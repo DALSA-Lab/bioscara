@@ -62,13 +62,13 @@
  * @brief Maximum acceleration in steps/s^2. Can be set for each joint depending on inertia. 
  * If set to high stalls might trigger since PID error grows too large.
  */
-#define MAXACCEL 1010000
+#define MAXACCEL 100
 
 /**
  * @brief Maximum velocity in steps/s. Can be set for each joint.
  * If set to high stalls might trigger since PID error grows too large.
  */
-#define MAXVEL 1800
+#define MAXVEL 10
 #error "No Joint has been defined. Define one of 'JX' where X 1,2,3,4"
 #endif
 

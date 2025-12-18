@@ -34,7 +34,7 @@
 
 /**
  * @brief Macro to dump a buffer to the serial console.
- * 
+ *
  * @param buffer pointer to a buffer to dump to the console
  * @param size number of bytes to dump
  */
@@ -49,14 +49,14 @@
     Serial.println();                 \
   }
 
-  /**
-   * @brief register and command definitions
-   * 
-   * a register can be read (R) or written (W), each register has a size in bytes.
-   * The payload can be split into multiple values or just be a single value.
-   * Note that not all functions are implemented.
-   * 
-   */
+/**
+ * @brief register and command definitions
+ *
+ * a register can be read (R) or written (W), each register has a size in bytes.
+ * The payload can be split into multiple values or just be a single value.
+ * Note that not all functions are implemented.
+ *
+ */
 enum stp_reg_t
 {
   PING = 0x0f,                ///< R; Size: 1; [(char) ACK]
@@ -89,7 +89,7 @@ enum stp_reg_t
   CHECKORIENTATION = 0x2B,    ///< W; Size: 4; [(float) degrees]
   GETENCODERRPM = 0x2C,       ///< R; Size: 4; [(float) RPM]
   HOME = 0x2D,                ///< W; Size: 4; [(uint8) current, (uint8) sensitivity, (uint8) speed, (uint8) direction]
-  HOMEOFFSET = 0x2E,       ///< R/W; Size: 4; [(float) -]
+  HOMEOFFSET = 0x2E,          ///< R/W; Size: 4; [(float) -]
 };
 
 /**
