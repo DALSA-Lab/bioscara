@@ -79,7 +79,7 @@ IP: 10.209.X.X".->DTUsecure
 robot<-."(optional)
 IP: 10.209.X.X".->DTUsecure
 dev<-."(optional)
-IP: 10.209.X.X".->laptop
+IP: 192.168.137.X".->laptop
 robot<-."(optional)
 IP: 192.168.137.X".->laptop
 
