@@ -12,8 +12,8 @@
  */
 #ifndef MBASEGRIPPER_H
 #define MBASEGRIPPER_H
-#include "bioscara_gripper_hardware_driver/mBaseGripper.h"
 #include "bioscara_arm_hardware_driver/uErr.h"
+#include <chrono>
 
 namespace bioscara_hardware_drivers
 {
@@ -146,9 +146,11 @@ namespace bioscara_hardware_drivers
         float _min = 0;                ///< Joint lower limit
         float _max = 0;                ///< Joint upper limit
         float _backup_init_pos = 0.0;  ///< Initial position used if none can be retrieved from the buffer file
-        float _pos = _backup_init_pos; ///< Last received command or stored position
-
+        float _pos = _backup_init_pos; ///< stored position
+        float _pos_get = _pos;         ///< reported position
     private:
+        std::chrono::_V2::system_clock::time_point new_cmd_time =
+            std::chrono::high_resolution_clock::now();
     };
 }
 #endif // MBASEGRIPPER_H

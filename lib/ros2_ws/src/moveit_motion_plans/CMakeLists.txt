@@ -41,6 +41,9 @@ install(
 # TODO: find a way to not add every script to the cmakelist
 install(PROGRAMS
         scripts/IAmNotARobot.py
+        scripts/PickPlace.py
+        scripts/PickPlace_continous.py
+        scripts/PickPlace_markers.py
         DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY 

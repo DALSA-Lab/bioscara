@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
-<robot name="scene" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="scene"
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:arg name="use_mock_hardware" default="false"/>
   <xacro:arg name="arm_description_package" default="bioscara_arm_description" />
@@ -14,15 +15,33 @@
   <link name="world"/>
 
   <!-- Include the robot macro which assembles the arm and the gripper -->
-  <xacro:load_robot 
-    parent="world" 
-    prefix="" 
-    use_mock_hardware="$(arg use_mock_hardware)"
-    arm_description_package="$(arg arm_description_package)"
-    arm_macro="$(arg arm_macro)"
-    gripper_description_package="$(arg gripper_description_package)"
-    gripper_macro="$(arg gripper_macro)">
+  <xacro:load_robot parent="world" prefix="" use_mock_hardware="$(arg use_mock_hardware)" arm_description_package="$(arg arm_description_package)" arm_macro="$(arg arm_macro)" gripper_description_package="$(arg gripper_description_package)" gripper_macro="$(arg gripper_macro)">
     <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:load_robot>
+
+  <joint name="table_in_world" type="fixed">
+    <parent link="world"/>
+    <child link="table"/>
+    <origin xyz="0 0 -0.01"/>
+  </joint>
+
+  <link name="table">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1 2.0 0.02" />
+      </geometry>
+      <material name="White">
+        <color rgba="0.9 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1 2.0 0.02" />
+      </geometry>
+    </collision>
+  </link>
 
 </robot>

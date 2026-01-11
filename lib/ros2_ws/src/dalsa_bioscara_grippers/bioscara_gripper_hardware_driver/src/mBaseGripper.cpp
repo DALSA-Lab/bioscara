@@ -1,6 +1,7 @@
 #include "bioscara_gripper_hardware_driver/mBaseGripper.h"
 #include <fstream>
 #include <iostream>
+#include <cmath>
 
 namespace bioscara_hardware_drivers
 {
@@ -55,13 +56,26 @@ namespace bioscara_hardware_drivers
 
         width = width < _min ? _min : width;
         width = width > _max ? _max : width;
+
+        if (fabs(_pos - width) > 0.0001)
+        {
+            new_cmd_time = std::chrono::high_resolution_clock::now();
+        }
         _pos = width;
-        return err_type_t::OK;  
+        return err_type_t::OK;
     }
 
     err_type_t BaseGripper::getPosition(float &width)
     {
-        width = _pos;
+        /* TODO: this delay is a very bad workaround to 
+        allow the gripper to move to its target. Redo with digital twin or similar*/
+        auto now = std::chrono::high_resolution_clock::now();
+        const std::chrono::duration<float> elapsed = now - new_cmd_time;
+        if (elapsed.count() > 1.0)
+        {
+            _pos_get = _pos;
+        }
+        width = _pos_get;
         return err_type_t::OK;
     }
 

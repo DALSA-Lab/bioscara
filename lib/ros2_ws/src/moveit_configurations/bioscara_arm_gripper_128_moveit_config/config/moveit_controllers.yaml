@@ -19,6 +19,8 @@ moveit_simple_controller_manager:
       - gripper
     action_ns: gripper_cmd
     default: true
+    allowed_goal_duration_margin: 1.0 # Necessary due to the delay in the gripper feedback
+
   velocity_joint_trajectory_controller:
     type: FollowJointTrajectory
     joints:
