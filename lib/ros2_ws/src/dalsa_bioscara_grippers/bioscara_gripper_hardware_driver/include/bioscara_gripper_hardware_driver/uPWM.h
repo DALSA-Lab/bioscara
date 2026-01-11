@@ -5,13 +5,6 @@
  * @version 0.1
  * @date 2025-05-27
  *
- * I copied this from: https://github.com/berndporr/rpi_pwm/blob/main/rpi_pwm.h
- * and slightly modified it.
- *
- * lgpio, the library used for I2C access can only generate soft PWM, 
- * The timing jitter will cause the servo to fidget. This may cause it to overheat and wear out prematurely.
- * 
- *
  * @copyright Copyright (c) 2025
  *
  */
@@ -28,18 +21,26 @@
 #include <math.h>
 
 /**
- * @brief PWM class for the Raspberry PI 4 and 5
+ * @brief Class to create a Pulse Width Modulated (PWM) signal on the Raspberry PI 4 and 5
+ * 
+ * Based on https://github.com/berndporr/rpi_pwm/blob/main/rpi_pwm.h
+ * and slightly modified.
+ *
+ * For servo control it is important to use a hardware generated PWM, since software PWM,
+ * like it is created by the lgpio library, is subject to timing jitter which can cause 
+ * the servo to figet which might lead to overheating and wear.
  **/
 class RPI_PWM
 {
 public:
     /**
-     * Starts the PWM
-     * \param channel The GPIO channel which is 2 or 3 for the RPI5
-     * \param frequency The PWM frequency
-     * \param duty_cycle The initial duty cycle of the PWM (default 0)
-     * \param chip The chip number (for RPI5 it's 2)
-     * \return >0 on success and -1 if an error has happened.
+     * @brief Starts the PWM
+     * 
+     * @param channel The GPIO channel
+     * @param frequency The PWM frequency
+     * @param duty_cycle The initial duty cycle of the PWM (default 0)
+     * @param chip The chip number
+     * @return >0 on success and -1 if an error has happened.
      **/
     int start(int channel, int frequency, float duty_cycle = 0, int chip = 2)
     {
@@ -65,22 +66,28 @@ public:
     }
 
     /**
-     * Stops the PWM
+     * @brief Stops the PWM
      **/
     void stop()
     {
         disable();
     }
 
+    /**
+     * @brief Destroy the RPI_PWM object
+     * 
+     * Invokes disable()
+     * 
+     */
     ~RPI_PWM()
     {
         disable();
     }
 
     /**
-     * Sets the duty cycle in percent 0 - 100.
-     * \param v The duty cycle in percent.
-     * \return >0 on success and -1 after an error.
+     * @brief Sets the duty cycle in percent 0 - 100.
+     * @param v The duty cycle in percent.
+     * @return >0 on success and -1 after an error.
      **/
     inline int setDutyCycle(float v) const
     {
@@ -90,6 +97,7 @@ public:
     }
 
 private:
+
     void setPeriod(int ns) const
     {
         writeSYS(pwmpath + "/" + "period", ns);

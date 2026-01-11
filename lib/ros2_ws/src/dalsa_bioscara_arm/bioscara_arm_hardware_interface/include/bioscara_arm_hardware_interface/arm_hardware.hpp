@@ -375,9 +375,9 @@ namespace bioscara_hardware_interfaces
          * The vector holds pointers to the actual interface structs stored in the parents
          * HardwareComponentInterface::joint_state_interfaces_ but in the desired order.
          * The order is:
-         * 1) position
-         * 2) velocity
-         * 3) home
+         * -# position
+         * -# velocity
+         * -# home
          * 
          * This order guarantees that when reading the state interfaces in read() that the 'home'
          * interface is read last and has the latest state flags from the joint.
@@ -388,8 +388,8 @@ namespace bioscara_hardware_interfaces
          * @brief A mutex that is used to prevent concurrent access to hardware and #_joint_command_modes
          * 
          * The mutex prevents two things:
-         * 1) Modifying the #_joint_command_modes from
-         * 2) Concurrent access to the hardware via the #_joints map. The Joint harwdare is not thread safe.
+         * - Modifying the #_joint_command_modes from
+         * - Concurrent access to the hardware via the #_joints map. The Joint harwdare is not thread safe.
          * In particular the read()/write() methods are executed in one RT thread while the perform_command_mode_switch()
          * is called from another RT thread. The latter also tries to modify the Joint object via activate_joint() and deactivate_joint()
          * which must not happen concurrently with a read() or write() call.

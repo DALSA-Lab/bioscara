@@ -18,8 +18,10 @@
 namespace bioscara_hardware_drivers
 {
   /**
-   * @brief TODO
+   * @brief Generic base class to control a single joint.
    *
+   * This class is a wrapper function to interact with a robot joint
+   * either through a MockJoint or hardware Joint object.
    */
   class BaseJoint
   {
@@ -74,239 +76,224 @@ namespace bioscara_hardware_drivers
      *
      * The Joint object represents a single joint.
      *
-     * @param name string device name for identification
+     * @param name string device name for logging.
      */
     BaseJoint(const std::string name);
+
+    /**
+     * @brief Destroy the BaseJoint object
+     *
+     * Invokes the disable() and deinit() method to clean up.
+     */
     ~BaseJoint(void);
 
     /**
-     * @brief Initialization, derived classes may override this.
+     * @brief Initialize the joint communication
+     *
+     * @return err_type_t
      *
      */
     virtual err_type_t init(void);
 
     /**
-     * @brief Deinitialization, derived classes may override this.
+     * @brief Denitialize the joint communication
+     *
+     * @return err_type_t
      *
      */
     virtual err_type_t deinit(void);
 
     /**
-     * @brief Setup the joint and engages motor, derived classes may override this.
+     * @brief Engages the joint.
      *
+     * This function prepares the motor for movement. After successfull execution the joint
+     * is ready to accept setPosition() and setVelocity() commands.
+     *
+     * The function sets the drive and hold current for the specified joint and engages the motor.
+     * The currents are in percent of driver max. output (2.5A, check with TMC5130 datasheet or Ustepper documentation)
+     * @param driveCurrent drive current in 0-100 % of 2.5A output (check uStepper doc.)
+     * @param holdCurrent hold current in 0-100 % of 2.5A output (check uStepper doc.)
+     * @return err_type_t
      */
     virtual err_type_t enable(u_int8_t driveCurrent, u_int8_t holdCurrent);
 
     /**
-     * @brief disenganges the joint motors, derived classes may override this.
-     * @return 0 on success,
-     * -1 on communication error,
-      -5 if the joint is not initialized.
+     * @brief disenganges the joint
+     *
+     * invokes stop(), sets hold and drive current to 0
+     * and sets the the joint brake mode to freewheeling
+     * @return err_type_t
      */
     virtual err_type_t disable(void);
 
     /**
-     * @brief Blocking implementation to home the joint, derived classes may override this.
+     * @brief Blocking implementation to home the joint
      *
-     * A blocking implementation which only returns after the the joint is no longer BUSY. See Joint::_home() for documentation.
+     * Homing the joint is neccessary after its controller has been powered off.
+     * The joint can be moved while the encoders are inactive and hence the position
+     * at startup is unknow. See _home() for information on implementation and
+     * description of the paramters.
      *
-     * Additionally this method returns:
-     * @return -2 when not homed succesfull (isHomed flag still not set),
-     * -109 if the joint is already currently homing (for example from a call to Joint::startHoming()).
+     * This is a blocking implementation which only returns after the the joint is no longer busy.
+     * First startHoming() is called, and subsequently waits with wait_while_busy() to finish homing.
+     * Lastly postHoming() is called.
+     * @return err_type_t
      */
     virtual err_type_t home(float velocity, u_int8_t sensitivity, u_int8_t current);
 
     /**
-     * @brief non-blocking implementation to home the joint, derived classes may override this.
+     * @brief non-blocking implementation to home the joint
      *
-     * See Joint::_home() for documentation. The current_b_cmd flag is set to HOME
-     * This method returns immediatly after starting the homing sequence. This should be used when the blocking implementation is not acceptable.
-     * For example in the update loop of the bioscara_hardware_interfaces::BioscaraHardwareInterface::write().
-
-     * Additionally this method returns:
-     * @return -109 if the joint is already currently homing (for example from a call to Joint::startHoming()).
+     * Homing the joint is neccessary after its controller has been powered off.
+     * The joint can be moved while the encoders are inactive and hence the position
+     * at startup is unknow. See _home() for information on implementation and
+     * description of the paramters.
+     *
+     *
+     * This method returns immediatly after starting the homing sequence and
+     * should be used when the blocking implementation is not acceptable,
+     * for example in a realtime loop.
+     *
+     * This method sets the #current_b_cmd flag to stp_reg_t::HOME
+     * @return err_type_t
      */
     virtual err_type_t startHoming(float velocity, u_int8_t sensitivity, u_int8_t current);
 
     /**
-     * @brief perform tasks after a non-blocking homing, derived classes may override this.
+     * @brief perform tasks after a non-blocking homing
      *
-     * This method resets the current_b_cmd to NONE, checks if the joint is homed,
+     * This method resets the #current_b_cmd to stp_reg_t::NONE, checks if the joint is homed,
      * and saves the homing offset to the joint.
      *
-     * @return 0 on success,
-     * -109 if the current_b_cmd is not HOME,
-     * -1 on communication error,
-     * -2 when not homed,
-     * -5 if the joint is not initialized.
-     *
+     * @return err_type_t
      */
     virtual err_type_t postHoming(void);
 
     /**
      * @brief get the current joint position in radians or m for
-     * cylindrical and prismatic joints respectively. Derived class must override this.
+     * cylindrical and prismatic joints respectively.
      *
      * @warning If the joint is not homed this method does not return an error.
      * Instead `pos` will be 0.0.
      *
-     * @param pos
-     * @return 0 on success,
-      -1 on communication error,
-      -5 if the joint is not initialized.
+     * @param pos the current joint position in rad or m.
+     * @return err_type_t
      */
     virtual err_type_t getPosition(float &pos) = 0;
 
     /**
      * @brief get the current joint position in radians or m for
-     * cylindrical and prismatic joints respectively. Derived class mayy override this.
+     * cylindrical and prismatic joints respectively.
      *
-     * @param pos in rad or m
-     * @return 0 on success,
-      -1 on communication error,
-      -2 when not homed,
-      -3 when the motor is not enabled,
-      -4 when the motor is stalled,
-      -5 if the joint is not initialized.
+     * @param pos the commanded joint position in rad or m.
+     * @return err_type_t
      */
     virtual err_type_t setPosition(float pos);
 
     /**
-     * @brief Move full steps. Derived class may override this.
+     * @brief Move full steps.
      *
      * This function can be called even when not homed.
      *
      * @param steps number of full steps
-     * @return 0 on success,
-      -1 on communication error,
-      -3 when the motor is not enabled,
-      -4 when the motor is stalled,
-      -5 if the joint is not initialized.
+     * @return err_type_t
      */
     virtual err_type_t moveSteps(int32_t steps);
 
     /**
      * @brief get the current joint velocity in radians/s or m/s for
-     * cylindrical and prismatic joints respectively. Derived class must override this.
+     * cylindrical and prismatic joints respectively.
      *
-     * @param vel
-     * @return 0 on success,
-      -1 on communication error,
-      -5 if the joint is not initialized.
+     * @param vel the current joint velocity in rad/s or m/s.
+     * @return err_type_t
      */
     virtual err_type_t getVelocity(float &vel) = 0;
 
     /**
      * @brief Set the current joint velocity in radians/s or m/s for
-     * cylindrical and prismatic joints respectively. Derived class may override this.
+     * cylindrical and prismatic joints respectively.
      *
-     * @param vel
-     * @return 0 on success,
-      -1 on communication error,
-      -2 when not homed,
-      -3 when the motor is not enabled,
-      -4 when the motor is stalled,
-      -5 if the joint is not initialized.
+     * @param vel the commanded joint velocity in rad/s or m/s.
+     * @return err_type_t
      */
     virtual err_type_t setVelocity(float vel);
 
     /**
      * @brief Calls the checkOrientation method of the motor. Checks in which direction the motor is turning.
-     * Derived class may override this.
      *
-     * As the orientation check is blocking on the motor, this this function returns when the isBusy flag is clear again.
-     *
+     * @note This is a blocking function.
      * @param angle degrees how much the motor should turn. A few degrees is sufficient.
-     * @return 0 on success,
-      -1 on communication error,
-      -3 when the motor is not enabled,
-      -4 when the motor is stalled,
-      -5 if the joint is not initialized.
+     * @return err_type_t
      */
-    virtual err_type_t checkOrientation(float angle = 10.0);
+    virtual err_type_t checkOrientation(float angle = 2.0);
 
     /**
-     * @brief Stops the motor. Derived class may override this.
+     * @brief Stops the motor.
      *
      * Stops the motor by setting the maximum velocity to zero and the position setpoint
      * to the current position
      *
-     * @return 0 on success,
-     * -1 on communication error,
-     * -5 if the joint is not initialized.
+     * @return err_type_t
      */
     virtual err_type_t stop(void);
 
-    /**
-     * @brief Disables the Closed-Loop PID Controller Derived class may override this.
-     * @return 0 on success, -1 on communication error,
-      -5 if the joint is not initialized.
-     */
     virtual err_type_t disableCL(void);
 
     /**
-     * @brief Set the Drive Current. Derived class may override this.
-     * @warning This function is unreliable and not well tested. Use Joint::enable() instead!
+     * @brief Set the Drive Current.
      * @param current 0% - 100% of driver current
-     * @return 0 on success, -1 on communication error,
-      -5 if the joint is not initialized.
+     * @return err_type_t
      */
     virtual err_type_t setDriveCurrent(u_int8_t current);
 
     /**
-     * @brief Set the Hold Current. Derived class may override this.
-     * @warning This function is unreliable and not well tested. Use Joint::enable() instead!
+     * @brief Set the Hold Current.
      * @param current 0% - 100% of driver current
-     * @return 0 on success,
+     * @return err_type_t
      * -1 on communication error,
-      -5 if the joint is not initialized.
      */
     virtual err_type_t setHoldCurrent(u_int8_t current);
 
     /**
-     * @brief Set Brake Mode. Derived class may override this.
+     * @brief Set Brake Mode.
      * @param mode Freewheel: 0, Coolbrake: 1, Hardbrake: 2
-     * @return 0 on success, -1 on communication error,
-      -5 if the joint is not initialized.
+     * @return err_type_t
      */
     virtual err_type_t setBrakeMode(u_int8_t mode);
 
     /**
      * @brief Set the maximum permitted joint acceleration (and deceleration) in rad/s^2 or m/s^2 for cylindrical
-     * and prismatic joints respectively. Derived class may override this.
+     * and prismatic joints respectively.
      *
      * @param maxAccel maximum joint acceleration.
-     * @return 0 on success, -1 on communication error,
-      -5 if the joint is not initialized.
+     * @return err_type_t
      */
     virtual err_type_t setMaxAcceleration(float maxAccel);
 
     /**
      * @brief Set the maximum permitted joint velocity in rad/s or m/s for cylindrical
-     * and prismatic joints respectively. Derived class may override this.
+     * and prismatic joints respectively.
      *
      * @param maxVel maximum joint velocity.
-     * @return 0 on success, -1 on communication error,
-      -5 if the joint is not initialized.
+     * @return err_type_t
      */
     virtual err_type_t setMaxVelocity(float maxVel);
 
     /**
-     * @brief Enable encoder stall detection of the joint. Derived class may override this.
+     * @brief Enable encoder stall detection of the joint.
      *
      * If the PID error exceeds the set threshold a stall is triggered and the motor disabled.
      * A detected stall can be reset by homing or reenabling the joint using enable().
-     * @note If stall detection shall be enabled, invoke this method  AFTER enabling the joint with enable(). 
+     * @note If stall detection shall be enabled, invoke this method  AFTER enabling the joint with enable().
      * @param sensitivity value of threshold. 0 - 255 where lower is more sensitive.
-     * @return 0 on success, -1 on communication error,
-      -5 if the joint is not initialized.
+     * @return err_type_t
      */
     virtual err_type_t enableStallguard(u_int8_t sensitivity);
 
     /**
      * @brief Checks the state if the motor is homed.
      *
-     * Reads the internal state flags from the last transmission. If an update is neccessary call Joint::getFlags() before invoking this function.
+     * Reads the internal state flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
      *
      * @return true if the motor is homed,
      * false if not.
@@ -316,7 +303,7 @@ namespace bioscara_hardware_drivers
     /**
      * @brief Checks the state if the motor is enabled.
      *
-     * Reads the internal state flags from the last transmission. If an update is neccessary call Joint::getFlags() before invoking this function.
+     * Reads the internal state flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
      * If the motor actually can move depends on the state of the STALLED flag which can be checked using Joint::isStalled().
      *
      * @return true if the motor is enabled,
@@ -327,7 +314,7 @@ namespace bioscara_hardware_drivers
     /**
      * @brief Checks if the motor is stalled.
      *
-     * Reads the internal state flags from the last transmission. If an update is neccessary call Joint::getFlags() before invoking this function.
+     * Reads the internal state flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
      * @return true if the motor is stalled,
      * false if not.
      */
@@ -336,24 +323,22 @@ namespace bioscara_hardware_drivers
     /**
      * @brief Checks if the joint controller is busy processing a blocking command.
      *
-     * Reads the internal state flags from the last transmission. If an update is neccessary call Joint::getFlags() before invoking this function.
+     * Reads the internal state flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
      * @return true if a blocking command is currently executing,
      * false if not.
      */
     virtual bool isBusy(void);
 
     /**
-     * ping the joint to get the latest driver state flags
+     * @brief get the latest driver state flags from the joint
      * @param flags if succesfull, populated with the latest flags
-     * @return 0 on success,
-      -5 if the joint is not initialized.
+     * @return err_type_t
      */
     virtual err_type_t getFlags(u_int8_t &flags);
 
     /**
-     * Overload of BaseJoint::getFlags(u_int8_t &flags)
-     * @return 0 on success,
-      -5 if the joint is not initialized.
+     * @brief Overload of getFlags(u_int8_t &flags)
+     * @return err_type_t
      */
     virtual err_type_t getFlags(void);
 
@@ -364,7 +349,7 @@ namespace bioscara_hardware_drivers
      */
     virtual stp_reg_t getCurrentBCmd(void);
 
-    std::string name;
+    std::string name; ///< Joint name for logging
 
   protected:
     /**
@@ -376,21 +361,7 @@ namespace bioscara_hardware_drivers
 
     /**
      * @brief Call to start the homing sequence of a joint.
-     *
-     * First the joint will check the motor wiring by executing the checkOrientation internally. Then it will set the specified speed
-     * until a resistance which drives the PID error above the specified threshold is encountered.
-     * At this point the stepper stops and zeros the encoder.
-     * @param velocity  signed velocity in rad/s or m/s. Must be between 1.0 < RAD2DEG(JOINT2ACTUATOR(velocity, reduction, 0)) / 6 < 250.0
-     * @param sensitivity Encoder pid error threshold 0 to 255.
-     * @param current homing current, determines how easy it is to stop the motor and thereby provoke a stall
-     *
-     * @return 0 on success,
-      -1 on communication error,
-      -3 when the motor is not enabled,
-      -5 if the joint is not initialized,
-      -101 if the velocity is zero,
-      -102 if absolute value of the velocity is outside the specified limits.
-   */
+     */
     virtual err_type_t _home(float velocity, u_int8_t sensitivity, u_int8_t current) = 0;
 
     /**
@@ -409,7 +380,7 @@ namespace bioscara_hardware_drivers
      * The flag is cleared when the joint is homed or the Stallguard enabled. \n
      * \b BUSY is set if the slave is busy processing a previous command. \n
      * \b NOTHOMED is cleared if the joint is homed. Movement is only allowed if this flag is clear \n
-     * \b NOTENABLED is cleared if the joint is enabled after calling Joint::enable()
+     * \b NOTENABLED is cleared if the joint is enabled after calling enable()
      */
     u_int8_t flags = 0b00001100;
 

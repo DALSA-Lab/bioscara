@@ -18,22 +18,19 @@
 namespace bioscara_hardware_drivers
 {
     /**
-     * TODO
+     * @brief Child class for to mock the gripper hardware.
+     *
+     * Use this class if you dont wish to use the gripper hardware. Commands are simply mirrored.
+     *
      */
     class MockGripper : public BaseGripper
     {
     public:
-    /**
-     * @brief Construct a new MockGripper object
-     * 
-     * TODO
-     * 
-     * @param reduction 
-     * @param offset 
-     * @param min 
-     * @param max 
-     * @param backup_init_pos 
-     */
+        /**
+         * @brief Construct a new MockGripper object
+         *
+         * see the BaseGripper constructor for a description of the parameters.
+         */
         MockGripper(float reduction, float offset, float min, float max, float backup_init_pos);
 
     protected:

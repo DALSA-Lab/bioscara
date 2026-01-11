@@ -19,11 +19,9 @@ namespace bioscara_hardware_drivers
      * @brief Wrapper function to request data from the I2C slave.
      *
      * Allocates a buffer of size sizeof(T) + RFLAGS_SIZE.
-     * invokes readFromI2CDev(), and copies the received payload to \a data  and the transmisison flags
+     * Invokes readFromI2CDev(), and copies the received payload to \a data  and the transmisison flags
      * to \a flags. See Joint::flags for details.
-     *@todo
-    - Implement a return code for read only functions
-    - Implement clearStall function
+
      * @tparam T Datatype of value to be transmitted
      * @param reg stp_reg_t register to read
      * @param data reference to store payload.

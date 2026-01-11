@@ -1,5 +1,5 @@
 /**
- * @file err.h
+ * @file uErr.h
  * @author sbstorz
  * @brief Defining common return types
  * @version 0.1
@@ -21,15 +21,15 @@ namespace bioscara_hardware_drivers
      */
     enum class err_type_t
     {
-        OK = 0,
-        ERROR = -1,
-        NOT_HOMED = -2,
-        NOT_ENABLED = -3,
-        STALLED = -4,
-        NOT_INIT = -5,
-        COMM_ERROR = -6,
-        INVALID_ARGUMENT = -101,
-        INCORRECT_STATE = -109,
+        OK = 0, ///< Success
+        ERROR = -1, ///< Generic Error
+        NOT_HOMED = -2, ///< Joint not homed or failed to home
+        NOT_ENABLED = -3, ///< Joint not enabled or failed to enable
+        STALLED = -4, ///< Joint stalled
+        NOT_INIT = -5, ///< Joint not initialized
+        COMM_ERROR = -6, ///< Communication error
+        INVALID_ARGUMENT = -101, ///< Argument violates conditions
+        INCORRECT_STATE = -109, ///< Joint is busy executing another blocking command
 
     };
 

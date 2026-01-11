@@ -59,7 +59,7 @@ namespace bioscara_hardware_drivers
 
         if (fabs(_pos - width) > 0.0001)
         {
-            new_cmd_time = std::chrono::high_resolution_clock::now();
+            _new_cmd_time = std::chrono::high_resolution_clock::now();
         }
         _pos = width;
         return err_type_t::OK;
@@ -67,10 +67,10 @@ namespace bioscara_hardware_drivers
 
     err_type_t BaseGripper::getPosition(float &width)
     {
-        /* TODO: this delay is a very bad workaround to 
+        /* TODO: this delay is a very bad hotfix to 
         allow the gripper to move to its target. Redo with digital twin or similar*/
         auto now = std::chrono::high_resolution_clock::now();
-        const std::chrono::duration<float> elapsed = now - new_cmd_time;
+        const std::chrono::duration<float> elapsed = now - _new_cmd_time;
         if (elapsed.count() > 1.0)
         {
             _pos_get = _pos;
@@ -79,19 +79,14 @@ namespace bioscara_hardware_drivers
         return err_type_t::OK;
     }
 
-    err_type_t BaseGripper::setServoPosition(float /*angle*/)
-    {
-        return err_type_t::OK;
-    }
-
     void BaseGripper::setReduction(float reduction)
     {
-        std::cout << "Set reduction to: " << reduction << std::endl;
+        _reduction = reduction;
     }
 
     void BaseGripper::setOffset(float offset)
     {
-        std::cout << "Set offset to: " << offset << std::endl;
+        _offset = offset;
     }
 
     err_type_t BaseGripper::save_last_position(float pos)

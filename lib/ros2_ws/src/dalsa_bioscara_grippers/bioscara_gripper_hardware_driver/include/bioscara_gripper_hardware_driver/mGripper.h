@@ -28,58 +28,61 @@ namespace bioscara_hardware_drivers
     {
     public:
         /**
-         * @brief Constructor of the hardware Gripper object.
+         * @brief Construct a new Gripper object
          *
-         * The gripper width in m is converted to a PWM dutycyle via the JOINT2ACTUATOR macro.
-         *
-         * @param reduction
-         * @param offset
-         * @param min minimum width in m.
-         * @param max maxmimum width in m.
-         * @param backup_init_pos initial position the gripper assumes
-         *  if it can not be read from the buffer file.
+         * see the BaseGripper constructor for a description of the parameters.
          */
         Gripper(float reduction, float offset, float min, float max, float backup_init_pos);
 
         /**
-         * @brief Prepares the servo for use.
+         * @brief Activates the the hardware.
          *
-         * Starts the PWM generation but does not set a position. Must be called before a position is set.
-         * The PWM pin is GPIO18. PWM chip is 0, channel 0.
+         * Invokes BaseGripper::enable() and starts the PWM generation but does not set a position.
+         * Must be called before a position is set.
+         * The PWM pin is GPIO18 on the Raspberry Pi 4. PWM chip is 0, channel 0.
          *
-         * @return return code of bioscara_hardware_drivers::esp_err_t type
+         * @return err_type_t::OK on success, err_type_t::COMM_ERROR if PWM can not be enabled
          */
         err_type_t enable(void) override;
 
         /**
-         * @brief Disables the servo.
+         * @brief Deactivates the hardware.
          *
-         * Stops the servo and disables the PWM generation.
+         * Invokes BaseGripper::disable()
+         * and stops the servo by disableing the PWM generation.
          *
-         * @return return code of bioscara_hardware_drivers::esp_err_t type.
+         * @return err_type_t::OK
          */
         err_type_t disable(void) override;
 
+        /**
+         * @copybrief BaseGripper::setPosition()
+         *
+         * Invokes BaseGripper::setPosition(),
+         * transforms the desired gripper width to a servo angle
+         * using the JOINT2ACTUATOR() macro and finally sets the
+         * servo position using setServoPosition()
+         * @param width width in m.
+         * @return see setServoPosition()
+         */
         err_type_t setPosition(float width) override;
 
-        err_type_t setServoPosition(float angle) override;
-
-        /**
-         * @brief Manually set reduction
-         *
-         * @param reduction
-         */
-        void setReduction(float reduction);
-
-        /**
-         * @brief Manually set offset
-         */
-        void setOffset(float offset);
-
     protected:
+        /**
+         * @brief Sets the servo position of the gripper actuator in degrees.
+         * 
+         * Calculates a PWM dutycycle for the desired servo angle and 
+         * invokes RPI_PWM::setDutyCycle() to set it. 
+         * @param angle in degrees.
+         * @return err_type_t::OK on success, err_type_t::COMM_ERROR if the dutycycle can not be set.
+         */
+        err_type_t setServoPosition(float angle);
+
+        RPI_PWM _pwm;   ///< RPI_PWM object to generate PWM voltage for servo control
+        int _freq = 50; ///< PWM frequency in Hz
+
     private:
-        RPI_PWM _pwm;
-        int _freq = 50;
+        
     };
 }
 #endif // MGRIPPER_H

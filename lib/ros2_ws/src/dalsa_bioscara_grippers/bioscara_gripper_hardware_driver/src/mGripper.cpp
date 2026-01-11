@@ -58,14 +58,4 @@ namespace bioscara_hardware_drivers
 
         return err_type_t::COMM_ERROR;
     }
-
-    void Gripper::setReduction(float reduction)
-    {
-        _reduction = reduction;
-    }
-
-    void Gripper::setOffset(float offset)
-    {
-        _offset = offset;
-    }
 }

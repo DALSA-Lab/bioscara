@@ -27,6 +27,7 @@ Sourcing the executables is only is necessary once after opening a new terminal.
 
 After running follow the instructions in the script.
 
+<!-- TODO: Link to BaseGripper Constructor, same stuff documented -->
 ## Calculating reduction and offset
 The gripper has the reduction $r$ and offset $o$ parameters which are used to translate from a desired gripper width to the servo angle. The relationship between gripper width $w$ and acutator angle $\alpha$ is as follows:
 $$
