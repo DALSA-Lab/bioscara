@@ -22,6 +22,7 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.autosummary",
     "sphinx.ext.githubpages",
+    "sphinx.ext.mathjax"
     "breathe",
     'myst_parser',
     'sphinxcontrib.mermaid',

@@ -7,7 +7,7 @@
  *
  * @copyright Copyright (c) 2025
 
- * Include this file for API functions to interact with the gripper.
+ * Include this file for API functions to interact with the hardware gripper.
  *
  */
 #ifndef MGRIPPER_H
@@ -16,14 +16,14 @@
 #include "bioscara_gripper_hardware_driver/uPWM.h"
 #include "bioscara_arm_hardware_driver/uErr.h"
 
-/**
- * @brief Derviced class from the BaseGripper class to interact with the hardware gripper.
- *
- * This class is a wrapper function to interact with a PWM servo gripper.
- *
- */
 namespace bioscara_hardware_drivers
 {
+    /**
+     * @brief Child class implementing control of the hardware gripper.
+     *
+     * Use this class if you wish to control the actual hardware by generating a PWM voltage on GPIO18 of the Raspberry Pi.
+     *
+     */
     class Gripper : public BaseGripper
     {
     public:
@@ -77,7 +77,6 @@ namespace bioscara_hardware_drivers
         void setOffset(float offset);
 
     protected:
-       
     private:
         RPI_PWM _pwm;
         int _freq = 50;

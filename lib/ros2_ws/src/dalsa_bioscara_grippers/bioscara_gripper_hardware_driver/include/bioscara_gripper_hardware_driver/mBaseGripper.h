@@ -15,51 +15,49 @@
 #include "bioscara_gripper_hardware_driver/mBaseGripper.h"
 #include "bioscara_arm_hardware_driver/uErr.h"
 
-/**
- * @brief Generic BaseGripper object to interact with the robot gripper.
- *
- * This class is a wrapper function to interact with the robot gripper either through a MockGripper
- * or the hardware Gripper.
- *
- * An example application is shown below. Note that depending on the build toolchain the include path can differ. This
-example assumes the bioscara_gripper_hardware_driver package is built with ROS2.
- *
- *
- *   \code{.cpp}
-// #include "bioscara_gripper_hardware_driver/mGripper.h"
-#include "bioscara_gripper_hardware_driver/mMockGripper.h"
-int main(int argc, char **argv)
-{
-    MockGripper gripper;
-    gripper.init();
-    if(gripper.enable() != 0){
-        cerr << "Failed to engage gripper" << endl;
-        return -1;
-    }
-
-    if (gripper.setPosition(40) != 0)
-    {
-        cerr << "setting position failed" << endl;
-        return -1;
-    }
-
-    if(gripper.disable() != 0){
-        cerr << "Failed to disengage gripper" << endl;
-        return -1;
-    }
-
-    gripper.deinit();
-    return 0;
-}
-  \endcode
- *
- *
- */
 namespace bioscara_hardware_drivers
 {
+
+    /**
+     * @brief Generic base class for gripper control implementations
+     *
+     * This class is a wrapper function to interact with the robot gripper either through a MockGripper
+     * or hardware Gripper object.
+     *
+     */
     class BaseGripper
     {
     public:
+        /**
+         * @brief Construct a new BaseGripper object
+         *
+         * ## Calculating reduction and offset
+         * The gripper has the reduction \fr\f and offset \fo\f parameters which are used to translate from a desired gripper width to the servo angle. The relationship between gripper width $w$ and acutator angle $\alpha$ is as follows:
+            \f[
+            \alpha = r (w-o)
+            \f]
+
+            To determine these parameters execute the following steps:
+
+            1. Manually set the gripper to an open position by setting a actuator angle. Be carefull to not exceed the physical limits of the gripper since the actuator is strong enough to break PLA before stalling.
+            2. Measure the gripper width \f$w_1\f$ and note the set actuator angle \f$\alpha_1\f$.
+            3. Move the gripper to a more closed position that still allows you to accurately measure the width
+            4. Measure the second width \f$w_2\f$ and note the corresponding angle \f$\alpha_2\f$
+            5. Calculate the offset \f$o\f$:
+            \f[
+            o = \frac{\alpha_1 w_2 -  \alpha_2 w_1}{\alpha_1 - \alpha_2}
+            \f]
+            6. Calculate the reduction \f$r\f$:
+            \f[
+            r = \frac{\alpha_1}{w_1 - o}
+            \f]            
+         *
+         * @param reduction the gripper width to actuator reduction ratio
+         * @param offset gripper width to actuator zero offset
+         * @param min lower limit
+         * @param max upper limit
+         * @param backup_init_pos initial position assumed if none can be retrieved from the buffer file
+         */
         BaseGripper(float reduction, float offset, float min, float max, float backup_init_pos);
 
         ~BaseGripper(void);
