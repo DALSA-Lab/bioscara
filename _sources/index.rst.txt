@@ -28,7 +28,6 @@ TODO:
    :caption: Contents:
 
    code/index.rst
-
 ..
    architecture/index.rst
    usage/examples/index.rst
