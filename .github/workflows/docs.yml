@@ -32,6 +32,8 @@ jobs:
         run: cd docs/doxygen && doxygen
       - name: Build Sphinx HTML
         run: sphinx-build -b html docs build/html
+      - name: Build Sphinx PDF
+        run: sphinx-build -M latexpdf docs build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

@@ -11,8 +11,8 @@ from pathlib import Path
 # sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lib/py_pkg/src")) TODO: is this required? And for what?
 
 project = 'Bioscara'
-copyright = '2025, Alan Mansour, DALSA; 2025, Sebastian Storz, DALSA'
-author = 'Alan Mansour; Sebastian Storz'
+copyright = '2026, DALSA'
+author = 'Sebastian Storz'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -34,6 +34,7 @@ exclude_patterns = []
 breathe_projects = {
     "cpp_proj": "doxygen/xml/",
 }
+breathe_default_project = "cpp_proj"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

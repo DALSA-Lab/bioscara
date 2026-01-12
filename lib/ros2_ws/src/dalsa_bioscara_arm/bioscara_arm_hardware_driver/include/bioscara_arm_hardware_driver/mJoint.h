@@ -148,19 +148,7 @@ namespace bioscara_hardware_drivers
      */
     err_type_t setHomingOffset(const float offset);
     
-    /**
-     * @copybrief BaseJoint::_home()
-     *
-     * The joint will start rotating with the specified speed
-     * until a resistance which drives the PID error above the specified threshold is encountered.
-     * At this point the stepper stops and zeros the encoder.
-     * @param velocity  signed velocity in rad/s or m/s. Must be between 1.0 < RAD2DEG(JOINT2ACTUATOR(velocity, reduction, 0)) / 6 < 250.0
-     * @param sensitivity Encoder pid error threshold 0 to 255.
-     * @param current homing current, determines how easy it is to stop the motor and thereby provoke a stall
-     *
-     * @return err_type_t
-   */
-    err_type_t _home(float velocity, u_int8_t sensitivity, u_int8_t current);
+    err_type_t _home(float velocity, u_int8_t sensitivity, u_int8_t current) override;
 
     /**
      * @brief Check if communication to the joint is established

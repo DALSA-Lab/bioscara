@@ -20,7 +20,7 @@ namespace bioscara_hardware_drivers
      *
      * Allocates a buffer of size sizeof(T) + RFLAGS_SIZE.
      * Invokes readFromI2CDev(), and copies the received payload to \a data  and the transmisison flags
-     * to \a flags. See Joint::flags for details.
+     * to \a flags. See BaseJoint::flags for details.
 
      * @tparam T Datatype of value to be transmitted
      * @param reg stp_reg_t register to read
