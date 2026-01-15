@@ -17,7 +17,7 @@
  * 
  * Define either J1, J2, J3 or J4 and subsequently include configuration.h 
  */
-#define J4
+#define J1
 #include "configuration.h"
 
 #include <UstepperS32.h>
@@ -77,7 +77,7 @@ void set_flags_for_blocking_handler(uint8_t reg);
  */
 void receiveEvent(int n) {
   // Serial.print("receive: \t");
-  reg = Wire.read();
+  reg = Wire.read(); // Defaults to -1 if no data is available
   // Serial.printf("Register: 0x%02x\n", reg);
   int i = 0;
   while (Wire.available()) {
