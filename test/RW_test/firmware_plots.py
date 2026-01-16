@@ -19,7 +19,6 @@ MOVETOANGLE_val = df[df["command"] == "MOVETOANGLE"]["t_exec [us]"]
 
 plt.hist(ANGLEMOVED_val, bins=range(int(min(ANGLEMOVED_val)), int(max(ANGLEMOVED_val))+binwidth, binwidth),label=f'read (mean: {ANGLEMOVED_val.mean():.2f} max: {ANGLEMOVED_val.max():.2f})',histtype="step")
 plt.hist(MOVETOANGLE_val, bins=range(int(min(MOVETOANGLE_val)), int(max(MOVETOANGLE_val))+binwidth, binwidth),label=f'write (mean: {MOVETOANGLE_val.mean():.2f} max: {MOVETOANGLE_val.max():.2f})',histtype="step")
-# plt.text(0, -1, r'Hello, world!', fontsize=15)
 
 plt.ylabel(r'Samples')
 plt.xlabel(r'$t_{total}$ [$\mu $s]')
