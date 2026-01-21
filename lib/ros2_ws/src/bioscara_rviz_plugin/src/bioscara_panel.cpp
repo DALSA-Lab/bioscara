@@ -47,6 +47,7 @@ namespace bioscara_rviz_plugin
             { homing_cmd("j4", 1); });
   }
 
+  // TODO: manually delete ui_ object?
   BioscaraPanel::~BioscaraPanel() = default;
 
   void BioscaraPanel::onInitialize()
@@ -271,8 +272,6 @@ namespace bioscara_rviz_plugin
 
   void BioscaraPanel::homing_cmd(const std::string joint, const int cmd)
   {
-    // TODO, disable other buttons
-
     RCLCPP_INFO(node_->get_logger(), "Homing %s, %d", joint.c_str(), cmd);
 
     DynamicInterfaceGroupValues msg;
