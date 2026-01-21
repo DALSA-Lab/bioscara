@@ -256,12 +256,12 @@ namespace bioscara_rviz_plugin
     void named_lcs_msg_to_map(const std::vector<NamedLifecycleState> &named_lcs_in,
                               std::unordered_map<std::string, NamedLifecycleState> &map_out);
 
-                              /**
-                               * @brief Print life-cycle state message to console
-                               * 
-                               * @param prefix string prefix
-                               * @param map_in map to be printed
-                               */
+    /**
+     * @brief Print life-cycle state message to console
+     *
+     * @param prefix string prefix
+     * @param map_in map to be printed
+     */
     void print_cm_map(const std::string prefix,
                       const std::unordered_map<std::string, NamedLifecycleState> &map_in);
 
@@ -303,27 +303,27 @@ namespace bioscara_rviz_plugin
     void prepopulate_state_map(std::unordered_map<std::string, NamedLifecycleState> &state_map,
                                std::vector<std::string> augment_vec);
 
-                               /**
-                                * @brief Enabl/Disables the homing group depending on the homing controller state
-                                * 
-                                */
+    /**
+     * @brief Enabl/Disables the homing group depending on the homing controller state
+     *
+     */
     void update_homing_grp_state(void);
 
     /**
      * @brief updates all homing state labels.
-     * 
+     *
      * Calls set_homing_state_label() for each joint state label.
-     * 
+     *
      */
     void update_homing_state_labels(void);
 
-/**
- * @brief Set state label text and color of the homing state label.
- * 
- * Sets color and text of label.
- * @param label pointer to label
- * @param state joint state
- */
+    /**
+     * @brief Set state label text and color of the homing state label.
+     *
+     * Sets color and text of label.
+     * @param label pointer to label
+     * @param state joint state
+     */
     void set_homing_state_label(QLabel *label, const InterfaceValue &state);
 
     /**
@@ -335,9 +335,9 @@ namespace bioscara_rviz_plugin
 
     /**
      * @brief updates component state label and control button.
-     * 
+     *
      * Calls set_state_label() for state_label and set_en_btn() for en_button.
-     * 
+     *
      * @param state_map component state map
      * @param state_label pointer to state label
      * @param en_button pointer to enable button
@@ -349,21 +349,21 @@ namespace bioscara_rviz_plugin
         QPushButton *en_button,
         const std::string &state_key);
 
-        /**
-         * @brief Set the state label.
-         * 
-         * sets color and text based on the component state.
-         * 
-         * @param label pointer to label to modify
-         * @param state state of the component
-         */
+    /**
+     * @brief Set the state label.
+     *
+     * sets color and text based on the component state.
+     *
+     * @param label pointer to label to modify
+     * @param state state of the component
+     */
     void set_state_label(QLabel *label, const NamedLifecycleState &state);
 
     /**
      * @brief Set the control button state
-     * 
+     *
      * Sets control buttons color, text and active status based on the component state.
-     * 
+     *
      * @param button pointer to button to modify
      * @param state state of the component
      */
@@ -392,13 +392,20 @@ namespace bioscara_rviz_plugin
 
     /**
      * @brief callback function called when a homing button is pressed
-     * 
+     *
      * publishes on #homing_publisher_ to initiate/stop homing
-     * 
+     *
      * @param joint string name of joint
      * @param cmd -1, 0, +1 to start homing to negative direction, stop homing, start homing to positve direction.
      */
     void homing_cmd(const std::string joint, const int cmd);
+
+    /**
+     * @brief callback on controller enable button
+     *
+     * @param controller string name of controller to change state
+     */
+    void ctrl_en_btn_cb(const std::string controller);
 
   private Q_SLOTS:
 
@@ -415,30 +422,6 @@ namespace bioscara_rviz_plugin
      *
      */
     void gripper_en_btn_cb(void);
-
-    /**
-     * @brief callback to activate/deactivate velocity_joint_trajectory_controller
-     * 
-     * @todo replace by generalized callback like homing_cmd()
-     * 
-     */
-    void vjtc_ctrl_en_btn_cb(void);
-
-    /**
-     * @brief callback to activate/deactivate homing_controller
-     * 
-     * @todo replace by generalized callback like homing_cmd()
-     * 
-     */
-    void homing_ctrl_en_btn_cb(void);
-
-    /**
-     * @brief callback to activate/deactivate gripper_controller
-     * 
-     * @todo replace by generalized callback like homing_cmd()
-     * 
-     */
-    void gripper_ctrl_en_btn_cb(void);
   };
 
 } // namespace bioscara_rviz_plugin

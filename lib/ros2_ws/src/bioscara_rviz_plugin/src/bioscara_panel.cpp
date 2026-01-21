@@ -13,13 +13,16 @@ namespace bioscara_rviz_plugin
     ui_ = new Ui::BioscaraUI();
     ui_->setupUi(this);
 
-    // TODO: since controller and hardware cb's are very similar, call lambda function with argument
-    // As for the homing buttons
     connect(ui_->arm_en_btn, SIGNAL(clicked()), this, SLOT(arm_en_btn_cb()));
     connect(ui_->gripper_en_btn, SIGNAL(clicked()), this, SLOT(gripper_en_btn_cb()));
-    connect(ui_->vjtc_ctrl_en_btn, SIGNAL(clicked()), this, SLOT(vjtc_ctrl_en_btn_cb()));
-    connect(ui_->homing_ctrl_en_btn, SIGNAL(clicked()), this, SLOT(homing_ctrl_en_btn_cb()));
-    connect(ui_->gripper_ctrl_en_btn, SIGNAL(clicked()), this, SLOT(gripper_ctrl_en_btn_cb()));
+    
+    
+    connect(ui_->vjtc_ctrl_en_btn, &QPushButton::clicked, this, [this]
+            { ctrl_en_btn_cb("velocity_joint_trajectory_controller"); });
+    connect(ui_->homing_ctrl_en_btn, &QPushButton::clicked, this, [this]
+            { ctrl_en_btn_cb("homing_controller"); });
+    connect(ui_->gripper_ctrl_en_btn, &QPushButton::clicked, this, [this]
+            { ctrl_en_btn_cb("gripper_controller"); });
 
     connect(ui_->j1_hm_neg_btn, &QPushButton::clicked, this, [this]
             { homing_cmd("j1", -1); });
@@ -47,8 +50,10 @@ namespace bioscara_rviz_plugin
             { homing_cmd("j4", 1); });
   }
 
-  // TODO: manually delete ui_ object?
-  BioscaraPanel::~BioscaraPanel() = default;
+  BioscaraPanel::~BioscaraPanel()
+  {
+    delete ui_;
+  }
 
   void BioscaraPanel::onInitialize()
   {
@@ -232,7 +237,7 @@ namespace bioscara_rviz_plugin
         return;
 
       case lifecycle_msgs::msg::State::PRIMARY_STATE_INACTIVE:
-         configure_controller(controller);
+        configure_controller(controller);
         return;
 
       default:
@@ -293,9 +298,7 @@ namespace bioscara_rviz_plugin
     set_hardware_component_state(component, target_state);
 
     // TODO: activate vjtc if all joints are homed and activation will succeed.
-   set_controller_state("velocity_joint_trajectory_controller", target_state);
-    
-    
+    set_controller_state("velocity_joint_trajectory_controller", target_state);
   }
 
   void BioscaraPanel::gripper_en_btn_cb(void)
@@ -307,31 +310,10 @@ namespace bioscara_rviz_plugin
     set_hardware_component_state(component, target_state);
 
     set_controller_state("gripper_controller", target_state);
-
   }
 
-  void BioscaraPanel::vjtc_ctrl_en_btn_cb(void)
+  void BioscaraPanel::ctrl_en_btn_cb(const std::string controller)
   {
-    std::string controller = "velocity_joint_trajectory_controller";
-    lifecycle_msgs::msg::State current_state = controller_states_.at(controller).state;
-    lifecycle_msgs::msg::State target_state = target_state_from_current(current_state);
-
-    set_controller_state(controller, target_state);
-
-  }
-
-  void BioscaraPanel::homing_ctrl_en_btn_cb(void)
-  {
-    std::string controller = "homing_controller";
-    lifecycle_msgs::msg::State current_state = controller_states_.at(controller).state;
-    lifecycle_msgs::msg::State target_state = target_state_from_current(current_state);
-
-    set_controller_state(controller, target_state);
-  }
-
-  void BioscaraPanel::gripper_ctrl_en_btn_cb(void)
-  {
-    std::string controller = "gripper_controller";
     lifecycle_msgs::msg::State current_state = controller_states_.at(controller).state;
     lifecycle_msgs::msg::State target_state = target_state_from_current(current_state);
 
