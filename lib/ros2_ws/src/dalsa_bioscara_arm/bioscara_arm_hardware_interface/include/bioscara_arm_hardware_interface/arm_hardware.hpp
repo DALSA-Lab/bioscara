@@ -40,7 +40,7 @@ namespace bioscara_hardware_interfaces
 
     /**
      * @brief The bioscara arm hardware interface class.
-     * 
+     *
      * The hardware interface serves to wrap custom hardware interaction with the arm joints in the standardized ros2_control architecture.
      *
      *
@@ -173,27 +173,27 @@ namespace bioscara_hardware_interfaces
             const rclcpp::Time &time,
             const rclcpp::Duration &period) override;
 
-            /**
-             * @brief Writes commands to the hardware from the command interfaces.
-             * 
-             * In contrast to the read() method the write() method only loops over the command interfaces that are currently active defined by
-             * the BioscaraArmHardwareInterface::_joint_command_modes map. See prepare_command_mode_switch() for a detailed reasoning why this approach
-             * has been chosen. 
-             * 
-             * - Command interface "position" -> Joint::setPosition()
-             * - Command interface "velocity" -> Joint::setVelocity()
-             * - Command interface "home"     -> Joint::startHoming()
-             *  - If the commanded value in "home" is != 0.0 the and the joint is currently executing a blocking function, 
-             * for example homing (Joint::getCurrentBCmd() == Joint::NONE), the homing sequence is started with the speed, sensitivity, current and acceleration
-             * defined in the BioscaraArmHardwareInterface::_joint_cfg which is polulated from the hardware description urdf. The direction of
-             * the homing is determined by the sign of the command interface value.
-             *  - If the commanded value in "home" is = 0.0 and the joint is currently executing homing, the homing is stopped. This can either
-             * happen prematurely through user input or when the homing is completed which is registered in read(). 
-             * .
-             * @param time 
-             * @param period 
-             * @return hardware_interface::return_type 
-             */
+        /**
+         * @brief Writes commands to the hardware from the command interfaces.
+         *
+         * In contrast to the read() method the write() method only loops over the command interfaces that are currently active defined by
+         * the BioscaraArmHardwareInterface::_joint_command_modes map. See prepare_command_mode_switch() for a detailed reasoning why this approach
+         * has been chosen.
+         *
+         * - Command interface "position" -> Joint::setPosition()
+         * - Command interface "velocity" -> Joint::setVelocity()
+         * - Command interface "home"     -> Joint::startHoming()
+         *  - If the commanded value in "home" is != 0.0 the and the joint is currently executing a blocking function,
+         * for example homing (Joint::getCurrentBCmd() == Joint::NONE), the homing sequence is started with the speed, sensitivity, current and acceleration
+         * defined in the BioscaraArmHardwareInterface::_joint_cfg which is polulated from the hardware description urdf. The direction of
+         * the homing is determined by the sign of the command interface value.
+         *  - If the commanded value in "home" is = 0.0 and the joint is currently executing homing, the homing is stopped. This can either
+         * happen prematurely through user input or when the homing is completed which is registered in read().
+         * .
+         * @param time
+         * @param period
+         * @return hardware_interface::return_type
+         */
         hardware_interface::return_type write(
             const rclcpp::Time &time,
             const rclcpp::Duration &period) override;
@@ -222,11 +222,11 @@ namespace bioscara_hardware_interfaces
          *  - [ERROR] Activating a second command interface for a joint.
          *  - [ERROR] Activating 'position' or 'velocity' command interface if the joint is not homed (Joint::isHomed() == false).
          * .
-         * 
+         *
          * Since this method operates in non-realtime context it must not access critical members (#_joint_command_modes and #_joints)
          * to avoid priority inversion. Therefore the new command modes are first saved to a cache #_new_joint_command_modes.
          * This will then be applied to #_joint_command_modes in the perform_command_mode_switch() which is executed in RT context.
-         * 
+         *
          * @param start_interfaces command interfaces that should be started in the form "joint/interface"
          * @param stop_interfaces command interfaces that should be stopped in the form "joint/interface"
          * @return hardware_interface::return_type
@@ -237,24 +237,24 @@ namespace bioscara_hardware_interfaces
 
         /**
          * @brief Perform the mode-switching for the new command interface combination in realtime context.
-         * 
+         *
          * Performs the following actions:
          * - acquires the #mtx lock to protect the critical members.
          * - Copies the cached #_new_joint_command_modes to the #_joint_command_modes
          * - <b>On activation</b>:
          *  - <b>home</b> interface:
-         *   - Reset command to 0.0. This clears any remaining commands that have been written to the 
+         *   - Reset command to 0.0. This clears any remaining commands that have been written to the
          * command interface while the hardware was unable to act on it. For example if it was inactive or the homing command
-         * was not the active command mode. 
+         * was not the active command mode.
          *
          * @param start_interfaces vector of string identifiers for the command interfaces starting.
          * @param stop_interfaces vector of string identifiers for the command interfaces stopping.
          * @return return_type::OK if the new command interface combination can be switched to (or) if the
          * interface key is not relevant to this system. Returns return_type::ERROR otherwise.
          */
-         hardware_interface::return_type perform_command_mode_switch(
-            const std::vector<std::string> & start_interfaces,
-            const std::vector<std::string> & stop_interfaces) override;
+        hardware_interface::return_type perform_command_mode_switch(
+            const std::vector<std::string> &start_interfaces,
+            const std::vector<std::string> &stop_interfaces) override;
 
         /**
          * @brief Called when an error in any state or state transition is thrown.
@@ -291,13 +291,40 @@ namespace bioscara_hardware_interfaces
          * @brief configuration structure holding the passed homing paramters from the ros2_control urdf
          *
          * Saving all parameters on initialization in a structure allows for quick access during runtime.
-         *
+         * See bioscara_hardware_drivers::BaseJoint::_home() for the description of the homing procedure.
          */
         struct joint_homing_config_t
         {
-            float speed = 0;
-            u_int8_t threshold = 10;
-            u_int8_t current = 10;
+            /**
+             * @brief [float] Signed homing velocity.
+             *
+             * In rad/s or m/s for cylindrical and prismatic joints respectively.
+             * Must satisfy: `1.0 < RAD2DEG(JOINT2ACTUATOR(<speed>, reduction, 0)) / 6 < 250.0`
+             */
+            float speed;
+
+            /**
+             * @brief [int, DEC] Encoder error threshold 0 to 255.
+             *
+             * Lower values make the homing more sensitve but also more susceptible to false positives.
+             */
+            u_int8_t threshold;
+
+            /**
+             * @brief [int, DEC] Homing current between 0 and 100.
+             *
+             * Determines how easy it is to stop the motor and thereby provoke a stall.
+             * See joint_config_t::drive_current.
+             */
+            u_int8_t current;
+
+            /**
+             * @brief [float] Joint acceleration during homing.
+             *
+             * In rad/s^2 or m/s^2 for cylindrical and prismatic joints respectively.
+             * Accelerating too fast can trigger a stall and hence false positve homing.
+             * See joint_config_t::max_acceleration.
+             */
             float acceleration = 0.01;
         };
 
@@ -309,15 +336,97 @@ namespace bioscara_hardware_interfaces
          */
         struct joint_config_t
         {
+            /**
+             * @brief [int, HEX] I2C device adress
+             *
+             * 1-byte I2C device adress (0x11 ... 0x14) for J1 ... J4
+             */
             int i2c_address;
+
+            /**
+             * @brief [float] Gear reduction of the joint
+             *
+             * This is used to transform position
+             * and velocity values between in joint units and actuator (stepper) units.
+             * The sign depends on the direction the motor is mounted and is turning. Adjust such that the joint moves in the positive
+             * direction on on positive joint commands. Cable polarity has no effect since the motors
+             * automatically adjust to always run in the 'right' direction from their point of view. \n
+             * J1: 35 \n
+             * J2: -2*pi/0.004 (4 mm linear movement per stepper revolution,
+             *  positive rotation makes the joint go down (negative), hence the minus sign for correction) \n
+             * J3: 24 \n
+             * J4: 12
+             */
             float reduction = 1;
+
+            /**
+             * @brief [float] Lower joint limit in joint units
+             *
+             * Initial values are (subject to tuning) \n
+             * J1: -3.04647 \n
+             * J2: -0.0016 \n
+             * J3: -2.62672 \n
+             * J4: -3.01069
+             */
             float min;
+
+            /**
+             * @brief [float] Upper joint limit in joint units
+             *
+             * Initial values are (subject to tuning) \n
+             * J1: 3.04647 \n
+             * J2: 0.3380 \n
+             * J3: 2.62672 \n
+             * J4: 3.01069
+             */
             float max;
+
+            /**
+             * @brief [int, DEC] Drive current of stepper driver in 0-100 % of 2.5A output (check uStepper doc.)
+             *
+             * Set when joint is enabled, see bioscara_hardware_drivers::BaseJoint::enable().
+             */
             u_int8_t drive_current;
+
+            /**
+             * @brief [int, DEC] Hold current of stepper driver in 0-100 % of 2.5A output (check uStepper doc.)
+             *
+             * Set when joint is enabled, see bioscara_hardware_drivers::BaseJoint::enable().
+             */
             u_int8_t hold_current;
+
+            /**
+             * @brief [int, DEC] Stall protection threshold in 0-255, where lower is more sensitive.
+             *
+             * If the PID error exceeds the set threshold a stall is triggered and the motor disabled.
+             * Set when joint is enabled, see bioscara_hardware_drivers::BaseJoint::enableStallguard().
+             */
             u_int8_t stall_threshold;
+
+            /**
+             * @brief [float] Maximum permitted joint velocity.
+             *
+             * In rad/s or m/s for cylindrical and prismatic joints respectively.
+             * Set when joint is enabled, see bioscara_hardware_drivers::BaseJoint::setMaxVelocity().
+             * @note This is the "last" limit and shall ALWAYS be greater than all limits set in the
+             * controller and application (MoveIt) configuration.
+             */
             float max_velocity;
+
+            /**
+             * @brief [float] Maximum permitted joint acceleration (and deceleration).
+             *
+             * In rad/s^2 or m/s^2 for cylindrical and prismatic joints respectively.
+             * Set when joint is enabled, see bioscara_hardware_drivers::BaseJoint::setMaxAcceleration().
+             * @note This is the "last" limit and shall ALWAYS be greater than all limits set in the
+             * controller and application (MoveIt) configuration.
+             */
             float max_acceleration;
+
+            /**
+             * @brief Holding the joint_homing_config_t configruation values
+             *
+             */
             joint_homing_config_t homing;
         };
 
@@ -359,18 +468,17 @@ namespace bioscara_hardware_interfaces
 
         /**
          * @brief Temporary cache of new joint_command_modes when switching controllers.
-         * 
+         *
          * Since the prepare_command_mode_switch() is executed in a non-RT context we save the new joint command modes to this
          * cache first to avoid needing to lock the #_joint_command_modes.
-         * 
+         *
          */
         std::unordered_map<std::string, std::set<std::string>> _new_joint_command_modes;
-
 
         /**
          * @brief A vector of a pair of interface name and pointer of the hardwares state interface which is ordered by joint
          * and state interface type.
-         * 
+         *
          * A vector is chosen since it guarantees the correct order by insertion.
          * The vector holds pointers to the actual interface structs stored in the parents
          * HardwareComponentInterface::joint_state_interfaces_ but in the desired order.
@@ -378,30 +486,30 @@ namespace bioscara_hardware_interfaces
          * -# position
          * -# velocity
          * -# home
-         * 
+         *
          * This order guarantees that when reading the state interfaces in read() that the 'home'
          * interface is read last and has the latest state flags from the joint.
          */
-        std::vector<std::pair<std::string, hardware_interface::InterfaceDescription*>> _ordered_joint_state_interfaces_ptr;
+        std::vector<std::pair<std::string, hardware_interface::InterfaceDescription *>> _ordered_joint_state_interfaces_ptr;
 
         /**
          * @brief A mutex that is used to prevent concurrent access to hardware and #_joint_command_modes
-         * 
+         *
          * The mutex prevents two things:
          * - Modifying the #_joint_command_modes from
          * - Concurrent access to the hardware via the #_joints map. The Joint harwdare is not thread safe.
          * In particular the read()/write() methods are executed in one RT thread while the perform_command_mode_switch()
          * is called from another RT thread. The latter also tries to modify the Joint object via activate_joint() and deactivate_joint()
          * which must not happen concurrently with a read() or write() call.
-         * 
-         * All methods that need to acquire this lock need to be performed in RT context to avoid being preempted by 
+         *
+         * All methods that need to acquire this lock need to be performed in RT context to avoid being preempted by
          * other lower priority threads potentially blocking the other RT threads from continuing.
          */
         std::mutex mtx;
 
         /**
          * @brief wrapper method to start homing.
-         * 
+         *
          * Activate the joint, set homing acceleration and start homing.
          * @param name
          * @param velocity
@@ -420,26 +528,26 @@ namespace bioscara_hardware_interfaces
 
         /**
          * @brief Split a interface string like "<joint_name>/<interface_name>" to "<joint_name>" and "<interface_name>"
-         * 
-         * @param interface 
-         * @param joint_name 
-         * @param interface_name 
+         *
+         * @param interface
+         * @param joint_name
+         * @param interface_name
          */
         void split_interface_string_to_joint_and_name(std::string interface, std::string &joint_name, std::string &interface_name);
 
         /**
          * @brief Enables each joint, enables the stall detection and sets the maximmum acceleration.
-         * 
+         *
          * @param name joint name to enable
-         * @return bioscara_hardware_drivers::err_type_t 
+         * @return bioscara_hardware_drivers::err_type_t
          */
         bioscara_hardware_drivers::err_type_t activate_joint(const std::string name);
 
         /**
          * @brief Disables each joint.
-         * 
+         *
          * @param name joint name to disable
-         * @return bioscara_hardware_drivers::err_type_t 
+         * @return bioscara_hardware_drivers::err_type_t
          */
         bioscara_hardware_drivers::err_type_t deactivate_joint(const std::string name);
     };
