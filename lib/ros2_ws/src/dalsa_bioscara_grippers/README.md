@@ -19,10 +19,10 @@ dalsa_bioscara_grippers/
     ├── meshes
     ├── rviz
     └── urdf/
-        ├── bioscara_gripper_128.urdf.xacro
-        ├── bioscara_gripper_128.ros2_control.xacro
+        ├── bioscara_gripper_128.urdf
+        ├── bioscara_gripper_128.ros2_control
         ├── bioscara_gripper_128.xacro
-        ├── <cool_other_bioscara_gripper>.urdf.xacro
-        ├── <cool_other_bioscara_gripper>.ros2_control.xacro
+        ├── <cool_other_bioscara_gripper>.urdf
+        ├── <cool_other_bioscara_gripper>.ros2_control
         └── <cool_other_bioscara_gripper>.xacro
 ```

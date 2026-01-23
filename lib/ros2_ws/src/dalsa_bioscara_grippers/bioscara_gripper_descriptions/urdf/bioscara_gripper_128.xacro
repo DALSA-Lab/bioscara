@@ -9,8 +9,8 @@
     <xacro:property name="config_file" value="$(find bioscara_gripper_descriptions)/config/bioscara_gripper_128_parameters.yaml" />
     <xacro:property name="params" value="${xacro.load_yaml(config_file)}"/>
 
-    <xacro:include filename="$(find bioscara_gripper_descriptions)/urdf/bioscara_gripper_128.urdf.xacro" />
-    <xacro:include filename="$(find bioscara_gripper_descriptions)/urdf/bioscara_gripper_128.ros2_control.xacro" />
+    <xacro:include filename="$(find bioscara_gripper_descriptions)/urdf/bioscara_gripper_128.urdf" />
+    <xacro:include filename="$(find bioscara_gripper_descriptions)/urdf/bioscara_gripper_128.ros2_control" />
     
     <xacro:bioscara_gripper_128_ros2_control
       prefix="${prefix}"

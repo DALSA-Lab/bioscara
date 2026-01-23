@@ -10,8 +10,8 @@
     <xacro:property name="config_file" value="$(find bioscara_arm_description)/config/bioscara_arm_parameters.yaml" />
     <xacro:property name="params" value="${xacro.load_yaml(config_file)}"/>
 
-    <xacro:include filename="$(find bioscara_arm_description)/urdf/bioscara.urdf.xacro" />
-    <xacro:include filename="$(find bioscara_arm_description)/urdf/bioscara.ros2control" />
+    <xacro:include filename="$(find bioscara_arm_description)/urdf/bioscara_arm.urdf" />
+    <xacro:include filename="$(find bioscara_arm_description)/urdf/bioscara_arm.ros2control" />
     
     <xacro:bioscara_arm_ros2_control 
       prefix="${prefix}" 
