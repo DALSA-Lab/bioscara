@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="bioscara" params="parameters prefix parent *origin">
+  <xacro:macro name="bioscara_arm" params="parameters prefix parent *origin">
     
     <xacro:include filename="$(find bioscara_arm_description)/urdf/materials.xacro" />
     <xacro:property name="tool_flange_zheight" value="0.135"/>

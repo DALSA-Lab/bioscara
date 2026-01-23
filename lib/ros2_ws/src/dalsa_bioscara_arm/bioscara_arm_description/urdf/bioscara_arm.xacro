@@ -13,16 +13,16 @@
     <xacro:include filename="$(find bioscara_arm_description)/urdf/bioscara.urdf.xacro" />
     <xacro:include filename="$(find bioscara_arm_description)/urdf/bioscara.ros2control" />
     
-    <xacro:bioscara_ros2_control 
+    <xacro:bioscara_arm_ros2_control 
       prefix="${prefix}" 
       parameters="${params}" 
       use_mock_hardware="${use_mock_hardware}"/>
 
-    <xacro:bioscara 
+    <xacro:bioscara_arm 
       parent="${parent}" 
       prefix="${prefix}" 
       parameters="${params}">
       <xacro:insert_block name="origin" />
-    </xacro:bioscara>
+    </xacro:bioscara_arm>
   </xacro:macro>
 </robot>

@@ -138,7 +138,7 @@ flowchart LR
         arm_urdf_parameters>"parameters"]
         arm_urdf_prefix>"prefix"]
   end
- subgraph bioscara_ros2_control["bioscara_ros2_control"]
+ subgraph bioscara_arm_ros2_control["bioscara_arm_ros2_control"]
     direction LR
         arm_ctrl_param_junction["arm_ctrl_param_junction"]
         arm_ctrl_use_mock_hardware>"use_mock_hardware"]
@@ -150,7 +150,7 @@ flowchart LR
         arm_param_junction["arm_param_junction"]
         arm_param_file["**[parameters]** = bioscara_arm_parameters.yaml"]
         bioscara
-        bioscara_ros2_control
+        bioscara_arm_ros2_control
   end
  subgraph bioscara_gripper_128["bioscara_gripper_128"]
         grp_urdf_p[" "]
