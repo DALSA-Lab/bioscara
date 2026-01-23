@@ -1,12 +1,18 @@
 # Bioscara - DALSA DIY SCARA robot arm
-This repository serves to collect all information regarding DTU DALSAs DIY robot arm Bioscara version 2.
-Version 2 is defined by replacing the MKS SERVO42C stepper drivers with the Ustepper S32 drivers and removing the 3D printer board. The orignal repository can be found in the bioscara_v1 branch.
+This repository serves to collect all information regarding DALSAs DIY robot arm Bioscara.
+The latest version is based on an earlier version which can be found under the "bioscara_v1" branch. It is updated by replacing the MKS SERVO42C stepper drivers with the Ustepper S32 drivers and removing the 3D printer driver board. A custom firmware is developed and ROS2 is deployed as the middleware for motion control.
 
+## Repository Structure
+The repository structure is based on the DALSA template.
+
+<!-- TODO: structure -->
 ## Documentation
-The documentation for the joint communication interface can be found in [/docs](/docs/). The documentation is made with Doxygen, its configuration file is in the root of the folder. The documentation can be found as a pdf [/docs/latex/refman.pdf](/docs/latex/refman.pdf) and as html in [/docs/html/index.html](/docs/html/index.html)
+The C++ source code documentation is generated from comments using doxygen. Doxygen creates the documentation output in multiple formats, HTML for static website and latex for pdf rednering.
+Additionally user documentation has also been generated and can be found together with the source code documentation here: https://dalsa-lab.github.io/bioscara/
 
 ## Usage
-The robots controller is a Raspberry Pi 4. The RPI is configured to connect to a WIFI network with the the following credentials:  
+<!-- TODO: link to network setup -->
+The robot controller is a Raspberry Pi 4. The RPI is configured to connect to a WIFI network with the the following credentials:  
 **SSID**: DALSA_IOT  
 **Password**: dalsa_iot  
 The easiest way to establish the network is to create a WIFI hotspot with the above credentials, however static IP assignemnt is not possible using Windows Hotspot, and hence the IP address must be checked before any connection attempt.
@@ -18,12 +24,12 @@ Interacting with the robot is handled through ROS2. In the subdirectory a sepera
 ### Mechanical
 - [ ]  Update the Fusion model to with all new parts.
 - [x] combine old and new stp and stl files
-- [ ] Fix J3 Pulley slipping by increasing surface roughness
-- [ ] Gripper Redesign
+- [x] Fix J3 Pulley slipping by increasing surface roughness
+- [x] Gripper Redesign
 ### Software
 - [ ] Finish the TODO list for the Joint Communication Protocol (see the documentation)
-- [ ] Create URDF file
-- [ ] Get started with MoveIt
+- [x] Create URDF file
+- [x] Get started with MoveIt
 ### Documentation
 - [ ] Continue this TODO list and Readme
 - [ ] Improve User guide with detailed descriptions and up to date 3D models
