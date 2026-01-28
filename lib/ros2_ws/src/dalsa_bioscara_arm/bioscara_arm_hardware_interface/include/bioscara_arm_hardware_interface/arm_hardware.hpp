@@ -496,9 +496,9 @@ namespace bioscara_hardware_interfaces
          * @brief A mutex that is used to prevent concurrent access to hardware and #_joint_command_modes
          *
          * The mutex prevents two things:
-         * - Modifying the #_joint_command_modes from
+         * - Modifying the #_joint_command_modes concurrently.
          * - Concurrent access to the hardware via the #_joints map. The Joint harwdare is not thread safe.
-         * In particular the read()/write() methods are executed in one RT thread while the perform_command_mode_switch()
+         * In particular the read() and write() methods are executed in one RT thread while the perform_command_mode_switch()
          * is called from another RT thread. The latter also tries to modify the Joint object via activate_joint() and deactivate_joint()
          * which must not happen concurrently with a read() or write() call.
          *
