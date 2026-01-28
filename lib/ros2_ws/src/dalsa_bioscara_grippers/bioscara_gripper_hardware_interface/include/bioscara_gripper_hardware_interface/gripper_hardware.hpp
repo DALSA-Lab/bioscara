@@ -105,7 +105,7 @@ namespace bioscara_hardware_interfaces
         /**
          * @brief Reads from the hardware and populates the state interfaces.
          *
-         * TODO
+         * Invokes the bioscara_hardware_drivers::Gripper::getPosition() method to read the gripper position.
          *
          * @param time
          * @param period
@@ -118,7 +118,7 @@ namespace bioscara_hardware_interfaces
         /**
          * @brief Writes commands to the hardware from the command interfaces.
          *
-         * TODO
+         * Invokes the bioscara_hardware_drivers::Gripper::setPosition() method to write the command to the gripper.
          *
          * @param time
          * @param period

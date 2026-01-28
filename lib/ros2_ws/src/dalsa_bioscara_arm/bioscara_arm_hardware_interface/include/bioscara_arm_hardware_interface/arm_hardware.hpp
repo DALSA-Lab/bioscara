@@ -63,7 +63,7 @@ namespace bioscara_hardware_interfaces
          * - Each joint must have the 3 command interfaces (in this order): 'position', 'velocity', 'home'
          * - Each joint must have the 3 state interfaces (in this order): 'position', 'velocity', 'home'
          *
-         * Stores the configuration parameters for each joint in the _joint_cfg map.
+         * Stores the configuration parameters for each joint in the #_joint_cfg map.
          * Each joint must have these parameters:
          * - i2c_address (int, HEX)
          * - reduction (float)
@@ -154,15 +154,15 @@ namespace bioscara_hardware_interfaces
          *
          * Iterates over all state interfaces and calls the corresponding Joint method.
          *
-         * - State interface "position" -> Joint::getPosition()
-         * - State interface "velocity" -> Joint::getVelocity()
-         * - State interface "home"     -> Joint::isHomed()
+         * - State interface "position" -> bioscara_hardware_drivers::Joint::getPosition()
+         * - State interface "velocity" -> bioscara_hardware_drivers::Joint::getVelocity()
+         * - State interface "home"     -> bioscara_hardware_drivers::Joint::isHomed()
          *  - This does not actually trigger a communication, instead it relies on the return flags of
          *    the previous transmissions. Since position and velocity have been called immediatly before the return flags
          *    are assumed to be valid.
-         *  - If the the homing of a joint has been activated through the command interface (Joint::getCurrentBCmd() == Joint::HOME)
-         *    the device signals BUSY (Joint::isBusy()) as long as it is still homing. \n
-         *    If the BUSY flag is reset while the current command is still Joint::HOME we can assume the homing has finished.
+         *  - If the the homing of a joint has been activated through the command interface (bioscara_hardware_drivers::Joint::getCurrentBCmd() == bioscara_hardware_drivers::Joint::HOME)
+         *    the device signals BUSY (bioscara_hardware_drivers::Joint::isBusy()) as long as it is still homing. \n
+         *    If the BUSY flag is reset while the current command is still bioscara_hardware_drivers::Joint::HOME we can assume the homing has finished.
          *    Then the "home" command interface of the joint is reset to 0.0, which will stop the homing (perform cleanup tasks) at the next write cycle.
          *
          * @param time
@@ -177,15 +177,15 @@ namespace bioscara_hardware_interfaces
          * @brief Writes commands to the hardware from the command interfaces.
          *
          * In contrast to the read() method the write() method only loops over the command interfaces that are currently active defined by
-         * the BioscaraArmHardwareInterface::_joint_command_modes map. See prepare_command_mode_switch() for a detailed reasoning why this approach
+         * the #_joint_command_modes map. See prepare_command_mode_switch() for a detailed reasoning why this approach
          * has been chosen.
          *
-         * - Command interface "position" -> Joint::setPosition()
-         * - Command interface "velocity" -> Joint::setVelocity()
-         * - Command interface "home"     -> Joint::startHoming()
+         * - Command interface "position" -> bioscara_hardware_drivers::Joint::setPosition()
+         * - Command interface "velocity" -> bioscara_hardware_drivers::Joint::setVelocity()
+         * - Command interface "home"     -> bioscara_hardware_drivers::Joint::startHoming()
          *  - If the commanded value in "home" is != 0.0 the and the joint is currently executing a blocking function,
-         * for example homing (Joint::getCurrentBCmd() == Joint::NONE), the homing sequence is started with the speed, sensitivity, current and acceleration
-         * defined in the BioscaraArmHardwareInterface::_joint_cfg which is polulated from the hardware description urdf. The direction of
+         * for example homing (bioscara_hardware_drivers::Joint::getCurrentBCmd() == bioscara_hardware_drivers::Joint::NONE), the homing sequence is started with the speed, sensitivity, current and acceleration
+         * defined in the #_joint_cfg which is polulated from the hardware description urdf. The direction of
          * the homing is determined by the sign of the command interface value.
          *  - If the commanded value in "home" is = 0.0 and the joint is currently executing homing, the homing is stopped. This can either
          * happen prematurely through user input or when the homing is completed which is registered in read().
@@ -213,14 +213,14 @@ namespace bioscara_hardware_interfaces
          *
          * The following basic checks are implemented:
          * - <b>On deactivation</b>:
-         *  - [ERROR] Homing command interfaces may only be deactivated if no current homing process is ongoing (Joint::getCurrentBCmd() != Joint::HOME)
+         *  - [ERROR] Homing command interfaces may only be deactivated if no current homing process is ongoing (bioscara_hardware_drivers::Joint::getCurrentBCmd() != bioscara_hardware_drivers::Joint::HOME)
          *  - [WARN] Deactivating a velocity command interface if the velocity set point is 0.0.
          *  - [WARN] Deactivating a command interface that has not been started. This should not happen.
          *
          * - <b>On activation</b>:
          *  - [ERROR] Activating a command interface that is already started. This should not happen.
          *  - [ERROR] Activating a second command interface for a joint.
-         *  - [ERROR] Activating 'position' or 'velocity' command interface if the joint is not homed (Joint::isHomed() == false).
+         *  - [ERROR] Activating 'position' or 'velocity' command interface if the joint is not homed (bioscara_hardware_drivers::Joint::isHomed() == false).
          * .
          *
          * Since this method operates in non-realtime context it must not access critical members (#_joint_command_modes and #_joints)
@@ -273,7 +273,7 @@ namespace bioscara_hardware_interfaces
          * - <b>Previous state</b>: `inactive`
          *  - Deactivate hardware (on_deactivate()) -> `inactive`
          *      - call the deactivate function anyway regardless if state was active or inactive.
-         *        For example if the on_activate() function fails on Joint::enableStallguard()
+         *        For example if the on_activate() function fails on bioscara_hardware_drivers::Joint::enableStallguard()
          *        the joint will have been enabled, to disable it invoke on_deactivate().
          *  - Clean-Up hardware (on_cleanup()) -> `unconfigured`
          * .

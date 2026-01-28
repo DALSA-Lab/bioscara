@@ -192,7 +192,7 @@ namespace bioscara_hardware_interfaces
     case lifecycle_msgs::msg::State::PRIMARY_STATE_UNCONFIGURED:
       break;
 
-      /* Deinitialize joints first */
+      /* Deinitialize joints first, TODO: necessary to call deactivate() as well? */
     case lifecycle_msgs::msg::State::PRIMARY_STATE_ACTIVE:
     case lifecycle_msgs::msg::State::PRIMARY_STATE_INACTIVE:
       cr = on_cleanup(previous_state);
