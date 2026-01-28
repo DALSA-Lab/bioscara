@@ -148,7 +148,7 @@ namespace bioscara_hardware_interfaces
         catch (...)
         {
           RCLCPP_FATAL(
-              get_logger(), "GPIO '%s' is missing one of the following parameters in 'home' command_interface: speed, threshold, current, acceleration",
+              get_logger(), "Joint '%s' is missing one of the following parameters in 'home' command_interface: speed, threshold, current, acceleration",
               joint.name.c_str());
           return hardware_interface::CallbackReturn::ERROR;
         }
@@ -319,10 +319,6 @@ namespace bioscara_hardware_interfaces
         set_command(name, 0.0);
       }
     }
-    // for (const auto &[name, descr] : gpio_command_interfaces_)
-    // {
-    //   set_command(name, get_state(name));
-    // }
 
     RCLCPP_INFO(get_logger(), "Successfully activated!");
 
@@ -400,59 +396,6 @@ namespace bioscara_hardware_interfaces
       }
       set_state(name, (double)v);
     }
-
-    // for (const auto &[name, descr] : gpio_state_interfaces_)
-    // {
-    //   float v;
-    //   bioscara_hardware_drivers::err_type_t rc = 1;
-
-    //   if (descr.interface_info.name == bioscara_hardware_interfaces::HW_IF_HOME)
-    //   {
-    //     /* Reset the return code. All following functions do not return an error code */
-    //     rc = 0;
-
-    //     /* We can assume that the previous calls to read the joint state interfaces
-    //     gave us the latest flags. Hence we can simply retrieve the HOMED flag by calling isHomed().
-    //     This does not generate additional communication trafic.  */
-    //     v = _joints.at(descr.prefix_name)->isHomed() * 1.0;
-
-    //     /* If the homing has been activated (through the command interface) the device signals BUSY
-    //     as long as it is still homing. If the BUSY flag is reset while the current command is still HOME
-    //     we can assume the homing has finished. Then stop the homing. */
-    //     if (_joints.at(descr.prefix_name)->getCurrentBCmd() == bioscara_hardware_drivers::Joint::HOME &&
-    //         !_joints.at(descr.prefix_name)->isBusy())
-    //     {
-    //       stop_homing(descr.prefix_name);
-    //       /* reset the command to not immediatly start a new homing.
-    //       Only possible with a controller which updates the command only once (SingleTriggerController) */
-    //       set_command(name, 0.0);
-    //     }
-    //   }
-    //   // use != 0 here since 1 for no compatible interface type
-    //   if (rc != 0)
-    //   {
-    //     std::string reason = "";
-    //     switch (rc)
-    //     {
-    //     case 1:
-    //       reason = "no compatible command to read " + descr.interface_info.name;
-    //       break;
-    //     case -1:
-    //       reason = "communication error";
-    //       break;
-    //     case -2:
-    //       reason = "joint not homed";
-    //       break;
-    //     default:
-    //       reason = "Unkown Reason " + std::to_string(rc);
-    //     }
-    //     RCLCPP_ERROR(
-    //         get_logger(),
-    //         "Failed to read %s of GPIO '%s'. Reason: %s", descr.interface_info.name.c_str(), name.c_str(), reason.c_str());
-    //     return hardware_interface::return_type::ERROR;
-    //   }
-    //   set_state(name, (double)v);
-    // }
 
     return hardware_interface::return_type::OK;
   }
