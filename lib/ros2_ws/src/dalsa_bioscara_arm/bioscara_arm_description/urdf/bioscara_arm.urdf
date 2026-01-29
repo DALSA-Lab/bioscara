@@ -13,11 +13,6 @@
     </joint>
 
     <link name="${prefix}base_link">
-      <inertial>
-        <origin xyz="-0.04726295478480471 -4.0726333219249673e-17 0.039609285941398516" rpy="0 0 0"/>
-        <mass value="42.07322100213777"/>
-        <inertia ixx="0.19661" iyy="0.332522" izz="0.481291" ixy="-0.0" iyz="-0.0" ixz="-0.016821"/>
-      </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -42,11 +37,6 @@
     </joint>
 
     <link name="${prefix}link_1">
-      <inertial>
-        <origin xyz="-0.015985049353244893 0.0 0.22758900000000004" rpy="0 0 0"/>
-        <mass value="201.06235973556932"/>
-        <inertia ixx="6.011699" iyy="6.341964" izz="1.505144" ixy="0.0" iyz="0.0" ixz="0.0"/>
-      </inertial>
       <visual>
         <origin xyz="-0.0 -0.0 -${tool_flange_zheight}" rpy="0 0 0"/>
         <geometry>
@@ -71,11 +61,6 @@
     </joint>
 
     <link name="${prefix}link_2">
-      <inertial>
-        <origin xyz="0.16393794060138223 0.0 0.06413863377953821" rpy="0 0 0"/>
-        <mass value="31.7907164853462"/>
-        <inertia ixx="0.067297" iyy="0.418803" izz="0.409122" ixy="-0.0" iyz="0.0" ixz="-0.039463"/>
-      </inertial>
       <visual>
         <origin xyz="-0.0 -0.0 -${tool_flange_zheight}" rpy="0 0 0"/>
         <geometry>
@@ -100,11 +85,6 @@
     </joint>
 
     <link name="${prefix}link_3">
-      <inertial>
-        <origin xyz="0.14250000161157844 -4.518384865479846e-17 0.08014650000000001" rpy="0 0 0"/>
-        <mass value="28.44193338693538"/>
-        <inertia ixx="0.063431" iyy="0.329798" izz="0.289827" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
-      </inertial>
       <visual>
         <origin xyz="-0.329476 -0.0 -${tool_flange_zheight}" rpy="0 0 0"/>
         <geometry>
@@ -129,11 +109,6 @@
     </joint>
 
     <link name="${prefix}link_4">
-      <inertial>
-        <origin xyz="3.2231565194607015e-09 -4.5766223964710255e-17 0.06973284751916564" rpy="0 0 0"/>
-        <mass value="1.4470826717389633"/>
-        <inertia ixx="0.002924" iyy="0.003053" izz="0.000318" ixy="0.0" iyz="0.0" ixz="-0.0"/>
-      </inertial>
       <visual>
         <origin xyz="-0.614476 0.0 -${tool_flange_zheight}" rpy="0 0 0"/>
         <geometry>
