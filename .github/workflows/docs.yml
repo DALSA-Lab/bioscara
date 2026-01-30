@@ -28,12 +28,16 @@ jobs:
         run: pip install -r docs/requirements-docs.txt
       - name: Install Doxygen
         run: sudo apt-get update && sudo apt-get install -y doxygen
+      - name: Install latex
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-font-utils texlive-fonts-recommended
       - name: Generate Doxygen XML
         run: cd docs/doxygen && doxygen
+      - name: Make doxygen pdf from latex output
+        run: cd docs/doxygen/latex && make
       - name: Build Sphinx HTML
         run: sphinx-build -b html docs build/html
       - name: Build Sphinx PDF
-        run: sphinx-build -M latexpdf docs build
+        run: sphinx-build -M latexpdf docs build/latex
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

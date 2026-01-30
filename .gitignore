@@ -32,6 +32,7 @@ test/*/record*
 !test/*/record*.csv
 
 test/.venv/
+docs/.venv/
 
 ## Ignore external packages
 lib/ros2_ws/src/dalsa_controllers/single_trigger_controller/
