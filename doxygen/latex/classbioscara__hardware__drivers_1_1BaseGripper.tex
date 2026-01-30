@@ -1,0 +1,388 @@
+\doxysection{bioscara\+\_\+hardware\+\_\+drivers\+::Base\+Gripper Class Reference}
+\hypertarget{classbioscara__hardware__drivers_1_1BaseGripper}{}\label{classbioscara__hardware__drivers_1_1BaseGripper}\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+
+
+Generic base class for gripper control implementations.  
+
+
+
+
+{\ttfamily \#include $<$m\+Base\+Gripper.\+h$>$}
+
+Inheritance diagram for bioscara\+\_\+hardware\+\_\+drivers\+::Base\+Gripper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbioscara__hardware__drivers_1_1BaseGripper}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a5e48cae19cd98b836e874370384fd7f0}{Base\+Gripper}} (float reduction, float offset, float min, float max, float backup\+\_\+init\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classbioscara__hardware__drivers_1_1BaseGripper}{Base\+Gripper} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a15c177d0466a883609e545552602b769}{\texorpdfstring{$\sim$}{\string~}\+Base\+Gripper}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classbioscara__hardware__drivers_1_1BaseGripper}{Base\+Gripper} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a6b8832da36c84c9e2eeff2a5b86a3135}{init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the gripper. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a71f6d89f40cc0ff6a4e94972b92d8f61}{deinit}} (void)
+\begin{DoxyCompactList}\small\item\em Deinitializes the gripper. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_aa39ca241eb16d9bd772d2cdeaa268bd0}{enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the gripper. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a1030a843fcca90b5ab83ff2bec795cf5}{disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the gripper. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_aebb3badd33e2ba24dd0971ec5de419fc}{set\+Position}} (float width)
+\begin{DoxyCompactList}\small\item\em Sets the gripper width in m. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a49fca88d7a33ad560cd96ceee0124092}{get\+Position}} (float \&width)
+\begin{DoxyCompactList}\small\item\em Gets the gripper width. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_aa7e516774731da7d7c2501317d3ba5e5}{set\+Reduction}} (float reduction)
+\begin{DoxyCompactList}\small\item\em Manually set reduction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_ad66c8a68783f65ca2dacb4cf93ce7ee9}{set\+Offset}} (float offset)
+\begin{DoxyCompactList}\small\item\em Manually set offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a99ecbf4d373191da1622844e9c58e0f7}{save\+\_\+last\+\_\+position}} (float pos)
+\begin{DoxyCompactList}\small\item\em Stores the latest position to the buffer file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a16aae28dcd08f034da662577719b5c1b}{retrieve\+\_\+last\+\_\+position}} (float \&pos)
+\begin{DoxyCompactList}\small\item\em Retrieves the stored position from the buffer file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a8287fbdc245e4c8bd32703ca8a97f881}{\+\_\+reduction}} = 1
+\begin{DoxyCompactList}\small\item\em gripper width to actuator reduction ratio \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a0dd7e2a5718be0441a1ab550f932dd26}{\+\_\+offset}} = 0
+\begin{DoxyCompactList}\small\item\em gripper width position offset \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a6242786f68423d34aa7b456f78c00a65}{\+\_\+min}} = 0
+\begin{DoxyCompactList}\small\item\em gripper width lower limit \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a1a4b808651f2abfac1e6325cf9425cc1}{\+\_\+max}} = 0
+\begin{DoxyCompactList}\small\item\em gripper width upper limit \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a132a5ee7e7aa2cc0f7b3527fbb5d23bd}{\+\_\+backup\+\_\+init\+\_\+pos}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Initial position assumed if none can be retrieved from the buffer file. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_ae10e0604a51b81e5da405152c74e9e9e}{\+\_\+pos}} = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a132a5ee7e7aa2cc0f7b3527fbb5d23bd}{\+\_\+backup\+\_\+init\+\_\+pos}}
+\begin{DoxyCompactList}\small\item\em stored position \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a44c99d057bf270f3af1c47c37d77c49a}{\+\_\+pos\+\_\+get}} = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_ae10e0604a51b81e5da405152c74e9e9e}{\+\_\+pos}}
+\begin{DoxyCompactList}\small\item\em reported position \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_ab2fbd0b7fe5665a7bd5a515b66ae86dc}{\+\_\+new\+\_\+cmd\+\_\+time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic base class for gripper control implementations. 
+
+This class is a wrapper function to interact with the robot gripper either through a \doxylink{classbioscara__hardware__drivers_1_1MockGripper}{Mock\+Gripper} or hardware \doxylink{classbioscara__hardware__drivers_1_1Gripper}{Gripper} object. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a5e48cae19cd98b836e874370384fd7f0}\label{classbioscara__hardware__drivers_1_1BaseGripper_a5e48cae19cd98b836e874370384fd7f0} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!BaseGripper@{BaseGripper}}
+\index{BaseGripper@{BaseGripper}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{BaseGripper()}{BaseGripper()}}
+{\footnotesize\ttfamily bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\+Base\+Gripper (\begin{DoxyParamCaption}\item[{float}]{reduction,  }\item[{float}]{offset,  }\item[{float}]{min,  }\item[{float}]{max,  }\item[{float}]{backup\+\_\+init\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classbioscara__hardware__drivers_1_1BaseGripper}{Base\+Gripper} object. 
+
+The gripper has the reduction $r$ and offset $o$ parameters which are used to translate from a desired gripper width to the servo angle. The relationship between gripper width $w$ and acutator angle $\alpha$ is as follows\+:  \[
+  \alpha = r (w-o)
+  \]
+
+To determine these parameters execute the following steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Manually set the gripper to an open position by setting a actuator angle. Be carefull to not exceed the physical limits of the gripper since the actuator is strong enough to break PLA before stalling.
+\item Measure the gripper width $w_1$ and note the set actuator angle $\alpha_1$.
+\item Move the gripper to a more closed position that still allows you to accurately measure the width
+\item Measure the second width $w_2$ and note the corresponding angle $\alpha_2$
+\item Calculate the offset $o$\+:  \[
+  o = \frac{\alpha_1 w_2 -  \alpha_2 w_1}{\alpha_1 - \alpha_2}
+  \]
+\item Calculate the reduction $r$\+:  \[
+  r = \frac{\alpha_1}{w_1 - o}
+  \]
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em reduction} & the gripper width to actuator reduction ratio \\
+\hline
+{\em offset} & gripper width to actuator zero offset \\
+\hline
+{\em min} & lower limit in m \\
+\hline
+{\em max} & upper limit in m \\
+\hline
+{\em backup\+\_\+init\+\_\+pos} & initial position assumed if none can be retrieved from the buffer file \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a15c177d0466a883609e545552602b769}\label{classbioscara__hardware__drivers_1_1BaseGripper_a15c177d0466a883609e545552602b769} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!````~BaseGripper@{\texorpdfstring{$\sim$}{\string~}BaseGripper}}
+\index{````~BaseGripper@{\texorpdfstring{$\sim$}{\string~}BaseGripper}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BaseGripper()}{\string~BaseGripper()}}
+{\footnotesize\ttfamily bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\texorpdfstring{$\sim$}{\string~}\+Base\+Gripper (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{classbioscara__hardware__drivers_1_1BaseGripper}{Base\+Gripper} object. 
+
+invokes the \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_a1030a843fcca90b5ab83ff2bec795cf5}{disable()} and \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_a71f6d89f40cc0ff6a4e94972b92d8f61}{deinit()} method to clean up. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a71f6d89f40cc0ff6a4e94972b92d8f61}\label{classbioscara__hardware__drivers_1_1BaseGripper_a71f6d89f40cc0ff6a4e94972b92d8f61} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!deinit@{deinit}}
+\index{deinit@{deinit}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deinitializes the gripper. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a1030a843fcca90b5ab83ff2bec795cf5}\label{classbioscara__hardware__drivers_1_1BaseGripper_a1030a843fcca90b5ab83ff2bec795cf5} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!disable@{disable}}
+\index{disable@{disable}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Disables the gripper. 
+
+As described in \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_aa39ca241eb16d9bd772d2cdeaa268bd0}{enable()} \begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_a15e81fdb19ac401043423db0ada77368}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_aa39ca241eb16d9bd772d2cdeaa268bd0}\label{classbioscara__hardware__drivers_1_1BaseGripper_aa39ca241eb16d9bd772d2cdeaa268bd0} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!enable@{enable}}
+\index{enable@{enable}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enables the gripper. 
+
+Since the gripper has no position feedback its position is initially unknown. For this reason we try to retrieve the latest commanded position from a buffer file using \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_a16aae28dcd08f034da662577719b5c1b}{retrieve\+\_\+last\+\_\+position()}. If this fails the \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_a132a5ee7e7aa2cc0f7b3527fbb5d23bd}{\+\_\+backup\+\_\+init\+\_\+pos} is used. \begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_ab08eb3424c419db0577deddf70fadacb}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a49fca88d7a33ad560cd96ceee0124092}\label{classbioscara__hardware__drivers_1_1BaseGripper_a49fca88d7a33ad560cd96ceee0124092} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::get\+Position (\begin{DoxyParamCaption}\item[{float \&}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the gripper width. 
+
+\begin{DoxyNote}{Note}
+Since the PWM servo has no position feedback, the latest position command is returned. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & width in m. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a6b8832da36c84c9e2eeff2a5b86a3135}\label{classbioscara__hardware__drivers_1_1BaseGripper_a6b8832da36c84c9e2eeff2a5b86a3135} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!init@{init}}
+\index{init@{init}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the gripper. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a16aae28dcd08f034da662577719b5c1b}\label{classbioscara__hardware__drivers_1_1BaseGripper_a16aae28dcd08f034da662577719b5c1b} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!retrieve\_last\_position@{retrieve\_last\_position}}
+\index{retrieve\_last\_position@{retrieve\_last\_position}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{retrieve\_last\_position()}{retrieve\_last\_position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::retrieve\+\_\+last\+\_\+position (\begin{DoxyParamCaption}\item[{float \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Retrieves the stored position from the buffer file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & position value that is retrieved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} on success, \doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5abb1ca97ec761fc37101737ba0aa2e7c5}{err\+\_\+type\+\_\+t\+::\+ERROR} if parsing buffer file fails. 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a99ecbf4d373191da1622844e9c58e0f7}\label{classbioscara__hardware__drivers_1_1BaseGripper_a99ecbf4d373191da1622844e9c58e0f7} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!save\_last\_position@{save\_last\_position}}
+\index{save\_last\_position@{save\_last\_position}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{save\_last\_position()}{save\_last\_position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::save\+\_\+last\+\_\+position (\begin{DoxyParamCaption}\item[{float}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Stores the latest position to the buffer file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & position value to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} on success, \doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5abb1ca97ec761fc37101737ba0aa2e7c5}{err\+\_\+type\+\_\+t\+::\+ERROR} if writing buffer file fails. 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_ad66c8a68783f65ca2dacb4cf93ce7ee9}\label{classbioscara__hardware__drivers_1_1BaseGripper_ad66c8a68783f65ca2dacb4cf93ce7ee9} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!setOffset@{setOffset}}
+\index{setOffset@{setOffset}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{setOffset()}{setOffset()}}
+{\footnotesize\ttfamily void bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::set\+Offset (\begin{DoxyParamCaption}\item[{float}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Manually set offset. 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_aebb3badd33e2ba24dd0971ec5de419fc}\label{classbioscara__hardware__drivers_1_1BaseGripper_aebb3badd33e2ba24dd0971ec5de419fc} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::set\+Position (\begin{DoxyParamCaption}\item[{float}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the gripper width in m. 
+
+Arguments outside the allowed range are bounded to \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_a6242786f68423d34aa7b456f78c00a65}{\+\_\+min} and \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_a1a4b808651f2abfac1e6325cf9425cc1}{\+\_\+max}. 
+\begin{DoxyParams}{Parameters}
+{\em width} & width in m. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_abdf1f8e545da0a246f4effd78ae09f35}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_aa7e516774731da7d7c2501317d3ba5e5}\label{classbioscara__hardware__drivers_1_1BaseGripper_aa7e516774731da7d7c2501317d3ba5e5} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!setReduction@{setReduction}}
+\index{setReduction@{setReduction}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{setReduction()}{setReduction()}}
+{\footnotesize\ttfamily void bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::set\+Reduction (\begin{DoxyParamCaption}\item[{float}]{reduction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Manually set reduction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reduction} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a132a5ee7e7aa2cc0f7b3527fbb5d23bd}\label{classbioscara__hardware__drivers_1_1BaseGripper_a132a5ee7e7aa2cc0f7b3527fbb5d23bd} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!\_backup\_init\_pos@{\_backup\_init\_pos}}
+\index{\_backup\_init\_pos@{\_backup\_init\_pos}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{\_backup\_init\_pos}{\_backup\_init\_pos}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\+\_\+backup\+\_\+init\+\_\+pos = 0.\+0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initial position assumed if none can be retrieved from the buffer file. 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a1a4b808651f2abfac1e6325cf9425cc1}\label{classbioscara__hardware__drivers_1_1BaseGripper_a1a4b808651f2abfac1e6325cf9425cc1} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!\_max@{\_max}}
+\index{\_max@{\_max}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{\_max}{\_max}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\+\_\+max = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+gripper width upper limit 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a6242786f68423d34aa7b456f78c00a65}\label{classbioscara__hardware__drivers_1_1BaseGripper_a6242786f68423d34aa7b456f78c00a65} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!\_min@{\_min}}
+\index{\_min@{\_min}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{\_min}{\_min}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\+\_\+min = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+gripper width lower limit 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_ab2fbd0b7fe5665a7bd5a515b66ae86dc}\label{classbioscara__hardware__drivers_1_1BaseGripper_ab2fbd0b7fe5665a7bd5a515b66ae86dc} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!\_new\_cmd\_time@{\_new\_cmd\_time}}
+\index{\_new\_cmd\_time@{\_new\_cmd\_time}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{\_new\_cmd\_time}{\_new\_cmd\_time}}
+{\footnotesize\ttfamily std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\+\_\+new\+\_\+cmd\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ std::chrono::high\_resolution\_clock::now()}
+
+\end{DoxyCode}
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a0dd7e2a5718be0441a1ab550f932dd26}\label{classbioscara__hardware__drivers_1_1BaseGripper_a0dd7e2a5718be0441a1ab550f932dd26} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!\_offset@{\_offset}}
+\index{\_offset@{\_offset}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{\_offset}{\_offset}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\+\_\+offset = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+gripper width position offset 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_ae10e0604a51b81e5da405152c74e9e9e}\label{classbioscara__hardware__drivers_1_1BaseGripper_ae10e0604a51b81e5da405152c74e9e9e} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!\_pos@{\_pos}}
+\index{\_pos@{\_pos}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{\_pos}{\_pos}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\+\_\+pos = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a132a5ee7e7aa2cc0f7b3527fbb5d23bd}{\+\_\+backup\+\_\+init\+\_\+pos}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+stored position 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a44c99d057bf270f3af1c47c37d77c49a}\label{classbioscara__hardware__drivers_1_1BaseGripper_a44c99d057bf270f3af1c47c37d77c49a} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!\_pos\_get@{\_pos\_get}}
+\index{\_pos\_get@{\_pos\_get}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{\_pos\_get}{\_pos\_get}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\+\_\+pos\+\_\+get = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_ae10e0604a51b81e5da405152c74e9e9e}{\+\_\+pos}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+reported position 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1BaseGripper_a8287fbdc245e4c8bd32703ca8a97f881}\label{classbioscara__hardware__drivers_1_1BaseGripper_a8287fbdc245e4c8bd32703ca8a97f881} 
+\index{bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}!\_reduction@{\_reduction}}
+\index{\_reduction@{\_reduction}!bioscara\_hardware\_drivers::BaseGripper@{bioscara\_hardware\_drivers::BaseGripper}}
+\doxysubsubsection{\texorpdfstring{\_reduction}{\_reduction}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper\+::\+\_\+reduction = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+gripper width to actuator reduction ratio 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+grippers/bioscara\+\_\+gripper\+\_\+hardware\+\_\+driver/include/bioscara\+\_\+gripper\+\_\+hardware\+\_\+driver/\mbox{\hyperlink{mBaseGripper_8h}{m\+Base\+Gripper.\+h}}\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+grippers/bioscara\+\_\+gripper\+\_\+hardware\+\_\+driver/src/\mbox{\hyperlink{mBaseGripper_8cpp}{m\+Base\+Gripper.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classbioscara__hardware__drivers_1_1MockGripper" kind="class" language="C++" prot="public">
+    <compoundname>bioscara_hardware_drivers::MockGripper</compoundname>
+    <basecompoundref refid="classbioscara__hardware__drivers_1_1BaseGripper" prot="public" virt="non-virtual">bioscara_hardware_drivers::BaseGripper</basecompoundref>
+    <includes refid="mMockGripper_8h" local="no">mMockGripper.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1MockGripper_1affb7fc712624aac3eaf1879b7ae37462" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bioscara_hardware_drivers::MockGripper::MockGripper</definition>
+        <argsstring>(float reduction, float offset, float min, float max, float backup_init_pos)</argsstring>
+        <name>MockGripper</name>
+        <qualifiedname>bioscara_hardware_drivers::MockGripper::MockGripper</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>reduction</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>backup_init_pos</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classbioscara__hardware__drivers_1_1MockGripper" kindref="compound">MockGripper</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>see the <ref refid="classbioscara__hardware__drivers_1_1BaseGripper" kindref="compound">BaseGripper</ref> constructor for a description of the parameters. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/mMockGripper.h" line="34" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/src/mMockGripper.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Child class for to mock the gripper hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Use this class if you dont wish to use the gripper hardware. Commands are simply mirrored. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>bioscara_hardware_drivers::BaseGripper</label>
+        <link refid="classbioscara__hardware__drivers_1_1BaseGripper"/>
+      </node>
+      <node id="1">
+        <label>bioscara_hardware_drivers::MockGripper</label>
+        <link refid="classbioscara__hardware__drivers_1_1MockGripper"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>bioscara_hardware_drivers::BaseGripper</label>
+        <link refid="classbioscara__hardware__drivers_1_1BaseGripper"/>
+      </node>
+      <node id="1">
+        <label>bioscara_hardware_drivers::MockGripper</label>
+        <link refid="classbioscara__hardware__drivers_1_1MockGripper"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/mMockGripper.h" line="26" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/mMockGripper.h" bodystart="27" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a132a5ee7e7aa2cc0f7b3527fbb5d23bd" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>_backup_init_pos</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a1a4b808651f2abfac1e6325cf9425cc1" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>_max</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a6242786f68423d34aa7b456f78c00a65" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>_min</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1ab2fbd0b7fe5665a7bd5a515b66ae86dc" prot="private" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>_new_cmd_time</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a0dd7e2a5718be0441a1ab550f932dd26" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>_offset</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1ae10e0604a51b81e5da405152c74e9e9e" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>_pos</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a44c99d057bf270f3af1c47c37d77c49a" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>_pos_get</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a8287fbdc245e4c8bd32703ca8a97f881" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>_reduction</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a5e48cae19cd98b836e874370384fd7f0" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>BaseGripper</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a71f6d89f40cc0ff6a4e94972b92d8f61" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>deinit</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a1030a843fcca90b5ab83ff2bec795cf5" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>disable</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1aa39ca241eb16d9bd772d2cdeaa268bd0" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>enable</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a49fca88d7a33ad560cd96ceee0124092" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>getPosition</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a6b8832da36c84c9e2eeff2a5b86a3135" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>init</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1MockGripper_1affb7fc712624aac3eaf1879b7ae37462" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>MockGripper</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a16aae28dcd08f034da662577719b5c1b" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>retrieve_last_position</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a99ecbf4d373191da1622844e9c58e0f7" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>save_last_position</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1ad66c8a68783f65ca2dacb4cf93ce7ee9" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>setOffset</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1aebb3badd33e2ba24dd0971ec5de419fc" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>setPosition</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1aa7e516774731da7d7c2501317d3ba5e5" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>setReduction</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseGripper_1a15c177d0466a883609e545552602b769" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::MockGripper</scope><name>~BaseGripper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

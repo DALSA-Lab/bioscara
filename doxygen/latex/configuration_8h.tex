@@ -1,0 +1,66 @@
+\doxysection{lib/joint\+\_\+firmware/joint/configuration.h File Reference}
+\hypertarget{configuration_8h}{}\label{configuration_8h}\index{lib/joint\_firmware/joint/configuration.h@{lib/joint\_firmware/joint/configuration.h}}
+
+
+Configuration definitions for Joint 1 to Joint 4.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{configuration_8h_ac0265004084d8f72947a83ca56953dda}{ADR}}~0x11
+\begin{DoxyCompactList}\small\item\em I2C adress of joint n is 0x1n. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{configuration_8h_a58d72e884a5d54f3b15eb8914c08ce07}{MAXACCEL}}~1010000
+\begin{DoxyCompactList}\small\item\em Maximum acceleration in steps/s\texorpdfstring{$^\wedge$}{\string^}2. Can be set for each joint depending on inertia. If set to high stalls might trigger since PID error grows too large. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{configuration_8h_a46ddbfe86544acf048b68d9e4735137b}{MAXVEL}}~1800
+\begin{DoxyCompactList}\small\item\em Maximum velocity in steps/s. Can be set for each joint. If set to high stalls might trigger since PID error grows too large. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Configuration definitions for Joint 1 to Joint 4. 
+
+\begin{DoxyAuthor}{Author}
+sbstorz 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/05-\/27
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025
+\end{DoxyCopyright}
+This file shall be included AFTER one of J1, J2, J3 or J4 have been defined. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{configuration_8h_ac0265004084d8f72947a83ca56953dda}\label{configuration_8h_ac0265004084d8f72947a83ca56953dda} 
+\index{configuration.h@{configuration.h}!ADR@{ADR}}
+\index{ADR@{ADR}!configuration.h@{configuration.h}}
+\doxysubsubsection{\texorpdfstring{ADR}{ADR}}
+{\footnotesize\ttfamily \#define ADR~0x11}
+
+
+
+I2C adress of joint n is 0x1n. 
+
+\Hypertarget{configuration_8h_a58d72e884a5d54f3b15eb8914c08ce07}\label{configuration_8h_a58d72e884a5d54f3b15eb8914c08ce07} 
+\index{configuration.h@{configuration.h}!MAXACCEL@{MAXACCEL}}
+\index{MAXACCEL@{MAXACCEL}!configuration.h@{configuration.h}}
+\doxysubsubsection{\texorpdfstring{MAXACCEL}{MAXACCEL}}
+{\footnotesize\ttfamily \#define MAXACCEL~1010000}
+
+
+
+Maximum acceleration in steps/s\texorpdfstring{$^\wedge$}{\string^}2. Can be set for each joint depending on inertia. If set to high stalls might trigger since PID error grows too large. 
+
+\Hypertarget{configuration_8h_a46ddbfe86544acf048b68d9e4735137b}\label{configuration_8h_a46ddbfe86544acf048b68d9e4735137b} 
+\index{configuration.h@{configuration.h}!MAXVEL@{MAXVEL}}
+\index{MAXVEL@{MAXVEL}!configuration.h@{configuration.h}}
+\doxysubsubsection{\texorpdfstring{MAXVEL}{MAXVEL}}
+{\footnotesize\ttfamily \#define MAXVEL~1800}
+
+
+
+Maximum velocity in steps/s. Can be set for each joint. If set to high stalls might trigger since PID error grows too large. 
+

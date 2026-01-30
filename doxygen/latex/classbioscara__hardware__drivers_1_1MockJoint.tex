@@ -1,0 +1,508 @@
+\doxysection{bioscara\+\_\+hardware\+\_\+drivers\+::Mock\+Joint Class Reference}
+\hypertarget{classbioscara__hardware__drivers_1_1MockJoint}{}\label{classbioscara__hardware__drivers_1_1MockJoint}\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+
+
+Representing a single joint mocking the hardware joint.  
+
+
+
+
+{\ttfamily \#include $<$m\+Mock\+Joint.\+h$>$}
+
+Inheritance diagram for bioscara\+\_\+hardware\+\_\+drivers\+::Mock\+Joint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbioscara__hardware__drivers_1_1MockJoint}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_ae9d27907406b49452666469766de8d08}{Mock\+Joint}} (const std\+::string \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aca33fbf6ffb94cf1cd15c5b9354eb643}{name}})
+\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a1e40d0678179df311723f5fecbf5a667}{enable}} (u\+\_\+int8\+\_\+t drive\+Current, u\+\_\+int8\+\_\+t hold\+Current) override
+\begin{DoxyCompactList}\small\item\em Engages the joint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_ab88ae97609266a92e603964565a3c0b5}{disable}} (void) override
+\begin{DoxyCompactList}\small\item\em disenganges the joint \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a669f5d39cc8e67155bf2774d204d3e81}{get\+Position}} (float \&pos) override
+\begin{DoxyCompactList}\small\item\em get the current joint position in radians or m for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a032944df226bfeb7e00d2de2429e5376}{set\+Position}} (float pos) override
+\begin{DoxyCompactList}\small\item\em get the current joint position in radians or m for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a38d475565b0acc21a70dd567c74b0a45}{get\+Velocity}} (float \&vel) override
+\begin{DoxyCompactList}\small\item\em get the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a3b44b1fb7d8d689a8ea07fa433d53cdb}{set\+Velocity}} (float vel) override
+\begin{DoxyCompactList}\small\item\em Set the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_ab47cce615b9b1f50b04a2f78fd04a6c8}{check\+Orientation}} (float angle=2.\+0) override
+\begin{DoxyCompactList}\small\item\em Calls the check\+Orientation method of the motor. Checks in which direction the motor is turning. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_ac363919b1b8e6543cd5ac60577e25f24}{stop}} (void) override
+\begin{DoxyCompactList}\small\item\em Stops the motor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_aceae1bb2d8a377ef28b3b4b94281b652}{get\+Flags}} (void) override
+\begin{DoxyCompactList}\small\item\em Overload of \doxylink{classbioscara__hardware__drivers_1_1BaseJoint_a5c54829edfd4860f5ce333cda7044fb2}{get\+Flags(u\+\_\+int8\+\_\+t \&flags)} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a6892f0942bfe3ca98532258a5b73dc56}{is\+Homed}} (void) override
+\begin{DoxyCompactList}\small\item\em Checks the state if the motor is homed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a8cbc09097a8f6a428879bf84fe702629}{Base\+Joint}} (const std\+::string \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aca33fbf6ffb94cf1cd15c5b9354eb643}{name}})
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ad19e3022fe177cb6cfd3044a111e4abb}{\texorpdfstring{$\sim$}{\string~}\+Base\+Joint}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classbioscara__hardware__drivers_1_1BaseJoint}{Base\+Joint} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a720e0da2547a8942fb9cf7e1961a758b}{init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the joint communication. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a6d5c44dc49dbcc361e8f0eb0a7f332d1}{deinit}} (void)
+\begin{DoxyCompactList}\small\item\em Denitialize the joint communication. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a1e728f5477c6e683eacba485b0c4deef}{home}} (float velocity, u\+\_\+int8\+\_\+t sensitivity, u\+\_\+int8\+\_\+t current)
+\begin{DoxyCompactList}\small\item\em Blocking implementation to home the joint. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a81b05153ca250ea09930f955ecff09f2}{start\+Homing}} (float velocity, u\+\_\+int8\+\_\+t sensitivity, u\+\_\+int8\+\_\+t current)
+\begin{DoxyCompactList}\small\item\em non-\/blocking implementation to home the joint \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_acdbdac96efcea81f34db96a47b317a55}{post\+Homing}} (void)
+\begin{DoxyCompactList}\small\item\em perform tasks after a non-\/blocking homing \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a8d2e2724df1d2a0906f6f2d3e1bb60bb}{move\+Steps}} (int32\+\_\+t steps)
+\begin{DoxyCompactList}\small\item\em Move full steps. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ab5746f8054e8c15f4f004c67325cc50f}{disable\+CL}} (void)
+\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aa917e3e6aeb7271e11ecefcc91ff257a}{set\+Drive\+Current}} (u\+\_\+int8\+\_\+t current)
+\begin{DoxyCompactList}\small\item\em Set the Drive Current. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_af0532522ea1f7aa066367b2a33d9225c}{set\+Hold\+Current}} (u\+\_\+int8\+\_\+t current)
+\begin{DoxyCompactList}\small\item\em Set the Hold Current. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a4420214ace796cee97755e41f97a8550}{set\+Brake\+Mode}} (u\+\_\+int8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set Brake Mode. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a47296176d6bd6a86a66412cad1fb5f21}{set\+Max\+Acceleration}} (float max\+Accel)
+\begin{DoxyCompactList}\small\item\em Set the maximum permitted joint acceleration (and deceleration) in rad/s\texorpdfstring{$^\wedge$}{\string^}2 or m/s\texorpdfstring{$^\wedge$}{\string^}2 for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a270d845f4fcbad79eaf3d218badf43e1}{set\+Max\+Velocity}} (float max\+Vel)
+\begin{DoxyCompactList}\small\item\em Set the maximum permitted joint velocity in rad/s or m/s for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_af2e8a64536a75ffb20f5ed81836eead5}{enable\+Stallguard}} (u\+\_\+int8\+\_\+t sensitivity)
+\begin{DoxyCompactList}\small\item\em Enable encoder stall detection of the joint. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ad918d513bfb96f082b1d7e1cc1f430d2}{is\+Enabled}} (void)
+\begin{DoxyCompactList}\small\item\em Checks the state if the motor is enabled. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a3e0bf2ee963d94b7272ea31c38ee9021}{is\+Stalled}} (void)
+\begin{DoxyCompactList}\small\item\em Checks if the motor is stalled. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a3d59aa860f6b64e6fead60919386f518}{is\+Busy}} (void)
+\begin{DoxyCompactList}\small\item\em Checks if the joint controller is busy processing a blocking command. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a5c54829edfd4860f5ce333cda7044fb2}{get\+Flags}} (u\+\_\+int8\+\_\+t \&\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}})
+\begin{DoxyCompactList}\small\item\em get the latest driver state flags from the joint \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a412c4e474be5de0820d88b7d1d6084de}{get\+Current\+BCmd}} (void)
+\begin{DoxyCompactList}\small\item\em get the currently active blocking command \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a21dcde6483552d6fb440e19bcd3a99bc}{\+\_\+home}} (float velocity, u\+\_\+int8\+\_\+t sensitivity, u\+\_\+int8\+\_\+t current)
+\begin{DoxyCompactList}\small\item\em Call to start the homing sequence of a joint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a8555f3dd707f20e8a30df9c642a5ffb1}{wait\+\_\+while\+\_\+busy}} (const float period\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Blocking loop waiting for BUSY flag to reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a1146be895ac3f2aec533f475889627e7}{get\+DeltaT}} (std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point \&last\+\_\+call, bool update=true)
+\begin{DoxyCompactList}\small\item\em Compute the time since the given time point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a0d78d44028d5d9a69d6b54a242c38290}{q}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em position \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_ab59dd1e2c694c5ae7597a332e5f21509}{qd}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em velocity \end{DoxyCompactList}\item 
+std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a883cf614b5c6e9af9e3ef88301be747c}{last\+\_\+set\+\_\+position}} = std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::now()
+\item 
+std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_ad32ce877950db3860c56e7f3d30ff89a}{last\+\_\+set\+\_\+velocity}} = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a883cf614b5c6e9af9e3ef88301be747c}{last\+\_\+set\+\_\+position}}
+\item 
+std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a1c308444f41a5f000b878b5581359df8}{async\+\_\+start\+\_\+time}} = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a883cf614b5c6e9af9e3ef88301be747c}{last\+\_\+set\+\_\+position}}
+\item 
+\mbox{\hyperlink{joint_8h_aaf12c41494c327736d4980ffe1184227}{stp\+\_\+reg\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_ab6b76d373cab97c8b014a9d65e0df76b}{op\+\_\+mode}} = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45}{NONE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}} \{ \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45}{NONE}} = 0x00
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ae8720d18d948fb556a54ababdd877f8b}{PING}} = 0x0f
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a223032f3646e3e996828736f484d447e}{SETUP}} = 0x10
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a1e84b541415e4add21c735fb451536d5}{SETRPM}} = 0x11
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad044a4c9f7da6cef029ccd1fff21eaa5}{GETDRIVERRPM}} = 0x12
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13aba49883a985d506aa5e4889fafdf7d65}{MOVESTEPS}} = 0x13
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ac941e7750fad733d1d6d923d31877a0a}{MOVEANGLE}} = 0x14
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a7047254578dd479cff21251d8596409d}{MOVETOANGLE}} = 0x15
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad0971de7ebe215ab10a090d9ad5f6647}{GETMOTORSTATE}} = 0x16
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a455aa94aa4bd470f083c2589eff9f416}{RUNCOTINOUS}} = 0x17
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab67f7cf4cf5b60110bd18c6e06af9753}{ANGLEMOVED}} = 0x18
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a5ac0b7e4fb8cf296c65aacef7e2f6c60}{SETCURRENT}} = 0x19
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab7538ca1e0d4576030825828eebea7d9}{SETHOLDCURRENT}} = 0x1A
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab6dd8689c0bd53792a8804b88a340c5f}{SETMAXACCELERATION}} = 0x1B
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab1667efd2009bea1883fd787b3d540eb}{SETMAXDECELERATION}} = 0x1C
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0c90e70f3ae738003f722537c435d7b}{SETMAXVELOCITY}} = 0x1D
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13aa27f384ee957893e8651a958d800f941}{ENABLESTALLGUARD}} = 0x1E
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad8021317a96d3c00769c83d0a590d381}{DISABLESTALLGUARD}} = 0x1F
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13af443d7efe7d7cf333a2787e7934a3ba3}{CLEARSTALL}} = 0x20
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad926039be0b1d9ac5c666f79c57bed3d}{SETBRAKEMODE}} = 0x22
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a73c4a3a2c651b451dfa337a0150ca820}{ENABLEPID}} = 0x23
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a1c3a61c741f99de3dd3c421bdf2960bc}{DISABLEPID}} = 0x24
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a0a8b4b17b84327807a2221382093ccfe}{ENABLECLOSEDLOOP}} = 0x25
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a2dfb035a1b3bc28dd9b290f5ec426966}{DISABLECLOSEDLOOP}} = 0x26
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13afdb66020aebb4cfc209fde7c5cc5be44}{SETCONTROLTHRESHOLD}} = 0x27
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a41a2b4c4d34fef0226666308020f8294}{MOVETOEND}} = 0x28
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ae64c24b0196c0b2014ba1dbb2c57ca0d}{STOP}} = 0x29
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a16de9b14545022bb1196eb795d4174e8}{GETPIDERROR}} = 0x2A
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13afb43bf90bcd948c31c206dc15d92b4aa}{CHECKORIENTATION}} = 0x2B
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a1d87ebf442a24b863eddd8177460607e}{GETENCODERRPM}} = 0x2C
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a93a9a074f04be4b2316dbbca5882b6fa}{HOME}} = 0x2D
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a7bf8300e64d1c6a9154dda83299939e4}{HOMEOFFSET}} = 0x2E
+ \}
+\begin{DoxyCompactList}\small\item\em register and command definitions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aca33fbf6ffb94cf1cd15c5b9354eb643}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} name for logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+u\+\_\+int8\+\_\+t \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}} = 0b00001100
+\begin{DoxyCompactList}\small\item\em State flags transmitted with every I2C transaction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a6bf8458a8930ca6360304f736ef5c781}{current\+\_\+b\+\_\+cmd}} = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45}{NONE}}
+\begin{DoxyCompactList}\small\item\em Keeps track if a blocking command is being executed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representing a single joint mocking the hardware joint. 
+
+This mock hardware implementation simply mirrors (potentially delayed) commands.
+
+\begin{DoxyNote}{Note}
+Much of this implementation is very basic not well written. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_ae9d27907406b49452666469766de8d08}\label{classbioscara__hardware__drivers_1_1MockJoint_ae9d27907406b49452666469766de8d08} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!MockJoint@{MockJoint}}
+\index{MockJoint@{MockJoint}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{MockJoint()}{MockJoint()}}
+{\footnotesize\ttfamily bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::\+Mock\+Joint (\begin{DoxyParamCaption}\item[{const std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a21dcde6483552d6fb440e19bcd3a99bc}\label{classbioscara__hardware__drivers_1_1MockJoint_a21dcde6483552d6fb440e19bcd3a99bc} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!\_home@{\_home}}
+\index{\_home@{\_home}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{\_home()}{\_home()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::\+\_\+home (\begin{DoxyParamCaption}\item[{float}]{velocity,  }\item[{u\+\_\+int8\+\_\+t}]{sensitivity,  }\item[{u\+\_\+int8\+\_\+t}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Call to start the homing sequence of a joint. 
+
+The joint will start rotating with the specified speed until a resistance which drives the PID error above the specified threshold is encountered. At this point the stepper stops and zeros the encoder. 
+\begin{DoxyParams}{Parameters}
+{\em velocity} & signed velocity in rad/s or m/s. Must be between 1.\+0 \texorpdfstring{$<$}{<} \doxylink{uTransmission_8h_aacc958134b53425ec947541bb72ac8b1}{RAD2\+DEG(\+JOINT2\+ACTUATOR(velocity, reduction, 0))} / 6 \texorpdfstring{$<$}{<} 250.\+0 \\
+\hline
+{\em sensitivity} & Encoder pid error threshold 0 to 255. \\
+\hline
+{\em current} & homing current, determines how easy it is to stop the motor and thereby provoke a stall\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ae05e1fd900c1d905ebec9a00ea5b2628}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_ab47cce615b9b1f50b04a2f78fd04a6c8}\label{classbioscara__hardware__drivers_1_1MockJoint_ab47cce615b9b1f50b04a2f78fd04a6c8} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!checkOrientation@{checkOrientation}}
+\index{checkOrientation@{checkOrientation}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{checkOrientation()}{checkOrientation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::check\+Orientation (\begin{DoxyParamCaption}\item[{float}]{angle = {\ttfamily 2.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calls the check\+Orientation method of the motor. Checks in which direction the motor is turning. 
+
+\begin{DoxyNote}{Note}
+This is a blocking function. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & degrees how much the motor should turn. A few degrees is sufficient. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a5a5a86649f69fa130c73e6ef6815c241}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_ab88ae97609266a92e603964565a3c0b5}\label{classbioscara__hardware__drivers_1_1MockJoint_ab88ae97609266a92e603964565a3c0b5} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!disable@{disable}}
+\index{disable@{disable}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+disenganges the joint 
+
+invokes \doxylink{classbioscara__hardware__drivers_1_1MockJoint_ac363919b1b8e6543cd5ac60577e25f24}{stop()}, sets hold and drive current to 0 and sets the the joint brake mode to freewheeling \begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ab6d12171276b56bae07d1b194a90844e}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a1e40d0678179df311723f5fecbf5a667}\label{classbioscara__hardware__drivers_1_1MockJoint_a1e40d0678179df311723f5fecbf5a667} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!enable@{enable}}
+\index{enable@{enable}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::enable (\begin{DoxyParamCaption}\item[{u\+\_\+int8\+\_\+t}]{drive\+Current,  }\item[{u\+\_\+int8\+\_\+t}]{hold\+Current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Engages the joint. 
+
+This function prepares the motor for movement. After successfull execution the joint is ready to accept \doxylink{classbioscara__hardware__drivers_1_1MockJoint_a032944df226bfeb7e00d2de2429e5376}{set\+Position()} and \doxylink{classbioscara__hardware__drivers_1_1MockJoint_a3b44b1fb7d8d689a8ea07fa433d53cdb}{set\+Velocity()} commands.
+
+The function sets the drive and hold current for the specified joint and engages the motor. The currents are in percent of driver max. output (2.\+5A, check with TMC5130 datasheet or Ustepper documentation) 
+\begin{DoxyParams}{Parameters}
+{\em drive\+Current} & drive current in 0-\/100 \% of 2.\+5A output (check u\+Stepper doc.) \\
+\hline
+{\em hold\+Current} & hold current in 0-\/100 \% of 2.\+5A output (check u\+Stepper doc.) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ab71c7a70946252c09efbd42b039b7eb0}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a1146be895ac3f2aec533f475889627e7}\label{classbioscara__hardware__drivers_1_1MockJoint_a1146be895ac3f2aec533f475889627e7} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!getDeltaT@{getDeltaT}}
+\index{getDeltaT@{getDeltaT}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{getDeltaT()}{getDeltaT()}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::get\+DeltaT (\begin{DoxyParamCaption}\item[{std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point \&}]{last\+\_\+call,  }\item[{bool}]{update = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the time since the given time point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+call} & the time point to calculate the duration \\
+\hline
+{\em update} & If true compute the duration and also reset {\itshape last\+\_\+call} to current time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+elapsed time in seconds since {\itshape last\+\_\+call} 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_aceae1bb2d8a377ef28b3b4b94281b652}\label{classbioscara__hardware__drivers_1_1MockJoint_aceae1bb2d8a377ef28b3b4b94281b652} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!getFlags@{getFlags}}
+\index{getFlags@{getFlags}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{getFlags()}{getFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::get\+Flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overload of \doxylink{classbioscara__hardware__drivers_1_1BaseJoint_a5c54829edfd4860f5ce333cda7044fb2}{get\+Flags(u\+\_\+int8\+\_\+t \&flags)} 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aaef8fb5aad3fb6ce0721043b6812d87b}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a669f5d39cc8e67155bf2774d204d3e81}\label{classbioscara__hardware__drivers_1_1MockJoint_a669f5d39cc8e67155bf2774d204d3e81} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::get\+Position (\begin{DoxyParamCaption}\item[{float \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the current joint position in radians or m for cylindrical and prismatic joints respectively. 
+
+\begin{DoxyWarning}{Warning}
+If the joint is not homed this method does not return an error. Instead {\ttfamily pos} will be 0.\+0.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the current joint position in rad or m. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a39160e6187aa75ae2be3112ae3538060}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a38d475565b0acc21a70dd567c74b0a45}\label{classbioscara__hardware__drivers_1_1MockJoint_a38d475565b0acc21a70dd567c74b0a45} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!getVelocity@{getVelocity}}
+\index{getVelocity@{getVelocity}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{getVelocity()}{getVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::get\+Velocity (\begin{DoxyParamCaption}\item[{float \&}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & the current joint velocity in rad/s or m/s. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a971fd55f4e858c806b2624fbd5d8806a}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a6892f0942bfe3ca98532258a5b73dc56}\label{classbioscara__hardware__drivers_1_1MockJoint_a6892f0942bfe3ca98532258a5b73dc56} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!isHomed@{isHomed}}
+\index{isHomed@{isHomed}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{isHomed()}{isHomed()}}
+{\footnotesize\ttfamily bool bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::is\+Homed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks the state if the motor is homed. 
+
+Reads the internal state flags from the last transmission. If an update is neccessary call \doxylink{classbioscara__hardware__drivers_1_1MockJoint_aceae1bb2d8a377ef28b3b4b94281b652}{get\+Flags()} before invoking this function.
+
+\begin{DoxyReturn}{Returns}
+true if the motor is homed, false if not. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ad010a69043a9ee4578cadeebc85d9c80}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a032944df226bfeb7e00d2de2429e5376}\label{classbioscara__hardware__drivers_1_1MockJoint_a032944df226bfeb7e00d2de2429e5376} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::set\+Position (\begin{DoxyParamCaption}\item[{float}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the current joint position in radians or m for cylindrical and prismatic joints respectively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the commanded joint position in rad or m. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ac16fc6fc228f1e4855ed0401a2c8368e}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a3b44b1fb7d8d689a8ea07fa433d53cdb}\label{classbioscara__hardware__drivers_1_1MockJoint_a3b44b1fb7d8d689a8ea07fa433d53cdb} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::set\+Velocity (\begin{DoxyParamCaption}\item[{float}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & the commanded joint velocity in rad/s or m/s. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affb3dfb90967f45ed12ef67a5a6e7ed9}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_ac363919b1b8e6543cd5ac60577e25f24}\label{classbioscara__hardware__drivers_1_1MockJoint_ac363919b1b8e6543cd5ac60577e25f24} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!stop@{stop}}
+\index{stop@{stop}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stops the motor. 
+
+Stops the motor by setting the maximum velocity to zero and the position setpoint to the current position
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aa604fcfc2283f48f0851aaf1439f7809}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a1c308444f41a5f000b878b5581359df8}\label{classbioscara__hardware__drivers_1_1MockJoint_a1c308444f41a5f000b878b5581359df8} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!async\_start\_time@{async\_start\_time}}
+\index{async\_start\_time@{async\_start\_time}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{async\_start\_time}{async\_start\_time}}
+{\footnotesize\ttfamily std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::async\+\_\+start\+\_\+time = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a883cf614b5c6e9af9e3ef88301be747c}{last\+\_\+set\+\_\+position}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a883cf614b5c6e9af9e3ef88301be747c}\label{classbioscara__hardware__drivers_1_1MockJoint_a883cf614b5c6e9af9e3ef88301be747c} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!last\_set\_position@{last\_set\_position}}
+\index{last\_set\_position@{last\_set\_position}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{last\_set\_position}{last\_set\_position}}
+{\footnotesize\ttfamily std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::last\+\_\+set\+\_\+position = std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::now()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_ad32ce877950db3860c56e7f3d30ff89a}\label{classbioscara__hardware__drivers_1_1MockJoint_ad32ce877950db3860c56e7f3d30ff89a} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!last\_set\_velocity@{last\_set\_velocity}}
+\index{last\_set\_velocity@{last\_set\_velocity}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{last\_set\_velocity}{last\_set\_velocity}}
+{\footnotesize\ttfamily std\+::chrono\+::\+\_\+\+V2\+::system\+\_\+clock\+::time\+\_\+point bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::last\+\_\+set\+\_\+velocity = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1MockJoint_a883cf614b5c6e9af9e3ef88301be747c}{last\+\_\+set\+\_\+position}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_ab6b76d373cab97c8b014a9d65e0df76b}\label{classbioscara__hardware__drivers_1_1MockJoint_ab6b76d373cab97c8b014a9d65e0df76b} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!op\_mode@{op\_mode}}
+\index{op\_mode@{op\_mode}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{op\_mode}{op\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{joint_8h_aaf12c41494c327736d4980ffe1184227}{stp\+\_\+reg\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::op\+\_\+mode = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45}{NONE}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_a0d78d44028d5d9a69d6b54a242c38290}\label{classbioscara__hardware__drivers_1_1MockJoint_a0d78d44028d5d9a69d6b54a242c38290} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!q@{q}}
+\index{q@{q}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::q = 0.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+position 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1MockJoint_ab59dd1e2c694c5ae7597a332e5f21509}\label{classbioscara__hardware__drivers_1_1MockJoint_ab59dd1e2c694c5ae7597a332e5f21509} 
+\index{bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}!qd@{qd}}
+\index{qd@{qd}!bioscara\_hardware\_drivers::MockJoint@{bioscara\_hardware\_drivers::MockJoint}}
+\doxysubsubsection{\texorpdfstring{qd}{qd}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Mock\+Joint\+::qd = 0.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+velocity 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+arm/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/include/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/\mbox{\hyperlink{mMockJoint_8h}{m\+Mock\+Joint.\+h}}\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+arm/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/src/\mbox{\hyperlink{mMockJoint_8cpp}{m\+Mock\+Joint.\+cpp}}\end{DoxyCompactItemize}

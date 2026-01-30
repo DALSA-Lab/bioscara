@@ -1,0 +1,1327 @@
+\begin{theindex}
+
+  \item {\_Gripper}
+    \subitem {manual\_control.cpp}, \hyperpage{168}
+  \item {\_backup\_init\_pos}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{22}
+  \item {\_freq}
+    \subitem {bioscara\_hardware\_drivers::Gripper}, \hyperpage{73}
+  \item {\_gripper}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{56}
+  \item {\_gripper\_cfg}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{56}
+  \item {\_home}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{27}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{79}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{101}
+  \item {\_joint\_cfg}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{49}
+  \item {\_joint\_command\_modes}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{49}
+  \item {\_joints}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{50}
+  \item {\_last\_pos}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{56}
+  \item {\_max}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{22}
+  \item {\_min}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{22}
+  \item {\_new\_cmd\_time}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{22}
+  \item {\_new\_joint\_command\_modes}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{50}
+  \item {\_offset}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{23}
+  \item {\_ordered\_joint\_state\_interfaces\_ptr}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{50}
+  \item {\_pos}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{23}
+  \item {\_pos\_get}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{23}
+  \item {\_pwm}
+    \subitem {bioscara\_hardware\_drivers::Gripper}, \hyperpage{73}
+  \item {\_reduction}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{23}
+  \item {\_vel}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{56}
+  \item {\texorpdfstring{$\sim$}{\string~}BaseGripper}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{19}
+  \item {\texorpdfstring{$\sim$}{\string~}BaseJoint}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{27}
+  \item {\texorpdfstring{$\sim$}{\string~}BioscaraPanel}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{59}
+  \item {\texorpdfstring{$\sim$}{\string~}Joint}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{78}
+  \item {\texorpdfstring{$\sim$}{\string~}RPI\_PWM}
+    \subitem {RPI\_PWM}, \hyperpage{108}
+  \item {\texorpdfstring{$\sim$}{\string~}TrajectorySequence}
+    \subitem {TrajectorySequence}, \hyperpage{111}
+
+  \indexspace
+
+  \item {acceleration}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_homing\_config\_t}, 
+		\hyperpage{93}
+  \item {ACK}
+    \subitem {joint.h}, \hyperpage{120}
+    \subitem {uI2C.h}, \hyperpage{145}
+  \item {activate\_joint}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{41}
+  \item {ACTUATOR2JOINT}
+    \subitem {uTransmission.h}, \hyperpage{148}
+  \item {address}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{88}
+  \item {addSegment}
+    \subitem {TrajectorySequence}, \hyperpage{111}
+  \item {ADR}
+    \subitem {configuration.h}, \hyperpage{116}
+  \item {ANGLEMOVED}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {arm\_en\_btn\_cb}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{60}
+  \item {async\_start\_time}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{105}
+
+  \indexspace
+
+  \item {BaseGripper}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{18}
+  \item {BaseJoint}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{27}
+  \item {Bioscara C++ API Documentation}, \hyperpage{1}
+  \item {bioscara\_hardware\_drivers}, \hyperpage{13}
+    \subitem {COMM\_ERROR}, \hyperpage{14}
+    \subitem {err\_type\_t}, \hyperpage{13}
+    \subitem {ERROR}, \hyperpage{14}
+    \subitem {error\_to\_string}, \hyperpage{14}
+    \subitem {INCORRECT\_STATE}, \hyperpage{14}
+    \subitem {INVALID\_ARGUMENT}, \hyperpage{14}
+    \subitem {NOT\_ENABLED}, \hyperpage{14}
+    \subitem {NOT\_HOMED}, \hyperpage{14}
+    \subitem {NOT\_INIT}, \hyperpage{14}
+    \subitem {OK}, \hyperpage{14}
+    \subitem {STALLED}, \hyperpage{14}
+  \item {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{17}
+    \subitem {\_backup\_init\_pos}, \hyperpage{22}
+    \subitem {\_max}, \hyperpage{22}
+    \subitem {\_min}, \hyperpage{22}
+    \subitem {\_new\_cmd\_time}, \hyperpage{22}
+    \subitem {\_offset}, \hyperpage{23}
+    \subitem {\_pos}, \hyperpage{23}
+    \subitem {\_pos\_get}, \hyperpage{23}
+    \subitem {\_reduction}, \hyperpage{23}
+    \subitem {\texorpdfstring{$\sim$}{\string~}BaseGripper}, 
+		\hyperpage{19}
+    \subitem {BaseGripper}, \hyperpage{18}
+    \subitem {deinit}, \hyperpage{19}
+    \subitem {disable}, \hyperpage{19}
+    \subitem {enable}, \hyperpage{20}
+    \subitem {getPosition}, \hyperpage{20}
+    \subitem {init}, \hyperpage{20}
+    \subitem {retrieve\_last\_position}, \hyperpage{21}
+    \subitem {save\_last\_position}, \hyperpage{21}
+    \subitem {setOffset}, \hyperpage{21}
+    \subitem {setPosition}, \hyperpage{21}
+    \subitem {setReduction}, \hyperpage{22}
+  \item {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{23}
+    \subitem {\_home}, \hyperpage{27}
+    \subitem {\texorpdfstring{$\sim$}{\string~}BaseJoint}, 
+		\hyperpage{27}
+    \subitem {ANGLEMOVED}, \hyperpage{26}
+    \subitem {BaseJoint}, \hyperpage{27}
+    \subitem {CHECKORIENTATION}, \hyperpage{26}
+    \subitem {checkOrientation}, \hyperpage{27}
+    \subitem {CLEARSTALL}, \hyperpage{26}
+    \subitem {current\_b\_cmd}, \hyperpage{37}
+    \subitem {deinit}, \hyperpage{28}
+    \subitem {disable}, \hyperpage{28}
+    \subitem {disableCL}, \hyperpage{28}
+    \subitem {DISABLECLOSEDLOOP}, \hyperpage{26}
+    \subitem {DISABLEPID}, \hyperpage{26}
+    \subitem {DISABLESTALLGUARD}, \hyperpage{26}
+    \subitem {enable}, \hyperpage{29}
+    \subitem {ENABLECLOSEDLOOP}, \hyperpage{26}
+    \subitem {ENABLEPID}, \hyperpage{26}
+    \subitem {ENABLESTALLGUARD}, \hyperpage{26}
+    \subitem {enableStallguard}, \hyperpage{29}
+    \subitem {flags}, \hyperpage{37}
+    \subitem {getCurrentBCmd}, \hyperpage{30}
+    \subitem {GETDRIVERRPM}, \hyperpage{26}
+    \subitem {GETENCODERRPM}, \hyperpage{26}
+    \subitem {getFlags}, \hyperpage{30}
+    \subitem {GETMOTORSTATE}, \hyperpage{26}
+    \subitem {GETPIDERROR}, \hyperpage{26}
+    \subitem {getPosition}, \hyperpage{30}
+    \subitem {getVelocity}, \hyperpage{31}
+    \subitem {HOME}, \hyperpage{26}
+    \subitem {home}, \hyperpage{31}
+    \subitem {HOMEOFFSET}, \hyperpage{26}
+    \subitem {init}, \hyperpage{32}
+    \subitem {isBusy}, \hyperpage{32}
+    \subitem {isEnabled}, \hyperpage{32}
+    \subitem {isHomed}, \hyperpage{32}
+    \subitem {isStalled}, \hyperpage{33}
+    \subitem {MOVEANGLE}, \hyperpage{26}
+    \subitem {MOVESTEPS}, \hyperpage{26}
+    \subitem {moveSteps}, \hyperpage{33}
+    \subitem {MOVETOANGLE}, \hyperpage{26}
+    \subitem {MOVETOEND}, \hyperpage{26}
+    \subitem {name}, \hyperpage{38}
+    \subitem {NONE}, \hyperpage{26}
+    \subitem {PING}, \hyperpage{26}
+    \subitem {postHoming}, \hyperpage{33}
+    \subitem {RUNCOTINOUS}, \hyperpage{26}
+    \subitem {SETBRAKEMODE}, \hyperpage{26}
+    \subitem {setBrakeMode}, \hyperpage{34}
+    \subitem {SETCONTROLTHRESHOLD}, \hyperpage{26}
+    \subitem {SETCURRENT}, \hyperpage{26}
+    \subitem {setDriveCurrent}, \hyperpage{34}
+    \subitem {SETHOLDCURRENT}, \hyperpage{26}
+    \subitem {setHoldCurrent}, \hyperpage{34}
+    \subitem {SETMAXACCELERATION}, \hyperpage{26}
+    \subitem {setMaxAcceleration}, \hyperpage{35}
+    \subitem {SETMAXDECELERATION}, \hyperpage{26}
+    \subitem {SETMAXVELOCITY}, \hyperpage{26}
+    \subitem {setMaxVelocity}, \hyperpage{35}
+    \subitem {setPosition}, \hyperpage{36}
+    \subitem {SETRPM}, \hyperpage{26}
+    \subitem {SETUP}, \hyperpage{26}
+    \subitem {setVelocity}, \hyperpage{36}
+    \subitem {startHoming}, \hyperpage{36}
+    \subitem {STOP}, \hyperpage{26}
+    \subitem {stop}, \hyperpage{37}
+    \subitem {stp\_reg\_t}, \hyperpage{26}
+    \subitem {wait\_while\_busy}, \hyperpage{37}
+  \item {bioscara\_hardware\_drivers::Gripper}, \hyperpage{69}
+    \subitem {\_freq}, \hyperpage{73}
+    \subitem {\_pwm}, \hyperpage{73}
+    \subitem {disable}, \hyperpage{71}
+    \subitem {enable}, \hyperpage{71}
+    \subitem {Gripper}, \hyperpage{71}
+    \subitem {setPosition}, \hyperpage{72}
+    \subitem {setServoPosition}, \hyperpage{72}
+  \item {bioscara\_hardware\_drivers::Joint}, \hyperpage{74}
+    \subitem {\_home}, \hyperpage{79}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Joint}, \hyperpage{78}
+    \subitem {address}, \hyperpage{88}
+    \subitem {checkCom}, \hyperpage{79}
+    \subitem {checkOrientation}, \hyperpage{79}
+    \subitem {deinit}, \hyperpage{80}
+    \subitem {disableCL}, \hyperpage{80}
+    \subitem {enable}, \hyperpage{80}
+    \subitem {enableStallguard}, \hyperpage{81}
+    \subitem {getFlags}, \hyperpage{81}
+    \subitem {getHomingOffset}, \hyperpage{81}
+    \subitem {getPosition}, \hyperpage{81}
+    \subitem {getVelocity}, \hyperpage{82}
+    \subitem {handle}, \hyperpage{88}
+    \subitem {init}, \hyperpage{82}
+    \subitem {Joint}, \hyperpage{78}
+    \subitem {max}, \hyperpage{88}
+    \subitem {min}, \hyperpage{89}
+    \subitem {moveSteps}, \hyperpage{82}
+    \subitem {offset}, \hyperpage{89}
+    \subitem {postHoming}, \hyperpage{83}
+    \subitem {read}, \hyperpage{83}
+    \subitem {reduction}, \hyperpage{89}
+    \subitem {setBrakeMode}, \hyperpage{84}
+    \subitem {setDriveCurrent}, \hyperpage{84}
+    \subitem {setHoldCurrent}, \hyperpage{84}
+    \subitem {setHomingOffset}, \hyperpage{86}
+    \subitem {setMaxAcceleration}, \hyperpage{86}
+    \subitem {setMaxVelocity}, \hyperpage{86}
+    \subitem {setPosition}, \hyperpage{87}
+    \subitem {setVelocity}, \hyperpage{87}
+    \subitem {stop}, \hyperpage{87}
+    \subitem {write}, \hyperpage{88}
+  \item {bioscara\_hardware\_drivers::MockGripper}, \hyperpage{95}
+    \subitem {MockGripper}, \hyperpage{97}
+  \item {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{97}
+    \subitem {\_home}, \hyperpage{101}
+    \subitem {async\_start\_time}, \hyperpage{105}
+    \subitem {checkOrientation}, \hyperpage{101}
+    \subitem {disable}, \hyperpage{101}
+    \subitem {enable}, \hyperpage{102}
+    \subitem {getDeltaT}, \hyperpage{102}
+    \subitem {getFlags}, \hyperpage{103}
+    \subitem {getPosition}, \hyperpage{103}
+    \subitem {getVelocity}, \hyperpage{103}
+    \subitem {isHomed}, \hyperpage{104}
+    \subitem {last\_set\_position}, \hyperpage{105}
+    \subitem {last\_set\_velocity}, \hyperpage{105}
+    \subitem {MockJoint}, \hyperpage{100}
+    \subitem {op\_mode}, \hyperpage{105}
+    \subitem {q}, \hyperpage{105}
+    \subitem {qd}, \hyperpage{106}
+    \subitem {setPosition}, \hyperpage{104}
+    \subitem {setVelocity}, \hyperpage{104}
+    \subitem {stop}, \hyperpage{105}
+  \item {bioscara\_hardware\_interfaces}, \hyperpage{14}
+    \subitem {HW\_IF\_HOME}, \hyperpage{14}
+  \item {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{38}
+    \subitem {\_joint\_cfg}, \hyperpage{49}
+    \subitem {\_joint\_command\_modes}, \hyperpage{49}
+    \subitem {\_joints}, \hyperpage{50}
+    \subitem {\_new\_joint\_command\_modes}, \hyperpage{50}
+    \subitem {\_ordered\_joint\_state\_interfaces\_ptr}, \hyperpage{50}
+    \subitem {activate\_joint}, \hyperpage{41}
+    \subitem {deactivate\_joint}, \hyperpage{41}
+    \subitem {mtx}, \hyperpage{50}
+    \subitem {on\_activate}, \hyperpage{41}
+    \subitem {on\_cleanup}, \hyperpage{42}
+    \subitem {on\_configure}, \hyperpage{42}
+    \subitem {on\_deactivate}, \hyperpage{42}
+    \subitem {on\_error}, \hyperpage{43}
+    \subitem {on\_init}, \hyperpage{44}
+    \subitem {on\_shutdown}, \hyperpage{45}
+    \subitem {perform\_command\_mode\_switch}, \hyperpage{45}
+    \subitem {prepare\_command\_mode\_switch}, \hyperpage{46}
+    \subitem {read}, \hyperpage{47}
+    \subitem {split\_interface\_string\_to\_joint\_and\_name}, 
+		\hyperpage{47}
+    \subitem {start\_homing}, \hyperpage{48}
+    \subitem {stop\_homing}, \hyperpage{48}
+    \subitem {write}, \hyperpage{48}
+  \item {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{89}
+    \subitem {drive\_current}, \hyperpage{90}
+    \subitem {hold\_current}, \hyperpage{90}
+    \subitem {homing}, \hyperpage{90}
+    \subitem {i2c\_address}, \hyperpage{91}
+    \subitem {max}, \hyperpage{91}
+    \subitem {max\_acceleration}, \hyperpage{91}
+    \subitem {max\_velocity}, \hyperpage{91}
+    \subitem {min}, \hyperpage{91}
+    \subitem {reduction}, \hyperpage{92}
+    \subitem {stall\_threshold}, \hyperpage{92}
+  \item {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_homing\_config\_t}, 
+		\hyperpage{92}
+    \subitem {acceleration}, \hyperpage{93}
+    \subitem {current}, \hyperpage{93}
+    \subitem {speed}, \hyperpage{93}
+    \subitem {threshold}, \hyperpage{93}
+  \item {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{51}
+    \subitem {\_gripper}, \hyperpage{56}
+    \subitem {\_gripper\_cfg}, \hyperpage{56}
+    \subitem {\_last\_pos}, \hyperpage{56}
+    \subitem {\_vel}, \hyperpage{56}
+    \subitem {on\_activate}, \hyperpage{52}
+    \subitem {on\_cleanup}, \hyperpage{53}
+    \subitem {on\_configure}, \hyperpage{53}
+    \subitem {on\_deactivate}, \hyperpage{53}
+    \subitem {on\_error}, \hyperpage{54}
+    \subitem {on\_init}, \hyperpage{54}
+    \subitem {on\_shutdown}, \hyperpage{55}
+    \subitem {read}, \hyperpage{55}
+    \subitem {write}, \hyperpage{55}
+  \item {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface::gripper\_config\_t}, 
+		\hyperpage{73}
+    \subitem {init\_pos}, \hyperpage{74}
+    \subitem {max}, \hyperpage{74}
+    \subitem {min}, \hyperpage{74}
+    \subitem {offset}, \hyperpage{74}
+    \subitem {reduction}, \hyperpage{74}
+  \item {bioscara\_rviz\_plugin}, \hyperpage{15}
+  \item {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{57}
+    \subitem {\texorpdfstring{$\sim$}{\string~}BioscaraPanel}, 
+		\hyperpage{59}
+    \subitem {arm\_en\_btn\_cb}, \hyperpage{60}
+    \subitem {BioscaraPanel}, \hyperpage{59}
+    \subitem {check\_activation\_conditions}, \hyperpage{60}
+    \subitem {cm\_state\_callback}, \hyperpage{60}
+    \subitem {cm\_state\_subsription\_}, \hyperpage{67}
+    \subitem {configure\_controller}, \hyperpage{60}
+    \subitem {configure\_controller\_client\_}, \hyperpage{67}
+    \subitem {controller\_states\_}, \hyperpage{67}
+    \subitem {ctrl\_en\_btn\_cb}, \hyperpage{61}
+    \subitem {dynamic\_joint\_state\_msg\_to\_map}, \hyperpage{61}
+    \subitem {ensure\_jsb\_is\_active}, \hyperpage{61}
+    \subitem {gripper\_en\_btn\_cb}, \hyperpage{61}
+    \subitem {hardware\_state\_client\_}, \hyperpage{68}
+    \subitem {hardware\_states\_}, \hyperpage{68}
+    \subitem {homing\_cmd}, \hyperpage{61}
+    \subitem {homing\_publisher\_}, \hyperpage{68}
+    \subitem {joint\_state\_callback}, \hyperpage{62}
+    \subitem {joint\_state\_subsription\_}, \hyperpage{68}
+    \subitem {joint\_states\_}, \hyperpage{68}
+    \subitem {named\_lcs\_msg\_to\_map}, \hyperpage{62}
+    \subitem {node\_}, \hyperpage{68}
+    \subitem {onInitialize}, \hyperpage{62}
+    \subitem {prepopulate\_joint\_state\_map}, \hyperpage{63}
+    \subitem {prepopulate\_state\_map}, \hyperpage{63}
+    \subitem {print\_cm\_map}, \hyperpage{63}
+    \subitem {prune\_timer\_}, \hyperpage{69}
+    \subitem {set\_controller\_state}, \hyperpage{64}
+    \subitem {set\_en\_btn}, \hyperpage{64}
+    \subitem {set\_hardware\_component\_state}, \hyperpage{64}
+    \subitem {set\_homing\_state\_label}, \hyperpage{65}
+    \subitem {set\_state\_label}, \hyperpage{65}
+    \subitem {switch\_controller\_client\_}, \hyperpage{69}
+    \subitem {switch\_controllers}, \hyperpage{65}
+    \subitem {target\_state\_from\_current}, \hyperpage{66}
+    \subitem {ui\_}, \hyperpage{69}
+    \subitem {update\_homing\_grp\_state}, \hyperpage{66}
+    \subitem {update\_homing\_state\_labels}, \hyperpage{66}
+    \subitem {update\_state\_label\_and\_btn}, \hyperpage{66}
+    \subitem {update\_state\_labels\_and\_btns}, \hyperpage{67}
+  \item {BioscaraPanel}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{59}
+  \item {blk\_reg}
+    \subitem {joint.ino}, \hyperpage{127}
+  \item {blocking\_handler}
+    \subitem {joint.ino}, \hyperpage{125}
+
+  \indexspace
+
+  \item {cb\_data}
+    \subitem {MovMax}, \hyperpage{107}
+  \item {cb\_index}
+    \subitem {MovMax}, \hyperpage{107}
+  \item {check\_activation\_conditions}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{60}
+  \item {checkCom}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{79}
+  \item {CHECKORIENTATION}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {checkOrientation}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{27}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{79}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{101}
+  \item {chippath}
+    \subitem {RPI\_PWM}, \hyperpage{110}
+  \item {CLEARSTALL}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {closeI2CDevHandle}
+    \subitem {uI2C.cpp}, \hyperpage{152}
+    \subitem {uI2C.h}, \hyperpage{145}
+  \item {cm\_state\_callback}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{60}
+  \item {cm\_state\_subsription\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{67}
+  \item {COMM\_ERROR}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+  \item {common.h}
+    \subitem {DUMP\_BUFFER}, \hyperpage{132}
+  \item {configuration.h}
+    \subitem {ADR}, \hyperpage{116}
+    \subitem {MAXACCEL}, \hyperpage{116}
+    \subitem {MAXVEL}, \hyperpage{116}
+  \item {configure\_controller}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{60}
+  \item {configure\_controller\_client\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{67}
+  \item {controller\_states\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{67}
+  \item {ctrl\_en\_btn\_cb}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{61}
+  \item {CURRENT}
+    \subitem {main.cpp}, \hyperpage{171, 172}
+  \item {current}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_homing\_config\_t}, 
+		\hyperpage{93}
+  \item {current\_b\_cmd}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{37}
+
+  \indexspace
+
+  \item {deactivate\_joint}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{41}
+  \item {DEG2RAD}
+    \subitem {uTransmission.h}, \hyperpage{148}
+  \item {deinit}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{19}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{28}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{80}
+  \item {disable}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{19}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{28}
+    \subitem {bioscara\_hardware\_drivers::Gripper}, \hyperpage{71}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{101}
+    \subitem {RPI\_PWM}, \hyperpage{108}
+  \item {disableCL}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{28}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{80}
+  \item {DISABLECLOSEDLOOP}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {DISABLEPID}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {DISABLESTALLGUARD}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {docs/doxygen/index.md}, \hyperpage{115}
+  \item {drive\_current}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{90}
+  \item {DUMP\_BUFFER}
+    \subitem {common.h}, \hyperpage{132}
+    \subitem {joint.h}, \hyperpage{120}
+  \item {dynamic\_joint\_state\_msg\_to\_map}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{61}
+
+  \indexspace
+
+  \item {enable}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{20}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{29}
+    \subitem {bioscara\_hardware\_drivers::Gripper}, \hyperpage{71}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{80}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{102}
+    \subitem {RPI\_PWM}, \hyperpage{108}
+  \item {ENABLECLOSEDLOOP}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {ENABLEPID}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {ENABLESTALLGUARD}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {enableStallguard}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{29}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{81}
+  \item {ensure\_jsb\_is\_active}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{61}
+  \item {err\_type\_t}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{13}
+  \item {ERROR}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+  \item {error\_to\_string}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+  \item {exec\_thread}
+    \subitem {TrajectorySequence}, \hyperpage{111}
+  \item {execute}
+    \subitem {TrajectorySequence}, \hyperpage{111}
+
+  \indexspace
+
+  \item {flags}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{37}
+
+  \indexspace
+
+  \item {getCurrentBCmd}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{30}
+  \item {getDeltaT}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{102}
+  \item {GETDRIVERRPM}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {GETENCODERRPM}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {getFlags}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{30}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{81}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{103}
+  \item {getHomingOffset}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{81}
+  \item {GetMotionSequence}
+    \subitem {pilz\_sequence.cpp}, \hyperpage{167}
+  \item {GETMOTORSTATE}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {getMoveGroupInterface}
+    \subitem {TrajectorySequence}, \hyperpage{111}
+  \item {getNode}
+    \subitem {TrajectorySequence}, \hyperpage{111}
+  \item {GETPIDERROR}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {getPosition}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{20}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{30}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{81}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{103}
+  \item {getVelocity}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{31}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{82}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{103}
+  \item {GoalHandleMoveGroupSequence}
+    \subitem {pilz\_sequence.cpp}, \hyperpage{167}
+  \item {Gripper}
+    \subitem {bioscara\_hardware\_drivers::Gripper}, \hyperpage{71}
+  \item {gripper\_en\_btn\_cb}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{61}
+
+  \indexspace
+
+  \item {handle}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{88}
+  \item {hardware\_state\_client\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{68}
+  \item {hardware\_states\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{68}
+  \item {hold\_current}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{90}
+  \item {HOME}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {home}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{31}
+  \item {HOMEOFFSET}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {homing}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{90}
+  \item {homing\_cmd}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{61}
+  \item {homing\_publisher\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{68}
+  \item {HW\_IF\_HOME}
+    \subitem {bioscara\_hardware\_interfaces}, \hyperpage{14}
+
+  \indexspace
+
+  \item {i2c\_address}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{91}
+  \item {INCORRECT\_STATE}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+  \item {init}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{20}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{32}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{82}
+    \subitem {TrajectorySequence}, \hyperpage{112}
+  \item {init\_pos}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface::gripper\_config\_t}, 
+		\hyperpage{74}
+  \item {INT\_handler}
+    \subitem {joint\_comm\_node.cpp}, \hyperpage{150}
+    \subitem {main.cpp}, \hyperpage{170--172}
+    \subitem {manual\_control.cpp}, \hyperpage{168}
+  \item {INVALID\_ARGUMENT}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+  \item {isBusy}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{32}
+  \item {isEnabled}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{32}
+  \item {isHomed}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{32}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{104}
+  \item {isStalled}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{33}
+  \item {items\_}
+    \subitem {TrajectorySequence}, \hyperpage{113}
+
+  \indexspace
+
+  \item {J}
+    \subitem {main.cpp}, \hyperpage{171}, \hyperpage{173}
+  \item {J1}
+    \subitem {joint\_comm\_node.cpp}, \hyperpage{150}
+  \item {J2}
+    \subitem {joint\_comm\_node.cpp}, \hyperpage{150}
+  \item {J3}
+    \subitem {joint\_comm\_node.cpp}, \hyperpage{150}
+  \item {J4}
+    \subitem {joint.ino}, \hyperpage{125}
+    \subitem {joint\_comm\_node.cpp}, \hyperpage{150}
+  \item {Joint}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{78}
+  \item {joint.h}
+    \subitem {ACK}, \hyperpage{120}
+    \subitem {ANGLEMOVED}, \hyperpage{121}
+    \subitem {CHECKORIENTATION}, \hyperpage{121}
+    \subitem {CLEARSTALL}, \hyperpage{121}
+    \subitem {DISABLECLOSEDLOOP}, \hyperpage{121}
+    \subitem {DISABLEPID}, \hyperpage{121}
+    \subitem {DISABLESTALLGUARD}, \hyperpage{121}
+    \subitem {DUMP\_BUFFER}, \hyperpage{120}
+    \subitem {ENABLECLOSEDLOOP}, \hyperpage{121}
+    \subitem {ENABLEPID}, \hyperpage{121}
+    \subitem {ENABLESTALLGUARD}, \hyperpage{121}
+    \subitem {GETDRIVERRPM}, \hyperpage{121}
+    \subitem {GETENCODERRPM}, \hyperpage{121}
+    \subitem {GETMOTORSTATE}, \hyperpage{121}
+    \subitem {GETPIDERROR}, \hyperpage{121}
+    \subitem {HOME}, \hyperpage{121}
+    \subitem {HOMEOFFSET}, \hyperpage{121}
+    \subitem {MAX\_BUFFER}, \hyperpage{120}
+    \subitem {MOVEANGLE}, \hyperpage{121}
+    \subitem {MOVESTEPS}, \hyperpage{121}
+    \subitem {MOVETOANGLE}, \hyperpage{121}
+    \subitem {MOVETOEND}, \hyperpage{121}
+    \subitem {NACK}, \hyperpage{120}
+    \subitem {PING}, \hyperpage{121}
+    \subitem {readValue}, \hyperpage{121}
+    \subitem {RFLAGS\_SIZE}, \hyperpage{120}
+    \subitem {RUNCOTINOUS}, \hyperpage{121}
+    \subitem {SETBRAKEMODE}, \hyperpage{121}
+    \subitem {SETCONTROLTHRESHOLD}, \hyperpage{121}
+    \subitem {SETCURRENT}, \hyperpage{121}
+    \subitem {SETHOLDCURRENT}, \hyperpage{121}
+    \subitem {SETMAXACCELERATION}, \hyperpage{121}
+    \subitem {SETMAXDECELERATION}, \hyperpage{121}
+    \subitem {SETMAXVELOCITY}, \hyperpage{121}
+    \subitem {SETRPM}, \hyperpage{121}
+    \subitem {SETUP}, \hyperpage{121}
+    \subitem {STOP}, \hyperpage{121}
+    \subitem {stp\_reg\_t}, \hyperpage{121}
+    \subitem {writeValue}, \hyperpage{122}
+  \item {joint.ino}
+    \subitem {blk\_reg}, \hyperpage{127}
+    \subitem {blocking\_handler}, \hyperpage{125}
+    \subitem {J4}, \hyperpage{125}
+    \subitem {loop}, \hyperpage{125}
+    \subitem {non\_blocking\_handler}, \hyperpage{125}
+    \subitem {receiveEvent}, \hyperpage{126}
+    \subitem {reg}, \hyperpage{127}
+    \subitem {requestEvent}, \hyperpage{126}
+    \subitem {rx\_buf}, \hyperpage{127}
+    \subitem {rx\_data\_ready}, \hyperpage{127}
+    \subitem {rx\_length}, \hyperpage{127}
+    \subitem {set\_flags\_for\_blocking\_handler}, \hyperpage{126}
+    \subitem {setup}, \hyperpage{127}
+    \subitem {stepper}, \hyperpage{127}
+    \subitem {tx\_buf}, \hyperpage{128}
+    \subitem {tx\_length}, \hyperpage{128}
+  \item {JOINT2ACTUATOR}
+    \subitem {uTransmission.h}, \hyperpage{148}
+  \item {joint\_comm\_node.cpp}
+    \subitem {INT\_handler}, \hyperpage{150}
+    \subitem {J1}, \hyperpage{150}
+    \subitem {J2}, \hyperpage{150}
+    \subitem {J3}, \hyperpage{150}
+    \subitem {J4}, \hyperpage{150}
+    \subitem {main}, \hyperpage{150}
+  \item {joint\_state\_callback}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{62}
+  \item {joint\_state\_subsription\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{68}
+  \item {joint\_states\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{68}
+
+  \indexspace
+
+  \item {K}
+    \subitem {Lowpass}, \hyperpage{95}
+
+  \indexspace
+
+  \item {last\_set\_position}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{105}
+  \item {last\_set\_velocity}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{105}
+  \item {lib/joint\_firmware/joint/configuration.h}, 
+		\hyperpage{115, 116}
+  \item {lib/joint\_firmware/joint/filters.h}, \hyperpage{117, 118}
+  \item {lib/joint\_firmware/joint/joint.h}, \hyperpage{118}, 
+		\hyperpage{122}
+  \item {lib/joint\_firmware/joint/joint.ino}, \hyperpage{123}
+  \item {lib/joint\_firmware/joint/stall.h}, \hyperpage{128, 129}
+  \item {lib/ros2\_ws/src/bioscara\_rviz\_plugin/include/bioscara\_rviz\_plugin/bioscara\_panel.hpp}, 
+		\hyperpage{129, 130}
+  \item {lib/ros2\_ws/src/bioscara\_rviz\_plugin/src/bioscara\_panel.cpp}, 
+		\hyperpage{131}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/common.h}, 
+		\hyperpage{132, 133}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/mBaseJoint.h}, 
+		\hyperpage{133, 134}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/mJoint.h}, 
+		\hyperpage{136, 137}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/mJoint.hpp}, 
+		\hyperpage{138, 139}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/mMockJoint.h}, 
+		\hyperpage{139, 140}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/uErr.h}, 
+		\hyperpage{141}, \hyperpage{143}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/uI2C.h}, 
+		\hyperpage{144}, \hyperpage{147}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/uTransmission.h}, 
+		\hyperpage{147}, \hyperpage{149}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/src/joint\_comm\_node.cpp}, 
+		\hyperpage{149}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/src/mBaseJoint.cpp}, 
+		\hyperpage{151}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/src/mJoint.cpp}, 
+		\hyperpage{151}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/src/mMockJoint.cpp}, 
+		\hyperpage{151}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/src/uErr.cpp}, 
+		\hyperpage{151}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/src/uI2C.cpp}, 
+		\hyperpage{152}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_interface/include/bioscara\_arm\_hardware\_interface/arm\_hardware.hpp}, 
+		\hyperpage{154, 155}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_interface/src/arm\_hardware.cpp}, 
+		\hyperpage{156}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_grippers/bioscara\_gripper\_hardware\_driver/include/bioscara\_gripper\_hardware\_driver/mBaseGripper.h}, 
+		\hyperpage{157, 158}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_grippers/bioscara\_gripper\_hardware\_driver/include/bioscara\_gripper\_hardware\_driver/mGripper.h}, 
+		\hyperpage{158, 159}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_grippers/bioscara\_gripper\_hardware\_driver/include/bioscara\_gripper\_hardware\_driver/mMockGripper.h}, 
+		\hyperpage{160, 161}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_grippers/bioscara\_gripper\_hardware\_driver/include/bioscara\_gripper\_hardware\_driver/uPWM.h}, 
+		\hyperpage{161, 162}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_grippers/bioscara\_gripper\_hardware\_driver/src/mBaseGripper.cpp}, 
+		\hyperpage{163}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_grippers/bioscara\_gripper\_hardware\_driver/src/mGripper.cpp}, 
+		\hyperpage{163}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_grippers/bioscara\_gripper\_hardware\_driver/src/mMockGripper.cpp}, 
+		\hyperpage{163}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_grippers/bioscara\_gripper\_hardware\_interface/include/bioscara\_gripper\_hardware\_interface/gripper\_hardware.hpp}, 
+		\hyperpage{164}
+  \item {lib/ros2\_ws/src/dalsa\_bioscara\_grippers/bioscara\_gripper\_hardware\_interface/src/gripper\_hardware.cpp}, 
+		\hyperpage{165}
+  \item {lib/ros2\_ws/src/moveit\_motion\_plans/src/pilz\_sequence.cpp}, 
+		\hyperpage{166}
+  \item {lib/ros2\_ws/src/system\_test\_packages/comm\_speed\_test/src/main.cpp}, 
+		\hyperpage{170}
+  \item {lib/ros2\_ws/src/system\_test\_packages/gripper\_manual\_control/src/manual\_control.cpp}, 
+		\hyperpage{167}
+  \item {lib/ros2\_ws/src/system\_test\_packages/gripper\_manual\_control/src/manual\_control.h}, 
+		\hyperpage{169}
+  \item {lib/ros2\_ws/src/system\_test\_packages/high\_speed\_stall\_test/src/main.cpp}, 
+		\hyperpage{170}
+  \item {lib/ros2\_ws/src/system\_test\_packages/max\_accel\_test/src/main.cpp}, 
+		\hyperpage{172}
+  \item {LOGGER}
+    \subitem {pilz\_sequence.cpp}, \hyperpage{167}
+  \item {loop}
+    \subitem {joint.ino}, \hyperpage{125}
+  \item {Lowpass}, \hyperpage{94}
+    \subitem {K}, \hyperpage{95}
+    \subitem {Lowpass}, \hyperpage{94}
+    \subitem {resetState}, \hyperpage{95}
+    \subitem {tau}, \hyperpage{95}
+    \subitem {Ts}, \hyperpage{95}
+    \subitem {updateState}, \hyperpage{95}
+    \subitem {x}, \hyperpage{95}
+
+  \indexspace
+
+  \item {M}
+    \subitem {MovMax}, \hyperpage{107}
+  \item {M\_PI}
+    \subitem {uTransmission.h}, \hyperpage{148}
+  \item {main}
+    \subitem {joint\_comm\_node.cpp}, \hyperpage{150}
+    \subitem {main.cpp}, \hyperpage{170--172}
+    \subitem {manual\_control.cpp}, \hyperpage{168}
+    \subitem {pilz\_sequence.cpp}, \hyperpage{167}
+  \item {main.cpp}
+    \subitem {CURRENT}, \hyperpage{171, 172}
+    \subitem {INT\_handler}, \hyperpage{170--172}
+    \subitem {J}, \hyperpage{171}, \hyperpage{173}
+    \subitem {main}, \hyperpage{170--172}
+    \subitem {MAXACCEL}, \hyperpage{171, 172}
+    \subitem {MAXVEL}, \hyperpage{171, 172}
+  \item {manual\_control.cpp}
+    \subitem {\_Gripper}, \hyperpage{168}
+    \subitem {INT\_handler}, \hyperpage{168}
+    \subitem {main}, \hyperpage{168}
+    \subitem {read\_angle}, \hyperpage{168}
+    \subitem {read\_offset}, \hyperpage{168}
+    \subitem {read\_reduction}, \hyperpage{168}
+    \subitem {read\_width}, \hyperpage{168}
+  \item {manual\_control.h}
+    \subitem {read\_angle}, \hyperpage{169}
+    \subitem {read\_offset}, \hyperpage{169}
+    \subitem {read\_reduction}, \hyperpage{169}
+    \subitem {read\_width}, \hyperpage{169}
+  \item {max}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{88}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{91}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface::gripper\_config\_t}, 
+		\hyperpage{74}
+  \item {max\_acceleration}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{91}
+  \item {MAX\_BUFFER}
+    \subitem {joint.h}, \hyperpage{120}
+    \subitem {uI2C.h}, \hyperpage{145}
+  \item {max\_velocity}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{91}
+  \item {MAXACCEL}
+    \subitem {configuration.h}, \hyperpage{116}
+    \subitem {main.cpp}, \hyperpage{171, 172}
+  \item {MAXVEL}
+    \subitem {configuration.h}, \hyperpage{116}
+    \subitem {main.cpp}, \hyperpage{171, 172}
+  \item {mgi\_}
+    \subitem {TrajectorySequence}, \hyperpage{113}
+  \item {min}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{89}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{91}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface::gripper\_config\_t}, 
+		\hyperpage{74}
+  \item {MockGripper}
+    \subitem {bioscara\_hardware\_drivers::MockGripper}, \hyperpage{97}
+  \item {MockJoint}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{100}
+  \item {MOVEANGLE}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {MoveGroupSequence}
+    \subitem {pilz\_sequence.cpp}, \hyperpage{167}
+  \item {moveJ}
+    \subitem {TrajectorySequence}, \hyperpage{112}
+  \item {moveL}
+    \subitem {TrajectorySequence}, \hyperpage{112}
+  \item {MOVESTEPS}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {moveSteps}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{33}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{82}
+  \item {MOVETOANGLE}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {MOVETOEND}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {MovMax}, \hyperpage{106}
+    \subitem {cb\_data}, \hyperpage{107}
+    \subitem {cb\_index}, \hyperpage{107}
+    \subitem {M}, \hyperpage{107}
+    \subitem {MovMax}, \hyperpage{106}
+    \subitem {updateState}, \hyperpage{106}
+  \item {mtx}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{50}
+
+  \indexspace
+
+  \item {NACK}
+    \subitem {joint.h}, \hyperpage{120}
+    \subitem {uI2C.h}, \hyperpage{145}
+  \item {name}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{38}
+  \item {named\_lcs\_msg\_to\_map}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{62}
+  \item {node\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{68}
+    \subitem {TrajectorySequence}, \hyperpage{113}
+  \item {non\_blocking\_handler}
+    \subitem {joint.ino}, \hyperpage{125}
+  \item {NONE}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+  \item {NOT\_ENABLED}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+  \item {NOT\_HOMED}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+  \item {NOT\_INIT}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+
+  \indexspace
+
+  \item {offset}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{89}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface::gripper\_config\_t}, 
+		\hyperpage{74}
+  \item {OK}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+  \item {on\_activate}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{41}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{52}
+  \item {on\_cleanup}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{42}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{53}
+  \item {on\_configure}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{42}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{53}
+  \item {on\_deactivate}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{42}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{53}
+  \item {on\_error}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{43}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{54}
+  \item {on\_init}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{44}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{54}
+  \item {on\_shutdown}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{45}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{55}
+  \item {onInitialize}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{62}
+  \item {op\_mode}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{105}
+  \item {openI2CDevHandle}
+    \subitem {uI2C.cpp}, \hyperpage{152}
+    \subitem {uI2C.h}, \hyperpage{146}
+
+  \indexspace
+
+  \item {per}
+    \subitem {RPI\_PWM}, \hyperpage{110}
+  \item {perform\_command\_mode\_switch}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{45}
+  \item {pilz\_sequence.cpp}
+    \subitem {GetMotionSequence}, \hyperpage{167}
+    \subitem {GoalHandleMoveGroupSequence}, \hyperpage{167}
+    \subitem {LOGGER}, \hyperpage{167}
+    \subitem {main}, \hyperpage{167}
+    \subitem {MoveGroupSequence}, \hyperpage{167}
+  \item {PING}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {planning\_group\_}
+    \subitem {TrajectorySequence}, \hyperpage{113}
+  \item {postHoming}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{33}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{83}
+  \item {prepare\_command\_mode\_switch}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{46}
+  \item {prepopulate\_joint\_state\_map}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{63}
+  \item {prepopulate\_state\_map}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{63}
+  \item {print\_cm\_map}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{63}
+  \item {prune\_timer\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{69}
+  \item {pwmpath}
+    \subitem {RPI\_PWM}, \hyperpage{110}
+
+  \indexspace
+
+  \item {q}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{105}
+  \item {qd}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{106}
+
+  \indexspace
+
+  \item {RAD2DEG}
+    \subitem {uTransmission.h}, \hyperpage{149}
+  \item {read}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{83}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{47}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{55}
+  \item {read\_angle}
+    \subitem {manual\_control.cpp}, \hyperpage{168}
+    \subitem {manual\_control.h}, \hyperpage{169}
+  \item {read\_offset}
+    \subitem {manual\_control.cpp}, \hyperpage{168}
+    \subitem {manual\_control.h}, \hyperpage{169}
+  \item {read\_reduction}
+    \subitem {manual\_control.cpp}, \hyperpage{168}
+    \subitem {manual\_control.h}, \hyperpage{169}
+  \item {read\_width}
+    \subitem {manual\_control.cpp}, \hyperpage{168}
+    \subitem {manual\_control.h}, \hyperpage{169}
+  \item {readFromI2CDev}
+    \subitem {uI2C.cpp}, \hyperpage{153}
+    \subitem {uI2C.h}, \hyperpage{146}
+  \item {readValue}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {receiveEvent}
+    \subitem {joint.ino}, \hyperpage{126}
+  \item {reduction}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{89}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{92}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface::gripper\_config\_t}, 
+		\hyperpage{74}
+  \item {reg}
+    \subitem {joint.ino}, \hyperpage{127}
+  \item {requestEvent}
+    \subitem {joint.ino}, \hyperpage{126}
+  \item {resetState}
+    \subitem {Lowpass}, \hyperpage{95}
+  \item {retrieve\_last\_position}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{21}
+  \item {RETURN\_ON\_ERROR}
+    \subitem {uErr.h}, \hyperpage{142}
+  \item {RETURN\_ON\_FALSE}
+    \subitem {uErr.h}, \hyperpage{142}
+  \item {RETURN\_ON\_NEGATIVE}
+    \subitem {uErr.h}, \hyperpage{142}
+  \item {RFLAGS\_SIZE}
+    \subitem {joint.h}, \hyperpage{120}
+    \subitem {uI2C.h}, \hyperpage{145}
+  \item {RPI\_PWM}, \hyperpage{107}
+    \subitem {\texorpdfstring{$\sim$}{\string~}RPI\_PWM}, 
+		\hyperpage{108}
+    \subitem {chippath}, \hyperpage{110}
+    \subitem {disable}, \hyperpage{108}
+    \subitem {enable}, \hyperpage{108}
+    \subitem {per}, \hyperpage{110}
+    \subitem {pwmpath}, \hyperpage{110}
+    \subitem {setDutyCycle}, \hyperpage{108}
+    \subitem {setDutyCycleNS}, \hyperpage{109}
+    \subitem {setPeriod}, \hyperpage{109}
+    \subitem {start}, \hyperpage{109}
+    \subitem {stop}, \hyperpage{109}
+    \subitem {writeSYS}, \hyperpage{109}
+  \item {RUNCOTINOUS}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {rx\_buf}
+    \subitem {joint.ino}, \hyperpage{127}
+  \item {rx\_data\_ready}
+    \subitem {joint.ino}, \hyperpage{127}
+  \item {rx\_length}
+    \subitem {joint.ino}, \hyperpage{127}
+
+  \indexspace
+
+  \item {save\_last\_position}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{21}
+  \item {seq\_action\_client\_}
+    \subitem {TrajectorySequence}, \hyperpage{113}
+  \item {seq\_service\_client\_}
+    \subitem {TrajectorySequence}, \hyperpage{113}
+  \item {set\_controller\_state}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{64}
+  \item {set\_en\_btn}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{64}
+  \item {set\_flags\_for\_blocking\_handler}
+    \subitem {joint.ino}, \hyperpage{126}
+  \item {set\_hardware\_component\_state}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{64}
+  \item {set\_homing\_state\_label}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{65}
+  \item {set\_state\_label}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{65}
+  \item {SETBRAKEMODE}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {setBrakeMode}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{34}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{84}
+  \item {SETCONTROLTHRESHOLD}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {SETCURRENT}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {setDriveCurrent}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{34}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{84}
+  \item {setDutyCycle}
+    \subitem {RPI\_PWM}, \hyperpage{108}
+  \item {setDutyCycleNS}
+    \subitem {RPI\_PWM}, \hyperpage{109}
+  \item {SETHOLDCURRENT}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {setHoldCurrent}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{34}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{84}
+  \item {setHomingOffset}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{86}
+  \item {SETMAXACCELERATION}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {setMaxAcceleration}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{35}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{86}
+  \item {SETMAXDECELERATION}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {SETMAXVELOCITY}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {setMaxVelocity}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{35}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{86}
+  \item {setOffset}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{21}
+  \item {setPeriod}
+    \subitem {RPI\_PWM}, \hyperpage{109}
+  \item {setPosition}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{21}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{36}
+    \subitem {bioscara\_hardware\_drivers::Gripper}, \hyperpage{72}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{87}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{104}
+  \item {setReduction}
+    \subitem {bioscara\_hardware\_drivers::BaseGripper}, \hyperpage{22}
+  \item {SETRPM}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {setServoPosition}
+    \subitem {bioscara\_hardware\_drivers::Gripper}, \hyperpage{72}
+  \item {SETUP}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {setup}
+    \subitem {joint.ino}, \hyperpage{127}
+  \item {setVelocity}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{36}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{87}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{104}
+  \item {speed}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_homing\_config\_t}, 
+		\hyperpage{93}
+  \item {split\_interface\_string\_to\_joint\_and\_name}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{47}
+  \item {stall.h}
+    \subitem {stall\_threshold}, \hyperpage{128}
+  \item {stall\_threshold}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_config\_t}, 
+		\hyperpage{92}
+    \subitem {stall.h}, \hyperpage{128}
+  \item {STALLED}
+    \subitem {bioscara\_hardware\_drivers}, \hyperpage{14}
+  \item {start}
+    \subitem {RPI\_PWM}, \hyperpage{109}
+  \item {start\_homing}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{48}
+  \item {startHoming}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{36}
+  \item {stepper}
+    \subitem {joint.ino}, \hyperpage{127}
+  \item {STOP}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {stop}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{37}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{87}
+    \subitem {bioscara\_hardware\_drivers::MockJoint}, \hyperpage{105}
+    \subitem {RPI\_PWM}, \hyperpage{109}
+  \item {stop\_homing}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{48}
+  \item {stp\_reg\_t}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{26}
+    \subitem {joint.h}, \hyperpage{121}
+  \item {switch\_controller\_client\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{69}
+  \item {switch\_controllers}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{65}
+
+  \indexspace
+
+  \item {target\_state\_from\_current}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{66}
+  \item {tau}
+    \subitem {Lowpass}, \hyperpage{95}
+  \item {threshold}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface::joint\_homing\_config\_t}, 
+		\hyperpage{93}
+  \item {Todo List}, \hyperpage{3}
+  \item {TrajectorySequence}, \hyperpage{110}
+    \subitem {\texorpdfstring{$\sim$}{\string~}TrajectorySequence}, 
+		\hyperpage{111}
+    \subitem {addSegment}, \hyperpage{111}
+    \subitem {exec\_thread}, \hyperpage{111}
+    \subitem {execute}, \hyperpage{111}
+    \subitem {getMoveGroupInterface}, \hyperpage{111}
+    \subitem {getNode}, \hyperpage{111}
+    \subitem {init}, \hyperpage{112}
+    \subitem {items\_}, \hyperpage{113}
+    \subitem {mgi\_}, \hyperpage{113}
+    \subitem {moveJ}, \hyperpage{112}
+    \subitem {moveL}, \hyperpage{112}
+    \subitem {node\_}, \hyperpage{113}
+    \subitem {planning\_group\_}, \hyperpage{113}
+    \subitem {seq\_action\_client\_}, \hyperpage{113}
+    \subitem {seq\_service\_client\_}, \hyperpage{113}
+    \subitem {TrajectorySequence}, \hyperpage{111}
+  \item {Ts}
+    \subitem {Lowpass}, \hyperpage{95}
+  \item {tx\_buf}
+    \subitem {joint.ino}, \hyperpage{128}
+  \item {tx\_length}
+    \subitem {joint.ino}, \hyperpage{128}
+
+  \indexspace
+
+  \item {uErr.h}
+    \subitem {RETURN\_ON\_ERROR}, \hyperpage{142}
+    \subitem {RETURN\_ON\_FALSE}, \hyperpage{142}
+    \subitem {RETURN\_ON\_NEGATIVE}, \hyperpage{142}
+  \item {Ui}, \hyperpage{15}
+  \item {uI2C.cpp}
+    \subitem {closeI2CDevHandle}, \hyperpage{152}
+    \subitem {openI2CDevHandle}, \hyperpage{152}
+    \subitem {readFromI2CDev}, \hyperpage{153}
+    \subitem {writeToI2CDev}, \hyperpage{153}
+  \item {uI2C.h}
+    \subitem {ACK}, \hyperpage{145}
+    \subitem {closeI2CDevHandle}, \hyperpage{145}
+    \subitem {MAX\_BUFFER}, \hyperpage{145}
+    \subitem {NACK}, \hyperpage{145}
+    \subitem {openI2CDevHandle}, \hyperpage{146}
+    \subitem {readFromI2CDev}, \hyperpage{146}
+    \subitem {RFLAGS\_SIZE}, \hyperpage{145}
+    \subitem {writeToI2CDev}, \hyperpage{146}
+  \item {ui\_}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{69}
+  \item {update\_homing\_grp\_state}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{66}
+  \item {update\_homing\_state\_labels}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{66}
+  \item {update\_state\_label\_and\_btn}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{66}
+  \item {update\_state\_labels\_and\_btns}
+    \subitem {bioscara\_rviz\_plugin::BioscaraPanel}, \hyperpage{67}
+  \item {updateState}
+    \subitem {Lowpass}, \hyperpage{95}
+    \subitem {MovMax}, \hyperpage{106}
+  \item {uTransmission.h}
+    \subitem {ACTUATOR2JOINT}, \hyperpage{148}
+    \subitem {DEG2RAD}, \hyperpage{148}
+    \subitem {JOINT2ACTUATOR}, \hyperpage{148}
+    \subitem {M\_PI}, \hyperpage{148}
+    \subitem {RAD2DEG}, \hyperpage{149}
+
+  \indexspace
+
+  \item {wait\_while\_busy}
+    \subitem {bioscara\_hardware\_drivers::BaseJoint}, \hyperpage{37}
+  \item {write}
+    \subitem {bioscara\_hardware\_drivers::Joint}, \hyperpage{88}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraArmHardwareInterface}, 
+		\hyperpage{48}
+    \subitem {bioscara\_hardware\_interfaces::BioscaraGripperHardwareInterface}, 
+		\hyperpage{55}
+  \item {writeSYS}
+    \subitem {RPI\_PWM}, \hyperpage{109}
+  \item {writeToI2CDev}
+    \subitem {uI2C.cpp}, \hyperpage{153}
+    \subitem {uI2C.h}, \hyperpage{146}
+  \item {writeValue}
+    \subitem {joint.h}, \hyperpage{122}
+
+  \indexspace
+
+  \item {x}
+    \subitem {Lowpass}, \hyperpage{95}
+
+\end{theindex}

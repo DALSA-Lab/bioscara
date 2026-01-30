@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d858bba49e679975ecb3b6a5c48c08b4" kind="dir">
+    <compoundname>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src</compoundname>
+    <innerfile refid="joint__comm__node_8cpp">joint_comm_node.cpp</innerfile>
+    <innerfile refid="mBaseJoint_8cpp">mBaseJoint.cpp</innerfile>
+    <innerfile refid="mJoint_8cpp">mJoint.cpp</innerfile>
+    <innerfile refid="mMockJoint_8cpp">mMockJoint.cpp</innerfile>
+    <innerfile refid="uErr_8cpp">uErr.cpp</innerfile>
+    <innerfile refid="uI2C_8cpp">uI2C.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/"/>
+  </compounddef>
+</doxygen>

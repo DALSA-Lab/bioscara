@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="mGripper_8h" kind="file" language="C++">
+    <compoundname>mGripper.h</compoundname>
+    <includes refid="mBaseGripper_8h" local="yes">bioscara_gripper_hardware_driver/mBaseGripper.h</includes>
+    <includes refid="uPWM_8h" local="yes">bioscara_gripper_hardware_driver/uPWM.h</includes>
+    <includes refid="uErr_8h" local="yes">bioscara_arm_hardware_driver/uErr.h</includes>
+    <includedby refid="mGripper_8cpp" local="yes">lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/src/mGripper.cpp</includedby>
+    <includedby refid="gripper__hardware_8hpp" local="yes">lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp</includedby>
+    <includedby refid="manual__control_8cpp" local="yes">lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>bioscara_arm_hardware_driver/uErr.h</label>
+        <link refid="uErr_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bioscara_gripper_hardware_driver/mBaseGripper.h</label>
+        <link refid="mBaseGripper_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/mGripper.h</label>
+        <link refid="mGripper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>bioscara_gripper_hardware_driver/uPWM.h</label>
+        <link refid="uPWM_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>math.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>string.h</label>
+      </node>
+      <node id="10">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/mGripper.h</label>
+        <link refid="mGripper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/src/mGripper.cpp</label>
+        <link refid="mGripper_8cpp"/>
+      </node>
+      <node id="3">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp</label>
+        <link refid="gripper__hardware_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp</label>
+        <link refid="gripper__hardware_8cpp"/>
+      </node>
+      <node id="5">
+        <label>lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp</label>
+        <link refid="manual__control_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classbioscara__hardware__drivers_1_1Gripper" prot="public">bioscara_hardware_drivers::Gripper</innerclass>
+    <innernamespace refid="namespacebioscara__hardware__drivers">bioscara_hardware_drivers</innernamespace>
+    <briefdescription>
+<para>File containing the Gripper class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>sbstorz </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2025-05-27</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2025</para>
+</simplesect>
+Include this file for API functions to interact with the hardware gripper. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MGRIPPER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MGRIPPER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mBaseGripper_8h" kindref="compound">bioscara_gripper_hardware_driver/mBaseGripper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="uPWM_8h" kindref="compound">bioscara_gripper_hardware_driver/uPWM.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="uErr_8h" kindref="compound">bioscara_arm_hardware_driver/uErr.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacebioscara__hardware__drivers" kindref="compound">bioscara_hardware_drivers</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="classbioscara__hardware__drivers_1_1Gripper" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classbioscara__hardware__drivers_1_1Gripper" kindref="compound">Gripper</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classbioscara__hardware__drivers_1_1BaseGripper" kindref="compound">BaseGripper</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classbioscara__hardware__drivers_1_1Gripper" kindref="compound">Gripper</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>reduction,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">backup_init_pos</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1Gripper_1ab08eb3424c419db0577deddf70fadacb" kindref="member">enable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1Gripper_1a15e81fdb19ac401043423db0ada77368" kindref="member">disable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1Gripper_1abdf1f8e545da0a246f4effd78ae09f35" kindref="member">setPosition</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">width</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1Gripper_1a3ecdc7bfd94d407e430ca15c8cbcb5cc" kindref="member">setServoPosition</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">angle</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classbioscara__hardware__drivers_1_1Gripper_1ad15dc50a93fb4afee1a478561f5c2e8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM" kindref="compound">RPI_PWM</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1Gripper_1ad15dc50a93fb4afee1a478561f5c2e8f" kindref="member">_pwm</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="classbioscara__hardware__drivers_1_1Gripper_1a64e8edb8794d4816f0410b1fcc150c65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classbioscara__hardware__drivers_1_1Gripper_1a64e8edb8794d4816f0410b1fcc150c65" kindref="member">_freq</ref><sp/>=<sp/>50;<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MGRIPPER_H</highlight></codeline>
+    </programlisting>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/mGripper.h"/>
+  </compounddef>
+</doxygen>

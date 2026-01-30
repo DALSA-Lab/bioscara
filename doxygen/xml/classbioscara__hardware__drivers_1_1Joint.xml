@@ -1,0 +1,1171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classbioscara__hardware__drivers_1_1Joint" kind="class" language="C++" prot="public">
+    <compoundname>bioscara_hardware_drivers::Joint</compoundname>
+    <basecompoundref refid="classbioscara__hardware__drivers_1_1BaseJoint" prot="public" virt="non-virtual">bioscara_hardware_drivers::BaseJoint</basecompoundref>
+    <includes refid="mJoint_8h" local="no">mJoint.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classbioscara__hardware__drivers_1_1Joint_1a20acf935ce8f212f17cabf3a18685517" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_drivers::Joint::reduction</definition>
+        <argsstring></argsstring>
+        <name>reduction</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::reduction</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref> to actuator reduction ratio. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="162" column="11" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__drivers_1_1Joint_1af1d813e08ed0e7f9c9ca236a0802a371" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_drivers::Joint::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::offset</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref> position offset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="163" column="11" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__drivers_1_1Joint_1a408272f7c846f1ee7bd139203dbcb12e" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_drivers::Joint::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::min</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref> lower limit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="164" column="11" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__drivers_1_1Joint_1a39932890fc3174218cb79a0068a26d5b" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_drivers::Joint::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::max</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref> upper limit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="165" column="11" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classbioscara__hardware__drivers_1_1Joint_1aa56fb271850d0c7416e29390f0c9b01b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bioscara_hardware_drivers::Joint::address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::address</qualifiedname>
+        <briefdescription>
+<para>I2C adress. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="174" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__drivers_1_1Joint_1a94ad561692bc595de865ddec3dc67a0f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bioscara_hardware_drivers::Joint::handle</definition>
+        <argsstring></argsstring>
+        <name>handle</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::handle</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+<para>I2C bus handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="175" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a15158462a50f041035e39d3bd98f9624" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bioscara_hardware_drivers::Joint::Joint</definition>
+        <argsstring>(const std::string name, const int address, const float reduction, const float min, const float max)</argsstring>
+        <name>Joint</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::Joint</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>reduction</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Create a <ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref> object represents a single joint and its actuator. Each <ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref> has a transmission with the following relationship: <linebreak/>
+ <blockquote><para><zwj/>actuator position = (joint position - offset) * reduction <linebreak/>
+joint position = actuator position / reduction + offset </para>
+</blockquote></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string device name for identification </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1-byte I2C device adress (0x11 ... 0x14) for J1 ... J4 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reduction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gear reduction of the joint. This is used to transform position and velocity values between in joint units and actuator (stepper) units. The sign depends on the direction the motor is mounted and is turning. Adjust such that the joint moves in the positive direction on on positive joint commands. Cable polarity has no effect since the motors automatically adjust to always run in the &apos;right&apos; direction from their point of view. <linebreak/>
+J1: 35 <linebreak/>
+J2: -2*pi/0.004 (4 mm linear movement per stepper revolution) <linebreak/>
+J3: 24 <linebreak/>
+J4: 12 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lower joint limit in joint units. <linebreak/>
+J1: -3.04647 <linebreak/>
+J2: -0.0016 <linebreak/>
+J3: -2.62672 <linebreak/>
+J4: -3.01069 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper joint limit in joint units. <linebreak/>
+J1: 3.04647 <linebreak/>
+J2: 0.3380 <linebreak/>
+J3: 2.62672 <linebreak/>
+J4: 3.01069 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="60" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="7" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1acdc5b57844833a7ac8a563f7527f961d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bioscara_hardware_drivers::Joint::~Joint</definition>
+        <argsstring>(void)</argsstring>
+        <name>~Joint</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::~Joint</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destroy the <ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a <ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref> object.   </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="67" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="19" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1aca63d0af8ba889417a16bc15510a565b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::init</definition>
+        <argsstring>(void) override</argsstring>
+        <name>init</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::init</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1a720e0da2547a8942fb9cf7e1961a758b">init</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize connection to a joint via I2C. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the joint to the I2C bus and tests if is responsive by invoking <ref refid="classbioscara__hardware__drivers_1_1Joint_1a9fb746226bee6133ca4469b6e1164834" kindref="member">checkCom()</ref>. If the joint is homed, retrieve the homing position stored on the joint by invoking <ref refid="classbioscara__hardware__drivers_1_1Joint_1aada1bc3cffdd384f6cb7777091c9a7ec" kindref="member">getHomingOffset()</ref>.</para>
+<para><simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="78" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="25" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a88b63de2e0d43456fd70249ab1c525e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::deinit</definition>
+        <argsstring>(void) override</argsstring>
+        <name>deinit</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::deinit</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1a6d5c44dc49dbcc361e8f0eb0a7f332d1">deinit</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Disconnects from a joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the joint from the I2C bus by invoking <ref refid="uI2C_8h_1afeb62c435271a8b6dd47be9e4428b746" kindref="member">closeI2CDevHandle()</ref>.</para>
+<para><simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="87" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a4fba72ada8234cb624658560a3c40530" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::enable</definition>
+        <argsstring>(u_int8_t driveCurrent, u_int8_t holdCurrent) override</argsstring>
+        <name>enable</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::enable</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab71c7a70946252c09efbd42b039b7eb0">enable</reimplements>
+        <param>
+          <type>u_int8_t</type>
+          <declname>driveCurrent</declname>
+        </param>
+        <param>
+          <type>u_int8_t</type>
+          <declname>holdCurrent</declname>
+        </param>
+        <briefdescription>
+<para>Engages the joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function prepares the motor for movement. After successfull execution the joint is ready to accept <ref refid="classbioscara__hardware__drivers_1_1Joint_1a8d477e842ea6139ca17fde0af43bc482" kindref="member">setPosition()</ref> and <ref refid="classbioscara__hardware__drivers_1_1Joint_1a5b2479210b861c53c3c4e53cf12d75be" kindref="member">setVelocity()</ref> commands.</para>
+<para>The function sets the drive and hold current for the specified joint and engages the motor. The currents are in percent of driver max. output (2.5A, check with TMC5130 datasheet or Ustepper documentation) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driveCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>drive current in 0-100 % of 2.5A output (check uStepper doc.) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>holdCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hold current in 0-100 % of 2.5A output (check uStepper doc.) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="89" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="53" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a00cdbe2e89b9955f83b891eaa259f1d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::postHoming</definition>
+        <argsstring>(void) override</argsstring>
+        <name>postHoming</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::postHoming</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1acdbdac96efcea81f34db96a47b317a55">postHoming</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>perform tasks after a non-blocking homing   </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Invokes <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1acdbdac96efcea81f34db96a47b317a55" kindref="member">BaseJoint::postHoming()</ref> and additionally saves the homing offset to the joint controller <ref refid="classbioscara__hardware__drivers_1_1Joint_1a36cb6ee03949c8ed8e57078d12c10b8f" kindref="member">setHomingOffset()</ref></para>
+<para><simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="99" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="68" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1aa48673be56b04a573142ee8c9ad18e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::getPosition</definition>
+        <argsstring>(float &amp;pos) override</argsstring>
+        <name>getPosition</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::getPosition</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1a39160e6187aa75ae2be3112ae3538060">getPosition</reimplements>
+        <param>
+          <type>float &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>get the current joint position in radians or m for cylindrical and prismatic joints respectively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>If the joint is not homed this method does not return an error. Instead <computeroutput>pos</computeroutput> will be 0.0.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current joint position in rad or m. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="101" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="113" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a8d477e842ea6139ca17fde0af43bc482" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::setPosition</definition>
+        <argsstring>(float pos) override</argsstring>
+        <name>setPosition</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::setPosition</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1ac16fc6fc228f1e4855ed0401a2c8368e">setPosition</reimplements>
+        <param>
+          <type>float</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>get the current joint position in radians or m for cylindrical and prismatic joints respectively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the commanded joint position in rad or m. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="103" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="126" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1af1a075a16a36e1ab5d6c81362c5f99d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::moveSteps</definition>
+        <argsstring>(int32_t steps) override</argsstring>
+        <name>moveSteps</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::moveSteps</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1a8d2e2724df1d2a0906f6f2d3e1bb60bb">moveSteps</reimplements>
+        <param>
+          <type>int32_t</type>
+          <declname>steps</declname>
+        </param>
+        <briefdescription>
+<para>Move full steps. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function can be called even when not homed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>steps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of full steps </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="105" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="142" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a12e554163eb7cb23f6b5b07da4b8705a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::getVelocity</definition>
+        <argsstring>(float &amp;vel) override</argsstring>
+        <name>getVelocity</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::getVelocity</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1a971fd55f4e858c806b2624fbd5d8806a">getVelocity</reimplements>
+        <param>
+          <type>float &amp;</type>
+          <declname>vel</declname>
+        </param>
+        <briefdescription>
+<para>get the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current joint velocity in rad/s or m/s. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="107" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="152" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a5b2479210b861c53c3c4e53cf12d75be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::setVelocity</definition>
+        <argsstring>(float vel) override</argsstring>
+        <name>setVelocity</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::setVelocity</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1affb3dfb90967f45ed12ef67a5a6e7ed9">setVelocity</reimplements>
+        <param>
+          <type>float</type>
+          <declname>vel</declname>
+        </param>
+        <briefdescription>
+<para>Set the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the commanded joint velocity in rad/s or m/s. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="109" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="162" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a5055eb9a482ef4f8114a58f8a772260d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::checkOrientation</definition>
+        <argsstring>(float angle=2.0) override</argsstring>
+        <name>checkOrientation</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::checkOrientation</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1a5a5a86649f69fa130c73e6ef6815c241">checkOrientation</reimplements>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+          <defval>2.0</defval>
+        </param>
+        <briefdescription>
+<para>Calls the checkOrientation method of the motor. Checks in which direction the motor is turning. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is a blocking function. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>degrees how much the motor should turn. A few degrees is sufficient. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="111" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="174" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a7a11a2f2d49749ec2e0118dab8adfde5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::stop</definition>
+        <argsstring>(void) override</argsstring>
+        <name>stop</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::stop</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1aa604fcfc2283f48f0851aaf1439f7809">stop</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Stops the motor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stops the motor by setting the maximum velocity to zero and the position setpoint to the current position</para>
+<para><simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="113" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="187" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a9b05f23c836dd08824b21628381cf324" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::disableCL</definition>
+        <argsstring>(void) override</argsstring>
+        <name>disableCL</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::disableCL</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab5746f8054e8c15f4f004c67325cc50f">disableCL</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="115" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="195" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1aabac8baa0314469b9b0235a2ff712107" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::setDriveCurrent</definition>
+        <argsstring>(u_int8_t current) override</argsstring>
+        <name>setDriveCurrent</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::setDriveCurrent</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1aa917e3e6aeb7271e11ecefcc91ff257a">setDriveCurrent</reimplements>
+        <param>
+          <type>u_int8_t</type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+<para>Set the Drive Current. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0% - 100% of driver current </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="117" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="204" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a21373b0df29cc283a40aeba42a0d0656" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::setHoldCurrent</definition>
+        <argsstring>(u_int8_t current) override</argsstring>
+        <name>setHoldCurrent</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::setHoldCurrent</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1af0532522ea1f7aa066367b2a33d9225c">setHoldCurrent</reimplements>
+        <param>
+          <type>u_int8_t</type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+<para>Set the Hold Current. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0% - 100% of driver current </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t -1 on communication error, </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="119" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="212" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a3fc257cb593d6a70599c4f8630ff1c33" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::setBrakeMode</definition>
+        <argsstring>(u_int8_t mode) override</argsstring>
+        <name>setBrakeMode</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::setBrakeMode</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1a4420214ace796cee97755e41f97a8550">setBrakeMode</reimplements>
+        <param>
+          <type>u_int8_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Set Brake Mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Freewheel: 0, Coolbrake: 1, Hardbrake: 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="121" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="220" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a40598bc9a450734c35b7a8060d50170e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::setMaxAcceleration</definition>
+        <argsstring>(float maxAccel) override</argsstring>
+        <name>setMaxAcceleration</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::setMaxAcceleration</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1a47296176d6bd6a86a66412cad1fb5f21">setMaxAcceleration</reimplements>
+        <param>
+          <type>float</type>
+          <declname>maxAccel</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum permitted joint acceleration (and deceleration) in rad/s^2 or m/s^2 for cylindrical and prismatic joints respectively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxAccel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum joint acceleration. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="123" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="228" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a9a3a794f43851cd6a6ae5068dff59d95" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::setMaxVelocity</definition>
+        <argsstring>(float maxVel) override</argsstring>
+        <name>setMaxVelocity</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::setMaxVelocity</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1a270d845f4fcbad79eaf3d218badf43e1">setMaxVelocity</reimplements>
+        <param>
+          <type>float</type>
+          <declname>maxVel</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum permitted joint velocity in rad/s or m/s for cylindrical and prismatic joints respectively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxVel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum joint velocity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="125" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="237" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a203608e60cc83c2078edf0c3a4a68dbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::enableStallguard</definition>
+        <argsstring>(u_int8_t sensitivity) override</argsstring>
+        <name>enableStallguard</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::enableStallguard</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1af2e8a64536a75ffb20f5ed81836eead5">enableStallguard</reimplements>
+        <param>
+          <type>u_int8_t</type>
+          <declname>sensitivity</declname>
+        </param>
+        <briefdescription>
+<para>Enable encoder stall detection of the joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the PID error exceeds the set threshold a stall is triggered and the motor disabled. A detected stall can be reset by homing or reenabling the joint using <ref refid="classbioscara__hardware__drivers_1_1Joint_1a4fba72ada8234cb624658560a3c40530" kindref="member">enable()</ref>. <simplesect kind="note"><para>If stall detection shall be enabled, invoke this method AFTER enabling the joint with <ref refid="classbioscara__hardware__drivers_1_1Joint_1a4fba72ada8234cb624658560a3c40530" kindref="member">enable()</ref>. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensitivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of threshold. 0 - 255 where lower is more sensitive. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="127" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="246" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a7c1f0ad13cedb16c6b0c3da6c88f8f94" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::getFlags</definition>
+        <argsstring>(void) override</argsstring>
+        <name>getFlags</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::getFlags</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1aaef8fb5aad3fb6ce0721043b6812d87b">getFlags</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Overload of <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a5c54829edfd4860f5ce333cda7044fb2" kindref="member">getFlags(u_int8_t &amp;flags)</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="129" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="267" bodyend="273"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1aada1bc3cffdd384f6cb7777091c9a7ec" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::getHomingOffset</definition>
+        <argsstring>(float &amp;offset)</argsstring>
+        <name>getHomingOffset</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::getHomingOffset</qualifiedname>
+        <param>
+          <type>float &amp;</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the homing position from the last homing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The homing position is stored on the joint to make it persistent as long as the joint is powered up.</para>
+<para><simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="140" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="275" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a36cb6ee03949c8ed8e57078d12c10b8f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::setHomingOffset</definition>
+        <argsstring>(const float offset)</argsstring>
+        <name>setHomingOffset</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::setHomingOffset</qualifiedname>
+        <param>
+          <type>const float</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Stores the homing position on the joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The homing position is stored on the joint to make it persistent as long as the joint is powered up.</para>
+<para><simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="149" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="287" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a6d416639501622575c86185620b2995b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::_home</definition>
+        <argsstring>(float velocity, u_int8_t sensitivity, u_int8_t current) override</argsstring>
+        <name>_home</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::_home</qualifiedname>
+        <reimplements refid="classbioscara__hardware__drivers_1_1BaseJoint_1ae05e1fd900c1d905ebec9a00ea5b2628">_home</reimplements>
+        <param>
+          <type>float</type>
+          <declname>velocity</declname>
+        </param>
+        <param>
+          <type>u_int8_t</type>
+          <declname>sensitivity</declname>
+        </param>
+        <param>
+          <type>u_int8_t</type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+<para>Call to start the homing sequence of a joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The joint will start rotating with the specified speed until a resistance which drives the PID error above the specified threshold is encountered. At this point the stepper stops and zeros the encoder. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed velocity in rad/s or m/s. Must be between 1.0 &lt; <ref refid="uTransmission_8h_1aacc958134b53425ec947541bb72ac8b1" kindref="member">RAD2DEG(JOINT2ACTUATOR(velocity, reduction, 0))</ref> / 6 &lt; 250.0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sensitivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Encoder pid error threshold 0 to 255. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>homing current, determines how easy it is to stop the motor and thereby provoke a stall</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="151" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="78" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a9fb746226bee6133ca4469b6e1164834" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref></type>
+        <definition>err_type_t bioscara_hardware_drivers::Joint::checkCom</definition>
+        <argsstring>(void)</argsstring>
+        <name>checkCom</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::checkCom</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Check if communication to the joint is established. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends a PING to and expects a ACK from the joint.</para>
+<para><simplesect kind="return"><para>err_type_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="160" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp" bodystart="254" bodyend="265"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a81a8e4841ae03d04498d2f6ef3c08d82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int bioscara_hardware_drivers::Joint::read</definition>
+        <argsstring>(const stp_reg_t reg, T &amp;data, u_int8_t &amp;flags)</argsstring>
+        <name>read</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::read</qualifiedname>
+        <param>
+          <type>const <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13" kindref="member">stp_reg_t</ref></type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>u_int8_t &amp;</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper function to request data from the I2C slave. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocates a buffer of size sizeof(T) + RFLAGS_SIZE. Invokes <ref refid="uI2C_8h_1a607cb25ea06e8ce952788a1e710e7f50" kindref="member">readFromI2CDev()</ref>, and copies the received payload to <emphasis>data</emphasis> and the transmisison flags to <emphasis>flags</emphasis>. See <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a959c1652a778c7654db894eef9b337c3" kindref="member">BaseJoint::flags</ref> for details.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Datatype of value to be transmitted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>stp_reg_t register to read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to store payload. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to a byte which stores the return flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on OK, negative on error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="169" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.hpp" bodystart="32" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__drivers_1_1Joint_1a6c6b257722e6d6b9c5d9f059fa9d0ca3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int bioscara_hardware_drivers::Joint::write</definition>
+        <argsstring>(const stp_reg_t reg, T data, u_int8_t &amp;flags)</argsstring>
+        <name>write</name>
+        <qualifiedname>bioscara_hardware_drivers::Joint::write</qualifiedname>
+        <param>
+          <type>const <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13" kindref="member">stp_reg_t</ref></type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>u_int8_t &amp;</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper function to send command to the I2C slave. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocates a buffer of size sizeof(T) + RFLAGS_SIZE. Copyies <emphasis>data</emphasis> to the buffer and invokes <ref refid="uI2C_8h_1ab73613a3b862a54f70dff0b5192cbcac" kindref="member">writeToI2CDev()</ref>. The flags received from the transaction are copied to <emphasis>flags</emphasis>. The flags are described in <ref refid="classbioscara__hardware__drivers_1_1Joint_1a81a8e4841ae03d04498d2f6ef3c08d82" kindref="member">Joint::read()</ref>.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Datatype of value to be transmitted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>stp_reg_t command to execute </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>payload to transmit. It is the users responsibility to populate the right amount of data for the relevant register </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to a byte which stores the return flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on OK, negative on error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="172" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.hpp" bodystart="62" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Representing a single hardware joint connected via I2C. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>bioscara_hardware_drivers::BaseJoint</label>
+        <link refid="classbioscara__hardware__drivers_1_1BaseJoint"/>
+      </node>
+      <node id="1">
+        <label>bioscara_hardware_drivers::Joint</label>
+        <link refid="classbioscara__hardware__drivers_1_1Joint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>bioscara_hardware_drivers::BaseJoint</label>
+        <link refid="classbioscara__hardware__drivers_1_1BaseJoint"/>
+      </node>
+      <node id="1">
+        <label>bioscara_hardware_drivers::Joint</label>
+        <link refid="classbioscara__hardware__drivers_1_1Joint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" line="25" column="3" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h" bodystart="26" bodyend="176"/>
+    <listofallmembers>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a6d416639501622575c86185620b2995b" prot="protected" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>_home</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1aa56fb271850d0c7416e29390f0c9b01b" prot="private" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>address</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ab67f7cf4cf5b60110bd18c6e06af9753" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>ANGLEMOVED</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a8cbc09097a8f6a428879bf84fe702629" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>BaseJoint</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a9fb746226bee6133ca4469b6e1164834" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>checkCom</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13afb43bf90bcd948c31c206dc15d92b4aa" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>CHECKORIENTATION</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a5055eb9a482ef4f8114a58f8a772260d" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>checkOrientation</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13af443d7efe7d7cf333a2787e7934a3ba3" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>CLEARSTALL</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a6bf8458a8930ca6360304f736ef5c781" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>current_b_cmd</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a88b63de2e0d43456fd70249ab1c525e5" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>deinit</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab6d12171276b56bae07d1b194a90844e" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>disable</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a9b05f23c836dd08824b21628381cf324" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>disableCL</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a2dfb035a1b3bc28dd9b290f5ec426966" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>DISABLECLOSEDLOOP</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a1c3a61c741f99de3dd3c421bdf2960bc" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>DISABLEPID</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ad8021317a96d3c00769c83d0a590d381" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>DISABLESTALLGUARD</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a4fba72ada8234cb624658560a3c40530" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>enable</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a0a8b4b17b84327807a2221382093ccfe" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>ENABLECLOSEDLOOP</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a73c4a3a2c651b451dfa337a0150ca820" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>ENABLEPID</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13aa27f384ee957893e8651a958d800f941" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>ENABLESTALLGUARD</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a203608e60cc83c2078edf0c3a4a68dbe" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>enableStallguard</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a959c1652a778c7654db894eef9b337c3" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>flags</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a412c4e474be5de0820d88b7d1d6084de" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>getCurrentBCmd</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ad044a4c9f7da6cef029ccd1fff21eaa5" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>GETDRIVERRPM</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a1d87ebf442a24b863eddd8177460607e" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>GETENCODERRPM</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a7c1f0ad13cedb16c6b0c3da6c88f8f94" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>getFlags</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a5c54829edfd4860f5ce333cda7044fb2" prot="public" virt="virtual" ambiguityscope="bioscara_hardware_drivers::BaseJoint::"><scope>bioscara_hardware_drivers::Joint</scope><name>getFlags</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1aada1bc3cffdd384f6cb7777091c9a7ec" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>getHomingOffset</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ad0971de7ebe215ab10a090d9ad5f6647" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>GETMOTORSTATE</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a16de9b14545022bb1196eb795d4174e8" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>GETPIDERROR</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1aa48673be56b04a573142ee8c9ad18e20" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>getPosition</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a12e554163eb7cb23f6b5b07da4b8705a" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>getVelocity</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a94ad561692bc595de865ddec3dc67a0f" prot="private" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>handle</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a93a9a074f04be4b2316dbbca5882b6fa" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>HOME</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a1e728f5477c6e683eacba485b0c4deef" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>home</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a7bf8300e64d1c6a9154dda83299939e4" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>HOMEOFFSET</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1aca63d0af8ba889417a16bc15510a565b" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>init</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a3d59aa860f6b64e6fead60919386f518" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>isBusy</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1ad918d513bfb96f082b1d7e1cc1f430d2" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>isEnabled</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1ad010a69043a9ee4578cadeebc85d9c80" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>isHomed</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a3e0bf2ee963d94b7272ea31c38ee9021" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>isStalled</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a15158462a50f041035e39d3bd98f9624" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>Joint</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a39932890fc3174218cb79a0068a26d5b" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>max</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a408272f7c846f1ee7bd139203dbcb12e" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>min</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ac941e7750fad733d1d6d923d31877a0a" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>MOVEANGLE</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13aba49883a985d506aa5e4889fafdf7d65" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>MOVESTEPS</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1af1a075a16a36e1ab5d6c81362c5f99d6" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>moveSteps</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a7047254578dd479cff21251d8596409d" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>MOVETOANGLE</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a41a2b4c4d34fef0226666308020f8294" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>MOVETOEND</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1aca33fbf6ffb94cf1cd15c5b9354eb643" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>name</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>NONE</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1af1d813e08ed0e7f9c9ca236a0802a371" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>offset</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ae8720d18d948fb556a54ababdd877f8b" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>PING</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a00cdbe2e89b9955f83b891eaa259f1d3" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>postHoming</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a81a8e4841ae03d04498d2f6ef3c08d82" prot="private" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>read</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a20acf935ce8f212f17cabf3a18685517" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>reduction</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a455aa94aa4bd470f083c2589eff9f416" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>RUNCOTINOUS</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a3fc257cb593d6a70599c4f8630ff1c33" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>setBrakeMode</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ad926039be0b1d9ac5c666f79c57bed3d" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>SETBRAKEMODE</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13afdb66020aebb4cfc209fde7c5cc5be44" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>SETCONTROLTHRESHOLD</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a5ac0b7e4fb8cf296c65aacef7e2f6c60" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>SETCURRENT</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1aabac8baa0314469b9b0235a2ff712107" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>setDriveCurrent</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a21373b0df29cc283a40aeba42a0d0656" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>setHoldCurrent</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ab7538ca1e0d4576030825828eebea7d9" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>SETHOLDCURRENT</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a36cb6ee03949c8ed8e57078d12c10b8f" prot="protected" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>setHomingOffset</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a40598bc9a450734c35b7a8060d50170e" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>setMaxAcceleration</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ab6dd8689c0bd53792a8804b88a340c5f" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>SETMAXACCELERATION</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ab1667efd2009bea1883fd787b3d540eb" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>SETMAXDECELERATION</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ab0c90e70f3ae738003f722537c435d7b" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>SETMAXVELOCITY</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a9a3a794f43851cd6a6ae5068dff59d95" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>setMaxVelocity</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a8d477e842ea6139ca17fde0af43bc482" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>setPosition</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a1e84b541415e4add21c735fb451536d5" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>SETRPM</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a223032f3646e3e996828736f484d447e" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>SETUP</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a5b2479210b861c53c3c4e53cf12d75be" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>setVelocity</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a81b05153ca250ea09930f955ecff09f2" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>startHoming</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ae64c24b0196c0b2014ba1dbb2c57ca0d" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>STOP</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a7a11a2f2d49749ec2e0118dab8adfde5" prot="public" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>stop</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>stp_reg_t</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1a8555f3dd707f20e8a30df9c642a5ffb1" prot="protected" virt="virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>wait_while_busy</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1a6c6b257722e6d6b9c5d9f059fa9d0ca3" prot="private" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>write</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1BaseJoint_1ad19e3022fe177cb6cfd3044a111e4abb" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>~BaseJoint</name></member>
+      <member refid="classbioscara__hardware__drivers_1_1Joint_1acdc5b57844833a7ac8a563f7527f961d" prot="public" virt="non-virtual"><scope>bioscara_hardware_drivers::Joint</scope><name>~Joint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

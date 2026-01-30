@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_de24fdd114b9286172dac3f30109b499" kind="dir">
+    <compoundname>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface</compoundname>
+    <innerfile refid="arm__hardware_8hpp">arm_hardware.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_f356dca73aa67f35246a3d5955743255" kind="dir">
+    <compoundname>lib/ros2_ws/src/system_test_packages</compoundname>
+    <innerdir refid="dir_a2d577cfdf855a8328adb5b1765ba8eb">lib/ros2_ws/src/system_test_packages/comm_speed_test</innerdir>
+    <innerdir refid="dir_e3f1b17a1a71a58652ed2fd8ca0a65b6">lib/ros2_ws/src/system_test_packages/gripper_manual_control</innerdir>
+    <innerdir refid="dir_b88a833f0674bf0c4a907caeed67f751">lib/ros2_ws/src/system_test_packages/high_speed_stall_test</innerdir>
+    <innerdir refid="dir_8b1e2d1fd1e6c919c251d1918b00fcad">lib/ros2_ws/src/system_test_packages/max_accel_test</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/system_test_packages/"/>
+  </compounddef>
+</doxygen>

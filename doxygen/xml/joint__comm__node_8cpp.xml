@@ -1,0 +1,350 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="joint__comm__node_8cpp" kind="file" language="C++">
+    <compoundname>joint_comm_node.cpp</compoundname>
+    <includes local="no">signal.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes refid="mJoint_8h" local="yes">bioscara_arm_hardware_driver/mJoint.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>bioscara_arm_hardware_driver/common.h</label>
+        <link refid="common_8h"/>
+      </node>
+      <node id="6">
+        <label>bioscara_arm_hardware_driver/mBaseJoint.h</label>
+        <link refid="mBaseJoint_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>bioscara_arm_hardware_driver/mJoint.h</label>
+        <link refid="mJoint_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>bioscara_arm_hardware_driver/mJoint.hpp</label>
+        <link refid="mJoint_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>bioscara_arm_hardware_driver/uErr.h</label>
+        <link refid="uErr_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>bioscara_arm_hardware_driver/uI2C.h</label>
+        <link refid="uI2C_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>bioscara_arm_hardware_driver/uTransmission.h</label>
+        <link refid="uTransmission_8h"/>
+      </node>
+      <node id="1">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp</label>
+        <link refid="joint__comm__node_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>cmath</label>
+      </node>
+      <node id="12">
+        <label>cstring</label>
+      </node>
+      <node id="13">
+        <label>errno.h</label>
+      </node>
+      <node id="14">
+        <label>fcntl.h</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>signal.h</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>termios.h</label>
+      </node>
+      <node id="3">
+        <label>unistd.h</label>
+      </node>
+      <node id="17">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" prot="public" static="no" mutable="no">
+        <type><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref></type>
+        <definition>Joint J1(&quot;j1&quot;, 0x11, 35, -3.04647, 3.04647)</definition>
+        <argsstring>(&quot;j1&quot;, 0x11, 35, -3.04647, 3.04647)</argsstring>
+        <name>J1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp" line="10" column="7"/>
+      </memberdef>
+      <memberdef kind="variable" id="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" prot="public" static="no" mutable="no">
+        <type><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref></type>
+        <definition>Joint J2(&quot;j2&quot;, 0x12, -2 *M_PI/0.004, 0.338, 0.0)</definition>
+        <argsstring>(&quot;j2&quot;, 0x12, -2 *M_PI/0.004, 0.338, 0.0)</argsstring>
+        <name>J2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp" line="11" column="7"/>
+      </memberdef>
+      <memberdef kind="variable" id="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" prot="public" static="no" mutable="no">
+        <type><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref></type>
+        <definition>Joint J3(&quot;j3&quot;, 0x13, 24, -2.62672, 2.62672)</definition>
+        <argsstring>(&quot;j3&quot;, 0x13, 24, -2.62672, 2.62672)</argsstring>
+        <name>J3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp" line="12" column="7"/>
+      </memberdef>
+      <memberdef kind="variable" id="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" prot="public" static="no" mutable="no">
+        <type><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref></type>
+        <definition>Joint J4(&quot;j4&quot;, 0x14, 12, -3.01069, 3.01069)</definition>
+        <argsstring>(&quot;j4&quot;, 0x14, 12, -3.01069, 3.01069)</argsstring>
+        <name>J4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp" line="13" column="7"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="joint__comm__node_8cpp_1af9b80db93c2f990422ecd0295b90668a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref></type>
+        <definition>void INT_handler</definition>
+        <argsstring>(int s)</argsstring>
+        <name>INT_handler</name>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp" line="15" column="6" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="joint__comm__node_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">char</ref> **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp" line="21" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp" bodystart="21" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mJoint_8h" kindref="compound">bioscara_arm_hardware_driver/mJoint.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacebioscara__hardware__drivers" kindref="compound">bioscara_hardware_drivers</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref><sp/><ref refid="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" kindref="member">J1</ref>(</highlight><highlight class="stringliteral">&quot;j1&quot;</highlight><highlight class="normal">,<sp/>0x11,<sp/>35,<sp/>-3.04647,<sp/>3.04647);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref><sp/><ref refid="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" kindref="member">J2</ref>(</highlight><highlight class="stringliteral">&quot;j2&quot;</highlight><highlight class="normal">,<sp/>0x12,<sp/>-2<sp/>*<sp/><ref refid="uTransmission_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref><sp/>/<sp/>0.004,<sp/>0.338,<sp/>0.0);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref><sp/><ref refid="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" kindref="member">J3</ref>(</highlight><highlight class="stringliteral">&quot;j3&quot;</highlight><highlight class="normal">,<sp/>0x13,<sp/>24,<sp/>-2.62672,<sp/>2.62672);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="classbioscara__hardware__drivers_1_1Joint" kindref="compound">Joint</ref><sp/><ref refid="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" kindref="member">J4</ref>(</highlight><highlight class="stringliteral">&quot;j4&quot;</highlight><highlight class="normal">,<sp/>0x14,<sp/>12,<sp/>-3.01069,<sp/>3.01069);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="joint__comm__node_8cpp_1af9b80db93c2f990422ecd0295b90668a" kindref="member">INT_handler</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">s</ref>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">printf</ref>(</highlight><highlight class="stringliteral">&quot;Caught<sp/>signal<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">exit</ref>(0);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint__comm__node_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">argc</ref>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">argv</ref>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">signal</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">SIGINT</ref>,<sp/><ref refid="joint__comm__node_8cpp_1af9b80db93c2f990422ecd0295b90668a" kindref="member">INT_handler</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref>)<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">argc</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref>)<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">argv</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" kindref="member">J1</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1aca63d0af8ba889417a16bc15510a565b" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" kindref="member">J2</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1aca63d0af8ba889417a16bc15510a565b" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" kindref="member">J3</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1aca63d0af8ba889417a16bc15510a565b" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" kindref="member">J4</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1aca63d0af8ba889417a16bc15510a565b" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" kindref="member">J2</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ad010a69043a9ee4578cadeebc85d9c80" kindref="member">isHomed</ref>())</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Homing<sp/>J2...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" kindref="member">J2</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1a4fba72ada8234cb624658560a3c40530" kindref="member">enable</ref>(20,<sp/>20);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" kindref="member">J2</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1a40598bc9a450734c35b7a8060d50170e" kindref="member">setMaxAcceleration</ref>(0.001);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" kindref="member">J2</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a1e728f5477c6e683eacba485b0c4deef" kindref="member">home</ref>(0.003,<sp/>50,<sp/>30);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" kindref="member">J2</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab6d12171276b56bae07d1b194a90844e" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Press<sp/>Enter<sp/>to<sp/>Continue...&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.ignore();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" kindref="member">J1</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ad010a69043a9ee4578cadeebc85d9c80" kindref="member">isHomed</ref>())</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Homing<sp/>J1...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" kindref="member">J1</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1a4fba72ada8234cb624658560a3c40530" kindref="member">enable</ref>(20,<sp/>20);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" kindref="member">J1</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1a40598bc9a450734c35b7a8060d50170e" kindref="member">setMaxAcceleration</ref>(0.01);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" kindref="member">J1</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a1e728f5477c6e683eacba485b0c4deef" kindref="member">home</ref>(-0.03,<sp/>30,<sp/>15);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" kindref="member">J1</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab6d12171276b56bae07d1b194a90844e" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Press<sp/>Enter<sp/>to<sp/>Continue...&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.ignore();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" kindref="member">J4</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ad010a69043a9ee4578cadeebc85d9c80" kindref="member">isHomed</ref>())</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Homing<sp/>J4...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" kindref="member">J4</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1a4fba72ada8234cb624658560a3c40530" kindref="member">enable</ref>(20,<sp/>20);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" kindref="member">J4</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1a40598bc9a450734c35b7a8060d50170e" kindref="member">setMaxAcceleration</ref>(0.01);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" kindref="member">J4</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a1e728f5477c6e683eacba485b0c4deef" kindref="member">home</ref>(0.1,<sp/>30,<sp/>10);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" kindref="member">J4</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab6d12171276b56bae07d1b194a90844e" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Press<sp/>Enter<sp/>to<sp/>Continue...&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.ignore();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" kindref="member">J3</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ad010a69043a9ee4578cadeebc85d9c80" kindref="member">isHomed</ref>())</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Homing<sp/>J3...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" kindref="member">J3</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1a4fba72ada8234cb624658560a3c40530" kindref="member">enable</ref>(20,<sp/>20);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" kindref="member">J3</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1a40598bc9a450734c35b7a8060d50170e" kindref="member">setMaxAcceleration</ref>(0.01);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" kindref="member">J3</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a1e728f5477c6e683eacba485b0c4deef" kindref="member">home</ref>(0.05,<sp/>25,<sp/>10);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" kindref="member">J3</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab6d12171276b56bae07d1b194a90844e" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J1.enable(20,<sp/>20);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J2.enable(20,<sp/>20);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J3.enable(20,<sp/>20);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J4.enable(20,<sp/>20);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J1.enableStallguard(5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J2.enableStallguard(5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J3.enableStallguard(5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J4.enableStallguard(5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J1.setPosition(0.0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>J2.setPosition(0.0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J3.setPosition(0.0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>J4.setPosition(0.0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Press<sp/>Enter<sp/>to<sp/>Continue...&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.ignore();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">vector&lt;float&gt;</ref><sp/>q<sp/>=<sp/>{0.0,<sp/>0.0,<sp/>0.0,<sp/>0.0};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">vector&lt;float&gt;</ref><sp/>qd<sp/>=<sp/>{0.0,<sp/>0.0,<sp/>0.0,<sp/>0.0};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">vector&lt;float&gt;</ref><sp/>q_set<sp/>=<sp/>{0.0,<sp/>0.0,<sp/>0.0,<sp/>0.0};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">vector&lt;float&gt;</ref><sp/>qd_set<sp/>=<sp/>{0.0,<sp/>0.0,<sp/>0.0,<sp/>0.0};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">t</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">period_ms</ref><sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" kindref="member">J1</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab6d12171276b56bae07d1b194a90844e" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" kindref="member">J2</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab6d12171276b56bae07d1b194a90844e" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" kindref="member">J3</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab6d12171276b56bae07d1b194a90844e" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" kindref="member">J4</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab6d12171276b56bae07d1b194a90844e" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint__comm__node_8cpp_1acbe52cd33b413facbb206bd7f54734f6" kindref="member">J1</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1aa48673be56b04a573142ee8c9ad18e20" kindref="member">getPosition</ref>(q[0])<sp/>==<sp/>err_type_t::OK<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1ae261ce877dad1392dd8bba2a5107abd5" kindref="member">J2</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1aa48673be56b04a573142ee8c9ad18e20" kindref="member">getPosition</ref>(q[1])<sp/>==<sp/>err_type_t::OK<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1a4deaebb2a18c7e8506b0d9fcd3f26366" kindref="member">J3</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1aa48673be56b04a573142ee8c9ad18e20" kindref="member">getPosition</ref>(q[2])<sp/>==<sp/>err_type_t::OK<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint__comm__node_8cpp_1a43da7a991a5851b1caa14ac2c5855aea" kindref="member">J4</ref>.<ref refid="classbioscara__hardware__drivers_1_1Joint_1aa48673be56b04a573142ee8c9ad18e20" kindref="member">getPosition</ref>(q[3])<sp/>==<sp/>err_type_t::OK)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Positions:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">n</ref><sp/>:<sp/>q)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">n</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">endl</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">usleep</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">period_ms</ref><sp/>*<sp/>1000);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">t</ref><sp/>+=<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">period_ms</ref><sp/>*<sp/>1.0<sp/>/<sp/>1000;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp"/>
+  </compounddef>
+</doxygen>

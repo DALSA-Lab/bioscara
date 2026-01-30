@@ -1,0 +1,40 @@
+\doxysection{m\+Joint.\+hpp}
+\hypertarget{mJoint_8hpp_source}{}\label{mJoint_8hpp_source}\index{lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/mJoint.hpp@{lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/mJoint.hpp}}
+\mbox{\hyperlink{mJoint_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mJoint_8h}{bioscara\_arm\_hardware\_driver/mJoint.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{uI2C_8h}{bioscara\_arm\_hardware\_driver/uI2C.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_8h}{bioscara\_arm\_hardware\_driver/common.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacebioscara__hardware__drivers}{bioscara\_hardware\_drivers}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a81a8e4841ae03d04498d2f6ef3c08d82}{Joint::read}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\_reg\_t}}\ \mbox{\hyperlink{joint_8ino_a9428adc9af4653a2050e2536b55dec8d}{reg}},\ T\ \&data,\ u\_int8\_t\ \&flags)}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size\ =\ \textcolor{keyword}{sizeof}(T)\ +\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buf[\mbox{\hyperlink{joint_8h_a1d5dab30b404fab91608086105afc78c}{MAX\_BUFFER}}\ +\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}}];}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ \mbox{\hyperlink{uI2C_8h_a607cb25ea06e8ce952788a1e710e7f50}{readFromI2CDev}}(this-\/>\mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a94ad561692bc595de865ddec3dc67a0f}{handle}},\ reg,\ buf,\ size);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ !=\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(size))}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ memcpy(\&data,\ buf,\ size\ -\/\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}},\ buf\ +\ size\ -\/\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}},\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a6c6b257722e6d6b9c5d9f059fa9d0ca3}{Joint::write}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\_reg\_t}}\ \mbox{\hyperlink{joint_8ino_a9428adc9af4653a2050e2536b55dec8d}{reg}},\ T\ data,\ u\_int8\_t\ \&flags)}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size\ =\ \textcolor{keyword}{sizeof}(T)\ +\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buf[\mbox{\hyperlink{joint_8h_a1d5dab30b404fab91608086105afc78c}{MAX\_BUFFER}}\ +\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}}];}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ memcpy(buf,\ \&data,\ size\ -\/\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rc\ =\ \mbox{\hyperlink{uI2C_8h_ab73613a3b862a54f70dff0b5192cbcac}{writeToI2CDev}}(this-\/>\mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a94ad561692bc595de865ddec3dc67a0f}{handle}},\ reg,\ buf,\ size\ -\/\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}},\ buf\ +\ size\ -\/\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ rc\ =\ rc\ >\ 0\ ?\ 0\ :\ rc;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}},\ buf\ +\ size\ -\/\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}},\ \mbox{\hyperlink{joint_8h_abf5d227b2ae124bdc7d5f15397b9bca1}{RFLAGS\_SIZE}});}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rc;}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="uPWM_8h" kind="file" language="C++">
+    <compoundname>uPWM.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">math.h</includes>
+    <includedby refid="mGripper_8h" local="yes">lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/mGripper.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h</label>
+        <link refid="uPWM_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/mGripper.h</label>
+        <link refid="mGripper_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h</label>
+        <link refid="uPWM_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/src/mGripper.cpp</label>
+        <link refid="mGripper_8cpp"/>
+      </node>
+      <node id="4">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp</label>
+        <link refid="gripper__hardware_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp</label>
+        <link refid="gripper__hardware_8cpp"/>
+      </node>
+      <node id="6">
+        <label>lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp</label>
+        <link refid="manual__control_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRPI__PWM" prot="public">RPI_PWM</innerclass>
+    <briefdescription>
+<para>Includes source code for Hardware PWM generation on Raspberry Pi 4. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>sbstorz and Bernd Porr, <ulink url="mailto:bernd.porr@glasgow.ac.uk">bernd.porr@glasgow.ac.uk</ulink> </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2025-05-27</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__RPIPWM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__RPIPWM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classRPI__PWM" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRPI__PWM" kindref="compound">RPI_PWM</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45" refid="classRPI__PWM_1a99e582b3b8571eb991c80268d6024cd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRPI__PWM_1a99e582b3b8571eb991c80268d6024cd8" kindref="member">start</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">channel</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">frequency</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">duty_cycle</ref><sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">chip</ref><sp/>=<sp/>2)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1a35df433d8a5faeed71f439ea6063030a" kindref="member">chippath</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/sys/class/pwm/pwmchip&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">chip</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1a62b8d2b406cbb62d2703d282bdc703d9" kindref="member">pwmpath</ref><sp/>=<sp/><ref refid="classRPI__PWM_1a35df433d8a5faeed71f439ea6063030a" kindref="member">chippath</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/pwm&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">channel</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">p</ref><sp/>=<sp/><ref refid="classRPI__PWM_1a35df433d8a5faeed71f439ea6063030a" kindref="member">chippath</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/export&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">FILE</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fp</ref><sp/>=<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fopen</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">p</ref>.c_str(),<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">NULL</ref><sp/>==<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fp</ref>)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;PWM<sp/>device<sp/>does<sp/>not<sp/>exist.<sp/>Make<sp/>sure<sp/>to<sp/>add<sp/>&apos;dtoverlay=pwm-2chan&apos;<sp/>to<sp/>/boot/firmware/config.txt.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref><sp/>=<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fprintf</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fp</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">channel</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fclose</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">usleep</ref>(100000);<sp/></highlight><highlight class="comment">//<sp/>it<sp/>takes<sp/>a<sp/>while<sp/>till<sp/>the<sp/>PWM<sp/>subdir<sp/>is<sp/>created</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1a980677ec3d3119a4dc69a66cf73f1de6" kindref="member">per</ref><sp/>=<sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref>)1<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">E9</ref><sp/>/<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">frequency</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1a6d1eaddac5428733db69f27d962b0cc3" kindref="member">setPeriod</ref>(<ref refid="classRPI__PWM_1a980677ec3d3119a4dc69a66cf73f1de6" kindref="member">per</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1aa873d369ec4dec004a6be8ba63606c11" kindref="member">setDutyCycle</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">duty_cycle</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1aa023cdb54ae0945f74c454d70d654a58" kindref="member">enable</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classRPI__PWM_1a1ca02994ab743f3397bce2ebc2b745ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRPI__PWM_1a1ca02994ab743f3397bce2ebc2b745ed" kindref="member">stop</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1ade7c53f4c16b0dc40e8e8f38eb151a89" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classRPI__PWM_1a48018f0627c5c22a313a2d69b0bb3301" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1a48018f0627c5c22a313a2d69b0bb3301" kindref="member">~RPI_PWM</ref>()</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1ade7c53f4c16b0dc40e8e8f38eb151a89" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classRPI__PWM_1aa873d369ec4dec004a6be8ba63606c11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRPI__PWM_1aa873d369ec4dec004a6be8ba63606c11" kindref="member">setDutyCycle</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">v</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="93"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dc</ref><sp/>=<sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref>)<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">round</ref>((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<ref refid="classRPI__PWM_1a980677ec3d3119a4dc69a66cf73f1de6" kindref="member">per</ref><sp/>*<sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">v</ref><sp/>/<sp/>100.0));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref><sp/>=<sp/><ref refid="classRPI__PWM_1acd7a572ed91355ae643f39689c5c8174" kindref="member">setDutyCycleNS</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dc</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classRPI__PWM_1a6d1eaddac5428733db69f27d962b0cc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRPI__PWM_1a6d1eaddac5428733db69f27d962b0cc3" kindref="member">setPeriod</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">ns</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="102"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1a96f1e19737bef5df387113a7dd7ca0f3" kindref="member">writeSYS</ref>(<ref refid="classRPI__PWM_1a62b8d2b406cbb62d2703d282bdc703d9" kindref="member">pwmpath</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;period&quot;</highlight><highlight class="normal">,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">ns</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classRPI__PWM_1acd7a572ed91355ae643f39689c5c8174" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRPI__PWM_1acd7a572ed91355ae643f39689c5c8174" kindref="member">setDutyCycleNS</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">ns</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="107"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref><sp/>=<sp/><ref refid="classRPI__PWM_1a96f1e19737bef5df387113a7dd7ca0f3" kindref="member">writeSYS</ref>(<ref refid="classRPI__PWM_1a62b8d2b406cbb62d2703d282bdc703d9" kindref="member">pwmpath</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;duty_cycle&quot;</highlight><highlight class="normal">,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">ns</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classRPI__PWM_1aa023cdb54ae0945f74c454d70d654a58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRPI__PWM_1aa023cdb54ae0945f74c454d70d654a58" kindref="member">enable</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="113"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1a96f1e19737bef5df387113a7dd7ca0f3" kindref="member">writeSYS</ref>(<ref refid="classRPI__PWM_1a62b8d2b406cbb62d2703d282bdc703d9" kindref="member">pwmpath</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;enable&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classRPI__PWM_1ade7c53f4c16b0dc40e8e8f38eb151a89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRPI__PWM_1ade7c53f4c16b0dc40e8e8f38eb151a89" kindref="member">disable</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="118"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRPI__PWM_1a96f1e19737bef5df387113a7dd7ca0f3" kindref="member">writeSYS</ref>(<ref refid="classRPI__PWM_1a62b8d2b406cbb62d2703d282bdc703d9" kindref="member">pwmpath</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;enable&quot;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classRPI__PWM_1a980677ec3d3119a4dc69a66cf73f1de6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRPI__PWM_1a980677ec3d3119a4dc69a66cf73f1de6" kindref="member">per</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="classRPI__PWM_1a35df433d8a5faeed71f439ea6063030a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classRPI__PWM_1a35df433d8a5faeed71f439ea6063030a" kindref="member">chippath</ref>;</highlight></codeline>
+<codeline lineno="125" refid="classRPI__PWM_1a62b8d2b406cbb62d2703d282bdc703d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classRPI__PWM_1a62b8d2b406cbb62d2703d282bdc703d9" kindref="member">pwmpath</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="classRPI__PWM_1a96f1e19737bef5df387113a7dd7ca0f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRPI__PWM_1a96f1e19737bef5df387113a7dd7ca0f3" kindref="member">writeSYS</ref>(std::string<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">filename</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">value</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="128"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">FILE</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fp</ref><sp/>=<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fopen</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">filename</ref>.c_str(),<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">NULL</ref><sp/>==<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fp</ref>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref><sp/>=<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fprintf</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fp</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fclose</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h"/>
+  </compounddef>
+</doxygen>

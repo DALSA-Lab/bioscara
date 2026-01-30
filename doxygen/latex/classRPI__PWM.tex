@@ -1,0 +1,175 @@
+\doxysection{RPI\+\_\+\+PWM Class Reference}
+\hypertarget{classRPI__PWM}{}\label{classRPI__PWM}\index{RPI\_PWM@{RPI\_PWM}}
+
+
+Class to create a Pulse Width Modulated (PWM) signal on the Raspberry PI 4 and 5.  
+
+
+
+
+{\ttfamily \#include $<$u\+PWM.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classRPI__PWM_a99e582b3b8571eb991c80268d6024cd8}{start}} (int channel, int frequency, float duty\+\_\+cycle=0, int chip=2)
+\begin{DoxyCompactList}\small\item\em Starts the PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRPI__PWM_a1ca02994ab743f3397bce2ebc2b745ed}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the PWM. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRPI__PWM_a48018f0627c5c22a313a2d69b0bb3301}{\texorpdfstring{$\sim$}{\string~}\+RPI\+\_\+\+PWM}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classRPI__PWM}{RPI\+\_\+\+PWM} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRPI__PWM_aa873d369ec4dec004a6be8ba63606c11}{set\+Duty\+Cycle}} (float v) const
+\begin{DoxyCompactList}\small\item\em Sets the duty cycle in percent 0 -\/ 100. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRPI__PWM_a6d1eaddac5428733db69f27d962b0cc3}{set\+Period}} (int ns) const
+\item 
+int \mbox{\hyperlink{classRPI__PWM_acd7a572ed91355ae643f39689c5c8174}{set\+Duty\+Cycle\+NS}} (int ns) const
+\item 
+void \mbox{\hyperlink{classRPI__PWM_aa023cdb54ae0945f74c454d70d654a58}{enable}} () const
+\item 
+void \mbox{\hyperlink{classRPI__PWM_ade7c53f4c16b0dc40e8e8f38eb151a89}{disable}} () const
+\item 
+int \mbox{\hyperlink{classRPI__PWM_a96f1e19737bef5df387113a7dd7ca0f3}{write\+SYS}} (std\+::string filename, int value) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classRPI__PWM_a980677ec3d3119a4dc69a66cf73f1de6}{per}} = 0
+\item 
+std\+::string \mbox{\hyperlink{classRPI__PWM_a35df433d8a5faeed71f439ea6063030a}{chippath}}
+\item 
+std\+::string \mbox{\hyperlink{classRPI__PWM_a62b8d2b406cbb62d2703d282bdc703d9}{pwmpath}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to create a Pulse Width Modulated (PWM) signal on the Raspberry PI 4 and 5. 
+
+Based on \href{https://github.com/berndporr/rpi_pwm/blob/main/rpi_pwm.h}{\texttt{ https\+://github.\+com/berndporr/rpi\+\_\+pwm/blob/main/rpi\+\_\+pwm.\+h}} and slightly modified.
+
+For servo control it is important to use a hardware generated PWM, since software PWM, like it is created by the lgpio library, is subject to timing jitter which can cause the servo to figet which might lead to overheating and wear. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRPI__PWM_a48018f0627c5c22a313a2d69b0bb3301}\label{classRPI__PWM_a48018f0627c5c22a313a2d69b0bb3301} 
+\index{RPI\_PWM@{RPI\_PWM}!````~RPI\_PWM@{\texorpdfstring{$\sim$}{\string~}RPI\_PWM}}
+\index{````~RPI\_PWM@{\texorpdfstring{$\sim$}{\string~}RPI\_PWM}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RPI\_PWM()}{\string~RPI\_PWM()}}
+{\footnotesize\ttfamily RPI\+\_\+\+PWM\+::\texorpdfstring{$\sim$}{\string~}\+RPI\+\_\+\+PWM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the \doxylink{classRPI__PWM}{RPI\+\_\+\+PWM} object. 
+
+Invokes \doxylink{classRPI__PWM_ade7c53f4c16b0dc40e8e8f38eb151a89}{disable()} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRPI__PWM_ade7c53f4c16b0dc40e8e8f38eb151a89}\label{classRPI__PWM_ade7c53f4c16b0dc40e8e8f38eb151a89} 
+\index{RPI\_PWM@{RPI\_PWM}!disable@{disable}}
+\index{disable@{disable}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void RPI\+\_\+\+PWM\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{classRPI__PWM_aa023cdb54ae0945f74c454d70d654a58}\label{classRPI__PWM_aa023cdb54ae0945f74c454d70d654a58} 
+\index{RPI\_PWM@{RPI\_PWM}!enable@{enable}}
+\index{enable@{enable}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void RPI\+\_\+\+PWM\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{classRPI__PWM_aa873d369ec4dec004a6be8ba63606c11}\label{classRPI__PWM_aa873d369ec4dec004a6be8ba63606c11} 
+\index{RPI\_PWM@{RPI\_PWM}!setDutyCycle@{setDutyCycle}}
+\index{setDutyCycle@{setDutyCycle}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{setDutyCycle()}{setDutyCycle()}}
+{\footnotesize\ttfamily int RPI\+\_\+\+PWM\+::set\+Duty\+Cycle (\begin{DoxyParamCaption}\item[{float}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the duty cycle in percent 0 -\/ 100. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The duty cycle in percent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\texorpdfstring{$>$}{>}0 on success and -\/1 after an error. 
+\end{DoxyReturn}
+\Hypertarget{classRPI__PWM_acd7a572ed91355ae643f39689c5c8174}\label{classRPI__PWM_acd7a572ed91355ae643f39689c5c8174} 
+\index{RPI\_PWM@{RPI\_PWM}!setDutyCycleNS@{setDutyCycleNS}}
+\index{setDutyCycleNS@{setDutyCycleNS}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{setDutyCycleNS()}{setDutyCycleNS()}}
+{\footnotesize\ttfamily int RPI\+\_\+\+PWM\+::set\+Duty\+Cycle\+NS (\begin{DoxyParamCaption}\item[{int}]{ns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{classRPI__PWM_a6d1eaddac5428733db69f27d962b0cc3}\label{classRPI__PWM_a6d1eaddac5428733db69f27d962b0cc3} 
+\index{RPI\_PWM@{RPI\_PWM}!setPeriod@{setPeriod}}
+\index{setPeriod@{setPeriod}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{setPeriod()}{setPeriod()}}
+{\footnotesize\ttfamily void RPI\+\_\+\+PWM\+::set\+Period (\begin{DoxyParamCaption}\item[{int}]{ns }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{classRPI__PWM_a99e582b3b8571eb991c80268d6024cd8}\label{classRPI__PWM_a99e582b3b8571eb991c80268d6024cd8} 
+\index{RPI\_PWM@{RPI\_PWM}!start@{start}}
+\index{start@{start}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily int RPI\+\_\+\+PWM\+::start (\begin{DoxyParamCaption}\item[{int}]{channel,  }\item[{int}]{frequency,  }\item[{float}]{duty\+\_\+cycle = {\ttfamily 0},  }\item[{int}]{chip = {\ttfamily 2} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts the PWM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The GPIO channel \\
+\hline
+{\em frequency} & The PWM frequency \\
+\hline
+{\em duty\+\_\+cycle} & The initial duty cycle of the PWM (default 0) \\
+\hline
+{\em chip} & The chip number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\texorpdfstring{$>$}{>}0 on success and -\/1 if an error has happened. 
+\end{DoxyReturn}
+\Hypertarget{classRPI__PWM_a1ca02994ab743f3397bce2ebc2b745ed}\label{classRPI__PWM_a1ca02994ab743f3397bce2ebc2b745ed} 
+\index{RPI\_PWM@{RPI\_PWM}!stop@{stop}}
+\index{stop@{stop}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void RPI\+\_\+\+PWM\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stops the PWM. 
+
+\Hypertarget{classRPI__PWM_a96f1e19737bef5df387113a7dd7ca0f3}\label{classRPI__PWM_a96f1e19737bef5df387113a7dd7ca0f3} 
+\index{RPI\_PWM@{RPI\_PWM}!writeSYS@{writeSYS}}
+\index{writeSYS@{writeSYS}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{writeSYS()}{writeSYS()}}
+{\footnotesize\ttfamily int RPI\+\_\+\+PWM\+::write\+SYS (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{int}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classRPI__PWM_a35df433d8a5faeed71f439ea6063030a}\label{classRPI__PWM_a35df433d8a5faeed71f439ea6063030a} 
+\index{RPI\_PWM@{RPI\_PWM}!chippath@{chippath}}
+\index{chippath@{chippath}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{chippath}{chippath}}
+{\footnotesize\ttfamily std\+::string RPI\+\_\+\+PWM\+::chippath\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRPI__PWM_a980677ec3d3119a4dc69a66cf73f1de6}\label{classRPI__PWM_a980677ec3d3119a4dc69a66cf73f1de6} 
+\index{RPI\_PWM@{RPI\_PWM}!per@{per}}
+\index{per@{per}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{per}{per}}
+{\footnotesize\ttfamily int RPI\+\_\+\+PWM\+::per = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRPI__PWM_a62b8d2b406cbb62d2703d282bdc703d9}\label{classRPI__PWM_a62b8d2b406cbb62d2703d282bdc703d9} 
+\index{RPI\_PWM@{RPI\_PWM}!pwmpath@{pwmpath}}
+\index{pwmpath@{pwmpath}!RPI\_PWM@{RPI\_PWM}}
+\doxysubsubsection{\texorpdfstring{pwmpath}{pwmpath}}
+{\footnotesize\ttfamily std\+::string RPI\+\_\+\+PWM\+::pwmpath\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+grippers/bioscara\+\_\+gripper\+\_\+hardware\+\_\+driver/include/bioscara\+\_\+gripper\+\_\+hardware\+\_\+driver/\mbox{\hyperlink{uPWM_8h}{u\+PWM.\+h}}\end{DoxyCompactItemize}

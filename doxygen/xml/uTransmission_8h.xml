@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="uTransmission_8h" kind="file" language="C++">
+    <compoundname>uTransmission.h</compoundname>
+    <includedby refid="mJoint_8h" local="yes">lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h</includedby>
+    <includedby refid="mGripper_8cpp" local="yes">lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/src/mGripper.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.h</label>
+        <link refid="mJoint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mJoint.hpp</label>
+        <link refid="mJoint_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h</label>
+        <link refid="uTransmission_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/joint_comm_node.cpp</label>
+        <link refid="joint__comm__node_8cpp"/>
+      </node>
+      <node id="5">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mJoint.cpp</label>
+        <link refid="mJoint_8cpp"/>
+      </node>
+      <node id="6">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp</label>
+        <link refid="arm__hardware_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp</label>
+        <link refid="arm__hardware_8cpp"/>
+      </node>
+      <node id="11">
+        <label>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/src/mGripper.cpp</label>
+        <link refid="mGripper_8cpp"/>
+      </node>
+      <node id="8">
+        <label>lib/ros2_ws/src/system_test_packages/comm_speed_test/src/main.cpp</label>
+        <link refid="comm__speed__test_2src_2main_8cpp"/>
+      </node>
+      <node id="9">
+        <label>lib/ros2_ws/src/system_test_packages/high_speed_stall_test/src/main.cpp</label>
+        <link refid="high__speed__stall__test_2src_2main_8cpp"/>
+      </node>
+      <node id="10">
+        <label>lib/ros2_ws/src/system_test_packages/max_accel_test/src/main.cpp</label>
+        <link refid="max__accel__test_2src_2main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="uTransmission_8h_1a056e4bc2bde4678659c2b48c1186ec7c" prot="public" static="no">
+        <name>JOINT2ACTUATOR</name>
+        <param><defname>in</defname></param>
+        <param><defname>reduction</defname></param>
+        <param><defname>offset</defname></param>
+        <initializer>(reduction * (<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">in</ref> - offset))</initializer>
+        <briefdescription>
+<para>Macro for a simple transmission from joint units to actuator units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The translation is based on the ros2_control transmission interface, simple transmission. For position reduction and offset need to be used.<linebreak/>
+For velocity and acceleration only use reduction and NO offset <linebreak/>
+For effort/torque use 1/reduction and NO offset <linebreak/>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" line="12" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="uTransmission_8h_1a88e00e01f6d4b0b1fd6a882fce05e361" prot="public" static="no">
+        <name>ACTUATOR2JOINT</name>
+        <param><defname>in</defname></param>
+        <param><defname>reduction</defname></param>
+        <param><defname>offset</defname></param>
+        <initializer>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">in</ref> / reduction + offset)</initializer>
+        <briefdescription>
+<para>Macro for a simple transmission from actuator units to joint units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The translation is based on the ros2_control transmission interface, simple transmission. For position reduction and offset need to be used.<linebreak/>
+For velocity and acceleration only use reduction and NO offset <linebreak/>
+For effort/torque use 1/reduction and NO offset <linebreak/>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" line="22" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="uTransmission_8h_1ae71449b1cc6e6250b91f539153a7a0d3" prot="public" static="no">
+        <name>M_PI</name>
+        <initializer>3.14159265358979323846</initializer>
+        <briefdescription>
+<para>pi </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" line="28" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="uTransmission_8h_1aacc958134b53425ec947541bb72ac8b1" prot="public" static="no">
+        <name>RAD2DEG</name>
+        <param><defname>rad</defname></param>
+        <initializer>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rad</ref> / <ref refid="uTransmission_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref> * 180)</initializer>
+        <briefdescription>
+<para>Macro to convert radians to degree. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" line="34" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="uTransmission_8h_1aa3616a5af1a14b0a5a1b2f542066ae45" prot="public" static="no">
+        <name>DEG2RAD</name>
+        <param><defname>deg</defname></param>
+        <initializer>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">deg</ref> * <ref refid="uTransmission_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref> / 180)</initializer>
+        <briefdescription>
+<para>Macro to convert degree to radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" line="40" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>UTRANSMISSION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UTRANSMISSION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="uTransmission_8h_1a056e4bc2bde4678659c2b48c1186ec7c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JOINT2ACTUATOR(in,<sp/>reduction,<sp/>offset)<sp/>(reduction<sp/>*<sp/>(in<sp/>-<sp/>offset))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="uTransmission_8h_1a88e00e01f6d4b0b1fd6a882fce05e361" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ACTUATOR2JOINT(in,<sp/>reduction,<sp/>offset)<sp/>(in<sp/>/<sp/>reduction<sp/>+<sp/>offset)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="uTransmission_8h_1ae71449b1cc6e6250b91f539153a7a0d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M_PI<sp/>3.14159265358979323846</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="uTransmission_8h_1aacc958134b53425ec947541bb72ac8b1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAD2DEG(rad)<sp/>(rad<sp/>/<sp/>M_PI<sp/>*<sp/>180)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="uTransmission_8h_1aa3616a5af1a14b0a5a1b2f542066ae45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEG2RAD(deg)<sp/>(deg<sp/>*<sp/>M_PI<sp/>/<sp/>180)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//UTRANSMISSION_H</highlight></codeline>
+    </programlisting>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/uTransmission.h"/>
+  </compounddef>
+</doxygen>

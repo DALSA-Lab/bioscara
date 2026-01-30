@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t" kind="struct" language="C++" prot="private">
+    <compoundname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a81230f46e2646921e34fa5bb013d953a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::i2c_address</definition>
+        <argsstring></argsstring>
+        <name>i2c_address</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::i2c_address</qualifiedname>
+        <briefdescription>
+<para>[int, HEX] I2C device adress </para>
+        </briefdescription>
+        <detaileddescription>
+<para>1-byte I2C device adress (0x11 ... 0x14) for J1 ... J4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="344" column="17" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a0a84f3e1768fbfb9da1952812a8ea644" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::reduction</definition>
+        <argsstring></argsstring>
+        <name>reduction</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::reduction</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>[float] Gear reduction of the joint </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is used to transform position and velocity values between in joint units and actuator (stepper) units. The sign depends on the direction the motor is mounted and is turning. Adjust such that the joint moves in the positive direction on on positive joint commands. Cable polarity has no effect since the motors automatically adjust to always run in the &apos;right&apos; direction from their point of view. <linebreak/>
+J1: 35 <linebreak/>
+J2: -2*pi/0.004 (4 mm linear movement per stepper revolution, positive rotation makes the joint go down (negative), hence the minus sign for correction) <linebreak/>
+J3: 24 <linebreak/>
+J4: 12 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="360" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a44a77fb4acc5764a54cad44e71142b91" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::min</qualifiedname>
+        <briefdescription>
+<para>[float] Lower joint limit in joint units </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initial values are (subject to tuning) <linebreak/>
+J1: -3.04647 <linebreak/>
+J2: -0.0016 <linebreak/>
+J3: -2.62672 <linebreak/>
+J4: -3.01069 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="371" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a3c29de194b4fc68f0934838209681382" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::max</qualifiedname>
+        <briefdescription>
+<para>[float] Upper joint limit in joint units </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initial values are (subject to tuning) <linebreak/>
+J1: 3.04647 <linebreak/>
+J2: 0.3380 <linebreak/>
+J3: 2.62672 <linebreak/>
+J4: 3.01069 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="382" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a7b364f719d04b022ed434c019213eab6" prot="public" static="no" mutable="no">
+        <type>u_int8_t</type>
+        <definition>u_int8_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::drive_current</definition>
+        <argsstring></argsstring>
+        <name>drive_current</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::drive_current</qualifiedname>
+        <briefdescription>
+<para>[int, DEC] Drive current of stepper driver in 0-100 % of 2.5A output (check uStepper doc.) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set when joint is enabled, see <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab71c7a70946252c09efbd42b039b7eb0" kindref="member">bioscara_hardware_drivers::BaseJoint::enable()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="389" column="22" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a1cf12b4ff59a2350d11285c65936553b" prot="public" static="no" mutable="no">
+        <type>u_int8_t</type>
+        <definition>u_int8_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::hold_current</definition>
+        <argsstring></argsstring>
+        <name>hold_current</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::hold_current</qualifiedname>
+        <briefdescription>
+<para>[int, DEC] Hold current of stepper driver in 0-100 % of 2.5A output (check uStepper doc.) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set when joint is enabled, see <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ab71c7a70946252c09efbd42b039b7eb0" kindref="member">bioscara_hardware_drivers::BaseJoint::enable()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="396" column="22" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a49c70f58dbe37935a5c7dd81f705b532" prot="public" static="no" mutable="no">
+        <type>u_int8_t</type>
+        <definition>u_int8_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::stall_threshold</definition>
+        <argsstring></argsstring>
+        <name>stall_threshold</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::stall_threshold</qualifiedname>
+        <briefdescription>
+<para>[int, DEC] Stall protection threshold in 0-255, where lower is more sensitive. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the PID error exceeds the set threshold a stall is triggered and the motor disabled. Set when joint is enabled, see <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1af2e8a64536a75ffb20f5ed81836eead5" kindref="member">bioscara_hardware_drivers::BaseJoint::enableStallguard()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="404" column="22" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1aea92062a753d103f48b2e5a7b03554a3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::max_velocity</definition>
+        <argsstring></argsstring>
+        <name>max_velocity</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::max_velocity</qualifiedname>
+        <briefdescription>
+<para>[float] Maximum permitted joint velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In rad/s or m/s for cylindrical and prismatic joints respectively. Set when joint is enabled, see <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a270d845f4fcbad79eaf3d218badf43e1" kindref="member">bioscara_hardware_drivers::BaseJoint::setMaxVelocity()</ref>. <simplesect kind="note"><para>This is the &quot;last&quot; limit and shall ALWAYS be greater than all limits set in the controller and application (MoveIt) configuration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="414" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a4bd8e5ea941aa2c52b2b31cbb0022765" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::max_acceleration</definition>
+        <argsstring></argsstring>
+        <name>max_acceleration</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::max_acceleration</qualifiedname>
+        <briefdescription>
+<para>[float] Maximum permitted joint acceleration (and deceleration). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In rad/s^2 or m/s^2 for cylindrical and prismatic joints respectively. Set when joint is enabled, see <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a47296176d6bd6a86a66412cad1fb5f21" kindref="member">bioscara_hardware_drivers::BaseJoint::setMaxAcceleration()</ref>. <simplesect kind="note"><para>This is the &quot;last&quot; limit and shall ALWAYS be greater than all limits set in the controller and application (MoveIt) configuration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="424" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a19efa0a3b6d4bb593cf457c52431c8b9" prot="public" static="no" mutable="no">
+        <type><ref refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t" kindref="compound">joint_homing_config_t</ref></type>
+        <definition>joint_homing_config_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::homing</definition>
+        <argsstring></argsstring>
+        <name>homing</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::homing</qualifiedname>
+        <briefdescription>
+<para>Holding the <ref refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t" kindref="compound">joint_homing_config_t</ref> configruation values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="430" column="35" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="430" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>configuration structure holding the passed paramters from the ros2_control urdf </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Saving all parameters on initialization in a structure allows for quick access during runtime. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</label>
+        <link refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>homing</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t</label>
+        <link refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="337" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="338" bodyend="431"/>
+    <listofallmembers>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a7b364f719d04b022ed434c019213eab6" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>drive_current</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a1cf12b4ff59a2350d11285c65936553b" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>hold_current</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a19efa0a3b6d4bb593cf457c52431c8b9" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>homing</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a81230f46e2646921e34fa5bb013d953a" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>i2c_address</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a3c29de194b4fc68f0934838209681382" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>max</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a4bd8e5ea941aa2c52b2b31cbb0022765" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>max_acceleration</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1aea92062a753d103f48b2e5a7b03554a3" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>max_velocity</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a44a77fb4acc5764a54cad44e71142b91" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>min</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a0a84f3e1768fbfb9da1952812a8ea644" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>reduction</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a49c70f58dbe37935a5c7dd81f705b532" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</scope><name>stall_threshold</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

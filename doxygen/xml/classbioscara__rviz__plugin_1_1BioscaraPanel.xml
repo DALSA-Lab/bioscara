@@ -1,0 +1,1238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classbioscara__rviz__plugin_1_1BioscaraPanel" kind="class" language="C++" prot="public">
+    <compoundname>bioscara_rviz_plugin::BioscaraPanel</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rviz_common::Panel</basecompoundref>
+    <includes refid="bioscara__panel_8hpp" local="no">bioscara_panel.hpp</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a95758278fff99d61ad29ff1746d767ec" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Node::SharedPtr</type>
+        <definition>rclcpp::Node::SharedPtr bioscara_rviz_plugin::BioscaraPanel::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::node_</qualifiedname>
+        <briefdescription>
+<para>Pointer to the parent node. Used for access to the executor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="75" column="29" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1acb0ccbaf786959f349361ce0d335fd77" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ControllerManagerActivity &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ControllerManagerActivity&gt;::SharedPtr bioscara_rviz_plugin::BioscaraPanel::cm_state_subsription_</definition>
+        <argsstring></argsstring>
+        <name>cm_state_subsription_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::cm_state_subsription_</qualifiedname>
+        <briefdescription>
+<para>Subscription to the the controller_manager state publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to retrieve information about hardware and controller state changes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="83" column="38" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1ab53e4f121e21982e3d05c26324a76f13" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; DynamicJointState &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;DynamicJointState&gt;::SharedPtr bioscara_rviz_plugin::BioscaraPanel::joint_state_subsription_</definition>
+        <argsstring></argsstring>
+        <name>joint_state_subsription_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::joint_state_subsription_</qualifiedname>
+        <briefdescription>
+<para>Subscription to the the joint state publisher state publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the &quot;/dynamic_joint_states&quot; to receive updates of all joints states. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="91" column="38" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a2992ee7a7d8d0036607d13d8e154944f" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; DynamicInterfaceGroupValues &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;DynamicInterfaceGroupValues&gt;::SharedPtr bioscara_rviz_plugin::BioscaraPanel::homing_publisher_</definition>
+        <argsstring></argsstring>
+        <name>homing_publisher_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::homing_publisher_</qualifiedname>
+        <briefdescription>
+<para>Publisher to send commands to the homing_controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to start and stop homing of joints. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="99" column="35" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1ac1ad2c999bf39ec304bdc587b9ac0300" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Client&lt; SwitchController &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;SwitchController&gt;::SharedPtr bioscara_rviz_plugin::BioscaraPanel::switch_controller_client_</definition>
+        <argsstring></argsstring>
+        <name>switch_controller_client_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::switch_controller_client_</qualifiedname>
+        <briefdescription>
+<para>Service client to the &quot;/controller_manager/switch_controller&quot; service. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to request activation and deactivation of controllers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="107" column="32" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a142b579c2883d0ed55404226f475c1f0" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Client&lt; ConfigureController &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;ConfigureController&gt;::SharedPtr bioscara_rviz_plugin::BioscaraPanel::configure_controller_client_</definition>
+        <argsstring></argsstring>
+        <name>configure_controller_client_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::configure_controller_client_</qualifiedname>
+        <briefdescription>
+<para>Service client to the &quot;/controller_manager/configure_controller&quot; service. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to request configuration and cleanup of controllers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="115" column="32" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a574e0fcc17ed80180136641176a6daca" prot="protected" static="no" mutable="no">
+        <type>rclcpp::Client&lt; SetHardwareComponentState &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;SetHardwareComponentState&gt;::SharedPtr bioscara_rviz_plugin::BioscaraPanel::hardware_state_client_</definition>
+        <argsstring></argsstring>
+        <name>hardware_state_client_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::hardware_state_client_</qualifiedname>
+        <briefdescription>
+<para>Service client to the &quot;/controller_manager/set_hardware_component_state&quot; service. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to request activation and deactivation of harddware components. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="123" column="32" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a75fed88ec83684f289f90d3f57bde737" prot="protected" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr bioscara_rviz_plugin::BioscaraPanel::prune_timer_</definition>
+        <argsstring></argsstring>
+        <name>prune_timer_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::prune_timer_</qualifiedname>
+        <briefdescription>
+<para>Timer triggered every 5 s to prune unanswered service requests. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="129" column="34" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a4b60f3fe654222b4b4e399a46f371f94" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, InterfaceValue &gt;</type>
+        <definition>std::unordered_map&lt;std::string, InterfaceValue&gt; bioscara_rviz_plugin::BioscaraPanel::joint_states_</definition>
+        <argsstring></argsstring>
+        <name>joint_states_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::joint_states_</qualifiedname>
+        <briefdescription>
+<para>Map storing all joint state interface values by each joint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="135" column="24" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1af33769aecead8200f09b4b98fea6173e" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, NamedLifecycleState &gt;</type>
+        <definition>std::unordered_map&lt;std::string, NamedLifecycleState&gt; bioscara_rviz_plugin::BioscaraPanel::hardware_states_</definition>
+        <argsstring></argsstring>
+        <name>hardware_states_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::hardware_states_</qualifiedname>
+        <briefdescription>
+<para>Map correlating hardware component name to its lifecycle_msgs/State. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stored as NamedLifecycleState to also simply access component name from map value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="143" column="24" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1aa19fb953879dd20583960fc19e29686a" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, NamedLifecycleState &gt;</type>
+        <definition>std::unordered_map&lt;std::string, NamedLifecycleState&gt; bioscara_rviz_plugin::BioscaraPanel::controller_states_</definition>
+        <argsstring></argsstring>
+        <name>controller_states_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::controller_states_</qualifiedname>
+        <briefdescription>
+<para>Map correlating controller name to its lifecycle_msgs/State. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stored as NamedLifecycleState to also simply access controller name from map value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="150" column="24" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a4501942366b971cad451516efa72e361" prot="protected" static="no" mutable="no">
+        <type>Ui::BioscaraUI *</type>
+        <definition>Ui::BioscaraUI* bioscara_rviz_plugin::BioscaraPanel::ui_</definition>
+        <argsstring></argsstring>
+        <name>ui_</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::ui_</qualifiedname>
+        <briefdescription>
+<para>The QT object containing all UI elements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Autogenerated from the &quot;bioscara_rviz_plugin_frame.ui&quot; file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="158" column="20" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1af76f50dbcb2d9ebf3479815cb5973367" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bioscara_rviz_plugin::BioscaraPanel::BioscaraPanel</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>BioscaraPanel</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::BioscaraPanel</qualifiedname>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new Bioscara Panel object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a4501942366b971cad451516efa72e361" kindref="member">ui_</ref> object from the ui object autogenerated from the &quot;bioscara_rviz_plugin_frame.ui&quot;. This object contains all UI elements. Each button gets assigned a callback function. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="51" column="14" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="11" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a874d256853f94c6fd48d4da1d9ee92cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bioscara_rviz_plugin::BioscaraPanel::~BioscaraPanel</definition>
+        <argsstring>() override</argsstring>
+        <name>~BioscaraPanel</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::~BioscaraPanel</qualifiedname>
+        <briefdescription>
+<para>Destroy the Bioscara Panel object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="57" column="5" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1ac05cfd222a17201a04eca282c2eb19ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::onInitialize</definition>
+        <argsstring>() override</argsstring>
+        <name>onInitialize</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::onInitialize</qualifiedname>
+        <briefdescription>
+<para>Automatically invoked by the RViz parent class. Initializes the panel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the pointer to the parent node and saves it in <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a95758278fff99d61ad29ff1746d767ec" kindref="member">node_</ref>. This node and its executor is used for all clients and publishers.</para>
+<para>Additionally a the <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a75fed88ec83684f289f90d3f57bde737" kindref="member">prune_timer_</ref> is created which periodically cleans all dangling service requests. All subscribers, publishers and clients are created and saved in their corresponding handler. Also the #controller_states_state and <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1af33769aecead8200f09b4b98fea6173e" kindref="member">hardware_states_</ref> state maps are prepopulated by invoking <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a56b9a76e17607b83c4dcd93c7d82e206" kindref="member">prepopulate_state_map()</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="69" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="58" bodyend="114"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a0012dbb5e4baca435e8ec0ac380944a4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::cm_state_callback</definition>
+        <argsstring>(const ControllerManagerActivity &amp;msg)</argsstring>
+        <name>cm_state_callback</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::cm_state_callback</qualifiedname>
+        <param>
+          <type>const ControllerManagerActivity &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>callback on reported controller or hardware state changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1aa19fb953879dd20583960fc19e29686a" kindref="member">controller_states_</ref> and <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1af33769aecead8200f09b4b98fea6173e" kindref="member">hardware_states_</ref> state maps. Reactivates the Joint State Broadcaster if it has become inactive. Updates controller and hardware state labels and buttons by invoking <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1af48cad9687e3e61d24518469a0a00cab" kindref="member">update_state_labels_and_btns()</ref> Updates homing group state by invoking <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1ab1f8741339db74bdeae1465631d8b3f0" kindref="member">update_homing_grp_state()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>received controller states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="170" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="116" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a53cde3f666ebe495c8b23cb1928e8fa1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::joint_state_callback</definition>
+        <argsstring>(const DynamicJointState &amp;msg)</argsstring>
+        <name>joint_state_callback</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::joint_state_callback</qualifiedname>
+        <param>
+          <type>const DynamicJointState &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>callback on joint state update. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a4b60f3fe654222b4b4e399a46f371f94" kindref="member">joint_states_</ref> with the latest values using <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a103a055689a35c6c0d33ecf03386f77c" kindref="member">dynamic_joint_state_msg_to_map()</ref>. Updates homing group state by invoking <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1ab1f8741339db74bdeae1465631d8b3f0" kindref="member">update_homing_grp_state()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>received joint states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="180" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="130" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a83b335e9d803cf2201f0d7a4136be5bc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::ensure_jsb_is_active</definition>
+        <argsstring>(void)</argsstring>
+        <name>ensure_jsb_is_active</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::ensure_jsb_is_active</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Ensure the joint state broadcaster is active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The JSB can become inactive, ensure that it comes active again.</para>
+<para>Calls the <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a0ecf54b02b6a0a67f266c4ccc70bd6f8" kindref="member">set_controller_state()</ref> method </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="190" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="137" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1aee8f4213ef4c0779258bf9a4893578eb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::set_hardware_component_state</definition>
+        <argsstring>(const std::string component, const lifecycle_msgs::msg::State target_state)</argsstring>
+        <name>set_hardware_component_state</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::set_hardware_component_state</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>const lifecycle_msgs::msg::State</type>
+          <declname>target_state</declname>
+        </param>
+        <briefdescription>
+<para>Makes a service request to change a hardware component state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Request issued through the <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a574e0fcc17ed80180136641176a6daca" kindref="member">hardware_state_client_</ref>. Asynchrounous call, method exits after having issued the request.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of hardware component to modify </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="201" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="147" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a8335351e92a71984a8a4c482b427999d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::configure_controller</definition>
+        <argsstring>(const std::string controller)</argsstring>
+        <name>configure_controller</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::configure_controller</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>controller</declname>
+        </param>
+        <briefdescription>
+<para>Makes a service request to configure a controller state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Request issued through the <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a142b579c2883d0ed55404226f475c1f0" kindref="member">configure_controller_client_</ref>. Asynchrounous call, method exits after having issued the request.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>controller</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of controller to activate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="211" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="163" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a88590559b24bf13d01d50781093da8ad" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::switch_controllers</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;activate_controllers, const std::vector&lt; std::string &gt; &amp;deactivate_controllers, const int32_t=SwitchController::Request::BEST_EFFORT, const bool activate_asap=false, const builtin_interfaces::msg::Duration timeout=builtin_interfaces::msg::Duration())</argsstring>
+        <name>switch_controllers</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::switch_controllers</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>activate_controllers</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>deactivate_controllers</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <defname>strictness</defname>
+          <defval>SwitchController::Request::BEST_EFFORT</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>activate_asap</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const builtin_interfaces::msg::Duration</type>
+          <declname>timeout</declname>
+          <defval>builtin_interfaces::msg::Duration()</defval>
+        </param>
+        <briefdescription>
+<para>Makes a service request to change controller states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Activates and deactivates a combination of controllers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>activate_controllers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of controllers to activate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deactivate_controllers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of controllers to deactivate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>activate_asap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true controller switch happens in the realtime loop </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>switch timeout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="223" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="178" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a0ecf54b02b6a0a67f266c4ccc70bd6f8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::set_controller_state</definition>
+        <argsstring>(const std::string controller, const lifecycle_msgs::msg::State target_state)</argsstring>
+        <name>set_controller_state</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::set_controller_state</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>controller</declname>
+        </param>
+        <param>
+          <type>const lifecycle_msgs::msg::State</type>
+          <declname>target_state</declname>
+        </param>
+        <briefdescription>
+<para>calls the correct functions to bring a controller to the correct state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a8335351e92a71984a8a4c482b427999d" kindref="member">configure_controller()</ref> needs to be called before <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a88590559b24bf13d01d50781093da8ad" kindref="member">switch_controllers()</ref> can be called to bring the controller to the desired state.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>controller</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>controller name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="238" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="201" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a103a055689a35c6c0d33ecf03386f77c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::dynamic_joint_state_msg_to_map</definition>
+        <argsstring>(const DynamicJointState &amp;dynamic_joint_state_in, std::unordered_map&lt; std::string, InterfaceValue &gt; &amp;map_out)</argsstring>
+        <name>dynamic_joint_state_msg_to_map</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::dynamic_joint_state_msg_to_map</qualifiedname>
+        <param>
+          <type>const DynamicJointState &amp;</type>
+          <declname>dynamic_joint_state_in</declname>
+        </param>
+        <param>
+          <type>std::unordered_map&lt; std::string, InterfaceValue &gt; &amp;</type>
+          <declname>map_out</declname>
+        </param>
+        <briefdescription>
+<para>simple conversion message type conversion function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dynamic_joint_state_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joint states map out </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="247" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="323" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a9f1d9816c4b745c3ee250657c394b303" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::named_lcs_msg_to_map</definition>
+        <argsstring>(const std::vector&lt; NamedLifecycleState &gt; &amp;named_lcs_in, std::unordered_map&lt; std::string, NamedLifecycleState &gt; &amp;map_out)</argsstring>
+        <name>named_lcs_msg_to_map</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::named_lcs_msg_to_map</qualifiedname>
+        <param>
+          <type>const std::vector&lt; NamedLifecycleState &gt; &amp;</type>
+          <declname>named_lcs_in</declname>
+        </param>
+        <param>
+          <type>std::unordered_map&lt; std::string, NamedLifecycleState &gt; &amp;</type>
+          <declname>map_out</declname>
+        </param>
+        <briefdescription>
+<para>simple conversion message type conversion function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>named_lcs_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NamedLifecycleState message in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state map out </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="256" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="332" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1ae249475507502e173ddf97bafaade646" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::print_cm_map</definition>
+        <argsstring>(const std::string prefix, const std::unordered_map&lt; std::string, NamedLifecycleState &gt; &amp;map_in)</argsstring>
+        <name>print_cm_map</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::print_cm_map</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; std::string, NamedLifecycleState &gt; &amp;</type>
+          <declname>map_in</declname>
+        </param>
+        <briefdescription>
+<para>Print life-cycle state message to console. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string prefix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>map to be printed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="265" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="341" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a78b9b5f7de4b9e801bc0ecc8a5dfe05d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::prepopulate_joint_state_map</definition>
+        <argsstring>(std::unordered_map&lt; std::string, InterfaceValue &gt; &amp;state_map, std::vector&lt; std::string &gt; augment_vec)</argsstring>
+        <name>prepopulate_joint_state_map</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::prepopulate_joint_state_map</qualifiedname>
+        <param>
+          <type>std::unordered_map&lt; std::string, InterfaceValue &gt; &amp;</type>
+          <declname>state_map</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>augment_vec</declname>
+        </param>
+        <briefdescription>
+<para>Prepopulates a state map with a default NamedLifecycleState for every specified key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is done to avoid having to check for the existence of key when accessing the map. Keys could be missing if hardware interfaces are not specified or named differently.</para>
+<para>For every joint the state interfaces are initialized as follows:<itemizedlist>
+<listitem><para><emphasis>position</emphasis>: 0.0</para>
+</listitem><listitem><para><emphasis>velocity</emphasis>: 0.0</para>
+</listitem><listitem><para><emphasis>home</emphasis>: 0.0</para>
+</listitem></itemizedlist>
+</para>
+<para>Some joints (the gripper) dont have all state interfaces, but they are initialized regardless.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state map to prepopulate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>augment_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keys that are added/overwritten </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="288" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="353" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a56b9a76e17607b83c4dcd93c7d82e206" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::prepopulate_state_map</definition>
+        <argsstring>(std::unordered_map&lt; std::string, NamedLifecycleState &gt; &amp;state_map, std::vector&lt; std::string &gt; augment_vec)</argsstring>
+        <name>prepopulate_state_map</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::prepopulate_state_map</qualifiedname>
+        <param>
+          <type>std::unordered_map&lt; std::string, NamedLifecycleState &gt; &amp;</type>
+          <declname>state_map</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>augment_vec</declname>
+        </param>
+        <briefdescription>
+<para>Prepopulates a state map with a default NamedLifecycleState for every specified key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is done to avoid having to check for the existence of key when accessing the map. Keys could be missing if an expected controller or hardware component has not been loaded or has a different name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state map to prepopulate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>augment_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keys that are added/overwritten </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="303" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="365" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1ab1f8741339db74bdeae1465631d8b3f0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::update_homing_grp_state</definition>
+        <argsstring>(void)</argsstring>
+        <name>update_homing_grp_state</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::update_homing_grp_state</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Enabl/Disables the homing group depending on the homing controller state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="310" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="376" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a6d60adb3bcb389e3637da8669294c58c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::update_homing_state_labels</definition>
+        <argsstring>(void)</argsstring>
+        <name>update_homing_state_labels</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::update_homing_state_labels</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>updates all homing state labels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a85c7b72b022257a6d1ec05098b502c65" kindref="member">set_homing_state_label()</ref> for each joint state label. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="318" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="394" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a85c7b72b022257a6d1ec05098b502c65" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::set_homing_state_label</definition>
+        <argsstring>(QLabel *label, const InterfaceValue &amp;state)</argsstring>
+        <name>set_homing_state_label</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::set_homing_state_label</qualifiedname>
+        <param>
+          <type>QLabel *</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const InterfaceValue &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set state label text and color of the homing state label. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets color and text of label. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to label </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joint state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="327" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="402" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1af48cad9687e3e61d24518469a0a00cab" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::update_state_labels_and_btns</definition>
+        <argsstring>(void)</argsstring>
+        <name>update_state_labels_and_btns</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::update_state_labels_and_btns</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Update all hardware and controller state lables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>calls <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a87c0e9b0f98f235d8b40916b394e055a" kindref="member">update_state_label_and_btn()</ref> for each controller and hardware component. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="334" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="427" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a87c0e9b0f98f235d8b40916b394e055a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::update_state_label_and_btn</definition>
+        <argsstring>(const std::unordered_map&lt; std::string, NamedLifecycleState &gt; &amp;state_map, QLabel *state_label, QPushButton *en_button, const std::string &amp;state_key)</argsstring>
+        <name>update_state_label_and_btn</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::update_state_label_and_btn</qualifiedname>
+        <param>
+          <type>const std::unordered_map&lt; std::string, NamedLifecycleState &gt; &amp;</type>
+          <declname>state_map</declname>
+        </param>
+        <param>
+          <type>QLabel *</type>
+          <declname>state_label</declname>
+        </param>
+        <param>
+          <type>QPushButton *</type>
+          <declname>en_button</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>state_key</declname>
+        </param>
+        <briefdescription>
+<para>updates component state label and control button. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1af68c7b6a3eef31d9bb2dbe99220eabee" kindref="member">set_state_label()</ref> for state_label and <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a0b2d515ddf157d09b2e7fae07624eb16" kindref="member">set_en_btn()</ref> for en_button.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>component state map </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state_label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to state label </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>en_button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to enable button </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string key to access in state_map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="346" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="445" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1af68c7b6a3eef31d9bb2dbe99220eabee" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::set_state_label</definition>
+        <argsstring>(QLabel *label, const NamedLifecycleState &amp;state)</argsstring>
+        <name>set_state_label</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::set_state_label</qualifiedname>
+        <param>
+          <type>QLabel *</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const NamedLifecycleState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set the state label. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>sets color and text based on the component state.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to label to modify </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state of the component </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="360" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="456" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a0b2d515ddf157d09b2e7fae07624eb16" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::set_en_btn</definition>
+        <argsstring>(QPushButton *button, const NamedLifecycleState &amp;state)</argsstring>
+        <name>set_en_btn</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::set_en_btn</qualifiedname>
+        <param>
+          <type>QPushButton *</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>const NamedLifecycleState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set the control button state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets control buttons color, text and active status based on the component state.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to button to modify </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state of the component </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="370" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="483" bodyend="515"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a1f2d87920058c4f067d9b4c5fd7b9868" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bioscara_rviz_plugin::BioscaraPanel::check_activation_conditions</definition>
+        <argsstring>(const std::string component_key)</argsstring>
+        <name>check_activation_conditions</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::check_activation_conditions</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>component_key</declname>
+        </param>
+        <briefdescription>
+<para>Check under which conditions a component is allowed to be activated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Some controllers will only activate under certain conditions. This functions disables the activation button if the coditions are met.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="382" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="517" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a96faf9a60bc4eeb25180cf6e69ae3464" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lifecycle_msgs::msg::State</type>
+        <definition>lifecycle_msgs::msg::State bioscara_rviz_plugin::BioscaraPanel::target_state_from_current</definition>
+        <argsstring>(lifecycle_msgs::msg::State current_state)</argsstring>
+        <name>target_state_from_current</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::target_state_from_current</qualifiedname>
+        <param>
+          <type>lifecycle_msgs::msg::State</type>
+          <declname>current_state</declname>
+        </param>
+        <briefdescription>
+<para>returns the next logical state from the current one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>lifecycle_msgs::msg::State </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="391" column="32" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="254" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a10f7f7f89f335c79a86a87dd34f840ea" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::homing_cmd</definition>
+        <argsstring>(const std::string joint, const int cmd)</argsstring>
+        <name>homing_cmd</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::homing_cmd</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>joint</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+<para>callback function called when a homing button is pressed </para>
+        </briefdescription>
+        <detaileddescription>
+<para>publishes on <ref refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a2992ee7a7d8d0036607d13d8e154944f" kindref="member">homing_publisher_</ref> to initiate/stop homing</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string name of joint </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-1, 0, +1 to start homing to negative direction, stop homing, start homing to positve direction. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="401" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="278" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1ad5722f74d54cda482a31688133f307d7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::ctrl_en_btn_cb</definition>
+        <argsstring>(const std::string controller)</argsstring>
+        <name>ctrl_en_btn_cb</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::ctrl_en_btn_cb</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>controller</declname>
+        </param>
+        <briefdescription>
+<para>callback on controller enable button </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>controller</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string name of controller to change state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="408" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="315" bodyend="321"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1acd799448d38d554075c5ac05e61be5a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::arm_en_btn_cb</definition>
+        <argsstring>(void)</argsstring>
+        <name>arm_en_btn_cb</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::arm_en_btn_cb</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Tries to set the bioscara_arm hardware component to the <computeroutput>active</computeroutput> state and tries to enable the velocity_joint_trajectory_controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="417" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="292" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="slot" id="classbioscara__rviz__plugin_1_1BioscaraPanel_1a9c8d37052c7c05d6fdca7b64010c3a26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_rviz_plugin::BioscaraPanel::gripper_en_btn_cb</definition>
+        <argsstring>(void)</argsstring>
+        <name>gripper_en_btn_cb</name>
+        <qualifiedname>bioscara_rviz_plugin::BioscaraPanel::gripper_en_btn_cb</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Tries to set the bioscara_gripper_128 hardware component to the <computeroutput>active</computeroutput> state and tries to enable the gripper_controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="424" column="10" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/src/bioscara_panel.cpp" bodystart="304" bodyend="313"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>RViz Panel to control the hardware specific functions of the Bioscara robot. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Through the panel it is possible to modify the robot&apos;s hardware&apos;s and controller states and to execute the homing procedures. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>bioscara_rviz_plugin::BioscaraPanel</label>
+        <link refid="classbioscara__rviz__plugin_1_1BioscaraPanel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rviz_common::Panel</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>bioscara_rviz_plugin::BioscaraPanel</label>
+        <link refid="classbioscara__rviz__plugin_1_1BioscaraPanel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rviz_common::Panel</label>
+      </node>
+    </collaborationgraph>
+    <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="38" column="3" bodyfile="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" bodystart="39" bodyend="425"/>
+    <listofallmembers>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1acd799448d38d554075c5ac05e61be5a6" prot="private" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>arm_en_btn_cb</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1af76f50dbcb2d9ebf3479815cb5973367" prot="public" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>BioscaraPanel</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a1f2d87920058c4f067d9b4c5fd7b9868" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>check_activation_conditions</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a0012dbb5e4baca435e8ec0ac380944a4" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>cm_state_callback</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1acb0ccbaf786959f349361ce0d335fd77" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>cm_state_subsription_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a8335351e92a71984a8a4c482b427999d" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>configure_controller</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a142b579c2883d0ed55404226f475c1f0" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>configure_controller_client_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1aa19fb953879dd20583960fc19e29686a" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>controller_states_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1ad5722f74d54cda482a31688133f307d7" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>ctrl_en_btn_cb</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a103a055689a35c6c0d33ecf03386f77c" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>dynamic_joint_state_msg_to_map</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a83b335e9d803cf2201f0d7a4136be5bc" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>ensure_jsb_is_active</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a9c8d37052c7c05d6fdca7b64010c3a26" prot="private" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>gripper_en_btn_cb</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a574e0fcc17ed80180136641176a6daca" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>hardware_state_client_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1af33769aecead8200f09b4b98fea6173e" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>hardware_states_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a10f7f7f89f335c79a86a87dd34f840ea" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>homing_cmd</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a2992ee7a7d8d0036607d13d8e154944f" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>homing_publisher_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a53cde3f666ebe495c8b23cb1928e8fa1" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>joint_state_callback</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1ab53e4f121e21982e3d05c26324a76f13" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>joint_state_subsription_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a4b60f3fe654222b4b4e399a46f371f94" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>joint_states_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a9f1d9816c4b745c3ee250657c394b303" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>named_lcs_msg_to_map</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a95758278fff99d61ad29ff1746d767ec" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>node_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1ac05cfd222a17201a04eca282c2eb19ca" prot="public" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>onInitialize</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a78b9b5f7de4b9e801bc0ecc8a5dfe05d" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>prepopulate_joint_state_map</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a56b9a76e17607b83c4dcd93c7d82e206" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>prepopulate_state_map</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1ae249475507502e173ddf97bafaade646" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>print_cm_map</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a75fed88ec83684f289f90d3f57bde737" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>prune_timer_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a0ecf54b02b6a0a67f266c4ccc70bd6f8" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>set_controller_state</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a0b2d515ddf157d09b2e7fae07624eb16" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>set_en_btn</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1aee8f4213ef4c0779258bf9a4893578eb" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>set_hardware_component_state</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a85c7b72b022257a6d1ec05098b502c65" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>set_homing_state_label</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1af68c7b6a3eef31d9bb2dbe99220eabee" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>set_state_label</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1ac1ad2c999bf39ec304bdc587b9ac0300" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>switch_controller_client_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a88590559b24bf13d01d50781093da8ad" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>switch_controllers</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a96faf9a60bc4eeb25180cf6e69ae3464" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>target_state_from_current</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a4501942366b971cad451516efa72e361" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>ui_</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1ab1f8741339db74bdeae1465631d8b3f0" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>update_homing_grp_state</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a6d60adb3bcb389e3637da8669294c58c" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>update_homing_state_labels</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a87c0e9b0f98f235d8b40916b394e055a" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>update_state_label_and_btn</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1af48cad9687e3e61d24518469a0a00cab" prot="protected" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>update_state_labels_and_btns</name></member>
+      <member refid="classbioscara__rviz__plugin_1_1BioscaraPanel_1a874d256853f94c6fd48d4da1d9ee92cb" prot="public" virt="non-virtual"><scope>bioscara_rviz_plugin::BioscaraPanel</scope><name>~BioscaraPanel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="uI2C_8cpp" kind="file" language="C++">
+    <compoundname>uI2C.cpp</compoundname>
+    <includes refid="uI2C_8h" local="yes">bioscara_arm_hardware_driver/uI2C.h</includes>
+    <includes refid="common_8h" local="yes">bioscara_arm_hardware_driver/common.h</includes>
+    <includes local="no">lgpio.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>bioscara_arm_hardware_driver/common.h</label>
+        <link refid="common_8h"/>
+      </node>
+      <node id="2">
+        <label>bioscara_arm_hardware_driver/uI2C.h</label>
+        <link refid="uI2C_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp</label>
+        <link refid="uI2C_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstring</label>
+      </node>
+      <node id="4">
+        <label>errno.h</label>
+      </node>
+      <node id="5">
+        <label>fcntl.h</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="10">
+        <label>lgpio.h</label>
+      </node>
+      <node id="7">
+        <label>termios.h</label>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="uI2C_8cpp_1a6434d4118a714731dc36bf1d2d1a9406" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+        <definition>int openI2CDevHandle</definition>
+        <argsstring>(const int dev_addr)</argsstring>
+        <name>openI2CDevHandle</name>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">const</ref> <ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>dev_addr</declname>
+        </param>
+        <briefdescription>
+<para>Initiates an I2C device on the bus. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>7-bit device adress [0 - 0x7F] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the device handle, negative on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp" line="6" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp" bodystart="6" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="uI2C_8cpp_1a607cb25ea06e8ce952788a1e710e7f50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+        <definition>int readFromI2CDev</definition>
+        <argsstring>(const int dev_handle, const int reg, char *buffer, const int data_length)</argsstring>
+        <name>readFromI2CDev</name>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">const</ref> <ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>dev_handle</declname>
+        </param>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">const</ref> <ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">char</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">const</ref> <ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>data_length</declname>
+        </param>
+        <briefdescription>
+<para>reads block of bytes from device to buffer </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev_handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device handle obtained from <computeroutput>openI2CDevHandle</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command/data register </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer to hold received values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes read, negative on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp" line="16" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp" bodystart="16" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="uI2C_8cpp_1ab73613a3b862a54f70dff0b5192cbcac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+        <definition>int writeToI2CDev</definition>
+        <argsstring>(const int dev_handle, const int reg, char *tx_buffer, const int data_length, char *RFLAGS_buffer)</argsstring>
+        <name>writeToI2CDev</name>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">const</ref> <ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>dev_handle</declname>
+        </param>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">const</ref> <ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">char</ref> *</type>
+          <declname>tx_buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">const</ref> <ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>data_length</declname>
+        </param>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">char</ref> *</type>
+          <declname>RFLAGS_buffer</declname>
+        </param>
+        <briefdescription>
+<para>writes block of bytes from buffer to device </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev_handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device handle obtained from <computeroutput>openI2CDevHandle</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command/data register </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tx_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer holding the data to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RFLAGS_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to hold returned flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on OK, negative on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp" line="36" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp" bodystart="36" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="uI2C_8cpp_1afeb62c435271a8b6dd47be9e4428b746" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+        <definition>int closeI2CDevHandle</definition>
+        <argsstring>(int &amp;dev_handle)</argsstring>
+        <name>closeI2CDevHandle</name>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref> &amp;</type>
+          <declname>dev_handle</declname>
+        </param>
+        <briefdescription>
+<para>close an I2C device on the bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev_handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device handle obtained from <computeroutput>openI2CDevHandle</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on OK, negative on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp" line="67" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp" bodystart="67" bodyend="76"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="uI2C_8h" kindref="compound">bioscara_arm_hardware_driver/uI2C.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_8h" kindref="compound">bioscara_arm_hardware_driver/common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;lgpio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="uI2C_8cpp_1a6434d4118a714731dc36bf1d2d1a9406" kindref="member">openI2CDevHandle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dev_addr</ref>)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>=<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">lgI2cOpen</ref>(1,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dev_addr</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;I2C<sp/>OPEN<sp/>ERROR:<sp/>\&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">lguErrorText</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="uI2C_8cpp_1a607cb25ea06e8ce952788a1e710e7f50" kindref="member">readFromI2CDev</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dev_handle</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8ino_1a9428adc9af4653a2050e2536b55dec8d" kindref="member">reg</ref>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">data_length</ref>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref><sp/>=<sp/>0;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref><sp/>&lt;<sp/>3;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>++)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>=<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">lgI2cReadI2CBlockData</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dev_handle</ref>,<sp/><ref refid="joint_8ino_1a9428adc9af4653a2050e2536b55dec8d" kindref="member">reg</ref>,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">buffer</ref>,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">data_length</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>&lt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>+1<sp/>&lt;<sp/>3){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">usleep</ref>(50);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;I2C<sp/>READ<sp/>ERROR:<sp/>\&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">lguErrorText</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="uI2C_8cpp_1ab73613a3b862a54f70dff0b5192cbcac" kindref="member">writeToI2CDev</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dev_handle</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8ino_1a9428adc9af4653a2050e2536b55dec8d" kindref="member">reg</ref>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">tx_buffer</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">data_length</ref>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">RFLAGS_buffer</ref>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cmnd</ref>[<ref refid="joint_8h_1a1d5dab30b404fab91608086105afc78c" kindref="member">MAX_BUFFER</ref><sp/>+<sp/>6];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cmnd</ref>[0]<sp/>=<sp/>5;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CMD:<sp/>Write</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cmnd</ref>[1]<sp/>=<sp/>1<sp/>+<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">data_length</ref>);<sp/></highlight><highlight class="comment">//<sp/>N<sp/>Bytes:<sp/>1<sp/>(reg)<sp/>+<sp/>data_length</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cmnd</ref>[2]<sp/>=<sp/><ref refid="joint_8ino_1a9428adc9af4653a2050e2536b55dec8d" kindref="member">reg</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Data:<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">memcpy</ref>(&amp;<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cmnd</ref>[3],<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">tx_buffer</ref>,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">data_length</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cmnd</ref>[3<sp/>+<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">data_length</ref>]<sp/>=<sp/>4;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CMD:<sp/>Read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cmnd</ref>[4<sp/>+<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">data_length</ref>]<sp/>=<sp/><ref refid="joint_8h_1abf5d227b2ae124bdc7d5f15397b9bca1" kindref="member">RFLAGS_SIZE</ref>;<sp/></highlight><highlight class="comment">//<sp/>N<sp/>Bytes:<sp/>RFLAGS_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cmnd</ref>[5<sp/>+<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">data_length</ref>]<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Terminate<sp/>Buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref><sp/>=<sp/>0;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref><sp/>&lt;<sp/>3;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>++)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>There<sp/>is<sp/>a<sp/>bug<sp/>in<sp/>the<sp/>lgpio<sp/>library<sp/>that<sp/>requires<sp/>`rxCount`<sp/>to<sp/>be<sp/>set<sp/>n+1<sp/>higher*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>=<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">lgI2cZip</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dev_handle</ref>,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cmnd</ref>,<sp/>6<sp/>+<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">data_length</ref>,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">RFLAGS_buffer</ref>,<sp/><ref refid="joint_8h_1abf5d227b2ae124bdc7d5f15397b9bca1" kindref="member">RFLAGS_SIZE</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>&lt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>+1<sp/>&lt;<sp/>3){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">usleep</ref>(50);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;I2C<sp/>WRITE<sp/>ERROR:<sp/>\&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">lguErrorText</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="uI2C_8cpp_1afeb62c435271a8b6dd47be9e4428b746" kindref="member">closeI2CDevHandle</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dev_handle</ref>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>=<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">lgI2cClose</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dev_handle</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;I2C<sp/>CLOSE<sp/>ERROR:<sp/>\&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">lguErrorText</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">dev_handle</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/uI2C.cpp"/>
+  </compounddef>
+</doxygen>

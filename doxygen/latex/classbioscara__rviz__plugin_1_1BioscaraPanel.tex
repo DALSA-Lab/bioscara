@@ -1,0 +1,710 @@
+\doxysection{bioscara\+\_\+rviz\+\_\+plugin\+::Bioscara\+Panel Class Reference}
+\hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel}{}\label{classbioscara__rviz__plugin_1_1BioscaraPanel}\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+
+
+RViz Panel to control the hardware specific functions of the Bioscara robot.  
+
+
+
+
+{\ttfamily \#include $<$bioscara\+\_\+panel.\+hpp$>$}
+
+Inheritance diagram for bioscara\+\_\+rviz\+\_\+plugin\+::Bioscara\+Panel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbioscara__rviz__plugin_1_1BioscaraPanel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_af76f50dbcb2d9ebf3479815cb5973367}{Bioscara\+Panel}} (QWidget \texorpdfstring{$\ast$}{*}parent=0)
+\begin{DoxyCompactList}\small\item\em Construct a new Bioscara Panel object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a874d256853f94c6fd48d4da1d9ee92cb}{\texorpdfstring{$\sim$}{\string~}\+Bioscara\+Panel}} () override
+\begin{DoxyCompactList}\small\item\em Destroy the Bioscara Panel object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_ac05cfd222a17201a04eca282c2eb19ca}{on\+Initialize}} () override
+\begin{DoxyCompactList}\small\item\em Automatically invoked by the RViz parent class. Initializes the panel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a0012dbb5e4baca435e8ec0ac380944a4}{cm\+\_\+state\+\_\+callback}} (const Controller\+Manager\+Activity \&msg)
+\begin{DoxyCompactList}\small\item\em callback on reported controller or hardware state changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a53cde3f666ebe495c8b23cb1928e8fa1}{joint\+\_\+state\+\_\+callback}} (const Dynamic\+Joint\+State \&msg)
+\begin{DoxyCompactList}\small\item\em callback on joint state update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a83b335e9d803cf2201f0d7a4136be5bc}{ensure\+\_\+jsb\+\_\+is\+\_\+active}} (void)
+\begin{DoxyCompactList}\small\item\em Ensure the joint state broadcaster is active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_aee8f4213ef4c0779258bf9a4893578eb}{set\+\_\+hardware\+\_\+component\+\_\+state}} (const std\+::string component, const lifecycle\+\_\+msgs\+::msg\+::\+State target\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Makes a service request to change a hardware component state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a8335351e92a71984a8a4c482b427999d}{configure\+\_\+controller}} (const std\+::string controller)
+\begin{DoxyCompactList}\small\item\em Makes a service request to configure a controller state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a88590559b24bf13d01d50781093da8ad}{switch\+\_\+controllers}} (const std\+::vector$<$ std\+::string $>$ \&activate\+\_\+controllers, const std\+::vector$<$ std\+::string $>$ \&deactivate\+\_\+controllers, const int32\+\_\+t=Switch\+Controller\+::\+Request\+::\+BEST\+\_\+\+EFFORT, const bool activate\+\_\+asap=false, const builtin\+\_\+interfaces\+::msg\+::\+Duration timeout=builtin\+\_\+interfaces\+::msg\+::\+Duration())
+\begin{DoxyCompactList}\small\item\em Makes a service request to change controller states. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a0ecf54b02b6a0a67f266c4ccc70bd6f8}{set\+\_\+controller\+\_\+state}} (const std\+::string controller, const lifecycle\+\_\+msgs\+::msg\+::\+State target\+\_\+state)
+\begin{DoxyCompactList}\small\item\em calls the correct functions to bring a controller to the correct state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a103a055689a35c6c0d33ecf03386f77c}{dynamic\+\_\+joint\+\_\+state\+\_\+msg\+\_\+to\+\_\+map}} (const Dynamic\+Joint\+State \&dynamic\+\_\+joint\+\_\+state\+\_\+in, std\+::unordered\+\_\+map$<$ std\+::string, Interface\+Value $>$ \&map\+\_\+out)
+\begin{DoxyCompactList}\small\item\em simple conversion message type conversion function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a9f1d9816c4b745c3ee250657c394b303}{named\+\_\+lcs\+\_\+msg\+\_\+to\+\_\+map}} (const std\+::vector$<$ Named\+Lifecycle\+State $>$ \&named\+\_\+lcs\+\_\+in, std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \&map\+\_\+out)
+\begin{DoxyCompactList}\small\item\em simple conversion message type conversion function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_ae249475507502e173ddf97bafaade646}{print\+\_\+cm\+\_\+map}} (const std\+::string prefix, const std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \&map\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Print life-\/cycle state message to console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a78b9b5f7de4b9e801bc0ecc8a5dfe05d}{prepopulate\+\_\+joint\+\_\+state\+\_\+map}} (std\+::unordered\+\_\+map$<$ std\+::string, Interface\+Value $>$ \&state\+\_\+map, std\+::vector$<$ std\+::string $>$ augment\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Prepopulates a state map with a default Named\+Lifecycle\+State for every specified key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a56b9a76e17607b83c4dcd93c7d82e206}{prepopulate\+\_\+state\+\_\+map}} (std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \&state\+\_\+map, std\+::vector$<$ std\+::string $>$ augment\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Prepopulates a state map with a default Named\+Lifecycle\+State for every specified key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_ab1f8741339db74bdeae1465631d8b3f0}{update\+\_\+homing\+\_\+grp\+\_\+state}} (void)
+\begin{DoxyCompactList}\small\item\em Enabl/\+Disables the homing group depending on the homing controller state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a6d60adb3bcb389e3637da8669294c58c}{update\+\_\+homing\+\_\+state\+\_\+labels}} (void)
+\begin{DoxyCompactList}\small\item\em updates all homing state labels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a85c7b72b022257a6d1ec05098b502c65}{set\+\_\+homing\+\_\+state\+\_\+label}} (QLabel \texorpdfstring{$\ast$}{*}label, const Interface\+Value \&state)
+\begin{DoxyCompactList}\small\item\em Set state label text and color of the homing state label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_af48cad9687e3e61d24518469a0a00cab}{update\+\_\+state\+\_\+labels\+\_\+and\+\_\+btns}} (void)
+\begin{DoxyCompactList}\small\item\em Update all hardware and controller state lables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a87c0e9b0f98f235d8b40916b394e055a}{update\+\_\+state\+\_\+label\+\_\+and\+\_\+btn}} (const std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \&state\+\_\+map, QLabel \texorpdfstring{$\ast$}{*}state\+\_\+label, QPush\+Button \texorpdfstring{$\ast$}{*}en\+\_\+button, const std\+::string \&state\+\_\+key)
+\begin{DoxyCompactList}\small\item\em updates component state label and control button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_af68c7b6a3eef31d9bb2dbe99220eabee}{set\+\_\+state\+\_\+label}} (QLabel \texorpdfstring{$\ast$}{*}label, const Named\+Lifecycle\+State \&state)
+\begin{DoxyCompactList}\small\item\em Set the state label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a0b2d515ddf157d09b2e7fae07624eb16}{set\+\_\+en\+\_\+btn}} (QPush\+Button \texorpdfstring{$\ast$}{*}button, const Named\+Lifecycle\+State \&state)
+\begin{DoxyCompactList}\small\item\em Set the control button state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a1f2d87920058c4f067d9b4c5fd7b9868}{check\+\_\+activation\+\_\+conditions}} (const std\+::string component\+\_\+key)
+\begin{DoxyCompactList}\small\item\em Check under which conditions a component is allowed to be activated. \end{DoxyCompactList}\item 
+lifecycle\+\_\+msgs\+::msg\+::\+State \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a96faf9a60bc4eeb25180cf6e69ae3464}{target\+\_\+state\+\_\+from\+\_\+current}} (lifecycle\+\_\+msgs\+::msg\+::\+State current\+\_\+state)
+\begin{DoxyCompactList}\small\item\em returns the next logical state from the current one. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a10f7f7f89f335c79a86a87dd34f840ea}{homing\+\_\+cmd}} (const std\+::string joint, const int cmd)
+\begin{DoxyCompactList}\small\item\em callback function called when a homing button is pressed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_ad5722f74d54cda482a31688133f307d7}{ctrl\+\_\+en\+\_\+btn\+\_\+cb}} (const std\+::string controller)
+\begin{DoxyCompactList}\small\item\em callback on controller enable button \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+rclcpp\+::\+Node\+::\+Shared\+Ptr \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a95758278fff99d61ad29ff1746d767ec}{node\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent node. Used for access to the executor. \end{DoxyCompactList}\item 
+rclcpp\+::\+Subscription$<$ Controller\+Manager\+Activity $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_acb0ccbaf786959f349361ce0d335fd77}{cm\+\_\+state\+\_\+subsription\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Subscription to the the controller\+\_\+manager state publisher. \end{DoxyCompactList}\item 
+rclcpp\+::\+Subscription$<$ Dynamic\+Joint\+State $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_ab53e4f121e21982e3d05c26324a76f13}{joint\+\_\+state\+\_\+subsription\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Subscription to the the joint state publisher state publisher. \end{DoxyCompactList}\item 
+rclcpp\+::\+Publisher$<$ Dynamic\+Interface\+Group\+Values $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a2992ee7a7d8d0036607d13d8e154944f}{homing\+\_\+publisher\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Publisher to send commands to the homing\+\_\+controller. \end{DoxyCompactList}\item 
+rclcpp\+::\+Client$<$ Switch\+Controller $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_ac1ad2c999bf39ec304bdc587b9ac0300}{switch\+\_\+controller\+\_\+client\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Service client to the "{}/controller\+\_\+manager/switch\+\_\+controller"{} service. \end{DoxyCompactList}\item 
+rclcpp\+::\+Client$<$ Configure\+Controller $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a142b579c2883d0ed55404226f475c1f0}{configure\+\_\+controller\+\_\+client\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Service client to the "{}/controller\+\_\+manager/configure\+\_\+controller"{} service. \end{DoxyCompactList}\item 
+rclcpp\+::\+Client$<$ Set\+Hardware\+Component\+State $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a574e0fcc17ed80180136641176a6daca}{hardware\+\_\+state\+\_\+client\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Service client to the "{}/controller\+\_\+manager/set\+\_\+hardware\+\_\+component\+\_\+state"{} service. \end{DoxyCompactList}\item 
+rclcpp\+::\+Timer\+Base\+::\+Shared\+Ptr \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a75fed88ec83684f289f90d3f57bde737}{prune\+\_\+timer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Timer triggered every 5 s to prune unanswered service requests. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, Interface\+Value $>$ \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a4b60f3fe654222b4b4e399a46f371f94}{joint\+\_\+states\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Map storing all joint state interface values by each joint. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_af33769aecead8200f09b4b98fea6173e}{hardware\+\_\+states\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Map correlating hardware component name to its lifecycle\+\_\+msgs/\+State. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_aa19fb953879dd20583960fc19e29686a}{controller\+\_\+states\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Map correlating controller name to its lifecycle\+\_\+msgs/\+State. \end{DoxyCompactList}\item 
+Ui\+::\+Bioscara\+UI \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a4501942366b971cad451516efa72e361}{ui\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The QT object containing all UI elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_acd799448d38d554075c5ac05e61be5a6}{arm\+\_\+en\+\_\+btn\+\_\+cb}} (void)
+\begin{DoxyCompactList}\small\item\em Tries to set the bioscara\+\_\+arm hardware component to the {\ttfamily active} state and tries to enable the velocity\+\_\+joint\+\_\+trajectory\+\_\+controller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbioscara__rviz__plugin_1_1BioscaraPanel_a9c8d37052c7c05d6fdca7b64010c3a26}{gripper\+\_\+en\+\_\+btn\+\_\+cb}} (void)
+\begin{DoxyCompactList}\small\item\em Tries to set the bioscara\+\_\+gripper\+\_\+128 hardware component to the {\ttfamily active} state and tries to enable the gripper\+\_\+controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RViz Panel to control the hardware specific functions of the Bioscara robot. 
+
+Through the panel it is possible to modify the robot\textquotesingle{}s hardware\textquotesingle{}s and controller states and to execute the homing procedures. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_af76f50dbcb2d9ebf3479815cb5973367}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_af76f50dbcb2d9ebf3479815cb5973367} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!BioscaraPanel@{BioscaraPanel}}
+\index{BioscaraPanel@{BioscaraPanel}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{BioscaraPanel()}{BioscaraPanel()}}
+{\footnotesize\ttfamily bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::\+Bioscara\+Panel (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Bioscara Panel object. 
+
+Creates a new \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a4501942366b971cad451516efa72e361}{ui\+\_\+} object from the ui object autogenerated from the "{}bioscara\+\_\+rviz\+\_\+plugin\+\_\+frame.\+ui"{}. This object contains all UI elements. Each button gets assigned a callback function. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a874d256853f94c6fd48d4da1d9ee92cb}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a874d256853f94c6fd48d4da1d9ee92cb} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!````~BioscaraPanel@{\texorpdfstring{$\sim$}{\string~}BioscaraPanel}}
+\index{````~BioscaraPanel@{\texorpdfstring{$\sim$}{\string~}BioscaraPanel}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BioscaraPanel()}{\string~BioscaraPanel()}}
+{\footnotesize\ttfamily bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::\texorpdfstring{$\sim$}{\string~}\+Bioscara\+Panel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Destroy the Bioscara Panel object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_acd799448d38d554075c5ac05e61be5a6}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_acd799448d38d554075c5ac05e61be5a6} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!arm\_en\_btn\_cb@{arm\_en\_btn\_cb}}
+\index{arm\_en\_btn\_cb@{arm\_en\_btn\_cb}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{arm\_en\_btn\_cb}{arm\_en\_btn\_cb}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::arm\+\_\+en\+\_\+btn\+\_\+cb (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Tries to set the bioscara\+\_\+arm hardware component to the {\ttfamily active} state and tries to enable the velocity\+\_\+joint\+\_\+trajectory\+\_\+controller. 
+
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a1f2d87920058c4f067d9b4c5fd7b9868}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a1f2d87920058c4f067d9b4c5fd7b9868} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!check\_activation\_conditions@{check\_activation\_conditions}}
+\index{check\_activation\_conditions@{check\_activation\_conditions}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{check\_activation\_conditions()}{check\_activation\_conditions()}}
+{\footnotesize\ttfamily bool bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::check\+\_\+activation\+\_\+conditions (\begin{DoxyParamCaption}\item[{const std\+::string}]{component\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check under which conditions a component is allowed to be activated. 
+
+Some controllers will only activate under certain conditions. This functions disables the activation button if the coditions are met.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component\+\_\+key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a0012dbb5e4baca435e8ec0ac380944a4}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a0012dbb5e4baca435e8ec0ac380944a4} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!cm\_state\_callback@{cm\_state\_callback}}
+\index{cm\_state\_callback@{cm\_state\_callback}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{cm\_state\_callback()}{cm\_state\_callback()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::cm\+\_\+state\+\_\+callback (\begin{DoxyParamCaption}\item[{const Controller\+Manager\+Activity \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+callback on reported controller or hardware state changes. 
+
+Updates the \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_aa19fb953879dd20583960fc19e29686a}{controller\+\_\+states\+\_\+} and \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_af33769aecead8200f09b4b98fea6173e}{hardware\+\_\+states\+\_\+} state maps. Reactivates the Joint State Broadcaster if it has become inactive. Updates controller and hardware state labels and buttons by invoking \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_af48cad9687e3e61d24518469a0a00cab}{update\+\_\+state\+\_\+labels\+\_\+and\+\_\+btns()} Updates homing group state by invoking \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_ab1f8741339db74bdeae1465631d8b3f0}{update\+\_\+homing\+\_\+grp\+\_\+state()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & received controller states \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a8335351e92a71984a8a4c482b427999d}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a8335351e92a71984a8a4c482b427999d} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!configure\_controller@{configure\_controller}}
+\index{configure\_controller@{configure\_controller}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{configure\_controller()}{configure\_controller()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::configure\+\_\+controller (\begin{DoxyParamCaption}\item[{const std\+::string}]{controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Makes a service request to configure a controller state. 
+
+Request issued through the \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a142b579c2883d0ed55404226f475c1f0}{configure\+\_\+controller\+\_\+client\+\_\+}. Asynchrounous call, method exits after having issued the request.
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & name of controller to activate \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_ad5722f74d54cda482a31688133f307d7}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_ad5722f74d54cda482a31688133f307d7} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!ctrl\_en\_btn\_cb@{ctrl\_en\_btn\_cb}}
+\index{ctrl\_en\_btn\_cb@{ctrl\_en\_btn\_cb}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{ctrl\_en\_btn\_cb()}{ctrl\_en\_btn\_cb()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::ctrl\+\_\+en\+\_\+btn\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+::string}]{controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+callback on controller enable button 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & string name of controller to change state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a103a055689a35c6c0d33ecf03386f77c}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a103a055689a35c6c0d33ecf03386f77c} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!dynamic\_joint\_state\_msg\_to\_map@{dynamic\_joint\_state\_msg\_to\_map}}
+\index{dynamic\_joint\_state\_msg\_to\_map@{dynamic\_joint\_state\_msg\_to\_map}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{dynamic\_joint\_state\_msg\_to\_map()}{dynamic\_joint\_state\_msg\_to\_map()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::dynamic\+\_\+joint\+\_\+state\+\_\+msg\+\_\+to\+\_\+map (\begin{DoxyParamCaption}\item[{const Dynamic\+Joint\+State \&}]{dynamic\+\_\+joint\+\_\+state\+\_\+in,  }\item[{std\+::unordered\+\_\+map$<$ std\+::string, Interface\+Value $>$ \&}]{map\+\_\+out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+simple conversion message type conversion function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dynamic\+\_\+joint\+\_\+state\+\_\+in} & message in \\
+\hline
+{\em map\+\_\+out} & joint states map out \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a83b335e9d803cf2201f0d7a4136be5bc}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a83b335e9d803cf2201f0d7a4136be5bc} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!ensure\_jsb\_is\_active@{ensure\_jsb\_is\_active}}
+\index{ensure\_jsb\_is\_active@{ensure\_jsb\_is\_active}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{ensure\_jsb\_is\_active()}{ensure\_jsb\_is\_active()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::ensure\+\_\+jsb\+\_\+is\+\_\+active (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Ensure the joint state broadcaster is active. 
+
+The JSB can become inactive, ensure that it comes active again.
+
+Calls the \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a0ecf54b02b6a0a67f266c4ccc70bd6f8}{set\+\_\+controller\+\_\+state()} method \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a9c8d37052c7c05d6fdca7b64010c3a26}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a9c8d37052c7c05d6fdca7b64010c3a26} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!gripper\_en\_btn\_cb@{gripper\_en\_btn\_cb}}
+\index{gripper\_en\_btn\_cb@{gripper\_en\_btn\_cb}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{gripper\_en\_btn\_cb}{gripper\_en\_btn\_cb}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::gripper\+\_\+en\+\_\+btn\+\_\+cb (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Tries to set the bioscara\+\_\+gripper\+\_\+128 hardware component to the {\ttfamily active} state and tries to enable the gripper\+\_\+controller. 
+
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a10f7f7f89f335c79a86a87dd34f840ea}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a10f7f7f89f335c79a86a87dd34f840ea} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!homing\_cmd@{homing\_cmd}}
+\index{homing\_cmd@{homing\_cmd}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{homing\_cmd()}{homing\_cmd()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::homing\+\_\+cmd (\begin{DoxyParamCaption}\item[{const std\+::string}]{joint,  }\item[{const int}]{cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+callback function called when a homing button is pressed 
+
+publishes on \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a2992ee7a7d8d0036607d13d8e154944f}{homing\+\_\+publisher\+\_\+} to initiate/stop homing
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint} & string name of joint \\
+\hline
+{\em cmd} & -\/1, 0, +1 to start homing to negative direction, stop homing, start homing to positve direction. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a53cde3f666ebe495c8b23cb1928e8fa1}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a53cde3f666ebe495c8b23cb1928e8fa1} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!joint\_state\_callback@{joint\_state\_callback}}
+\index{joint\_state\_callback@{joint\_state\_callback}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{joint\_state\_callback()}{joint\_state\_callback()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::joint\+\_\+state\+\_\+callback (\begin{DoxyParamCaption}\item[{const Dynamic\+Joint\+State \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+callback on joint state update. 
+
+Updates \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a4b60f3fe654222b4b4e399a46f371f94}{joint\+\_\+states\+\_\+} with the latest values using \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a103a055689a35c6c0d33ecf03386f77c}{dynamic\+\_\+joint\+\_\+state\+\_\+msg\+\_\+to\+\_\+map()}. Updates homing group state by invoking \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_ab1f8741339db74bdeae1465631d8b3f0}{update\+\_\+homing\+\_\+grp\+\_\+state()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & received joint states \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a9f1d9816c4b745c3ee250657c394b303}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a9f1d9816c4b745c3ee250657c394b303} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!named\_lcs\_msg\_to\_map@{named\_lcs\_msg\_to\_map}}
+\index{named\_lcs\_msg\_to\_map@{named\_lcs\_msg\_to\_map}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{named\_lcs\_msg\_to\_map()}{named\_lcs\_msg\_to\_map()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::named\+\_\+lcs\+\_\+msg\+\_\+to\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Named\+Lifecycle\+State $>$ \&}]{named\+\_\+lcs\+\_\+in,  }\item[{std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \&}]{map\+\_\+out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+simple conversion message type conversion function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em named\+\_\+lcs\+\_\+in} & Named\+Lifecycle\+State message in \\
+\hline
+{\em map\+\_\+out} & state map out \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_ac05cfd222a17201a04eca282c2eb19ca}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_ac05cfd222a17201a04eca282c2eb19ca} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Automatically invoked by the RViz parent class. Initializes the panel. 
+
+Retrieves the pointer to the parent node and saves it in \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a95758278fff99d61ad29ff1746d767ec}{node\+\_\+}. This node and its executor is used for all clients and publishers.
+
+Additionally a the \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a75fed88ec83684f289f90d3f57bde737}{prune\+\_\+timer\+\_\+} is created which periodically cleans all dangling service requests. All subscribers, publishers and clients are created and saved in their corresponding handler. Also the \#controller\+\_\+states\+\_\+state and \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_af33769aecead8200f09b4b98fea6173e}{hardware\+\_\+states\+\_\+} state maps are prepopulated by invoking \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a56b9a76e17607b83c4dcd93c7d82e206}{prepopulate\+\_\+state\+\_\+map()} \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a78b9b5f7de4b9e801bc0ecc8a5dfe05d}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a78b9b5f7de4b9e801bc0ecc8a5dfe05d} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!prepopulate\_joint\_state\_map@{prepopulate\_joint\_state\_map}}
+\index{prepopulate\_joint\_state\_map@{prepopulate\_joint\_state\_map}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{prepopulate\_joint\_state\_map()}{prepopulate\_joint\_state\_map()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::prepopulate\+\_\+joint\+\_\+state\+\_\+map (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, Interface\+Value $>$ \&}]{state\+\_\+map,  }\item[{std\+::vector$<$ std\+::string $>$}]{augment\+\_\+vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prepopulates a state map with a default Named\+Lifecycle\+State for every specified key. 
+
+This is done to avoid having to check for the existence of key when accessing the map. Keys could be missing if hardware interfaces are not specified or named differently.
+
+For every joint the state interfaces are initialized as follows\+:
+\begin{DoxyItemize}
+\item {\itshape position}\+: 0.\+0
+\item {\itshape velocity}\+: 0.\+0
+\item {\itshape home}\+: 0.\+0
+\end{DoxyItemize}
+
+Some joints (the gripper) dont have all state interfaces, but they are initialized regardless.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+\_\+map} & The state map to prepopulate \\
+\hline
+{\em augment\+\_\+vec} & keys that are added/overwritten \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a56b9a76e17607b83c4dcd93c7d82e206}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a56b9a76e17607b83c4dcd93c7d82e206} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!prepopulate\_state\_map@{prepopulate\_state\_map}}
+\index{prepopulate\_state\_map@{prepopulate\_state\_map}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{prepopulate\_state\_map()}{prepopulate\_state\_map()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::prepopulate\+\_\+state\+\_\+map (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \&}]{state\+\_\+map,  }\item[{std\+::vector$<$ std\+::string $>$}]{augment\+\_\+vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prepopulates a state map with a default Named\+Lifecycle\+State for every specified key. 
+
+This is done to avoid having to check for the existence of key when accessing the map. Keys could be missing if an expected controller or hardware component has not been loaded or has a different name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+\_\+map} & The state map to prepopulate \\
+\hline
+{\em augment\+\_\+vec} & keys that are added/overwritten \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_ae249475507502e173ddf97bafaade646}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_ae249475507502e173ddf97bafaade646} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!print\_cm\_map@{print\_cm\_map}}
+\index{print\_cm\_map@{print\_cm\_map}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{print\_cm\_map()}{print\_cm\_map()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::print\+\_\+cm\+\_\+map (\begin{DoxyParamCaption}\item[{const std\+::string}]{prefix,  }\item[{const std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \&}]{map\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Print life-\/cycle state message to console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & string prefix \\
+\hline
+{\em map\+\_\+in} & map to be printed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a0ecf54b02b6a0a67f266c4ccc70bd6f8}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a0ecf54b02b6a0a67f266c4ccc70bd6f8} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!set\_controller\_state@{set\_controller\_state}}
+\index{set\_controller\_state@{set\_controller\_state}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{set\_controller\_state()}{set\_controller\_state()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::set\+\_\+controller\+\_\+state (\begin{DoxyParamCaption}\item[{const std\+::string}]{controller,  }\item[{const lifecycle\+\_\+msgs\+::msg\+::\+State}]{target\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+calls the correct functions to bring a controller to the correct state. 
+
+Checks if \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a8335351e92a71984a8a4c482b427999d}{configure\+\_\+controller()} needs to be called before \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a88590559b24bf13d01d50781093da8ad}{switch\+\_\+controllers()} can be called to bring the controller to the desired state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & controller name \\
+\hline
+{\em target\+\_\+state} & target state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a0b2d515ddf157d09b2e7fae07624eb16}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a0b2d515ddf157d09b2e7fae07624eb16} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!set\_en\_btn@{set\_en\_btn}}
+\index{set\_en\_btn@{set\_en\_btn}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{set\_en\_btn()}{set\_en\_btn()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::set\+\_\+en\+\_\+btn (\begin{DoxyParamCaption}\item[{QPush\+Button \texorpdfstring{$\ast$}{*}}]{button,  }\item[{const Named\+Lifecycle\+State \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set the control button state. 
+
+Sets control buttons color, text and active status based on the component state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & pointer to button to modify \\
+\hline
+{\em state} & state of the component \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_aee8f4213ef4c0779258bf9a4893578eb}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_aee8f4213ef4c0779258bf9a4893578eb} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!set\_hardware\_component\_state@{set\_hardware\_component\_state}}
+\index{set\_hardware\_component\_state@{set\_hardware\_component\_state}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{set\_hardware\_component\_state()}{set\_hardware\_component\_state()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::set\+\_\+hardware\+\_\+component\+\_\+state (\begin{DoxyParamCaption}\item[{const std\+::string}]{component,  }\item[{const lifecycle\+\_\+msgs\+::msg\+::\+State}]{target\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Makes a service request to change a hardware component state. 
+
+Request issued through the \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a574e0fcc17ed80180136641176a6daca}{hardware\+\_\+state\+\_\+client\+\_\+}. Asynchrounous call, method exits after having issued the request.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & name of hardware component to modify \\
+\hline
+{\em target\+\_\+state} & target state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a85c7b72b022257a6d1ec05098b502c65}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a85c7b72b022257a6d1ec05098b502c65} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!set\_homing\_state\_label@{set\_homing\_state\_label}}
+\index{set\_homing\_state\_label@{set\_homing\_state\_label}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{set\_homing\_state\_label()}{set\_homing\_state\_label()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::set\+\_\+homing\+\_\+state\+\_\+label (\begin{DoxyParamCaption}\item[{QLabel \texorpdfstring{$\ast$}{*}}]{label,  }\item[{const Interface\+Value \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set state label text and color of the homing state label. 
+
+Sets color and text of label. 
+\begin{DoxyParams}{Parameters}
+{\em label} & pointer to label \\
+\hline
+{\em state} & joint state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_af68c7b6a3eef31d9bb2dbe99220eabee}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_af68c7b6a3eef31d9bb2dbe99220eabee} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!set\_state\_label@{set\_state\_label}}
+\index{set\_state\_label@{set\_state\_label}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{set\_state\_label()}{set\_state\_label()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::set\+\_\+state\+\_\+label (\begin{DoxyParamCaption}\item[{QLabel \texorpdfstring{$\ast$}{*}}]{label,  }\item[{const Named\+Lifecycle\+State \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set the state label. 
+
+sets color and text based on the component state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & pointer to label to modify \\
+\hline
+{\em state} & state of the component \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a88590559b24bf13d01d50781093da8ad}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a88590559b24bf13d01d50781093da8ad} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!switch\_controllers@{switch\_controllers}}
+\index{switch\_controllers@{switch\_controllers}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{switch\_controllers()}{switch\_controllers()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::switch\+\_\+controllers (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{activate\+\_\+controllers,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{deactivate\+\_\+controllers,  }\item[{const int32\+\_\+t}]{strictness = {\ttfamily SwitchController\+:\+:Request\+:\+:BEST\+\_\+EFFORT},  }\item[{const bool}]{activate\+\_\+asap = {\ttfamily false},  }\item[{const builtin\+\_\+interfaces\+::msg\+::\+Duration}]{timeout = {\ttfamily builtin\+\_\+interfaces\+:\+:msg\+:\+:Duration()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Makes a service request to change controller states. 
+
+Activates and deactivates a combination of controllers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em activate\+\_\+controllers} & list of controllers to activate \\
+\hline
+{\em deactivate\+\_\+controllers} & list of controllers to deactivate \\
+\hline
+{\em activate\+\_\+asap} & if true controller switch happens in the realtime loop \\
+\hline
+{\em timeout} & switch timeout \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a96faf9a60bc4eeb25180cf6e69ae3464}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a96faf9a60bc4eeb25180cf6e69ae3464} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!target\_state\_from\_current@{target\_state\_from\_current}}
+\index{target\_state\_from\_current@{target\_state\_from\_current}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{target\_state\_from\_current()}{target\_state\_from\_current()}}
+{\footnotesize\ttfamily lifecycle\+\_\+msgs\+::msg\+::\+State bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::target\+\_\+state\+\_\+from\+\_\+current (\begin{DoxyParamCaption}\item[{lifecycle\+\_\+msgs\+::msg\+::\+State}]{current\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+returns the next logical state from the current one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+state} & current state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lifecycle\+\_\+msgs\+::msg\+::\+State 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_ab1f8741339db74bdeae1465631d8b3f0}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_ab1f8741339db74bdeae1465631d8b3f0} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!update\_homing\_grp\_state@{update\_homing\_grp\_state}}
+\index{update\_homing\_grp\_state@{update\_homing\_grp\_state}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{update\_homing\_grp\_state()}{update\_homing\_grp\_state()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::update\+\_\+homing\+\_\+grp\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Enabl/\+Disables the homing group depending on the homing controller state. 
+
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a6d60adb3bcb389e3637da8669294c58c}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a6d60adb3bcb389e3637da8669294c58c} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!update\_homing\_state\_labels@{update\_homing\_state\_labels}}
+\index{update\_homing\_state\_labels@{update\_homing\_state\_labels}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{update\_homing\_state\_labels()}{update\_homing\_state\_labels()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::update\+\_\+homing\+\_\+state\+\_\+labels (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+updates all homing state labels. 
+
+Calls \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a85c7b72b022257a6d1ec05098b502c65}{set\+\_\+homing\+\_\+state\+\_\+label()} for each joint state label. \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a87c0e9b0f98f235d8b40916b394e055a}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a87c0e9b0f98f235d8b40916b394e055a} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!update\_state\_label\_and\_btn@{update\_state\_label\_and\_btn}}
+\index{update\_state\_label\_and\_btn@{update\_state\_label\_and\_btn}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{update\_state\_label\_and\_btn()}{update\_state\_label\_and\_btn()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::update\+\_\+state\+\_\+label\+\_\+and\+\_\+btn (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ std\+::string, Named\+Lifecycle\+State $>$ \&}]{state\+\_\+map,  }\item[{QLabel \texorpdfstring{$\ast$}{*}}]{state\+\_\+label,  }\item[{QPush\+Button \texorpdfstring{$\ast$}{*}}]{en\+\_\+button,  }\item[{const std\+::string \&}]{state\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+updates component state label and control button. 
+
+Calls \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_af68c7b6a3eef31d9bb2dbe99220eabee}{set\+\_\+state\+\_\+label()} for state\+\_\+label and \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a0b2d515ddf157d09b2e7fae07624eb16}{set\+\_\+en\+\_\+btn()} for en\+\_\+button.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+\_\+map} & component state map \\
+\hline
+{\em state\+\_\+label} & pointer to state label \\
+\hline
+{\em en\+\_\+button} & pointer to enable button \\
+\hline
+{\em state\+\_\+key} & string key to access in state\+\_\+map \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_af48cad9687e3e61d24518469a0a00cab}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_af48cad9687e3e61d24518469a0a00cab} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!update\_state\_labels\_and\_btns@{update\_state\_labels\_and\_btns}}
+\index{update\_state\_labels\_and\_btns@{update\_state\_labels\_and\_btns}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{update\_state\_labels\_and\_btns()}{update\_state\_labels\_and\_btns()}}
+{\footnotesize\ttfamily void bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::update\+\_\+state\+\_\+labels\+\_\+and\+\_\+btns (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Update all hardware and controller state lables. 
+
+calls \doxylink{classbioscara__rviz__plugin_1_1BioscaraPanel_a87c0e9b0f98f235d8b40916b394e055a}{update\+\_\+state\+\_\+label\+\_\+and\+\_\+btn()} for each controller and hardware component. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_acb0ccbaf786959f349361ce0d335fd77}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_acb0ccbaf786959f349361ce0d335fd77} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!cm\_state\_subsription\_@{cm\_state\_subsription\_}}
+\index{cm\_state\_subsription\_@{cm\_state\_subsription\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{cm\_state\_subsription\_}{cm\_state\_subsription\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Subscription$<$Controller\+Manager\+Activity$>$\+::\+Shared\+Ptr bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::cm\+\_\+state\+\_\+subsription\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Subscription to the the controller\+\_\+manager state publisher. 
+
+Used to retrieve information about hardware and controller state changes. \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a142b579c2883d0ed55404226f475c1f0}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a142b579c2883d0ed55404226f475c1f0} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!configure\_controller\_client\_@{configure\_controller\_client\_}}
+\index{configure\_controller\_client\_@{configure\_controller\_client\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{configure\_controller\_client\_}{configure\_controller\_client\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Client$<$Configure\+Controller$>$\+::\+Shared\+Ptr bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::configure\+\_\+controller\+\_\+client\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Service client to the "{}/controller\+\_\+manager/configure\+\_\+controller"{} service. 
+
+Used to request configuration and cleanup of controllers. \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_aa19fb953879dd20583960fc19e29686a}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_aa19fb953879dd20583960fc19e29686a} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!controller\_states\_@{controller\_states\_}}
+\index{controller\_states\_@{controller\_states\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{controller\_states\_}{controller\_states\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, Named\+Lifecycle\+State$>$ bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::controller\+\_\+states\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map correlating controller name to its lifecycle\+\_\+msgs/\+State. 
+
+Stored as Named\+Lifecycle\+State to also simply access controller name from map value. \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a574e0fcc17ed80180136641176a6daca}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a574e0fcc17ed80180136641176a6daca} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!hardware\_state\_client\_@{hardware\_state\_client\_}}
+\index{hardware\_state\_client\_@{hardware\_state\_client\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{hardware\_state\_client\_}{hardware\_state\_client\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Client$<$Set\+Hardware\+Component\+State$>$\+::\+Shared\+Ptr bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::hardware\+\_\+state\+\_\+client\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Service client to the "{}/controller\+\_\+manager/set\+\_\+hardware\+\_\+component\+\_\+state"{} service. 
+
+Used to request activation and deactivation of harddware components. \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_af33769aecead8200f09b4b98fea6173e}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_af33769aecead8200f09b4b98fea6173e} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!hardware\_states\_@{hardware\_states\_}}
+\index{hardware\_states\_@{hardware\_states\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{hardware\_states\_}{hardware\_states\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, Named\+Lifecycle\+State$>$ bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::hardware\+\_\+states\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map correlating hardware component name to its lifecycle\+\_\+msgs/\+State. 
+
+Stored as Named\+Lifecycle\+State to also simply access component name from map value. \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a2992ee7a7d8d0036607d13d8e154944f}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a2992ee7a7d8d0036607d13d8e154944f} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!homing\_publisher\_@{homing\_publisher\_}}
+\index{homing\_publisher\_@{homing\_publisher\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{homing\_publisher\_}{homing\_publisher\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Publisher$<$Dynamic\+Interface\+Group\+Values$>$\+::\+Shared\+Ptr bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::homing\+\_\+publisher\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Publisher to send commands to the homing\+\_\+controller. 
+
+Used to start and stop homing of joints. \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_ab53e4f121e21982e3d05c26324a76f13}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_ab53e4f121e21982e3d05c26324a76f13} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!joint\_state\_subsription\_@{joint\_state\_subsription\_}}
+\index{joint\_state\_subsription\_@{joint\_state\_subsription\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{joint\_state\_subsription\_}{joint\_state\_subsription\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Subscription$<$Dynamic\+Joint\+State$>$\+::\+Shared\+Ptr bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::joint\+\_\+state\+\_\+subsription\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Subscription to the the joint state publisher state publisher. 
+
+Uses the "{}/dynamic\+\_\+joint\+\_\+states"{} to receive updates of all joints states. \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a4b60f3fe654222b4b4e399a46f371f94}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a4b60f3fe654222b4b4e399a46f371f94} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!joint\_states\_@{joint\_states\_}}
+\index{joint\_states\_@{joint\_states\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{joint\_states\_}{joint\_states\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, Interface\+Value$>$ bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::joint\+\_\+states\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map storing all joint state interface values by each joint. 
+
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a95758278fff99d61ad29ff1746d767ec}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a95758278fff99d61ad29ff1746d767ec} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!node\_@{node\_}}
+\index{node\_@{node\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{node\_}{node\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Node\+::\+Shared\+Ptr bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::node\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pointer to the parent node. Used for access to the executor. 
+
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a75fed88ec83684f289f90d3f57bde737}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a75fed88ec83684f289f90d3f57bde737} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!prune\_timer\_@{prune\_timer\_}}
+\index{prune\_timer\_@{prune\_timer\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{prune\_timer\_}{prune\_timer\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Timer\+Base\+::\+Shared\+Ptr bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::prune\+\_\+timer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Timer triggered every 5 s to prune unanswered service requests. 
+
+\Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_ac1ad2c999bf39ec304bdc587b9ac0300}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_ac1ad2c999bf39ec304bdc587b9ac0300} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!switch\_controller\_client\_@{switch\_controller\_client\_}}
+\index{switch\_controller\_client\_@{switch\_controller\_client\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{switch\_controller\_client\_}{switch\_controller\_client\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Client$<$Switch\+Controller$>$\+::\+Shared\+Ptr bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::switch\+\_\+controller\+\_\+client\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Service client to the "{}/controller\+\_\+manager/switch\+\_\+controller"{} service. 
+
+Used to request activation and deactivation of controllers. \Hypertarget{classbioscara__rviz__plugin_1_1BioscaraPanel_a4501942366b971cad451516efa72e361}\label{classbioscara__rviz__plugin_1_1BioscaraPanel_a4501942366b971cad451516efa72e361} 
+\index{bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}!ui\_@{ui\_}}
+\index{ui\_@{ui\_}!bioscara\_rviz\_plugin::BioscaraPanel@{bioscara\_rviz\_plugin::BioscaraPanel}}
+\doxysubsubsection{\texorpdfstring{ui\_}{ui\_}}
+{\footnotesize\ttfamily Ui\+::\+Bioscara\+UI\texorpdfstring{$\ast$}{*} bioscara\+\_\+rviz\+\_\+plugin\+::\+Bioscara\+Panel\+::ui\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The QT object containing all UI elements. 
+
+Autogenerated from the "{}bioscara\+\_\+rviz\+\_\+plugin\+\_\+frame.\+ui"{} file. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/ros2\+\_\+ws/src/bioscara\+\_\+rviz\+\_\+plugin/include/bioscara\+\_\+rviz\+\_\+plugin/\mbox{\hyperlink{bioscara__panel_8hpp}{bioscara\+\_\+panel.\+hpp}}\item 
+lib/ros2\+\_\+ws/src/bioscara\+\_\+rviz\+\_\+plugin/src/\mbox{\hyperlink{bioscara__panel_8cpp}{bioscara\+\_\+panel.\+cpp}}\end{DoxyCompactItemize}

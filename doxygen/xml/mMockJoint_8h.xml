@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="mMockJoint_8h" kind="file" language="C++">
+    <compoundname>mMockJoint.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="mBaseJoint_8h" local="yes">bioscara_arm_hardware_driver/mBaseJoint.h</includes>
+    <includes local="no">chrono</includes>
+    <includedby refid="mMockJoint_8cpp" local="yes">lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mMockJoint.cpp</includedby>
+    <includedby refid="arm__hardware_8hpp" local="yes">lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>bioscara_arm_hardware_driver/mBaseJoint.h</label>
+        <link refid="mBaseJoint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mMockJoint.h</label>
+        <link refid="mMockJoint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>bioscara_arm_hardware_driver/uErr.h</label>
+        <link refid="uErr_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>chrono</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mMockJoint.h</label>
+        <link refid="mMockJoint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src/mMockJoint.cpp</label>
+        <link refid="mMockJoint_8cpp"/>
+      </node>
+      <node id="3">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp</label>
+        <link refid="arm__hardware_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp</label>
+        <link refid="arm__hardware_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classbioscara__hardware__drivers_1_1MockJoint" prot="public">bioscara_hardware_drivers::MockJoint</innerclass>
+    <innernamespace refid="namespacebioscara__hardware__drivers">bioscara_hardware_drivers</innernamespace>
+    <briefdescription>
+<para>File including the MockJoint class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>sbstorz </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2025-05-29</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MMOCKJOINT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMOCKJOINT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mBaseJoint_8h" kindref="compound">bioscara_arm_hardware_driver/mBaseJoint.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacebioscara__hardware__drivers" kindref="compound">bioscara_hardware_drivers</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="classbioscara__hardware__drivers_1_1MockJoint" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classbioscara__hardware__drivers_1_1MockJoint" kindref="compound">MockJoint</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classbioscara__hardware__drivers_1_1BaseJoint" kindref="compound">BaseJoint</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint" kindref="compound">MockJoint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1aca33fbf6ffb94cf1cd15c5b9354eb643" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a1e40d0678179df311723f5fecbf5a667" kindref="member">enable</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">u_int8_t</ref><sp/>driveCurrent,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">u_int8_t</ref><sp/>holdCurrent)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1ab88ae97609266a92e603964565a3c0b5" kindref="member">disable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a669f5d39cc8e67155bf2774d204d3e81" kindref="member">getPosition</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">pos</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a032944df226bfeb7e00d2de2429e5376" kindref="member">setPosition</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">pos</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a38d475565b0acc21a70dd567c74b0a45" kindref="member">getVelocity</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">vel</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a3b44b1fb7d8d689a8ea07fa433d53cdb" kindref="member">setVelocity</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">vel</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1ab47cce615b9b1f50b04a2f78fd04a6c8" kindref="member">checkOrientation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">angle</ref><sp/>=<sp/>2.0)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1ac363919b1b8e6543cd5ac60577e25f24" kindref="member">stop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1aceae1bb2d8a377ef28b3b4b94281b652" kindref="member">getFlags</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a6892f0942bfe3ca98532258a5b73dc56" kindref="member">isHomed</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">err_type_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a21dcde6483552d6fb440e19bcd3a99bc" kindref="member">_home</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">velocity</ref>,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">u_int8_t</ref><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">sensitivity</ref>,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">u_int8_t</ref><sp/>current);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57" refid="classbioscara__hardware__drivers_1_1MockJoint_1a0d78d44028d5d9a69d6b54a242c38290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a0d78d44028d5d9a69d6b54a242c38290" kindref="member">q</ref><sp/>=<sp/>0.0;<sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="classbioscara__hardware__drivers_1_1MockJoint_1ab59dd1e2c694c5ae7597a332e5f21509" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1ab59dd1e2c694c5ae7597a332e5f21509" kindref="member">qd</ref><sp/>=<sp/>0.0;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classbioscara__hardware__drivers_1_1MockJoint_1a883cf614b5c6e9af9e3ef88301be747c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::_V2::system_clock::time_point<sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a883cf614b5c6e9af9e3ef88301be747c" kindref="member">last_set_position</ref><sp/>=<sp/>std::chrono::high_resolution_clock::now();</highlight></codeline>
+<codeline lineno="61" refid="classbioscara__hardware__drivers_1_1MockJoint_1ad32ce877950db3860c56e7f3d30ff89a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::_V2::system_clock::time_point<sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1ad32ce877950db3860c56e7f3d30ff89a" kindref="member">last_set_velocity</ref><sp/>=<sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a883cf614b5c6e9af9e3ef88301be747c" kindref="member">last_set_position</ref>;</highlight></codeline>
+<codeline lineno="62" refid="classbioscara__hardware__drivers_1_1MockJoint_1a1c308444f41a5f000b878b5581359df8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::_V2::system_clock::time_point<sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a1c308444f41a5f000b878b5581359df8" kindref="member">async_start_time</ref><sp/>=<sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a883cf614b5c6e9af9e3ef88301be747c" kindref="member">last_set_position</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1a1146be895ac3f2aec533f475889627e7" kindref="member">getDeltaT</ref>(std::chrono::_V2::system_clock::time_point<sp/>&amp;<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">last_call</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">update</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classbioscara__hardware__drivers_1_1MockJoint_1ab6b76d373cab97c8b014a9d65e0df76b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1aaf12c41494c327736d4980ffe1184227" kindref="member">stp_reg_t</ref><sp/><ref refid="classbioscara__hardware__drivers_1_1MockJoint_1ab6b76d373cab97c8b014a9d65e0df76b" kindref="member">op_mode</ref><sp/>=<sp/><ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45" kindref="member">NONE</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include/bioscara_arm_hardware_driver/mMockJoint.h"/>
+  </compounddef>
+</doxygen>

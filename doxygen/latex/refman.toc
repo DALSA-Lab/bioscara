@@ -1,0 +1,534 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Bioscara C++ API Documentation}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Todo List}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Namespace Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Namespace List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Hierarchical Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class Hierarchy}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Class Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Class List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}File Index}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}File List}{11}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Namespace Documentation}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}drivers Namespace Reference}{13}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Enumeration Type Documentation}{13}{subsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.1.1}err\_type\_t}{13}{subsubsection.7.1.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Function Documentation}{14}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}error\_to\_string()}{14}{subsubsection.7.1.2.1}%
+\contentsline {section}{\numberline {7.2}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interfaces Namespace Reference}{14}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Variable Documentation}{14}{subsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.1.1}HW\_IF\_HOME}{14}{subsubsection.7.2.1.1}%
+\contentsline {section}{\numberline {7.3}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rviz\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}plugin Namespace Reference}{15}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Ui Namespace Reference}{15}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Class Documentation}{17}{chapter.8}%
+\contentsline {section}{\numberline {8.1}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}drivers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper Class Reference}{17}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{18}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Constructor \& Destructor Documentation}{18}{subsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.1}BaseGripper()}{18}{subsubsection.8.1.2.1}%
+\contentsline {subsubsection}{\numberline {8.1.2.2}$\sim $BaseGripper()}{19}{subsubsection.8.1.2.2}%
+\contentsline {subsection}{\numberline {8.1.3}Member Function Documentation}{19}{subsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.3.1}deinit()}{19}{subsubsection.8.1.3.1}%
+\contentsline {subsubsection}{\numberline {8.1.3.2}disable()}{20}{subsubsection.8.1.3.2}%
+\contentsline {subsubsection}{\numberline {8.1.3.3}enable()}{20}{subsubsection.8.1.3.3}%
+\contentsline {subsubsection}{\numberline {8.1.3.4}getPosition()}{20}{subsubsection.8.1.3.4}%
+\contentsline {subsubsection}{\numberline {8.1.3.5}init()}{21}{subsubsection.8.1.3.5}%
+\contentsline {subsubsection}{\numberline {8.1.3.6}retrieve\_last\_position()}{21}{subsubsection.8.1.3.6}%
+\contentsline {subsubsection}{\numberline {8.1.3.7}save\_last\_position()}{21}{subsubsection.8.1.3.7}%
+\contentsline {subsubsection}{\numberline {8.1.3.8}setOffset()}{21}{subsubsection.8.1.3.8}%
+\contentsline {subsubsection}{\numberline {8.1.3.9}setPosition()}{22}{subsubsection.8.1.3.9}%
+\contentsline {subsubsection}{\numberline {8.1.3.10}setReduction()}{22}{subsubsection.8.1.3.10}%
+\contentsline {subsection}{\numberline {8.1.4}Member Data Documentation}{22}{subsection.8.1.4}%
+\contentsline {subsubsection}{\numberline {8.1.4.1}\_backup\_init\_pos}{22}{subsubsection.8.1.4.1}%
+\contentsline {subsubsection}{\numberline {8.1.4.2}\_max}{22}{subsubsection.8.1.4.2}%
+\contentsline {subsubsection}{\numberline {8.1.4.3}\_min}{22}{subsubsection.8.1.4.3}%
+\contentsline {subsubsection}{\numberline {8.1.4.4}\_new\_cmd\_time}{23}{subsubsection.8.1.4.4}%
+\contentsline {subsubsection}{\numberline {8.1.4.5}\_offset}{23}{subsubsection.8.1.4.5}%
+\contentsline {subsubsection}{\numberline {8.1.4.6}\_pos}{23}{subsubsection.8.1.4.6}%
+\contentsline {subsubsection}{\numberline {8.1.4.7}\_pos\_get}{23}{subsubsection.8.1.4.7}%
+\contentsline {subsubsection}{\numberline {8.1.4.8}\_reduction}{23}{subsubsection.8.1.4.8}%
+\contentsline {section}{\numberline {8.2}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}drivers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint Class Reference}{23}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{26}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Member Enumeration Documentation}{26}{subsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.2.1}stp\_reg\_t}{26}{subsubsection.8.2.2.1}%
+\contentsline {subsection}{\numberline {8.2.3}Constructor \& Destructor Documentation}{27}{subsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.1}BaseJoint()}{27}{subsubsection.8.2.3.1}%
+\contentsline {subsubsection}{\numberline {8.2.3.2}$\sim $BaseJoint()}{27}{subsubsection.8.2.3.2}%
+\contentsline {subsection}{\numberline {8.2.4}Member Function Documentation}{27}{subsection.8.2.4}%
+\contentsline {subsubsection}{\numberline {8.2.4.1}\_home()}{27}{subsubsection.8.2.4.1}%
+\contentsline {subsubsection}{\numberline {8.2.4.2}checkOrientation()}{28}{subsubsection.8.2.4.2}%
+\contentsline {subsubsection}{\numberline {8.2.4.3}deinit()}{28}{subsubsection.8.2.4.3}%
+\contentsline {subsubsection}{\numberline {8.2.4.4}disable()}{28}{subsubsection.8.2.4.4}%
+\contentsline {subsubsection}{\numberline {8.2.4.5}disableCL()}{29}{subsubsection.8.2.4.5}%
+\contentsline {subsubsection}{\numberline {8.2.4.6}enable()}{29}{subsubsection.8.2.4.6}%
+\contentsline {subsubsection}{\numberline {8.2.4.7}enableStallguard()}{29}{subsubsection.8.2.4.7}%
+\contentsline {subsubsection}{\numberline {8.2.4.8}getCurrentBCmd()}{30}{subsubsection.8.2.4.8}%
+\contentsline {subsubsection}{\numberline {8.2.4.9}getFlags()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{30}{subsubsection.8.2.4.9}%
+\contentsline {subsubsection}{\numberline {8.2.4.10}getFlags()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{30}{subsubsection.8.2.4.10}%
+\contentsline {subsubsection}{\numberline {8.2.4.11}getPosition()}{31}{subsubsection.8.2.4.11}%
+\contentsline {subsubsection}{\numberline {8.2.4.12}getVelocity()}{31}{subsubsection.8.2.4.12}%
+\contentsline {subsubsection}{\numberline {8.2.4.13}home()}{31}{subsubsection.8.2.4.13}%
+\contentsline {subsubsection}{\numberline {8.2.4.14}init()}{32}{subsubsection.8.2.4.14}%
+\contentsline {subsubsection}{\numberline {8.2.4.15}isBusy()}{32}{subsubsection.8.2.4.15}%
+\contentsline {subsubsection}{\numberline {8.2.4.16}isEnabled()}{32}{subsubsection.8.2.4.16}%
+\contentsline {subsubsection}{\numberline {8.2.4.17}isHomed()}{33}{subsubsection.8.2.4.17}%
+\contentsline {subsubsection}{\numberline {8.2.4.18}isStalled()}{33}{subsubsection.8.2.4.18}%
+\contentsline {subsubsection}{\numberline {8.2.4.19}moveSteps()}{33}{subsubsection.8.2.4.19}%
+\contentsline {subsubsection}{\numberline {8.2.4.20}postHoming()}{34}{subsubsection.8.2.4.20}%
+\contentsline {subsubsection}{\numberline {8.2.4.21}setBrakeMode()}{34}{subsubsection.8.2.4.21}%
+\contentsline {subsubsection}{\numberline {8.2.4.22}setDriveCurrent()}{34}{subsubsection.8.2.4.22}%
+\contentsline {subsubsection}{\numberline {8.2.4.23}setHoldCurrent()}{35}{subsubsection.8.2.4.23}%
+\contentsline {subsubsection}{\numberline {8.2.4.24}setMaxAcceleration()}{35}{subsubsection.8.2.4.24}%
+\contentsline {subsubsection}{\numberline {8.2.4.25}setMaxVelocity()}{35}{subsubsection.8.2.4.25}%
+\contentsline {subsubsection}{\numberline {8.2.4.26}setPosition()}{36}{subsubsection.8.2.4.26}%
+\contentsline {subsubsection}{\numberline {8.2.4.27}setVelocity()}{36}{subsubsection.8.2.4.27}%
+\contentsline {subsubsection}{\numberline {8.2.4.28}startHoming()}{36}{subsubsection.8.2.4.28}%
+\contentsline {subsubsection}{\numberline {8.2.4.29}stop()}{37}{subsubsection.8.2.4.29}%
+\contentsline {subsubsection}{\numberline {8.2.4.30}wait\_while\_busy()}{37}{subsubsection.8.2.4.30}%
+\contentsline {subsection}{\numberline {8.2.5}Member Data Documentation}{37}{subsection.8.2.5}%
+\contentsline {subsubsection}{\numberline {8.2.5.1}current\_b\_cmd}{37}{subsubsection.8.2.5.1}%
+\contentsline {subsubsection}{\numberline {8.2.5.2}flags}{38}{subsubsection.8.2.5.2}%
+\contentsline {subsubsection}{\numberline {8.2.5.3}name}{38}{subsubsection.8.2.5.3}%
+\contentsline {section}{\numberline {8.3}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interfaces\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface Class Reference}{38}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Detailed Description}{40}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Member Function Documentation}{41}{subsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.1}activate\_joint()}{41}{subsubsection.8.3.2.1}%
+\contentsline {subsubsection}{\numberline {8.3.2.2}deactivate\_joint()}{41}{subsubsection.8.3.2.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.3}on\_activate()}{41}{subsubsection.8.3.2.3}%
+\contentsline {subsubsection}{\numberline {8.3.2.4}on\_cleanup()}{42}{subsubsection.8.3.2.4}%
+\contentsline {subsubsection}{\numberline {8.3.2.5}on\_configure()}{42}{subsubsection.8.3.2.5}%
+\contentsline {subsubsection}{\numberline {8.3.2.6}on\_deactivate()}{43}{subsubsection.8.3.2.6}%
+\contentsline {subsubsection}{\numberline {8.3.2.7}on\_error()}{43}{subsubsection.8.3.2.7}%
+\contentsline {subsubsection}{\numberline {8.3.2.8}on\_init()}{44}{subsubsection.8.3.2.8}%
+\contentsline {subsubsection}{\numberline {8.3.2.9}on\_shutdown()}{45}{subsubsection.8.3.2.9}%
+\contentsline {subsubsection}{\numberline {8.3.2.10}perform\_command\_mode\_switch()}{45}{subsubsection.8.3.2.10}%
+\contentsline {subsubsection}{\numberline {8.3.2.11}prepare\_command\_mode\_switch()}{46}{subsubsection.8.3.2.11}%
+\contentsline {subsubsection}{\numberline {8.3.2.12}read()}{47}{subsubsection.8.3.2.12}%
+\contentsline {subsubsection}{\numberline {8.3.2.13}split\_interface\_string\_to\_joint\_and\_name()}{47}{subsubsection.8.3.2.13}%
+\contentsline {subsubsection}{\numberline {8.3.2.14}start\_homing()}{48}{subsubsection.8.3.2.14}%
+\contentsline {subsubsection}{\numberline {8.3.2.15}stop\_homing()}{48}{subsubsection.8.3.2.15}%
+\contentsline {subsubsection}{\numberline {8.3.2.16}write()}{48}{subsubsection.8.3.2.16}%
+\contentsline {subsection}{\numberline {8.3.3}Member Data Documentation}{49}{subsection.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.3.3.1}\_joint\_cfg}{49}{subsubsection.8.3.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.3.2}\_joint\_command\_modes}{49}{subsubsection.8.3.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.3.3}\_joints}{50}{subsubsection.8.3.3.3}%
+\contentsline {subsubsection}{\numberline {8.3.3.4}\_new\_joint\_command\_modes}{50}{subsubsection.8.3.3.4}%
+\contentsline {subsubsection}{\numberline {8.3.3.5}\_ordered\_joint\_state\_interfaces\_ptr}{50}{subsubsection.8.3.3.5}%
+\contentsline {subsubsection}{\numberline {8.3.3.6}mtx}{51}{subsubsection.8.3.3.6}%
+\contentsline {section}{\numberline {8.4}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interfaces\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface Class Reference}{51}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{52}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Member Function Documentation}{52}{subsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.2.1}on\_activate()}{52}{subsubsection.8.4.2.1}%
+\contentsline {subsubsection}{\numberline {8.4.2.2}on\_cleanup()}{53}{subsubsection.8.4.2.2}%
+\contentsline {subsubsection}{\numberline {8.4.2.3}on\_configure()}{53}{subsubsection.8.4.2.3}%
+\contentsline {subsubsection}{\numberline {8.4.2.4}on\_deactivate()}{53}{subsubsection.8.4.2.4}%
+\contentsline {subsubsection}{\numberline {8.4.2.5}on\_error()}{54}{subsubsection.8.4.2.5}%
+\contentsline {subsubsection}{\numberline {8.4.2.6}on\_init()}{54}{subsubsection.8.4.2.6}%
+\contentsline {subsubsection}{\numberline {8.4.2.7}on\_shutdown()}{55}{subsubsection.8.4.2.7}%
+\contentsline {subsubsection}{\numberline {8.4.2.8}read()}{55}{subsubsection.8.4.2.8}%
+\contentsline {subsubsection}{\numberline {8.4.2.9}write()}{55}{subsubsection.8.4.2.9}%
+\contentsline {subsection}{\numberline {8.4.3}Member Data Documentation}{56}{subsection.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.4.3.1}\_gripper}{56}{subsubsection.8.4.3.1}%
+\contentsline {subsubsection}{\numberline {8.4.3.2}\_gripper\_cfg}{56}{subsubsection.8.4.3.2}%
+\contentsline {subsubsection}{\numberline {8.4.3.3}\_last\_pos}{56}{subsubsection.8.4.3.3}%
+\contentsline {subsubsection}{\numberline {8.4.3.4}\_vel}{56}{subsubsection.8.4.3.4}%
+\contentsline {section}{\numberline {8.5}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rviz\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}plugin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Panel Class Reference}{57}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{59}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Constructor \& Destructor Documentation}{59}{subsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.2.1}BioscaraPanel()}{59}{subsubsection.8.5.2.1}%
+\contentsline {subsubsection}{\numberline {8.5.2.2}$\sim $BioscaraPanel()}{59}{subsubsection.8.5.2.2}%
+\contentsline {subsection}{\numberline {8.5.3}Member Function Documentation}{60}{subsection.8.5.3}%
+\contentsline {subsubsection}{\numberline {8.5.3.1}arm\_en\_btn\_cb}{60}{subsubsection.8.5.3.1}%
+\contentsline {subsubsection}{\numberline {8.5.3.2}check\_activation\_conditions()}{60}{subsubsection.8.5.3.2}%
+\contentsline {subsubsection}{\numberline {8.5.3.3}cm\_state\_callback()}{60}{subsubsection.8.5.3.3}%
+\contentsline {subsubsection}{\numberline {8.5.3.4}configure\_controller()}{60}{subsubsection.8.5.3.4}%
+\contentsline {subsubsection}{\numberline {8.5.3.5}ctrl\_en\_btn\_cb()}{61}{subsubsection.8.5.3.5}%
+\contentsline {subsubsection}{\numberline {8.5.3.6}dynamic\_joint\_state\_msg\_to\_map()}{61}{subsubsection.8.5.3.6}%
+\contentsline {subsubsection}{\numberline {8.5.3.7}ensure\_jsb\_is\_active()}{61}{subsubsection.8.5.3.7}%
+\contentsline {subsubsection}{\numberline {8.5.3.8}gripper\_en\_btn\_cb}{61}{subsubsection.8.5.3.8}%
+\contentsline {subsubsection}{\numberline {8.5.3.9}homing\_cmd()}{62}{subsubsection.8.5.3.9}%
+\contentsline {subsubsection}{\numberline {8.5.3.10}joint\_state\_callback()}{62}{subsubsection.8.5.3.10}%
+\contentsline {subsubsection}{\numberline {8.5.3.11}named\_lcs\_msg\_to\_map()}{62}{subsubsection.8.5.3.11}%
+\contentsline {subsubsection}{\numberline {8.5.3.12}onInitialize()}{62}{subsubsection.8.5.3.12}%
+\contentsline {subsubsection}{\numberline {8.5.3.13}prepopulate\_joint\_state\_map()}{63}{subsubsection.8.5.3.13}%
+\contentsline {subsubsection}{\numberline {8.5.3.14}prepopulate\_state\_map()}{63}{subsubsection.8.5.3.14}%
+\contentsline {subsubsection}{\numberline {8.5.3.15}print\_cm\_map()}{64}{subsubsection.8.5.3.15}%
+\contentsline {subsubsection}{\numberline {8.5.3.16}set\_controller\_state()}{64}{subsubsection.8.5.3.16}%
+\contentsline {subsubsection}{\numberline {8.5.3.17}set\_en\_btn()}{64}{subsubsection.8.5.3.17}%
+\contentsline {subsubsection}{\numberline {8.5.3.18}set\_hardware\_component\_state()}{64}{subsubsection.8.5.3.18}%
+\contentsline {subsubsection}{\numberline {8.5.3.19}set\_homing\_state\_label()}{65}{subsubsection.8.5.3.19}%
+\contentsline {subsubsection}{\numberline {8.5.3.20}set\_state\_label()}{65}{subsubsection.8.5.3.20}%
+\contentsline {subsubsection}{\numberline {8.5.3.21}switch\_controllers()}{65}{subsubsection.8.5.3.21}%
+\contentsline {subsubsection}{\numberline {8.5.3.22}target\_state\_from\_current()}{66}{subsubsection.8.5.3.22}%
+\contentsline {subsubsection}{\numberline {8.5.3.23}update\_homing\_grp\_state()}{66}{subsubsection.8.5.3.23}%
+\contentsline {subsubsection}{\numberline {8.5.3.24}update\_homing\_state\_labels()}{66}{subsubsection.8.5.3.24}%
+\contentsline {subsubsection}{\numberline {8.5.3.25}update\_state\_label\_and\_btn()}{67}{subsubsection.8.5.3.25}%
+\contentsline {subsubsection}{\numberline {8.5.3.26}update\_state\_labels\_and\_btns()}{67}{subsubsection.8.5.3.26}%
+\contentsline {subsection}{\numberline {8.5.4}Member Data Documentation}{67}{subsection.8.5.4}%
+\contentsline {subsubsection}{\numberline {8.5.4.1}cm\_state\_subsription\_}{67}{subsubsection.8.5.4.1}%
+\contentsline {subsubsection}{\numberline {8.5.4.2}configure\_controller\_client\_}{67}{subsubsection.8.5.4.2}%
+\contentsline {subsubsection}{\numberline {8.5.4.3}controller\_states\_}{68}{subsubsection.8.5.4.3}%
+\contentsline {subsubsection}{\numberline {8.5.4.4}hardware\_state\_client\_}{68}{subsubsection.8.5.4.4}%
+\contentsline {subsubsection}{\numberline {8.5.4.5}hardware\_states\_}{68}{subsubsection.8.5.4.5}%
+\contentsline {subsubsection}{\numberline {8.5.4.6}homing\_publisher\_}{68}{subsubsection.8.5.4.6}%
+\contentsline {subsubsection}{\numberline {8.5.4.7}joint\_state\_subsription\_}{68}{subsubsection.8.5.4.7}%
+\contentsline {subsubsection}{\numberline {8.5.4.8}joint\_states\_}{68}{subsubsection.8.5.4.8}%
+\contentsline {subsubsection}{\numberline {8.5.4.9}node\_}{69}{subsubsection.8.5.4.9}%
+\contentsline {subsubsection}{\numberline {8.5.4.10}prune\_timer\_}{69}{subsubsection.8.5.4.10}%
+\contentsline {subsubsection}{\numberline {8.5.4.11}switch\_controller\_client\_}{69}{subsubsection.8.5.4.11}%
+\contentsline {subsubsection}{\numberline {8.5.4.12}ui\_}{69}{subsubsection.8.5.4.12}%
+\contentsline {section}{\numberline {8.6}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}drivers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gripper Class Reference}{69}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Detailed Description}{71}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Constructor \& Destructor Documentation}{71}{subsection.8.6.2}%
+\contentsline {subsubsection}{\numberline {8.6.2.1}Gripper()}{71}{subsubsection.8.6.2.1}%
+\contentsline {subsection}{\numberline {8.6.3}Member Function Documentation}{71}{subsection.8.6.3}%
+\contentsline {subsubsection}{\numberline {8.6.3.1}disable()}{71}{subsubsection.8.6.3.1}%
+\contentsline {subsubsection}{\numberline {8.6.3.2}enable()}{72}{subsubsection.8.6.3.2}%
+\contentsline {subsubsection}{\numberline {8.6.3.3}setPosition()}{72}{subsubsection.8.6.3.3}%
+\contentsline {subsubsection}{\numberline {8.6.3.4}setServoPosition()}{72}{subsubsection.8.6.3.4}%
+\contentsline {subsection}{\numberline {8.6.4}Member Data Documentation}{73}{subsection.8.6.4}%
+\contentsline {subsubsection}{\numberline {8.6.4.1}\_freq}{73}{subsubsection.8.6.4.1}%
+\contentsline {subsubsection}{\numberline {8.6.4.2}\_pwm}{73}{subsubsection.8.6.4.2}%
+\contentsline {section}{\numberline {8.7}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interfaces\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}config\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Struct Reference}{73}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Detailed Description}{73}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}Member Data Documentation}{74}{subsection.8.7.2}%
+\contentsline {subsubsection}{\numberline {8.7.2.1}init\_pos}{74}{subsubsection.8.7.2.1}%
+\contentsline {subsubsection}{\numberline {8.7.2.2}max}{74}{subsubsection.8.7.2.2}%
+\contentsline {subsubsection}{\numberline {8.7.2.3}min}{74}{subsubsection.8.7.2.3}%
+\contentsline {subsubsection}{\numberline {8.7.2.4}offset}{74}{subsubsection.8.7.2.4}%
+\contentsline {subsubsection}{\numberline {8.7.2.5}reduction}{74}{subsubsection.8.7.2.5}%
+\contentsline {section}{\numberline {8.8}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}drivers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Joint Class Reference}{74}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Detailed Description}{77}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Constructor \& Destructor Documentation}{78}{subsection.8.8.2}%
+\contentsline {subsubsection}{\numberline {8.8.2.1}Joint()}{78}{subsubsection.8.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.8.2.2}$\sim $Joint()}{78}{subsubsection.8.8.2.2}%
+\contentsline {subsection}{\numberline {8.8.3}Member Function Documentation}{79}{subsection.8.8.3}%
+\contentsline {subsubsection}{\numberline {8.8.3.1}\_home()}{79}{subsubsection.8.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.8.3.2}checkCom()}{79}{subsubsection.8.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.8.3.3}checkOrientation()}{79}{subsubsection.8.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.8.3.4}deinit()}{80}{subsubsection.8.8.3.4}%
+\contentsline {subsubsection}{\numberline {8.8.3.5}disableCL()}{80}{subsubsection.8.8.3.5}%
+\contentsline {subsubsection}{\numberline {8.8.3.6}enable()}{80}{subsubsection.8.8.3.6}%
+\contentsline {subsubsection}{\numberline {8.8.3.7}enableStallguard()}{81}{subsubsection.8.8.3.7}%
+\contentsline {subsubsection}{\numberline {8.8.3.8}getFlags()}{81}{subsubsection.8.8.3.8}%
+\contentsline {subsubsection}{\numberline {8.8.3.9}getHomingOffset()}{81}{subsubsection.8.8.3.9}%
+\contentsline {subsubsection}{\numberline {8.8.3.10}getPosition()}{82}{subsubsection.8.8.3.10}%
+\contentsline {subsubsection}{\numberline {8.8.3.11}getVelocity()}{82}{subsubsection.8.8.3.11}%
+\contentsline {subsubsection}{\numberline {8.8.3.12}init()}{82}{subsubsection.8.8.3.12}%
+\contentsline {subsubsection}{\numberline {8.8.3.13}moveSteps()}{83}{subsubsection.8.8.3.13}%
+\contentsline {subsubsection}{\numberline {8.8.3.14}postHoming()}{83}{subsubsection.8.8.3.14}%
+\contentsline {subsubsection}{\numberline {8.8.3.15}read()}{83}{subsubsection.8.8.3.15}%
+\contentsline {subsubsection}{\numberline {8.8.3.16}setBrakeMode()}{84}{subsubsection.8.8.3.16}%
+\contentsline {subsubsection}{\numberline {8.8.3.17}setDriveCurrent()}{84}{subsubsection.8.8.3.17}%
+\contentsline {subsubsection}{\numberline {8.8.3.18}setHoldCurrent()}{84}{subsubsection.8.8.3.18}%
+\contentsline {subsubsection}{\numberline {8.8.3.19}setHomingOffset()}{86}{subsubsection.8.8.3.19}%
+\contentsline {subsubsection}{\numberline {8.8.3.20}setMaxAcceleration()}{86}{subsubsection.8.8.3.20}%
+\contentsline {subsubsection}{\numberline {8.8.3.21}setMaxVelocity()}{86}{subsubsection.8.8.3.21}%
+\contentsline {subsubsection}{\numberline {8.8.3.22}setPosition()}{87}{subsubsection.8.8.3.22}%
+\contentsline {subsubsection}{\numberline {8.8.3.23}setVelocity()}{87}{subsubsection.8.8.3.23}%
+\contentsline {subsubsection}{\numberline {8.8.3.24}stop()}{87}{subsubsection.8.8.3.24}%
+\contentsline {subsubsection}{\numberline {8.8.3.25}write()}{88}{subsubsection.8.8.3.25}%
+\contentsline {subsection}{\numberline {8.8.4}Member Data Documentation}{88}{subsection.8.8.4}%
+\contentsline {subsubsection}{\numberline {8.8.4.1}address}{88}{subsubsection.8.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.8.4.2}handle}{88}{subsubsection.8.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.8.4.3}max}{89}{subsubsection.8.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.8.4.4}min}{89}{subsubsection.8.8.4.4}%
+\contentsline {subsubsection}{\numberline {8.8.4.5}offset}{89}{subsubsection.8.8.4.5}%
+\contentsline {subsubsection}{\numberline {8.8.4.6}reduction}{89}{subsubsection.8.8.4.6}%
+\contentsline {section}{\numberline {8.9}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interfaces\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::joint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}config\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Struct Reference}{89}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Detailed Description}{90}{subsection.8.9.1}%
+\contentsline {subsection}{\numberline {8.9.2}Member Data Documentation}{90}{subsection.8.9.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.1}drive\_current}{90}{subsubsection.8.9.2.1}%
+\contentsline {subsubsection}{\numberline {8.9.2.2}hold\_current}{90}{subsubsection.8.9.2.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.3}homing}{91}{subsubsection.8.9.2.3}%
+\contentsline {subsubsection}{\numberline {8.9.2.4}i2c\_address}{91}{subsubsection.8.9.2.4}%
+\contentsline {subsubsection}{\numberline {8.9.2.5}max}{91}{subsubsection.8.9.2.5}%
+\contentsline {subsubsection}{\numberline {8.9.2.6}max\_acceleration}{91}{subsubsection.8.9.2.6}%
+\contentsline {subsubsection}{\numberline {8.9.2.7}max\_velocity}{91}{subsubsection.8.9.2.7}%
+\contentsline {subsubsection}{\numberline {8.9.2.8}min}{92}{subsubsection.8.9.2.8}%
+\contentsline {subsubsection}{\numberline {8.9.2.9}reduction}{92}{subsubsection.8.9.2.9}%
+\contentsline {subsubsection}{\numberline {8.9.2.10}stall\_threshold}{92}{subsubsection.8.9.2.10}%
+\contentsline {section}{\numberline {8.10}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interfaces\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::joint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}homing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}config\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Struct Reference}{92}{section.8.10}%
+\contentsline {subsection}{\numberline {8.10.1}Detailed Description}{93}{subsection.8.10.1}%
+\contentsline {subsection}{\numberline {8.10.2}Member Data Documentation}{93}{subsection.8.10.2}%
+\contentsline {subsubsection}{\numberline {8.10.2.1}acceleration}{93}{subsubsection.8.10.2.1}%
+\contentsline {subsubsection}{\numberline {8.10.2.2}current}{93}{subsubsection.8.10.2.2}%
+\contentsline {subsubsection}{\numberline {8.10.2.3}speed}{93}{subsubsection.8.10.2.3}%
+\contentsline {subsubsection}{\numberline {8.10.2.4}threshold}{94}{subsubsection.8.10.2.4}%
+\contentsline {section}{\numberline {8.11}Lowpass Class Reference}{94}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Constructor \& Destructor Documentation}{94}{subsection.8.11.1}%
+\contentsline {subsubsection}{\numberline {8.11.1.1}Lowpass()}{94}{subsubsection.8.11.1.1}%
+\contentsline {subsection}{\numberline {8.11.2}Member Function Documentation}{95}{subsection.8.11.2}%
+\contentsline {subsubsection}{\numberline {8.11.2.1}resetState()}{95}{subsubsection.8.11.2.1}%
+\contentsline {subsubsection}{\numberline {8.11.2.2}updateState()}{95}{subsubsection.8.11.2.2}%
+\contentsline {subsection}{\numberline {8.11.3}Member Data Documentation}{95}{subsection.8.11.3}%
+\contentsline {subsubsection}{\numberline {8.11.3.1}K}{95}{subsubsection.8.11.3.1}%
+\contentsline {subsubsection}{\numberline {8.11.3.2}tau}{95}{subsubsection.8.11.3.2}%
+\contentsline {subsubsection}{\numberline {8.11.3.3}Ts}{95}{subsubsection.8.11.3.3}%
+\contentsline {subsubsection}{\numberline {8.11.3.4}x}{95}{subsubsection.8.11.3.4}%
+\contentsline {section}{\numberline {8.12}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}drivers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Mock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper Class Reference}{95}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Detailed Description}{97}{subsection.8.12.1}%
+\contentsline {subsection}{\numberline {8.12.2}Constructor \& Destructor Documentation}{97}{subsection.8.12.2}%
+\contentsline {subsubsection}{\numberline {8.12.2.1}MockGripper()}{97}{subsubsection.8.12.2.1}%
+\contentsline {section}{\numberline {8.13}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}drivers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Mock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint Class Reference}{97}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Detailed Description}{100}{subsection.8.13.1}%
+\contentsline {subsection}{\numberline {8.13.2}Constructor \& Destructor Documentation}{100}{subsection.8.13.2}%
+\contentsline {subsubsection}{\numberline {8.13.2.1}MockJoint()}{100}{subsubsection.8.13.2.1}%
+\contentsline {subsection}{\numberline {8.13.3}Member Function Documentation}{101}{subsection.8.13.3}%
+\contentsline {subsubsection}{\numberline {8.13.3.1}\_home()}{101}{subsubsection.8.13.3.1}%
+\contentsline {subsubsection}{\numberline {8.13.3.2}checkOrientation()}{101}{subsubsection.8.13.3.2}%
+\contentsline {subsubsection}{\numberline {8.13.3.3}disable()}{102}{subsubsection.8.13.3.3}%
+\contentsline {subsubsection}{\numberline {8.13.3.4}enable()}{102}{subsubsection.8.13.3.4}%
+\contentsline {subsubsection}{\numberline {8.13.3.5}getDeltaT()}{102}{subsubsection.8.13.3.5}%
+\contentsline {subsubsection}{\numberline {8.13.3.6}getFlags()}{103}{subsubsection.8.13.3.6}%
+\contentsline {subsubsection}{\numberline {8.13.3.7}getPosition()}{103}{subsubsection.8.13.3.7}%
+\contentsline {subsubsection}{\numberline {8.13.3.8}getVelocity()}{103}{subsubsection.8.13.3.8}%
+\contentsline {subsubsection}{\numberline {8.13.3.9}isHomed()}{104}{subsubsection.8.13.3.9}%
+\contentsline {subsubsection}{\numberline {8.13.3.10}setPosition()}{104}{subsubsection.8.13.3.10}%
+\contentsline {subsubsection}{\numberline {8.13.3.11}setVelocity()}{104}{subsubsection.8.13.3.11}%
+\contentsline {subsubsection}{\numberline {8.13.3.12}stop()}{105}{subsubsection.8.13.3.12}%
+\contentsline {subsection}{\numberline {8.13.4}Member Data Documentation}{105}{subsection.8.13.4}%
+\contentsline {subsubsection}{\numberline {8.13.4.1}async\_start\_time}{105}{subsubsection.8.13.4.1}%
+\contentsline {subsubsection}{\numberline {8.13.4.2}last\_set\_position}{105}{subsubsection.8.13.4.2}%
+\contentsline {subsubsection}{\numberline {8.13.4.3}last\_set\_velocity}{105}{subsubsection.8.13.4.3}%
+\contentsline {subsubsection}{\numberline {8.13.4.4}op\_mode}{105}{subsubsection.8.13.4.4}%
+\contentsline {subsubsection}{\numberline {8.13.4.5}q}{106}{subsubsection.8.13.4.5}%
+\contentsline {subsubsection}{\numberline {8.13.4.6}qd}{106}{subsubsection.8.13.4.6}%
+\contentsline {section}{\numberline {8.14}Mov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Max Class Reference}{106}{section.8.14}%
+\contentsline {subsection}{\numberline {8.14.1}Constructor \& Destructor Documentation}{106}{subsection.8.14.1}%
+\contentsline {subsubsection}{\numberline {8.14.1.1}MovMax()}{106}{subsubsection.8.14.1.1}%
+\contentsline {subsection}{\numberline {8.14.2}Member Function Documentation}{106}{subsection.8.14.2}%
+\contentsline {subsubsection}{\numberline {8.14.2.1}updateState()}{106}{subsubsection.8.14.2.1}%
+\contentsline {subsection}{\numberline {8.14.3}Member Data Documentation}{107}{subsection.8.14.3}%
+\contentsline {subsubsection}{\numberline {8.14.3.1}cb\_data}{107}{subsubsection.8.14.3.1}%
+\contentsline {subsubsection}{\numberline {8.14.3.2}cb\_index}{107}{subsubsection.8.14.3.2}%
+\contentsline {subsubsection}{\numberline {8.14.3.3}M}{107}{subsubsection.8.14.3.3}%
+\contentsline {section}{\numberline {8.15}RPI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PWM Class Reference}{107}{section.8.15}%
+\contentsline {subsection}{\numberline {8.15.1}Detailed Description}{108}{subsection.8.15.1}%
+\contentsline {subsection}{\numberline {8.15.2}Constructor \& Destructor Documentation}{108}{subsection.8.15.2}%
+\contentsline {subsubsection}{\numberline {8.15.2.1}$\sim $RPI\_PWM()}{108}{subsubsection.8.15.2.1}%
+\contentsline {subsection}{\numberline {8.15.3}Member Function Documentation}{108}{subsection.8.15.3}%
+\contentsline {subsubsection}{\numberline {8.15.3.1}disable()}{108}{subsubsection.8.15.3.1}%
+\contentsline {subsubsection}{\numberline {8.15.3.2}enable()}{108}{subsubsection.8.15.3.2}%
+\contentsline {subsubsection}{\numberline {8.15.3.3}setDutyCycle()}{108}{subsubsection.8.15.3.3}%
+\contentsline {subsubsection}{\numberline {8.15.3.4}setDutyCycleNS()}{109}{subsubsection.8.15.3.4}%
+\contentsline {subsubsection}{\numberline {8.15.3.5}setPeriod()}{109}{subsubsection.8.15.3.5}%
+\contentsline {subsubsection}{\numberline {8.15.3.6}start()}{109}{subsubsection.8.15.3.6}%
+\contentsline {subsubsection}{\numberline {8.15.3.7}stop()}{109}{subsubsection.8.15.3.7}%
+\contentsline {subsubsection}{\numberline {8.15.3.8}writeSYS()}{109}{subsubsection.8.15.3.8}%
+\contentsline {subsection}{\numberline {8.15.4}Member Data Documentation}{110}{subsection.8.15.4}%
+\contentsline {subsubsection}{\numberline {8.15.4.1}chippath}{110}{subsubsection.8.15.4.1}%
+\contentsline {subsubsection}{\numberline {8.15.4.2}per}{110}{subsubsection.8.15.4.2}%
+\contentsline {subsubsection}{\numberline {8.15.4.3}pwmpath}{110}{subsubsection.8.15.4.3}%
+\contentsline {section}{\numberline {8.16}Trajectory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sequence Class Reference}{110}{section.8.16}%
+\contentsline {subsection}{\numberline {8.16.1}Constructor \& Destructor Documentation}{111}{subsection.8.16.1}%
+\contentsline {subsubsection}{\numberline {8.16.1.1}TrajectorySequence()}{111}{subsubsection.8.16.1.1}%
+\contentsline {subsubsection}{\numberline {8.16.1.2}$\sim $TrajectorySequence()}{111}{subsubsection.8.16.1.2}%
+\contentsline {subsection}{\numberline {8.16.2}Member Function Documentation}{111}{subsection.8.16.2}%
+\contentsline {subsubsection}{\numberline {8.16.2.1}addSegment()}{111}{subsubsection.8.16.2.1}%
+\contentsline {subsubsection}{\numberline {8.16.2.2}exec\_thread()}{111}{subsubsection.8.16.2.2}%
+\contentsline {subsubsection}{\numberline {8.16.2.3}execute()}{111}{subsubsection.8.16.2.3}%
+\contentsline {subsubsection}{\numberline {8.16.2.4}getMoveGroupInterface()}{111}{subsubsection.8.16.2.4}%
+\contentsline {subsubsection}{\numberline {8.16.2.5}getNode()}{112}{subsubsection.8.16.2.5}%
+\contentsline {subsubsection}{\numberline {8.16.2.6}init()}{112}{subsubsection.8.16.2.6}%
+\contentsline {subsubsection}{\numberline {8.16.2.7}moveJ()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{112}{subsubsection.8.16.2.7}%
+\contentsline {subsubsection}{\numberline {8.16.2.8}moveJ()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{112}{subsubsection.8.16.2.8}%
+\contentsline {subsubsection}{\numberline {8.16.2.9}moveL()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{112}{subsubsection.8.16.2.9}%
+\contentsline {subsubsection}{\numberline {8.16.2.10}moveL()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{112}{subsubsection.8.16.2.10}%
+\contentsline {subsection}{\numberline {8.16.3}Member Data Documentation}{113}{subsection.8.16.3}%
+\contentsline {subsubsection}{\numberline {8.16.3.1}items\_}{113}{subsubsection.8.16.3.1}%
+\contentsline {subsubsection}{\numberline {8.16.3.2}mgi\_}{113}{subsubsection.8.16.3.2}%
+\contentsline {subsubsection}{\numberline {8.16.3.3}node\_}{113}{subsubsection.8.16.3.3}%
+\contentsline {subsubsection}{\numberline {8.16.3.4}planning\_group\_}{113}{subsubsection.8.16.3.4}%
+\contentsline {subsubsection}{\numberline {8.16.3.5}seq\_action\_client\_}{113}{subsubsection.8.16.3.5}%
+\contentsline {subsubsection}{\numberline {8.16.3.6}seq\_service\_client\_}{113}{subsubsection.8.16.3.6}%
+\contentsline {chapter}{\numberline {9}File Documentation}{115}{chapter.9}%
+\contentsline {section}{\numberline {9.1}docs/doxygen/index.md File Reference}{115}{section.9.1}%
+\contentsline {section}{\numberline {9.2}lib/joint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}firmware/joint/configuration.h File Reference}{115}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Detailed Description}{115}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Macro Definition Documentation}{116}{subsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.2.1}ADR}{116}{subsubsection.9.2.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2.2}MAXACCEL}{116}{subsubsection.9.2.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.2.3}MAXVEL}{116}{subsubsection.9.2.2.3}%
+\contentsline {section}{\numberline {9.3}configuration.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{116}{section.9.3}%
+\contentsline {section}{\numberline {9.4}lib/joint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}firmware/joint/filters.h File Reference}{117}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Detailed Description}{117}{subsection.9.4.1}%
+\contentsline {section}{\numberline {9.5}filters.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{118}{section.9.5}%
+\contentsline {section}{\numberline {9.6}lib/joint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}firmware/joint/joint.h File Reference}{118}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}Detailed Description}{119}{subsection.9.6.1}%
+\contentsline {subsection}{\numberline {9.6.2}Macro Definition Documentation}{120}{subsection.9.6.2}%
+\contentsline {subsubsection}{\numberline {9.6.2.1}ACK}{120}{subsubsection.9.6.2.1}%
+\contentsline {subsubsection}{\numberline {9.6.2.2}DUMP\_BUFFER}{120}{subsubsection.9.6.2.2}%
+\contentsline {subsubsection}{\numberline {9.6.2.3}MAX\_BUFFER}{120}{subsubsection.9.6.2.3}%
+\contentsline {subsubsection}{\numberline {9.6.2.4}NACK}{120}{subsubsection.9.6.2.4}%
+\contentsline {subsubsection}{\numberline {9.6.2.5}RFLAGS\_SIZE}{120}{subsubsection.9.6.2.5}%
+\contentsline {subsection}{\numberline {9.6.3}Enumeration Type Documentation}{121}{subsection.9.6.3}%
+\contentsline {subsubsection}{\numberline {9.6.3.1}stp\_reg\_t}{121}{subsubsection.9.6.3.1}%
+\contentsline {subsection}{\numberline {9.6.4}Function Documentation}{121}{subsection.9.6.4}%
+\contentsline {subsubsection}{\numberline {9.6.4.1}readValue()}{121}{subsubsection.9.6.4.1}%
+\contentsline {subsubsection}{\numberline {9.6.4.2}writeValue()}{122}{subsubsection.9.6.4.2}%
+\contentsline {section}{\numberline {9.7}joint.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{122}{section.9.7}%
+\contentsline {section}{\numberline {9.8}lib/joint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}firmware/joint/joint.ino File Reference}{123}{section.9.8}%
+\contentsline {subsection}{\numberline {9.8.1}Detailed Description}{124}{subsection.9.8.1}%
+\contentsline {subsection}{\numberline {9.8.2}Macro Definition Documentation}{125}{subsection.9.8.2}%
+\contentsline {subsubsection}{\numberline {9.8.2.1}J4}{125}{subsubsection.9.8.2.1}%
+\contentsline {subsection}{\numberline {9.8.3}Function Documentation}{125}{subsection.9.8.3}%
+\contentsline {subsubsection}{\numberline {9.8.3.1}blocking\_handler()}{125}{subsubsection.9.8.3.1}%
+\contentsline {subsubsection}{\numberline {9.8.3.2}loop()}{125}{subsubsection.9.8.3.2}%
+\contentsline {subsubsection}{\numberline {9.8.3.3}non\_blocking\_handler()}{126}{subsubsection.9.8.3.3}%
+\contentsline {subsubsection}{\numberline {9.8.3.4}receiveEvent()}{126}{subsubsection.9.8.3.4}%
+\contentsline {subsubsection}{\numberline {9.8.3.5}requestEvent()}{126}{subsubsection.9.8.3.5}%
+\contentsline {subsubsection}{\numberline {9.8.3.6}set\_flags\_for\_blocking\_handler()}{127}{subsubsection.9.8.3.6}%
+\contentsline {subsubsection}{\numberline {9.8.3.7}setup()}{127}{subsubsection.9.8.3.7}%
+\contentsline {subsection}{\numberline {9.8.4}Variable Documentation}{127}{subsection.9.8.4}%
+\contentsline {subsubsection}{\numberline {9.8.4.1}blk\_reg}{127}{subsubsection.9.8.4.1}%
+\contentsline {subsubsection}{\numberline {9.8.4.2}reg}{127}{subsubsection.9.8.4.2}%
+\contentsline {subsubsection}{\numberline {9.8.4.3}rx\_buf}{127}{subsubsection.9.8.4.3}%
+\contentsline {subsubsection}{\numberline {9.8.4.4}rx\_data\_ready}{127}{subsubsection.9.8.4.4}%
+\contentsline {subsubsection}{\numberline {9.8.4.5}rx\_length}{127}{subsubsection.9.8.4.5}%
+\contentsline {subsubsection}{\numberline {9.8.4.6}stepper}{128}{subsubsection.9.8.4.6}%
+\contentsline {subsubsection}{\numberline {9.8.4.7}tx\_buf}{128}{subsubsection.9.8.4.7}%
+\contentsline {subsubsection}{\numberline {9.8.4.8}tx\_length}{128}{subsubsection.9.8.4.8}%
+\contentsline {section}{\numberline {9.9}lib/joint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}firmware/joint/stall.h File Reference}{128}{section.9.9}%
+\contentsline {subsection}{\numberline {9.9.1}Detailed Description}{128}{subsection.9.9.1}%
+\contentsline {subsection}{\numberline {9.9.2}Function Documentation}{128}{subsection.9.9.2}%
+\contentsline {subsubsection}{\numberline {9.9.2.1}stall\_threshold()}{128}{subsubsection.9.9.2.1}%
+\contentsline {section}{\numberline {9.10}stall.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{129}{section.9.10}%
+\contentsline {section}{\numberline {9.11}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rviz\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}plugin/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rviz\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}plugin/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}panel.hpp File Reference}{129}{section.9.11}%
+\contentsline {section}{\numberline {9.12}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}panel.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{130}{section.9.12}%
+\contentsline {section}{\numberline {9.13}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rviz\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}plugin/src/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}panel.cpp File Reference}{131}{section.9.13}%
+\contentsline {section}{\numberline {9.14}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/common.h File Reference}{132}{section.9.14}%
+\contentsline {subsection}{\numberline {9.14.1}Detailed Description}{132}{subsection.9.14.1}%
+\contentsline {subsection}{\numberline {9.14.2}Macro Definition Documentation}{132}{subsection.9.14.2}%
+\contentsline {subsubsection}{\numberline {9.14.2.1}DUMP\_BUFFER}{132}{subsubsection.9.14.2.1}%
+\contentsline {section}{\numberline {9.15}common.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{133}{section.9.15}%
+\contentsline {section}{\numberline {9.16}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.h File Reference}{133}{section.9.16}%
+\contentsline {subsection}{\numberline {9.16.1}Detailed Description}{134}{subsection.9.16.1}%
+\contentsline {section}{\numberline {9.17}m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{134}{section.9.17}%
+\contentsline {section}{\numberline {9.18}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.h File Reference}{136}{section.9.18}%
+\contentsline {subsection}{\numberline {9.18.1}Detailed Description}{136}{subsection.9.18.1}%
+\contentsline {section}{\numberline {9.19}m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{137}{section.9.19}%
+\contentsline {section}{\numberline {9.20}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.hpp File Reference}{138}{section.9.20}%
+\contentsline {subsection}{\numberline {9.20.1}Detailed Description}{138}{subsection.9.20.1}%
+\contentsline {section}{\numberline {9.21}m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{139}{section.9.21}%
+\contentsline {section}{\numberline {9.22}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.h File Reference}{139}{section.9.22}%
+\contentsline {subsection}{\numberline {9.22.1}Detailed Description}{140}{subsection.9.22.1}%
+\contentsline {section}{\numberline {9.23}m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{140}{section.9.23}%
+\contentsline {section}{\numberline {9.24}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Err.h File Reference}{141}{section.9.24}%
+\contentsline {subsection}{\numberline {9.24.1}Detailed Description}{141}{subsection.9.24.1}%
+\contentsline {subsection}{\numberline {9.24.2}Macro Definition Documentation}{142}{subsection.9.24.2}%
+\contentsline {subsubsection}{\numberline {9.24.2.1}RETURN\_ON\_ERROR}{142}{subsubsection.9.24.2.1}%
+\contentsline {subsubsection}{\numberline {9.24.2.2}RETURN\_ON\_FALSE}{142}{subsubsection.9.24.2.2}%
+\contentsline {subsubsection}{\numberline {9.24.2.3}RETURN\_ON\_NEGATIVE}{142}{subsubsection.9.24.2.3}%
+\contentsline {section}{\numberline {9.25}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Err.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{143}{section.9.25}%
+\contentsline {section}{\numberline {9.26}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I2C.h File Reference}{144}{section.9.26}%
+\contentsline {subsection}{\numberline {9.26.1}Detailed Description}{144}{subsection.9.26.1}%
+\contentsline {subsection}{\numberline {9.26.2}Macro Definition Documentation}{145}{subsection.9.26.2}%
+\contentsline {subsubsection}{\numberline {9.26.2.1}ACK}{145}{subsubsection.9.26.2.1}%
+\contentsline {subsubsection}{\numberline {9.26.2.2}MAX\_BUFFER}{145}{subsubsection.9.26.2.2}%
+\contentsline {subsubsection}{\numberline {9.26.2.3}NACK}{145}{subsubsection.9.26.2.3}%
+\contentsline {subsubsection}{\numberline {9.26.2.4}RFLAGS\_SIZE}{145}{subsubsection.9.26.2.4}%
+\contentsline {subsection}{\numberline {9.26.3}Function Documentation}{145}{subsection.9.26.3}%
+\contentsline {subsubsection}{\numberline {9.26.3.1}closeI2CDevHandle()}{145}{subsubsection.9.26.3.1}%
+\contentsline {subsubsection}{\numberline {9.26.3.2}openI2CDevHandle()}{146}{subsubsection.9.26.3.2}%
+\contentsline {subsubsection}{\numberline {9.26.3.3}readFromI2CDev()}{146}{subsubsection.9.26.3.3}%
+\contentsline {subsubsection}{\numberline {9.26.3.4}writeToI2CDev()}{146}{subsubsection.9.26.3.4}%
+\contentsline {section}{\numberline {9.27}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{147}{section.9.27}%
+\contentsline {section}{\numberline {9.28}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transmission.h File Reference}{147}{section.9.28}%
+\contentsline {subsection}{\numberline {9.28.1}Macro Definition Documentation}{148}{subsection.9.28.1}%
+\contentsline {subsubsection}{\numberline {9.28.1.1}ACTUATOR2JOINT}{148}{subsubsection.9.28.1.1}%
+\contentsline {subsubsection}{\numberline {9.28.1.2}DEG2RAD}{148}{subsubsection.9.28.1.2}%
+\contentsline {subsubsection}{\numberline {9.28.1.3}JOINT2ACTUATOR}{148}{subsubsection.9.28.1.3}%
+\contentsline {subsubsection}{\numberline {9.28.1.4}M\_PI}{149}{subsubsection.9.28.1.4}%
+\contentsline {subsubsection}{\numberline {9.28.1.5}RAD2DEG}{149}{subsubsection.9.28.1.5}%
+\contentsline {section}{\numberline {9.29}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Transmission.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{149}{section.9.29}%
+\contentsline {section}{\numberline {9.30}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/src/joint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}comm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}node.cpp File Reference}{149}{section.9.30}%
+\contentsline {subsection}{\numberline {9.30.1}Function Documentation}{150}{subsection.9.30.1}%
+\contentsline {subsubsection}{\numberline {9.30.1.1}INT\_handler()}{150}{subsubsection.9.30.1.1}%
+\contentsline {subsubsection}{\numberline {9.30.1.2}main()}{150}{subsubsection.9.30.1.2}%
+\contentsline {subsection}{\numberline {9.30.2}Variable Documentation}{150}{subsection.9.30.2}%
+\contentsline {subsubsection}{\numberline {9.30.2.1}J1}{150}{subsubsection.9.30.2.1}%
+\contentsline {subsubsection}{\numberline {9.30.2.2}J2}{150}{subsubsection.9.30.2.2}%
+\contentsline {subsubsection}{\numberline {9.30.2.3}J3}{150}{subsubsection.9.30.2.3}%
+\contentsline {subsubsection}{\numberline {9.30.2.4}J4}{150}{subsubsection.9.30.2.4}%
+\contentsline {section}{\numberline {9.31}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/src/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.cpp File Reference}{151}{section.9.31}%
+\contentsline {section}{\numberline {9.32}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/src/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.cpp File Reference}{151}{section.9.32}%
+\contentsline {section}{\numberline {9.33}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/src/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Joint.cpp File Reference}{151}{section.9.33}%
+\contentsline {section}{\numberline {9.34}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/src/u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Err.cpp File Reference}{151}{section.9.34}%
+\contentsline {section}{\numberline {9.35}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/src/u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I2C.cpp File Reference}{152}{section.9.35}%
+\contentsline {subsection}{\numberline {9.35.1}Function Documentation}{152}{subsection.9.35.1}%
+\contentsline {subsubsection}{\numberline {9.35.1.1}closeI2CDevHandle()}{152}{subsubsection.9.35.1.1}%
+\contentsline {subsubsection}{\numberline {9.35.1.2}openI2CDevHandle()}{152}{subsubsection.9.35.1.2}%
+\contentsline {subsubsection}{\numberline {9.35.1.3}readFromI2CDev()}{153}{subsubsection.9.35.1.3}%
+\contentsline {subsubsection}{\numberline {9.35.1.4}writeToI2CDev()}{153}{subsubsection.9.35.1.4}%
+\contentsline {section}{\numberline {9.36}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface/arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware.hpp File Reference}{154}{section.9.36}%
+\contentsline {section}{\numberline {9.37}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{155}{section.9.37}%
+\contentsline {section}{\numberline {9.38}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface/src/arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware.cpp File Reference}{156}{section.9.38}%
+\contentsline {section}{\numberline {9.39}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}grippers/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper.h File Reference}{157}{section.9.39}%
+\contentsline {subsection}{\numberline {9.39.1}Detailed Description}{157}{subsection.9.39.1}%
+\contentsline {section}{\numberline {9.40}m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{158}{section.9.40}%
+\contentsline {section}{\numberline {9.41}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}grippers/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper.h File Reference}{158}{section.9.41}%
+\contentsline {subsection}{\numberline {9.41.1}Detailed Description}{159}{subsection.9.41.1}%
+\contentsline {section}{\numberline {9.42}m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{159}{section.9.42}%
+\contentsline {section}{\numberline {9.43}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}grippers/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper.h File Reference}{160}{section.9.43}%
+\contentsline {subsection}{\numberline {9.43.1}Detailed Description}{160}{subsection.9.43.1}%
+\contentsline {section}{\numberline {9.44}m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{161}{section.9.44}%
+\contentsline {section}{\numberline {9.45}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}grippers/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PWM.h File Reference}{161}{section.9.45}%
+\contentsline {subsection}{\numberline {9.45.1}Detailed Description}{161}{subsection.9.45.1}%
+\contentsline {section}{\numberline {9.46}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PWM.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{162}{section.9.46}%
+\contentsline {section}{\numberline {9.47}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}grippers/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/src/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper.cpp File Reference}{163}{section.9.47}%
+\contentsline {section}{\numberline {9.48}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}grippers/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/src/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper.cpp File Reference}{163}{section.9.48}%
+\contentsline {section}{\numberline {9.49}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}grippers/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver/src/m\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gripper.cpp File Reference}{163}{section.9.49}%
+\contentsline {section}{\numberline {9.50}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}grippers/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface/include/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface/gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware.hpp File Reference}{164}{section.9.50}%
+\contentsline {section}{\numberline {9.51}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{164}{section.9.51}%
+\contentsline {section}{\numberline {9.52}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/dalsa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}grippers/bioscara\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface/src/gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hardware.cpp File Reference}{165}{section.9.52}%
+\contentsline {section}{\numberline {9.53}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/moveit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}motion\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}plans/src/pilz\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sequence.cpp File Reference}{166}{section.9.53}%
+\contentsline {subsection}{\numberline {9.53.1}Typedef Documentation}{167}{subsection.9.53.1}%
+\contentsline {subsubsection}{\numberline {9.53.1.1}GetMotionSequence}{167}{subsubsection.9.53.1.1}%
+\contentsline {subsubsection}{\numberline {9.53.1.2}GoalHandleMoveGroupSequence}{167}{subsubsection.9.53.1.2}%
+\contentsline {subsubsection}{\numberline {9.53.1.3}MoveGroupSequence}{167}{subsubsection.9.53.1.3}%
+\contentsline {subsection}{\numberline {9.53.2}Function Documentation}{167}{subsection.9.53.2}%
+\contentsline {subsubsection}{\numberline {9.53.2.1}main()}{167}{subsubsection.9.53.2.1}%
+\contentsline {subsection}{\numberline {9.53.3}Variable Documentation}{167}{subsection.9.53.3}%
+\contentsline {subsubsection}{\numberline {9.53.3.1}LOGGER}{167}{subsubsection.9.53.3.1}%
+\contentsline {section}{\numberline {9.54}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/system\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}packages/gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}control/src/manual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}control.cpp File Reference}{167}{section.9.54}%
+\contentsline {subsection}{\numberline {9.54.1}Function Documentation}{168}{subsection.9.54.1}%
+\contentsline {subsubsection}{\numberline {9.54.1.1}INT\_handler()}{168}{subsubsection.9.54.1.1}%
+\contentsline {subsubsection}{\numberline {9.54.1.2}main()}{168}{subsubsection.9.54.1.2}%
+\contentsline {subsubsection}{\numberline {9.54.1.3}read\_angle()}{168}{subsubsection.9.54.1.3}%
+\contentsline {subsubsection}{\numberline {9.54.1.4}read\_offset()}{168}{subsubsection.9.54.1.4}%
+\contentsline {subsubsection}{\numberline {9.54.1.5}read\_reduction()}{168}{subsubsection.9.54.1.5}%
+\contentsline {subsubsection}{\numberline {9.54.1.6}read\_width()}{168}{subsubsection.9.54.1.6}%
+\contentsline {subsection}{\numberline {9.54.2}Variable Documentation}{168}{subsection.9.54.2}%
+\contentsline {subsubsection}{\numberline {9.54.2.1}\_Gripper}{168}{subsubsection.9.54.2.1}%
+\contentsline {section}{\numberline {9.55}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/system\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}packages/gripper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}control/src/manual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}control.h File Reference}{169}{section.9.55}%
+\contentsline {subsection}{\numberline {9.55.1}Function Documentation}{169}{subsection.9.55.1}%
+\contentsline {subsubsection}{\numberline {9.55.1.1}read\_angle()}{169}{subsubsection.9.55.1.1}%
+\contentsline {subsubsection}{\numberline {9.55.1.2}read\_offset()}{169}{subsubsection.9.55.1.2}%
+\contentsline {subsubsection}{\numberline {9.55.1.3}read\_reduction()}{169}{subsubsection.9.55.1.3}%
+\contentsline {subsubsection}{\numberline {9.55.1.4}read\_width()}{169}{subsubsection.9.55.1.4}%
+\contentsline {section}{\numberline {9.56}manual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}control.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{169}{section.9.56}%
+\contentsline {section}{\numberline {9.57}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/system\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}packages/comm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}speed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test/src/main.cpp File Reference}{170}{section.9.57}%
+\contentsline {subsection}{\numberline {9.57.1}Function Documentation}{170}{subsection.9.57.1}%
+\contentsline {subsubsection}{\numberline {9.57.1.1}INT\_handler()}{170}{subsubsection.9.57.1.1}%
+\contentsline {subsubsection}{\numberline {9.57.1.2}main()}{170}{subsubsection.9.57.1.2}%
+\contentsline {section}{\numberline {9.58}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/system\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}packages/high\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}speed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}stall\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test/src/main.cpp File Reference}{170}{section.9.58}%
+\contentsline {subsection}{\numberline {9.58.1}Macro Definition Documentation}{171}{subsection.9.58.1}%
+\contentsline {subsubsection}{\numberline {9.58.1.1}CURRENT}{171}{subsubsection.9.58.1.1}%
+\contentsline {subsubsection}{\numberline {9.58.1.2}MAXACCEL}{171}{subsubsection.9.58.1.2}%
+\contentsline {subsubsection}{\numberline {9.58.1.3}MAXVEL}{171}{subsubsection.9.58.1.3}%
+\contentsline {subsection}{\numberline {9.58.2}Function Documentation}{171}{subsection.9.58.2}%
+\contentsline {subsubsection}{\numberline {9.58.2.1}INT\_handler()}{171}{subsubsection.9.58.2.1}%
+\contentsline {subsubsection}{\numberline {9.58.2.2}main()}{171}{subsubsection.9.58.2.2}%
+\contentsline {subsection}{\numberline {9.58.3}Variable Documentation}{171}{subsection.9.58.3}%
+\contentsline {subsubsection}{\numberline {9.58.3.1}J}{171}{subsubsection.9.58.3.1}%
+\contentsline {section}{\numberline {9.59}lib/ros2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ws/src/system\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}packages/max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}accel\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test/src/main.cpp File Reference}{172}{section.9.59}%
+\contentsline {subsection}{\numberline {9.59.1}Macro Definition Documentation}{172}{subsection.9.59.1}%
+\contentsline {subsubsection}{\numberline {9.59.1.1}CURRENT}{172}{subsubsection.9.59.1.1}%
+\contentsline {subsubsection}{\numberline {9.59.1.2}MAXACCEL}{172}{subsubsection.9.59.1.2}%
+\contentsline {subsubsection}{\numberline {9.59.1.3}MAXVEL}{172}{subsubsection.9.59.1.3}%
+\contentsline {subsection}{\numberline {9.59.2}Function Documentation}{172}{subsection.9.59.2}%
+\contentsline {subsubsection}{\numberline {9.59.2.1}INT\_handler()}{172}{subsubsection.9.59.2.1}%
+\contentsline {subsubsection}{\numberline {9.59.2.2}main()}{173}{subsubsection.9.59.2.2}%
+\contentsline {subsection}{\numberline {9.59.3}Variable Documentation}{173}{subsection.9.59.3}%
+\contentsline {subsubsection}{\numberline {9.59.3.1}J}{173}{subsubsection.9.59.3.1}%
+\contentsline {chapter}{Index}{175}{section*.148}%

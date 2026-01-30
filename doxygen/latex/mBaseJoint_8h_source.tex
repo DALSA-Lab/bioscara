@@ -1,0 +1,129 @@
+\doxysection{m\+Base\+Joint.\+h}
+\hypertarget{mBaseJoint_8h_source}{}\label{mBaseJoint_8h_source}\index{lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/mBaseJoint.h@{lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/mBaseJoint.h}}
+\mbox{\hyperlink{mBaseJoint_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MBASEJOINT\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MBASEJOINT\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{uErr_8h}{bioscara\_arm\_hardware\_driver/uErr.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacebioscara__hardware__drivers}{bioscara\_hardware\_drivers}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00026\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{BaseJoint}}}
+\DoxyCodeLine{00027\ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\_reg\_t}}}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45}{NONE}}\ =\ 0x00,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ae8720d18d948fb556a54ababdd877f8b}{PING}}\ =\ 0x0f,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a223032f3646e3e996828736f484d447e}{SETUP}}\ =\ 0x10,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a1e84b541415e4add21c735fb451536d5}{SETRPM}}\ =\ 0x11,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad044a4c9f7da6cef029ccd1fff21eaa5}{GETDRIVERRPM}}\ =\ 0x12,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13aba49883a985d506aa5e4889fafdf7d65}{MOVESTEPS}}\ =\ 0x13,\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ac941e7750fad733d1d6d923d31877a0a}{MOVEANGLE}}\ =\ 0x14,\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a7047254578dd479cff21251d8596409d}{MOVETOANGLE}}\ =\ 0x15,\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad0971de7ebe215ab10a090d9ad5f6647}{GETMOTORSTATE}}\ =\ 0x16,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a455aa94aa4bd470f083c2589eff9f416}{RUNCOTINOUS}}\ =\ 0x17,\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab67f7cf4cf5b60110bd18c6e06af9753}{ANGLEMOVED}}\ =\ 0x18,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a5ac0b7e4fb8cf296c65aacef7e2f6c60}{SETCURRENT}}\ =\ 0x19,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab7538ca1e0d4576030825828eebea7d9}{SETHOLDCURRENT}}\ =\ 0x1A,\ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab6dd8689c0bd53792a8804b88a340c5f}{SETMAXACCELERATION}}\ =\ 0x1B,\ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab1667efd2009bea1883fd787b3d540eb}{SETMAXDECELERATION}}\ =\ 0x1C,\ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0c90e70f3ae738003f722537c435d7b}{SETMAXVELOCITY}}\ =\ 0x1D,\ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13aa27f384ee957893e8651a958d800f941}{ENABLESTALLGUARD}}\ =\ 0x1E,\ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad8021317a96d3c00769c83d0a590d381}{DISABLESTALLGUARD}}\ =\ 0x1F,\ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13af443d7efe7d7cf333a2787e7934a3ba3}{CLEARSTALL}}\ =\ 0x20,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad926039be0b1d9ac5c666f79c57bed3d}{SETBRAKEMODE}}\ =\ 0x22,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a73c4a3a2c651b451dfa337a0150ca820}{ENABLEPID}}\ =\ 0x23,\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a1c3a61c741f99de3dd3c421bdf2960bc}{DISABLEPID}}\ =\ 0x24,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a0a8b4b17b84327807a2221382093ccfe}{ENABLECLOSEDLOOP}}\ =\ 0x25,\ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a2dfb035a1b3bc28dd9b290f5ec426966}{DISABLECLOSEDLOOP}}\ =\ 0x26,\ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13afdb66020aebb4cfc209fde7c5cc5be44}{SETCONTROLTHRESHOLD}}\ =\ 0x27,\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a41a2b4c4d34fef0226666308020f8294}{MOVETOEND}}\ =\ 0x28,\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ae64c24b0196c0b2014ba1dbb2c57ca0d}{STOP}}\ =\ 0x29,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a16de9b14545022bb1196eb795d4174e8}{GETPIDERROR}}\ =\ 0x2A,\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13afb43bf90bcd948c31c206dc15d92b4aa}{CHECKORIENTATION}}\ =\ 0x2B,\ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a1d87ebf442a24b863eddd8177460607e}{GETENCODERRPM}}\ =\ 0x2C,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a93a9a074f04be4b2316dbbca5882b6fa}{HOME}}\ =\ 0x2D,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a7bf8300e64d1c6a9154dda83299939e4}{HOMEOFFSET}}\ =\ 0x2E,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{BaseJoint}}(\textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aca33fbf6ffb94cf1cd15c5b9354eb643}{name}});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ad19e3022fe177cb6cfd3044a111e4abb}{\string~BaseJoint}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a720e0da2547a8942fb9cf7e1961a758b}{init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a6d5c44dc49dbcc361e8f0eb0a7f332d1}{deinit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ab71c7a70946252c09efbd42b039b7eb0}{enable}}(u\_int8\_t\ driveCurrent,\ u\_int8\_t\ holdCurrent);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ab6d12171276b56bae07d1b194a90844e}{disable}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a1e728f5477c6e683eacba485b0c4deef}{home}}(\textcolor{keywordtype}{float}\ velocity,\ u\_int8\_t\ sensitivity,\ u\_int8\_t\ current);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a81b05153ca250ea09930f955ecff09f2}{startHoming}}(\textcolor{keywordtype}{float}\ velocity,\ u\_int8\_t\ sensitivity,\ u\_int8\_t\ current);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_acdbdac96efcea81f34db96a47b317a55}{postHoming}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a39160e6187aa75ae2be3112ae3538060}{getPosition}}(\textcolor{keywordtype}{float}\ \&pos)\ =\ 0;}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ac16fc6fc228f1e4855ed0401a2c8368e}{setPosition}}(\textcolor{keywordtype}{float}\ pos);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a8d2e2724df1d2a0906f6f2d3e1bb60bb}{moveSteps}}(int32\_t\ steps);}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a971fd55f4e858c806b2624fbd5d8806a}{getVelocity}}(\textcolor{keywordtype}{float}\ \&vel)\ =\ 0;}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affb3dfb90967f45ed12ef67a5a6e7ed9}{setVelocity}}(\textcolor{keywordtype}{float}\ vel);}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a5a5a86649f69fa130c73e6ef6815c241}{checkOrientation}}(\textcolor{keywordtype}{float}\ angle\ =\ 2.0);}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aa604fcfc2283f48f0851aaf1439f7809}{stop}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ab5746f8054e8c15f4f004c67325cc50f}{disableCL}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aa917e3e6aeb7271e11ecefcc91ff257a}{setDriveCurrent}}(u\_int8\_t\ current);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_af0532522ea1f7aa066367b2a33d9225c}{setHoldCurrent}}(u\_int8\_t\ current);}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a4420214ace796cee97755e41f97a8550}{setBrakeMode}}(u\_int8\_t\ mode);}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a47296176d6bd6a86a66412cad1fb5f21}{setMaxAcceleration}}(\textcolor{keywordtype}{float}\ maxAccel);}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a270d845f4fcbad79eaf3d218badf43e1}{setMaxVelocity}}(\textcolor{keywordtype}{float}\ maxVel);}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_af2e8a64536a75ffb20f5ed81836eead5}{enableStallguard}}(u\_int8\_t\ sensitivity);}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ad010a69043a9ee4578cadeebc85d9c80}{isHomed}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ad918d513bfb96f082b1d7e1cc1f430d2}{isEnabled}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a3e0bf2ee963d94b7272ea31c38ee9021}{isStalled}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a3d59aa860f6b64e6fead60919386f518}{isBusy}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aaef8fb5aad3fb6ce0721043b6812d87b}{getFlags}}(u\_int8\_t\ \&\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}});}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aaef8fb5aad3fb6ce0721043b6812d87b}{getFlags}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\_reg\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a412c4e474be5de0820d88b7d1d6084de}{getCurrentBCmd}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \ \ \ \ std::string\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aca33fbf6ffb94cf1cd15c5b9354eb643}{name}};\ }
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00360\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a8555f3dd707f20e8a30df9c642a5ffb1}{wait\_while\_busy}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ period\_ms);}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\_type\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ae05e1fd900c1d905ebec9a00ea5b2628}{\_home}}(\textcolor{keywordtype}{float}\ velocity,\ u\_int8\_t\ sensitivity,\ u\_int8\_t\ current)\ =\ 0;}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00394\ \ \ \ \ u\_int8\_t\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}}\ =\ 0b00001100;}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ \ \ \ \ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\_reg\_t}}\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a6bf8458a8930ca6360304f736ef5c781}{current\_b\_cmd}}\ =\ \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45}{NONE}};\ }
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00399\ \ \ \};}
+\DoxyCodeLine{00400\ \}}
+\DoxyCodeLine{00401\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

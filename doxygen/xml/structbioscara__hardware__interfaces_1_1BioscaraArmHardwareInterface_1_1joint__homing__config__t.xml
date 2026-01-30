@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t" kind="struct" language="C++" prot="private">
+    <compoundname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t_1a0f406a11cc130505aa3e8f1271bc26fb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t::speed</qualifiedname>
+        <briefdescription>
+<para>[float] Signed homing velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In rad/s or m/s for cylindrical and prismatic joints respectively. Must satisfy: <computeroutput>1.0 &lt; RAD2DEG(JOINT2ACTUATOR(&lt;speed&gt;, reduction, 0)) / 6 &lt; 250.0</computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="304" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t_1abb4efbc5f0b651c014b1fb16e2e36154" prot="public" static="no" mutable="no">
+        <type>u_int8_t</type>
+        <definition>u_int8_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t::threshold</definition>
+        <argsstring></argsstring>
+        <name>threshold</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t::threshold</qualifiedname>
+        <briefdescription>
+<para>[int, DEC] Encoder error threshold 0 to 255. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lower values make the homing more sensitve but also more susceptible to false positives. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="311" column="22" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t_1a31ee793925d243d4035aa1d02bd427a1" prot="public" static="no" mutable="no">
+        <type>u_int8_t</type>
+        <definition>u_int8_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t::current</qualifiedname>
+        <briefdescription>
+<para>[int, DEC] Homing current between 0 and 100. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines how easy it is to stop the motor and thereby provoke a stall. See <ref refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a7b364f719d04b022ed434c019213eab6" kindref="member">joint_config_t::drive_current</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="319" column="22" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t_1ab65e47260898162fa8d4a7db416e6041" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t::acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t::acceleration</qualifiedname>
+        <initializer>= 0.01</initializer>
+        <briefdescription>
+<para>[float] Joint acceleration during homing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In rad/s^2 or m/s^2 for cylindrical and prismatic joints respectively. Accelerating too fast can trigger a stall and hence false positve homing. See <ref refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t_1a4bd8e5ea941aa2c52b2b31cbb0022765" kindref="member">joint_config_t::max_acceleration</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="328" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="328" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>configuration structure holding the passed homing paramters from the ros2_control urdf </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Saving all parameters on initialization in a structure allows for quick access during runtime. See <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ae05e1fd900c1d905ebec9a00ea5b2628" kindref="member">bioscara_hardware_drivers::BaseJoint::_home()</ref> for the description of the homing procedure. </para>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="296" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="297" bodyend="329"/>
+    <listofallmembers>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t_1ab65e47260898162fa8d4a7db416e6041" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t</scope><name>acceleration</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t_1a31ee793925d243d4035aa1d02bd427a1" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t</scope><name>current</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t_1a0f406a11cc130505aa3e8f1271bc26fb" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t</scope><name>speed</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t_1abb4efbc5f0b651c014b1fb16e2e36154" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t</scope><name>threshold</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

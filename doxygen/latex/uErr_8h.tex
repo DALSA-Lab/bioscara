@@ -1,0 +1,147 @@
+\doxysection{lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+arm/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/include/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/u\+Err.h File Reference}
+\hypertarget{uErr_8h}{}\label{uErr_8h}\index{lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/uErr.h@{lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/include/bioscara\_arm\_hardware\_driver/uErr.h}}
+
+
+Defining common return types.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacebioscara__hardware__drivers}{bioscara\+\_\+hardware\+\_\+drivers}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{uErr_8h_ae580e0a7ebd48825aefa0bcedca05f33}{RETURN\+\_\+\+ON\+\_\+\+ERROR}}(x)
+\begin{DoxyCompactList}\small\item\em Macro which executes a function and returns from the calling function with the error code if the called function fails. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uErr_8h_a0a1e64a409c0238fd6fc19663abc0fa1}{RETURN\+\_\+\+ON\+\_\+\+FALSE}}(a,  err\+\_\+code)
+\begin{DoxyCompactList}\small\item\em Macro which returns the calling function with specified error\+\_\+code if the given condition is false. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uErr_8h_a84d754c5a8643c3049d75b084a1d8a66}{RETURN\+\_\+\+ON\+\_\+\+NEGATIVE}}(a,  err\+\_\+code)
+\begin{DoxyCompactList}\small\item\em Macro which returns the calling function with specified error\+\_\+code if the given condition is negative. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{bioscara\+\_\+hardware\+\_\+drivers\+::err\+\_\+type\+\_\+t}} \{ \newline
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{bioscara\+\_\+hardware\+\_\+drivers\+::\+OK}} = 0
+, \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5abb1ca97ec761fc37101737ba0aa2e7c5}{bioscara\+\_\+hardware\+\_\+drivers\+::\+ERROR}} = -\/1
+, \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5a8279c150ce308a3cdca3c362fa06a7c8}{bioscara\+\_\+hardware\+\_\+drivers\+::\+NOT\+\_\+\+HOMED}} = -\/2
+, \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5a987ccd915b17c81fb4ed90447146d3ab}{bioscara\+\_\+hardware\+\_\+drivers\+::\+NOT\+\_\+\+ENABLED}} = -\/3
+, \newline
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5a4be6a75b35e47c01bca1a18f1b0ce3fb}{bioscara\+\_\+hardware\+\_\+drivers\+::\+STALLED}} = -\/4
+, \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5aca0408a962115a6e199dbac349bd3597}{bioscara\+\_\+hardware\+\_\+drivers\+::\+NOT\+\_\+\+INIT}} = -\/5
+, \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ac08f3c03ad9600e78bee4d966579f629}{bioscara\+\_\+hardware\+\_\+drivers\+::\+COMM\+\_\+\+ERROR}} = -\/6
+, \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5af295a0c3e37c94f078e1c5476479132d}{bioscara\+\_\+hardware\+\_\+drivers\+::\+INVALID\+\_\+\+ARGUMENT}} = -\/101
+, \newline
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5a01543f12db76841c042fc51fd1c561f3}{bioscara\+\_\+hardware\+\_\+drivers\+::\+INCORRECT\+\_\+\+STATE}} = -\/109
+ \}
+\begin{DoxyCompactList}\small\item\em Enum defining common error types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacebioscara__hardware__drivers_adc29da267e0358eb6052e528614d19f7}{bioscara\+\_\+hardware\+\_\+drivers\+::error\+\_\+to\+\_\+string}} (\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} err)
+\begin{DoxyCompactList}\small\item\em Converts an error code to a string and returns it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defining common return types. 
+
+\begin{DoxyAuthor}{Author}
+sbstorz 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/11-\/05
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{uErr_8h_ae580e0a7ebd48825aefa0bcedca05f33}\label{uErr_8h_ae580e0a7ebd48825aefa0bcedca05f33} 
+\index{uErr.h@{uErr.h}!RETURN\_ON\_ERROR@{RETURN\_ON\_ERROR}}
+\index{RETURN\_ON\_ERROR@{RETURN\_ON\_ERROR}!uErr.h@{uErr.h}}
+\doxysubsubsection{\texorpdfstring{RETURN\_ON\_ERROR}{RETURN\_ON\_ERROR}}
+{\footnotesize\ttfamily \#define RETURN\+\_\+\+ON\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{bioscara\_hardware\_drivers::err\_type\_t}}\ err\_rc\_\ =\ (x);\ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (err\_rc\_\ !=\ \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{bioscara\_hardware\_drivers::err\_type\_t::OK}})\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ err\_rc\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}\ (0);}
+
+\end{DoxyCode}
+
+
+Macro which executes a function and returns from the calling function with the error code if the called function fails. 
+
+Adapted from the \href{https://github.com/espressif/esp-idf/blob/ff97953b32a32e44f507593320b50d728eea3f06/components/esp_common/include/esp_check.h\#L19}{\texttt{ ESP-\/\+IDF}} 
+\begin{DoxyParams}{Parameters}
+{\em x} & function to call \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uErr_8h_a0a1e64a409c0238fd6fc19663abc0fa1}\label{uErr_8h_a0a1e64a409c0238fd6fc19663abc0fa1} 
+\index{uErr.h@{uErr.h}!RETURN\_ON\_FALSE@{RETURN\_ON\_FALSE}}
+\index{RETURN\_ON\_FALSE@{RETURN\_ON\_FALSE}!uErr.h@{uErr.h}}
+\doxysubsubsection{\texorpdfstring{RETURN\_ON\_FALSE}{RETURN\_ON\_FALSE}}
+{\footnotesize\ttfamily \#define RETURN\+\_\+\+ON\+\_\+\+FALSE(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{err\+\_\+code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!(a))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ err\_code;\ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}\ (0);}
+
+\end{DoxyCode}
+
+
+Macro which returns the calling function with specified error\+\_\+code if the given condition is false. 
+
+Adapted from the \href{https://github.com/espressif/esp-idf/blob/ff97953b32a32e44f507593320b50d728eea3f06/components/esp_common/include/esp_check.h\#L90}{\texttt{ ESP-\/\+IDF}} 
+\begin{DoxyParams}{Parameters}
+{\em a} & expression that evaluates to true or false \\
+\hline
+{\em err\+\_\+code} & return code to return on false \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uErr_8h_a84d754c5a8643c3049d75b084a1d8a66}\label{uErr_8h_a84d754c5a8643c3049d75b084a1d8a66} 
+\index{uErr.h@{uErr.h}!RETURN\_ON\_NEGATIVE@{RETURN\_ON\_NEGATIVE}}
+\index{RETURN\_ON\_NEGATIVE@{RETURN\_ON\_NEGATIVE}!uErr.h@{uErr.h}}
+\doxysubsubsection{\texorpdfstring{RETURN\_ON\_NEGATIVE}{RETURN\_ON\_NEGATIVE}}
+{\footnotesize\ttfamily \#define RETURN\+\_\+\+ON\+\_\+\+NEGATIVE(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{err\+\_\+code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ ((a)\ <\ 0)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ err\_code;\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}\ (0);}
+
+\end{DoxyCode}
+
+
+Macro which returns the calling function with specified error\+\_\+code if the given condition is negative. 
+
+Adapted from the \href{https://github.com/espressif/esp-idf/blob/ff97953b32a32e44f507593320b50d728eea3f06/components/esp_common/include/esp_check.h\#L90}{\texttt{ ESP-\/\+IDF}} 
+\begin{DoxyParams}{Parameters}
+{\em a} & expression that evaluates to a signed number \\
+\hline
+{\em err\+\_\+code} & return code to return on false \\
+\hline
+\end{DoxyParams}

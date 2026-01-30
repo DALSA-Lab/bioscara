@@ -1,0 +1,73 @@
+\doxysection{lib/ros2\+\_\+ws/src/system\+\_\+test\+\_\+packages/high\+\_\+speed\+\_\+stall\+\_\+test/src/main.cpp File Reference}
+\hypertarget{high__speed__stall__test_2src_2main_8cpp}{}\label{high__speed__stall__test_2src_2main_8cpp}\index{lib/ros2\_ws/src/system\_test\_packages/high\_speed\_stall\_test/src/main.cpp@{lib/ros2\_ws/src/system\_test\_packages/high\_speed\_stall\_test/src/main.cpp}}
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include "{}bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/m\+Joint.\+h"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{high__speed__stall__test_2src_2main_8cpp_a1f957b762e025dae67967a36c86dcfc1}{CURRENT}}~20
+\item 
+\#define \mbox{\hyperlink{high__speed__stall__test_2src_2main_8cpp_a58d72e884a5d54f3b15eb8914c08ce07}{MAXACCEL}}~30
+\item 
+\#define \mbox{\hyperlink{high__speed__stall__test_2src_2main_8cpp_a46ddbfe86544acf048b68d9e4735137b}{MAXVEL}}~10
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{high__speed__stall__test_2src_2main_8cpp_af9b80db93c2f990422ecd0295b90668a}{INT\+\_\+handler}} (int s)
+\item 
+int \mbox{\hyperlink{high__speed__stall__test_2src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint}{Joint}} \mbox{\hyperlink{high__speed__stall__test_2src_2main_8cpp_a83ff9ce5c3250ac5ef7b1cf4c041a0b7}{J}} ("{}j4"{}, 0x14, 12, -\/3.\+01069, 3.\+01069)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{high__speed__stall__test_2src_2main_8cpp_a1f957b762e025dae67967a36c86dcfc1}\label{high__speed__stall__test_2src_2main_8cpp_a1f957b762e025dae67967a36c86dcfc1} 
+\index{main.cpp@{main.cpp}!CURRENT@{CURRENT}}
+\index{CURRENT@{CURRENT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CURRENT}{CURRENT}}
+{\footnotesize\ttfamily \#define CURRENT~20}
+
+\Hypertarget{high__speed__stall__test_2src_2main_8cpp_a58d72e884a5d54f3b15eb8914c08ce07}\label{high__speed__stall__test_2src_2main_8cpp_a58d72e884a5d54f3b15eb8914c08ce07} 
+\index{main.cpp@{main.cpp}!MAXACCEL@{MAXACCEL}}
+\index{MAXACCEL@{MAXACCEL}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MAXACCEL}{MAXACCEL}}
+{\footnotesize\ttfamily \#define MAXACCEL~30}
+
+\Hypertarget{high__speed__stall__test_2src_2main_8cpp_a46ddbfe86544acf048b68d9e4735137b}\label{high__speed__stall__test_2src_2main_8cpp_a46ddbfe86544acf048b68d9e4735137b} 
+\index{main.cpp@{main.cpp}!MAXVEL@{MAXVEL}}
+\index{MAXVEL@{MAXVEL}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MAXVEL}{MAXVEL}}
+{\footnotesize\ttfamily \#define MAXVEL~10}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{high__speed__stall__test_2src_2main_8cpp_af9b80db93c2f990422ecd0295b90668a}\label{high__speed__stall__test_2src_2main_8cpp_af9b80db93c2f990422ecd0295b90668a} 
+\index{main.cpp@{main.cpp}!INT\_handler@{INT\_handler}}
+\index{INT\_handler@{INT\_handler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_handler()}{INT\_handler()}}
+{\footnotesize\ttfamily void INT\+\_\+handler (\begin{DoxyParamCaption}\item[{int}]{s }\end{DoxyParamCaption})}
+
+\Hypertarget{high__speed__stall__test_2src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{high__speed__stall__test_2src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{high__speed__stall__test_2src_2main_8cpp_a83ff9ce5c3250ac5ef7b1cf4c041a0b7}\label{high__speed__stall__test_2src_2main_8cpp_a83ff9ce5c3250ac5ef7b1cf4c041a0b7} 
+\index{main.cpp@{main.cpp}!J@{J}}
+\index{J@{J}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{J}{J}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint}{Joint}} J("{}j4"{}, 0x14, 12, -\/3.\+01069, 3.\+01069) (\begin{DoxyParamCaption}\item[{"{}j4"{}}]{,  }\item[{0x14}]{,  }\item[{12}]{,  }\item[{-\/3.}]{01069,  }\item[{3.}]{01069 }\end{DoxyParamCaption})}
+

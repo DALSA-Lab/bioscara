@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t" kind="struct" language="C++" prot="private">
+    <compoundname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1a1b6d94f5e63fc4d203d61ba033dd5405" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::reduction</definition>
+        <argsstring></argsstring>
+        <name>reduction</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::reduction</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="165" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1a12e0d7c109076aa35ccc660a1ee64307" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::offset</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="166" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1a46ac31e73c73b60cb5d846231d235257" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="167" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1ac9aa7a3d481b7e0e050052464ed1588d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="168" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1afc3c1de24718923a31a88d91367d88d1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::init_pos</definition>
+        <argsstring></argsstring>
+        <name>init_pos</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::init_pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="169" column="19" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>configuration structure holding the passed paramters from the ros2_control urdf </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Saving all parameters on initialization in a structure allows for quick access during runtime. </para>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="163" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="164" bodyend="170"/>
+    <listofallmembers>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1afc3c1de24718923a31a88d91367d88d1" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t</scope><name>init_pos</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1ac9aa7a3d481b7e0e050052464ed1588d" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t</scope><name>max</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1a46ac31e73c73b60cb5d846231d235257" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t</scope><name>min</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1a12e0d7c109076aa35ccc660a1ee64307" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t</scope><name>offset</name></member>
+      <member refid="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t_1a1b6d94f5e63fc4d203d61ba033dd5405" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t</scope><name>reduction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

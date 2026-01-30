@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_11cf1f15787dcaf067070081d5ba2b94" kind="dir">
+    <compoundname>lib/ros2_ws/src/system_test_packages/gripper_manual_control/src</compoundname>
+    <innerfile refid="manual__control_8cpp">manual_control.cpp</innerfile>
+    <innerfile refid="manual__control_8h">manual_control.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/"/>
+  </compounddef>
+</doxygen>

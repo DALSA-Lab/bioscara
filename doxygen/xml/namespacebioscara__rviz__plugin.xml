@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacebioscara__rviz__plugin" kind="namespace" language="C++">
+    <compoundname>bioscara_rviz_plugin</compoundname>
+    <innerclass refid="classbioscara__rviz__plugin_1_1BioscaraPanel" prot="public">bioscara_rviz_plugin::BioscaraPanel</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/bioscara_rviz_plugin/include/bioscara_rviz_plugin/bioscara_panel.hpp" line="27" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,209 @@
+\doxysection{bioscara\+\_\+hardware\+\_\+drivers\+::Gripper Class Reference}
+\hypertarget{classbioscara__hardware__drivers_1_1Gripper}{}\label{classbioscara__hardware__drivers_1_1Gripper}\index{bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}}
+
+
+Child class implementing control of the hardware gripper.  
+
+
+
+
+{\ttfamily \#include $<$m\+Gripper.\+h$>$}
+
+Inheritance diagram for bioscara\+\_\+hardware\+\_\+drivers\+::Gripper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbioscara__hardware__drivers_1_1Gripper}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_a1d7a2707f584025a9101cdd695d21e74}{Gripper}} (float reduction, float offset, float min, float max, float backup\+\_\+init\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classbioscara__hardware__drivers_1_1Gripper}{Gripper} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_ab08eb3424c419db0577deddf70fadacb}{enable}} (void) override
+\begin{DoxyCompactList}\small\item\em Activates the the hardware. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_a15e81fdb19ac401043423db0ada77368}{disable}} (void) override
+\begin{DoxyCompactList}\small\item\em Deactivates the hardware. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_abdf1f8e545da0a246f4effd78ae09f35}{set\+Position}} (float width) override
+\begin{DoxyCompactList}\small\item\em Sets the gripper width in m.   \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a5e48cae19cd98b836e874370384fd7f0}{Base\+Gripper}} (float reduction, float offset, float min, float max, float backup\+\_\+init\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classbioscara__hardware__drivers_1_1BaseGripper}{Base\+Gripper} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a15c177d0466a883609e545552602b769}{\texorpdfstring{$\sim$}{\string~}\+Base\+Gripper}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classbioscara__hardware__drivers_1_1BaseGripper}{Base\+Gripper} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a6b8832da36c84c9e2eeff2a5b86a3135}{init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the gripper. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a71f6d89f40cc0ff6a4e94972b92d8f61}{deinit}} (void)
+\begin{DoxyCompactList}\small\item\em Deinitializes the gripper. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a49fca88d7a33ad560cd96ceee0124092}{get\+Position}} (float \&width)
+\begin{DoxyCompactList}\small\item\em Gets the gripper width. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_aa7e516774731da7d7c2501317d3ba5e5}{set\+Reduction}} (float reduction)
+\begin{DoxyCompactList}\small\item\em Manually set reduction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_ad66c8a68783f65ca2dacb4cf93ce7ee9}{set\+Offset}} (float offset)
+\begin{DoxyCompactList}\small\item\em Manually set offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_a3ecdc7bfd94d407e430ca15c8cbcb5cc}{set\+Servo\+Position}} (float angle)
+\begin{DoxyCompactList}\small\item\em Sets the servo position of the gripper actuator in degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a99ecbf4d373191da1622844e9c58e0f7}{save\+\_\+last\+\_\+position}} (float pos)
+\begin{DoxyCompactList}\small\item\em Stores the latest position to the buffer file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a16aae28dcd08f034da662577719b5c1b}{retrieve\+\_\+last\+\_\+position}} (float \&pos)
+\begin{DoxyCompactList}\small\item\em Retrieves the stored position from the buffer file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRPI__PWM}{RPI\+\_\+\+PWM}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_ad15dc50a93fb4afee1a478561f5c2e8f}{\+\_\+pwm}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classRPI__PWM}{RPI\+\_\+\+PWM} object to generate PWM voltage for servo control. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Gripper_a64e8edb8794d4816f0410b1fcc150c65}{\+\_\+freq}} = 50
+\begin{DoxyCompactList}\small\item\em PWM frequency in Hz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a8287fbdc245e4c8bd32703ca8a97f881}{\+\_\+reduction}} = 1
+\begin{DoxyCompactList}\small\item\em gripper width to actuator reduction ratio \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a0dd7e2a5718be0441a1ab550f932dd26}{\+\_\+offset}} = 0
+\begin{DoxyCompactList}\small\item\em gripper width position offset \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a6242786f68423d34aa7b456f78c00a65}{\+\_\+min}} = 0
+\begin{DoxyCompactList}\small\item\em gripper width lower limit \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a1a4b808651f2abfac1e6325cf9425cc1}{\+\_\+max}} = 0
+\begin{DoxyCompactList}\small\item\em gripper width upper limit \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a132a5ee7e7aa2cc0f7b3527fbb5d23bd}{\+\_\+backup\+\_\+init\+\_\+pos}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Initial position assumed if none can be retrieved from the buffer file. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_ae10e0604a51b81e5da405152c74e9e9e}{\+\_\+pos}} = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a132a5ee7e7aa2cc0f7b3527fbb5d23bd}{\+\_\+backup\+\_\+init\+\_\+pos}}
+\begin{DoxyCompactList}\small\item\em stored position \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a44c99d057bf270f3af1c47c37d77c49a}{\+\_\+pos\+\_\+get}} = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_ae10e0604a51b81e5da405152c74e9e9e}{\+\_\+pos}}
+\begin{DoxyCompactList}\small\item\em reported position \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Child class implementing control of the hardware gripper. 
+
+Use this class if you wish to control the actual hardware by generating a PWM voltage on GPIO18 of the Raspberry Pi. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1Gripper_a1d7a2707f584025a9101cdd695d21e74}\label{classbioscara__hardware__drivers_1_1Gripper_a1d7a2707f584025a9101cdd695d21e74} 
+\index{bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}!Gripper@{Gripper}}
+\index{Gripper@{Gripper}!bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}}
+\doxysubsubsection{\texorpdfstring{Gripper()}{Gripper()}}
+{\footnotesize\ttfamily bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper\+::\+Gripper (\begin{DoxyParamCaption}\item[{float}]{reduction,  }\item[{float}]{offset,  }\item[{float}]{min,  }\item[{float}]{max,  }\item[{float}]{backup\+\_\+init\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classbioscara__hardware__drivers_1_1Gripper}{Gripper} object. 
+
+see the \doxylink{classbioscara__hardware__drivers_1_1BaseGripper}{Base\+Gripper} constructor for a description of the parameters. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1Gripper_a15e81fdb19ac401043423db0ada77368}\label{classbioscara__hardware__drivers_1_1Gripper_a15e81fdb19ac401043423db0ada77368} 
+\index{bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}!disable@{disable}}
+\index{disable@{disable}!bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper\+::disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Deactivates the hardware. 
+
+Invokes \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_a1030a843fcca90b5ab83ff2bec795cf5}{Base\+Gripper\+::disable()} and stops the servo by disableing the PWM generation.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_a1030a843fcca90b5ab83ff2bec795cf5}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Gripper_ab08eb3424c419db0577deddf70fadacb}\label{classbioscara__hardware__drivers_1_1Gripper_ab08eb3424c419db0577deddf70fadacb} 
+\index{bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}!enable@{enable}}
+\index{enable@{enable}!bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper\+::enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activates the the hardware. 
+
+Invokes \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_aa39ca241eb16d9bd772d2cdeaa268bd0}{Base\+Gripper\+::enable()} and starts the PWM generation but does not set a position. Must be called before a position is set. The PWM pin is GPIO18 on the Raspberry Pi 4. PWM chip is 0, channel 0.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} on success, \doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ac08f3c03ad9600e78bee4d966579f629}{err\+\_\+type\+\_\+t\+::\+COMM\+\_\+\+ERROR} if PWM can not be enabled 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_aa39ca241eb16d9bd772d2cdeaa268bd0}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Gripper_abdf1f8e545da0a246f4effd78ae09f35}\label{classbioscara__hardware__drivers_1_1Gripper_abdf1f8e545da0a246f4effd78ae09f35} 
+\index{bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper\+::set\+Position (\begin{DoxyParamCaption}\item[{float}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the gripper width in m.   
+
+Invokes \doxylink{classbioscara__hardware__drivers_1_1BaseGripper_aebb3badd33e2ba24dd0971ec5de419fc}{Base\+Gripper\+::set\+Position()}, transforms the desired gripper width to a servo angle using the \doxylink{uTransmission_8h_a056e4bc2bde4678659c2b48c1186ec7c}{JOINT2\+ACTUATOR()} macro and finally sets the servo position using \doxylink{classbioscara__hardware__drivers_1_1Gripper_a3ecdc7bfd94d407e430ca15c8cbcb5cc}{set\+Servo\+Position()} 
+\begin{DoxyParams}{Parameters}
+{\em width} & width in m. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+see \doxylink{classbioscara__hardware__drivers_1_1Gripper_a3ecdc7bfd94d407e430ca15c8cbcb5cc}{set\+Servo\+Position()} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseGripper_aebb3badd33e2ba24dd0971ec5de419fc}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Gripper}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Gripper_a3ecdc7bfd94d407e430ca15c8cbcb5cc}\label{classbioscara__hardware__drivers_1_1Gripper_a3ecdc7bfd94d407e430ca15c8cbcb5cc} 
+\index{bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}!setServoPosition@{setServoPosition}}
+\index{setServoPosition@{setServoPosition}!bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}}
+\doxysubsubsection{\texorpdfstring{setServoPosition()}{setServoPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper\+::set\+Servo\+Position (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets the servo position of the gripper actuator in degrees. 
+
+Calculates a PWM dutycycle for the desired servo angle and invokes \doxylink{classRPI__PWM_aa873d369ec4dec004a6be8ba63606c11}{RPI\+\_\+\+PWM\+::set\+Duty\+Cycle()} to set it. 
+\begin{DoxyParams}{Parameters}
+{\em angle} & in degrees. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ae0aa021e21dddbd6d8cecec71e9cf564}{err\+\_\+type\+\_\+t\+::\+OK} on success, \doxylink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5ac08f3c03ad9600e78bee4d966579f629}{err\+\_\+type\+\_\+t\+::\+COMM\+\_\+\+ERROR} if the dutycycle can not be set. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1Gripper_a64e8edb8794d4816f0410b1fcc150c65}\label{classbioscara__hardware__drivers_1_1Gripper_a64e8edb8794d4816f0410b1fcc150c65} 
+\index{bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}!\_freq@{\_freq}}
+\index{\_freq@{\_freq}!bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}}
+\doxysubsubsection{\texorpdfstring{\_freq}{\_freq}}
+{\footnotesize\ttfamily int bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper\+::\+\_\+freq = 50\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+PWM frequency in Hz. 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Gripper_ad15dc50a93fb4afee1a478561f5c2e8f}\label{classbioscara__hardware__drivers_1_1Gripper_ad15dc50a93fb4afee1a478561f5c2e8f} 
+\index{bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}!\_pwm@{\_pwm}}
+\index{\_pwm@{\_pwm}!bioscara\_hardware\_drivers::Gripper@{bioscara\_hardware\_drivers::Gripper}}
+\doxysubsubsection{\texorpdfstring{\_pwm}{\_pwm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRPI__PWM}{RPI\+\_\+\+PWM}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Gripper\+::\+\_\+pwm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{classRPI__PWM}{RPI\+\_\+\+PWM} object to generate PWM voltage for servo control. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+grippers/bioscara\+\_\+gripper\+\_\+hardware\+\_\+driver/include/bioscara\+\_\+gripper\+\_\+hardware\+\_\+driver/\mbox{\hyperlink{mGripper_8h}{m\+Gripper.\+h}}\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+grippers/bioscara\+\_\+gripper\+\_\+hardware\+\_\+driver/src/\mbox{\hyperlink{mGripper_8cpp}{m\+Gripper.\+cpp}}\end{DoxyCompactItemize}

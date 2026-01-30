@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['rad2deg_0',['RAD2DEG',['../uTransmission_8h.html#aacc958134b53425ec947541bb72ac8b1',1,'uTransmission.h']]],
+  ['read_1',['read',['../classbioscara__hardware__drivers_1_1Joint.html#a81a8e4841ae03d04498d2f6ef3c08d82',1,'bioscara_hardware_drivers::Joint::read()'],['../classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface.html#adc34f1df847375abf18fe8100ecec1d1',1,'bioscara_hardware_interfaces::BioscaraArmHardwareInterface::read()'],['../classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface.html#a207c9d4e3f1d72d65fb42623bb63a96a',1,'bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::read()']]],
+  ['read_5fangle_2',['read_angle',['../manual__control_8h.html#abfb3f9456a2dd202244316208bb3ee2d',1,'read_angle(void):&#160;manual_control.cpp'],['../manual__control_8cpp.html#a6acba5e3fefc8f68101e187e16d5a902',1,'read_angle():&#160;manual_control.cpp']]],
+  ['read_5foffset_3',['read_offset',['../manual__control_8h.html#ae11b3e9eaea5051e2477105cfa2d3eda',1,'read_offset(void):&#160;manual_control.cpp'],['../manual__control_8cpp.html#a24f7978abf40bfbedfebbb698157b8c7',1,'read_offset():&#160;manual_control.cpp']]],
+  ['read_5freduction_4',['read_reduction',['../manual__control_8h.html#a2652453081fce6ec00e87e043aaf573b',1,'read_reduction(void):&#160;manual_control.cpp'],['../manual__control_8cpp.html#afa3679662405460881b7003e4bd95cf6',1,'read_reduction():&#160;manual_control.cpp']]],
+  ['read_5fwidth_5',['read_width',['../manual__control_8cpp.html#affb6d356d1a8dab7c82573250405023a',1,'read_width():&#160;manual_control.cpp'],['../manual__control_8h.html#aaaa6bdd284b26f5c76eea75579371826',1,'read_width(void):&#160;manual_control.cpp']]],
+  ['readfromi2cdev_6',['readfromi2cdev',['../uI2C_8h.html#a607cb25ea06e8ce952788a1e710e7f50',1,'readFromI2CDev(const int dev_handle, const int reg, char *buffer, const int data_length):&#160;uI2C.cpp'],['../uI2C_8cpp.html#a607cb25ea06e8ce952788a1e710e7f50',1,'readFromI2CDev(const int dev_handle, const int reg, char *buffer, const int data_length):&#160;uI2C.cpp']]],
+  ['readvalue_7',['readValue',['../joint_8h.html#a018130d8f5ce298859605a5c8e1320ee',1,'joint.h']]],
+  ['receiveevent_8',['receiveEvent',['../joint_8ino.html#aad830e539898b28392f61bfbbc02458f',1,'joint.ino']]],
+  ['reduction_9',['reduction',['../structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t.html#a1b6d94f5e63fc4d203d61ba033dd5405',1,'bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::reduction'],['../structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t.html#a0a84f3e1768fbfb9da1952812a8ea644',1,'bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::reduction'],['../classbioscara__hardware__drivers_1_1Joint.html#a20acf935ce8f212f17cabf3a18685517',1,'bioscara_hardware_drivers::Joint::reduction']]],
+  ['reg_10',['reg',['../joint_8ino.html#a9428adc9af4653a2050e2536b55dec8d',1,'joint.ino']]],
+  ['requestevent_11',['requestEvent',['../joint_8ino.html#ac10b80b8aaeaf66cecbf0bb5eff5ae33',1,'joint.ino']]],
+  ['resetstate_12',['resetState',['../classLowpass.html#a0874aff5328a74d27be3c51d553007aa',1,'Lowpass']]],
+  ['retrieve_5flast_5fposition_13',['retrieve_last_position',['../classbioscara__hardware__drivers_1_1BaseGripper.html#a16aae28dcd08f034da662577719b5c1b',1,'bioscara_hardware_drivers::BaseGripper']]],
+  ['return_5fon_5ferror_14',['RETURN_ON_ERROR',['../uErr_8h.html#ae580e0a7ebd48825aefa0bcedca05f33',1,'uErr.h']]],
+  ['return_5fon_5ffalse_15',['RETURN_ON_FALSE',['../uErr_8h.html#a0a1e64a409c0238fd6fc19663abc0fa1',1,'uErr.h']]],
+  ['return_5fon_5fnegative_16',['RETURN_ON_NEGATIVE',['../uErr_8h.html#a84d754c5a8643c3049d75b084a1d8a66',1,'uErr.h']]],
+  ['rflags_5fsize_17',['rflags_size',['../joint_8h.html#abf5d227b2ae124bdc7d5f15397b9bca1',1,'RFLAGS_SIZE:&#160;joint.h'],['../uI2C_8h.html#abf5d227b2ae124bdc7d5f15397b9bca1',1,'RFLAGS_SIZE:&#160;uI2C.h']]],
+  ['rpi_5fpwm_18',['RPI_PWM',['../classRPI__PWM.html',1,'']]],
+  ['runcotinous_19',['runcotinous',['../classbioscara__hardware__drivers_1_1BaseJoint.html#affbc9ba6c17b02af32647dc76796de13a455aa94aa4bd470f083c2589eff9f416',1,'bioscara_hardware_drivers::BaseJoint::RUNCOTINOUS'],['../joint_8h.html#aaf12c41494c327736d4980ffe1184227a2fdd9e499993a5715fda88fa871e09fc',1,'RUNCOTINOUS:&#160;joint.h']]],
+  ['rx_5fbuf_20',['rx_buf',['../joint_8ino.html#a4d929025fa8e1a7ac1fe8209bc592f73',1,'joint.ino']]],
+  ['rx_5fdata_5fready_21',['rx_data_ready',['../joint_8ino.html#a26beb56022f5fe492a3f84209e7f61fa',1,'joint.ino']]],
+  ['rx_5flength_22',['rx_length',['../joint_8ino.html#a15d2985ceb08bf6824378e9b6ee54ac1',1,'joint.ino']]]
+];

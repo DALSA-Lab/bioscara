@@ -1,0 +1,865 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface" kind="class" language="C++" prot="public">
+    <compoundname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">hardware_interface::SystemInterface</basecompoundref>
+    <includes refid="arm__hardware_8hpp" local="no">arm_hardware.hpp</includes>
+    <innerclass refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t" prot="private">bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t</innerclass>
+    <innerclass refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t" prot="private">bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a99e93a65247944cf62e75767ba98a656" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::unique_ptr&lt; <ref refid="classbioscara__hardware__drivers_1_1BaseJoint" kindref="compound">bioscara_hardware_drivers::BaseJoint</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::unique_ptr&lt;bioscara_hardware_drivers::BaseJoint&gt; &gt; bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_joints</definition>
+        <argsstring></argsstring>
+        <name>_joints</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_joints</qualifiedname>
+        <briefdescription>
+<para>unordered map storing the pointers to BaseJoint objects. This will either be a MockJoint or Joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>An unordered map is chosen to simplify acces via the joint name, as this conforms well with the ROS2_control hardware interface The map does not need to be ordered. Search, insertion, and removal of elements have average constant-time complexity.</para>
+<para>Since the BaseJoint methods are implemented as virtual, dynamic method dispatch can be utilized to call the correct implementation of a method. So either BaseJoint::foo() or Joint::foo()/MockJoint::foo() if foo() is overwritten in Joint or MockJoint. a smart pointer is used to guarantee destruction when the pointer is destructed. A unique pointer is used to prevent copying of the object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="443" column="28" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a24bfb6fef55ee2a8f659f82ab60b5a4b" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, <ref refid="structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t" kindref="compound">joint_config_t</ref> &gt;</type>
+        <definition>std::unordered_map&lt;std::string, joint_config_t&gt; bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_joint_cfg</definition>
+        <argsstring></argsstring>
+        <name>_joint_cfg</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_joint_cfg</qualifiedname>
+        <briefdescription>
+<para>unordered map storing the configuration struct of the joints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>An unordered map is chosen to simplify acces via the joint name, as this conforms well with the ROS2_control hardware interface The map does not need to be ordered. Search, insertion, and removal of elements have average constant-time complexity. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="452" column="28" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::set&lt; std::string &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::set&lt;std::string&gt; &gt; bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_joint_command_modes</definition>
+        <argsstring></argsstring>
+        <name>_joint_command_modes</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_joint_command_modes</qualifiedname>
+        <briefdescription>
+<para>unordered map of sets storing the active command interfaces for each joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Each joint can have a set of active command interfaces. This type of structure is chosen to group interfaces by joint. In the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a4ffd7d4e6890f9dfc3d757fb5e3bd5e3" kindref="member">write()</ref> function the interface name can simply be constructed by concatenating joint name with interface name. Although currently only one active command interface is allowed at the time, a set can be used to store multiple command interfaces that are acceptable to be combined, for example it would be acceptable to set velocity and driver current and hence that would be an allowable combination.</para>
+<para>An unordered map is chosen to simplify acces via the joint name, as this conforms well with the ROS2_control hardware interface. The map does not need to be ordered. Search, insertion, and removal of elements have average constant-time complexity. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="467" column="28" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="467" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a222af12f49df8ea14f9d0d44a92e9617" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::set&lt; std::string &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::set&lt;std::string&gt; &gt; bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_new_joint_command_modes</definition>
+        <argsstring></argsstring>
+        <name>_new_joint_command_modes</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_new_joint_command_modes</qualifiedname>
+        <briefdescription>
+<para>Temporary cache of new joint_command_modes when switching controllers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Since the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a39c1169f5d6bcc8d74b015ba73684096" kindref="member">prepare_command_mode_switch()</ref> is executed in a non-RT context we save the new joint command modes to this cache first to avoid needing to lock the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" kindref="member">_joint_command_modes</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="476" column="28" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="476" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a2faf2623163728b0dfd2b3e45c48e954" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; std::string, hardware_interface::InterfaceDescription * &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;std::string, hardware_interface::InterfaceDescription *&gt; &gt; bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_ordered_joint_state_interfaces_ptr</definition>
+        <argsstring></argsstring>
+        <name>_ordered_joint_state_interfaces_ptr</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::_ordered_joint_state_interfaces_ptr</qualifiedname>
+        <briefdescription>
+<para>A vector of a pair of interface name and pointer of the hardwares state interface which is ordered by joint and state interface type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A vector is chosen since it guarantees the correct order by insertion. The vector holds pointers to the actual interface structs stored in the parents HardwareComponentInterface::joint_state_interfaces_ but in the desired order. The order is:<orderedlist>
+<listitem><para>position</para>
+</listitem><listitem><para>velocity</para>
+</listitem><listitem><para>home</para>
+</listitem></orderedlist>
+</para>
+<para>This order guarantees that when reading the state interfaces in <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adc34f1df847375abf18fe8100ecec1d1" kindref="member">read()</ref> that the &apos;home&apos; interface is read last and has the latest state flags from the joint. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="493" column="21" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="493" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ae6ab09796fe5fe402f63f6769670eea3" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex bioscara_hardware_interfaces::BioscaraArmHardwareInterface::mtx</definition>
+        <argsstring></argsstring>
+        <name>mtx</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::mtx</qualifiedname>
+        <briefdescription>
+<para>A mutex that is used to prevent concurrent access to hardware and <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" kindref="member">_joint_command_modes</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The mutex prevents two things:<itemizedlist>
+<listitem><para>Modifying the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" kindref="member">_joint_command_modes</ref> concurrently.</para>
+</listitem><listitem><para>Concurrent access to the hardware via the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a99e93a65247944cf62e75767ba98a656" kindref="member">_joints</ref> map. The Joint harwdare is not thread safe. In particular the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adc34f1df847375abf18fe8100ecec1d1" kindref="member">read()</ref> and <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a4ffd7d4e6890f9dfc3d757fb5e3bd5e3" kindref="member">write()</ref> methods are executed in one RT thread while the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a06406f562da286f933b52b6e7009bd7f" kindref="member">perform_command_mode_switch()</ref> is called from another RT thread. The latter also tries to modify the Joint object via <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1aacfb3f227b2e2e5ab0d4aaa6e6790771" kindref="member">activate_joint()</ref> and <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ae2dd8ba9d468f31f98338ebbd3e3c9c7" kindref="member">deactivate_joint()</ref> which must not happen concurrently with a <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adc34f1df847375abf18fe8100ecec1d1" kindref="member">read()</ref> or <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a4ffd7d4e6890f9dfc3d757fb5e3bd5e3" kindref="member">write()</ref> call.</para>
+</listitem></itemizedlist>
+</para>
+<para>All methods that need to acquire this lock need to be performed in RT context to avoid being preempted by other lower priority threads potentially blocking the other RT threads from continuing. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="508" column="20" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="508" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adf7c055a54ae3c1810743de2296585d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_init</definition>
+        <argsstring>(const hardware_interface::HardwareComponentInterfaceParams &amp;params) override</argsstring>
+        <name>on_init</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_init</qualifiedname>
+        <param>
+          <type>const hardware_interface::HardwareComponentInterfaceParams &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Called on initialization to the <computeroutput>unconfigured</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs the following checks on the configures joints parsed form the URDF description:<itemizedlist>
+<listitem><para>Each joint must have the 3 command interfaces (in this order): &apos;position&apos;, &apos;velocity&apos;, &apos;home&apos;</para>
+</listitem><listitem><para>Each joint must have the 3 state interfaces (in this order): &apos;position&apos;, &apos;velocity&apos;, &apos;home&apos;</para>
+</listitem></itemizedlist>
+</para>
+<para>Stores the configuration parameters for each joint in the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a24bfb6fef55ee2a8f659f82ab60b5a4b" kindref="member">_joint_cfg</ref> map. Each joint must have these parameters:<itemizedlist>
+<listitem><para>i2c_address (int, HEX)</para>
+</listitem><listitem><para>reduction (float)</para>
+</listitem><listitem><para>min (float)</para>
+</listitem><listitem><para>max (float)</para>
+</listitem><listitem><para>stall_threshold (int, DEC)</para>
+</listitem><listitem><para>hold_current (int, DEC)</para>
+</listitem><listitem><para>drive_current (int, DEC)</para>
+</listitem><listitem><para>max_acceleration (float)</para>
+</listitem><listitem><para>max_velocity (float)</para>
+</listitem><listitem><para>homing<itemizedlist>
+<listitem><para>speed (float)</para>
+</listitem><listitem><para>threshold (int, DEC)</para>
+</listitem><listitem><para>current (int, DEC)</para>
+</listitem><listitem><para>acceleration (float)</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>Adds each joint to the internal _joints map. Creates a MockJoint object if the use_mock_hardware parameter is &apos;True&apos; or &apos;true&apos;, or else a hardware Joint. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Loop over all joints decribed in the hardware description file, check if they have the position and velocity command and state interface defined and finally add them to the internal _joints list</para>
+<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>threshold and current are uint8_t, if a number larger outside 0 &lt; n &lt; 255 is passed as a parameters it will overflow. </para>
+</xrefdescription></xrefsect></para>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="88" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="28" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afa934c6b2ca1e00577c57ed91b80b385" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_shutdown</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_shutdown</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_shutdown</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>inactive</computeroutput>, <computeroutput>unconfigured</computeroutput> and <computeroutput>active</computeroutput> to the <computeroutput>finalized</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When transitioning directly from <computeroutput>active</computeroutput> to <computeroutput>finalized</computeroutput> <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ab126441df1ddd42eee72667dd3d91301" kindref="member">on_deactivate()</ref> is automatically called before <ulink url="https://github.com/ros-controls/ros2_control/blob/d0836b7f12b89acb89bde83d4ba4308513b03204/hardware_interface/src/resource_manager.cpp#L616">Source Code</ulink> If the previous state is either <computeroutput>inactive</computeroutput> or <computeroutput>active</computeroutput> the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a1bec98b0fd955e1403ebc224e3562082" kindref="member">on_cleanup()</ref> method is called first. Then regardless of the previous state, the _joints map is cleared. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="100" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="183" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a46024cc8b398b66dc5cf80b8bcd252b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_configure</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_configure</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_configure</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>unconfigured</computeroutput> to the <computeroutput>inactive</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Establish and test connection to each joint. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="110" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="210" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a1bec98b0fd955e1403ebc224e3562082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_cleanup</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_cleanup</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_cleanup</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>inactive</computeroutput> to the <computeroutput>unconfigured</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Disconnect from the joints.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Disconnect from the joints and throw error if it fails</para>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="121" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="251" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a98236f8d72f1937774358eb326c4e795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_activate</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_activate</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_activate</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>inactive</computeroutput> to the <computeroutput>active</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1aacfb3f227b2e2e5ab0d4aaa6e6790771" kindref="member">activate_joint()</ref> to enable the joints. <linebreak/>
+It is allowed to activate the hardware even if it is not homed. To home the joint the homing_controller must be activated, but generally a hardware component must be active in order for controllers to become active. <linebreak/>
+ To prohibit movement on activation the set point for each position command interface is set equal to the current measured position, and the velocity command is set to 0.0 for each command interface. The current values are obtained by calling the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adc34f1df847375abf18fe8100ecec1d1" kindref="member">read()</ref> method once which populates the state interfaces with values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Below a workaround to force a read cycle of all joints to get inital values for the state interfaces. These will be copied to the command interface to prevent movement at startup.</para>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="138" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="275" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ab126441df1ddd42eee72667dd3d91301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_deactivate</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_deactivate</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_deactivate</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>active</computeroutput> to the <computeroutput>inactive</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Disables all joints and thereby allows backdriving. State interfaces continue to be updated.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>disable the joints and throw error if it fails</para>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="149" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="328" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adc34f1df847375abf18fe8100ecec1d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::return_type</type>
+        <definition>hardware_interface::return_type bioscara_hardware_interfaces::BioscaraArmHardwareInterface::read</definition>
+        <argsstring>(const rclcpp::Time &amp;time, const rclcpp::Duration &amp;period) override</argsstring>
+        <name>read</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::read</qualifiedname>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Duration &amp;</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para>Reads from the hardware and populates the state interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterates over all state interfaces and calls the corresponding Joint method.</para>
+<para><itemizedlist>
+<listitem><para>State interface &quot;position&quot; -&gt; <ref refid="classbioscara__hardware__drivers_1_1Joint_1aa48673be56b04a573142ee8c9ad18e20" kindref="member">bioscara_hardware_drivers::Joint::getPosition()</ref></para>
+</listitem><listitem><para>State interface &quot;velocity&quot; -&gt; <ref refid="classbioscara__hardware__drivers_1_1Joint_1a12e554163eb7cb23f6b5b07da4b8705a" kindref="member">bioscara_hardware_drivers::Joint::getVelocity()</ref></para>
+</listitem><listitem><para>State interface &quot;home&quot; -&gt; <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ad010a69043a9ee4578cadeebc85d9c80" kindref="member">bioscara_hardware_drivers::Joint::isHomed()</ref><itemizedlist>
+<listitem><para>This does not actually trigger a communication, instead it relies on the return flags of the previous transmissions. Since position and velocity have been called immediatly before the return flags are assumed to be valid.</para>
+</listitem><listitem><para>If the the homing of a joint has been activated through the command interface (<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a412c4e474be5de0820d88b7d1d6084de" kindref="member">bioscara_hardware_drivers::Joint::getCurrentBCmd()</ref> == <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a93a9a074f04be4b2316dbbca5882b6fa" kindref="member">bioscara_hardware_drivers::Joint::HOME</ref>) the device signals BUSY (<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a3d59aa860f6b64e6fead60919386f518" kindref="member">bioscara_hardware_drivers::Joint::isBusy()</ref>) as long as it is still homing. <linebreak/>
+ If the BUSY flag is reset while the current command is still <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a93a9a074f04be4b2316dbbca5882b6fa" kindref="member">bioscara_hardware_drivers::Joint::HOME</ref> we can assume the homing has finished. Then the &quot;home&quot; command interface of the joint is reset to 0.0, which will stop the homing (perform cleanup tasks) at the next write cycle.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::return_type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="172" column="41" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="348" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a4ffd7d4e6890f9dfc3d757fb5e3bd5e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::return_type</type>
+        <definition>hardware_interface::return_type bioscara_hardware_interfaces::BioscaraArmHardwareInterface::write</definition>
+        <argsstring>(const rclcpp::Time &amp;time, const rclcpp::Duration &amp;period) override</argsstring>
+        <name>write</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::write</qualifiedname>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Duration &amp;</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para>Writes commands to the hardware from the command interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In contrast to the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adc34f1df847375abf18fe8100ecec1d1" kindref="member">read()</ref> method the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a4ffd7d4e6890f9dfc3d757fb5e3bd5e3" kindref="member">write()</ref> method only loops over the command interfaces that are currently active defined by the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" kindref="member">_joint_command_modes</ref> map. See <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a39c1169f5d6bcc8d74b015ba73684096" kindref="member">prepare_command_mode_switch()</ref> for a detailed reasoning why this approach has been chosen.</para>
+<para><itemizedlist>
+<listitem><para>Command interface &quot;position&quot; -&gt; <ref refid="classbioscara__hardware__drivers_1_1Joint_1a8d477e842ea6139ca17fde0af43bc482" kindref="member">bioscara_hardware_drivers::Joint::setPosition()</ref></para>
+</listitem><listitem><para>Command interface &quot;velocity&quot; -&gt; <ref refid="classbioscara__hardware__drivers_1_1Joint_1a5b2479210b861c53c3c4e53cf12d75be" kindref="member">bioscara_hardware_drivers::Joint::setVelocity()</ref></para>
+</listitem><listitem><para>Command interface &quot;home&quot; -&gt; <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a81b05153ca250ea09930f955ecff09f2" kindref="member">bioscara_hardware_drivers::Joint::startHoming()</ref><itemizedlist>
+<listitem><para>If the commanded value in &quot;home&quot; is != 0.0 the and the joint is currently executing a blocking function, for example homing (<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a412c4e474be5de0820d88b7d1d6084de" kindref="member">bioscara_hardware_drivers::Joint::getCurrentBCmd()</ref> == <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45" kindref="member">bioscara_hardware_drivers::Joint::NONE</ref>), the homing sequence is started with the speed, sensitivity, current and acceleration defined in the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a24bfb6fef55ee2a8f659f82ab60b5a4b" kindref="member">_joint_cfg</ref> which is polulated from the hardware description urdf. The direction of the homing is determined by the sign of the command interface value.</para>
+</listitem><listitem><para>If the commanded value in &quot;home&quot; is = 0.0 and the joint is currently executing homing, the homing is stopped. This can either happen prematurely through user input or when the homing is completed which is registered in <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adc34f1df847375abf18fe8100ecec1d1" kindref="member">read()</ref>.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::return_type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="197" column="41" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="403" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a39c1169f5d6bcc8d74b015ba73684096" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::return_type</type>
+        <definition>hardware_interface::return_type bioscara_hardware_interfaces::BioscaraArmHardwareInterface::prepare_command_mode_switch</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;start_interfaces, const std::vector&lt; std::string &gt; &amp;stop_interfaces) override</argsstring>
+        <name>prepare_command_mode_switch</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::prepare_command_mode_switch</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>start_interfaces</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>stop_interfaces</declname>
+        </param>
+        <briefdescription>
+<para>Performs checks and book keeping of the active control mode when changing controllers in non-realtime context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For safe operation only one controller may interact with the hardware at the time. For example if the velocity JTC is active and has claimed the velocity command interfaces it is technically possible to activate the position JTC (or a homing controller, or others) that claim a different command interface (position in this case). However if both controllers are active they start writing to the hardware simultaneously which is to be avoided. For this reason a book keeping mechanism has been implemented which stores the currently active command interfaces for each joint in the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" kindref="member">_joint_command_modes</ref> member. Each joint has a set of active command interfaces. When a controller switch is performed the interfaces that should be stopped are removed from each joint set, then the one that should be started are added, if they are already present an error is thrown. Lastly a validation is performed. Currently the validation is simple since each joint may only have one command interface. The validation can be expanded for furture use cases that require a combination of active command interfaces per joint for example. <linebreak/>
+ The following basic checks are implemented:<itemizedlist>
+<listitem><para><bold>On deactivation</bold>:<itemizedlist>
+<listitem><para>[ERROR] Homing command interfaces may only be deactivated if no current homing process is ongoing (<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1a412c4e474be5de0820d88b7d1d6084de" kindref="member">bioscara_hardware_drivers::Joint::getCurrentBCmd()</ref> != <ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1affbc9ba6c17b02af32647dc76796de13a93a9a074f04be4b2316dbbca5882b6fa" kindref="member">bioscara_hardware_drivers::Joint::HOME</ref>)</para>
+</listitem><listitem><para>[WARN] Deactivating a velocity command interface if the velocity set point is 0.0.</para>
+</listitem><listitem><para>[WARN] Deactivating a command interface that has not been started. This should not happen.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>On activation</bold>:<itemizedlist>
+<listitem><para>[ERROR] Activating a command interface that is already started. This should not happen.</para>
+</listitem><listitem><para>[ERROR] Activating a second command interface for a joint.</para>
+</listitem><listitem><para>[ERROR] Activating &apos;position&apos; or &apos;velocity&apos; command interface if the joint is not homed (<ref refid="classbioscara__hardware__drivers_1_1BaseJoint_1ad010a69043a9ee4578cadeebc85d9c80" kindref="member">bioscara_hardware_drivers::Joint::isHomed()</ref> == false).</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+Since this method operates in non-realtime context it must not access critical members (<ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" kindref="member">_joint_command_modes</ref> and <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a99e93a65247944cf62e75767ba98a656" kindref="member">_joints</ref>) to avoid priority inversion. Therefore the new command modes are first saved to a cache <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a222af12f49df8ea14f9d0d44a92e9617" kindref="member">_new_joint_command_modes</ref>. This will then be applied to <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" kindref="member">_joint_command_modes</ref> in the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a06406f562da286f933b52b6e7009bd7f" kindref="member">perform_command_mode_switch()</ref> which is executed in RT context.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_interfaces</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command interfaces that should be started in the form &quot;joint/interface&quot; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stop_interfaces</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command interfaces that should be stopped in the form &quot;joint/interface&quot; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::return_type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="234" column="41" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="479" bodyend="594"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a06406f562da286f933b52b6e7009bd7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::return_type</type>
+        <definition>hardware_interface::return_type bioscara_hardware_interfaces::BioscaraArmHardwareInterface::perform_command_mode_switch</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;start_interfaces, const std::vector&lt; std::string &gt; &amp;stop_interfaces) override</argsstring>
+        <name>perform_command_mode_switch</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::perform_command_mode_switch</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>start_interfaces</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>stop_interfaces</declname>
+        </param>
+        <briefdescription>
+<para>Perform the mode-switching for the new command interface combination in realtime context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs the following actions:<itemizedlist>
+<listitem><para>acquires the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ae6ab09796fe5fe402f63f6769670eea3" kindref="member">mtx</ref> lock to protect the critical members.</para>
+</listitem><listitem><para>Copies the cached <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a222af12f49df8ea14f9d0d44a92e9617" kindref="member">_new_joint_command_modes</ref> to the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" kindref="member">_joint_command_modes</ref></para>
+</listitem><listitem><para><bold>On activation</bold>:<itemizedlist>
+<listitem><para><bold>home</bold> interface:<itemizedlist>
+<listitem><para>Reset command to 0.0. This clears any remaining commands that have been written to the command interface while the hardware was unable to act on it. For example if it was inactive or the homing command was not the active command mode.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_interfaces</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of string identifiers for the command interfaces starting. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stop_interfaces</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of string identifiers for the command interfaces stopping. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return_type::OK if the new command interface combination can be switched to (or) if the interface key is not relevant to this system. Returns return_type::ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="255" column="41" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="596" bodyend="644"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1abf1f3328408e4393b11699ffee27fe33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_error</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_error</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_error</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called when an error in any state or state transition is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>According to the <ulink url="https://control.ros.org/jazzy/doc/ros2_control/hardware_interface/doc/hardware_components_userdoc.html#handling-of-errors-that-happen-during-read-and-write-calls">ros2_control documentation</ulink>:</para>
+<para><blockquote><para><zwj/>Error handling follows the node lifecycle. If successful CallbackReturn::SUCCESS is returned and hardware is again in <computeroutput>UNCONFIGURED</computeroutput> state, if any ERROR or FAILURE happens the hardware ends in <computeroutput>FINALIZED</computeroutput> state and can not be recovered. The only option is to reload the complete plugin, but there is currently no service for this in the Controller Manager. </para>
+</blockquote></para>
+<para>Since the hardware will immediatly return to the <computeroutput>unconfigured</computeroutput> state (<ulink url="https://github.com/ros-controls/ros2_control/blob/d0836b7f12b89acb89bde83d4ba4308513b03204/hardware_interface/src/hardware_component.cpp#L247">source</ulink>) if the error could be handled we manually call the transition functions which would normally be called to this state. Those are:<itemizedlist>
+<listitem><para><bold>Previous state</bold>: <computeroutput>active</computeroutput><itemizedlist>
+<listitem><para>Deactivate hardware (<ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ab126441df1ddd42eee72667dd3d91301" kindref="member">on_deactivate()</ref>) -&gt; <computeroutput>inactive</computeroutput></para>
+</listitem><listitem><para>Clean-Up hardware (<ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a1bec98b0fd955e1403ebc224e3562082" kindref="member">on_cleanup()</ref>) -&gt; <computeroutput>unconfigured</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Previous state</bold>: <computeroutput>inactive</computeroutput><itemizedlist>
+<listitem><para>Deactivate hardware (<ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ab126441df1ddd42eee72667dd3d91301" kindref="member">on_deactivate()</ref>) -&gt; <computeroutput>inactive</computeroutput><itemizedlist>
+<listitem><para>call the deactivate function anyway regardless if state was active or inactive. For example if the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a98236f8d72f1937774358eb326c4e795" kindref="member">on_activate()</ref> function fails on <ref refid="classbioscara__hardware__drivers_1_1Joint_1a203608e60cc83c2078edf0c3a4a68dbe" kindref="member">bioscara_hardware_drivers::Joint::enableStallguard()</ref> the joint will have been enabled, to disable it invoke <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ab126441df1ddd42eee72667dd3d91301" kindref="member">on_deactivate()</ref>.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Clean-Up hardware (<ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a1bec98b0fd955e1403ebc224e3562082" kindref="member">on_cleanup()</ref>) -&gt; <computeroutput>unconfigured</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+In particular the deactivation is important. For example if a joint stalls the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adc34f1df847375abf18fe8100ecec1d1" kindref="member">read()</ref> or <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a4ffd7d4e6890f9dfc3d757fb5e3bd5e3" kindref="member">write()</ref> methods throw an error, which will be handled here and allow the hardware to be deactivated, disableing the joints to allow backdriving.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="286" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="646" bodyend="679"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a639930173ff099a985d3664f2292d5b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">bioscara_hardware_drivers::err_type_t</ref></type>
+        <definition>bioscara_hardware_drivers::err_type_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::start_homing</definition>
+        <argsstring>(const std::string name, float velocity)</argsstring>
+        <name>start_homing</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::start_homing</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+<para>wrapper method to start homing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Activate the joint, set homing acceleration and start homing. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">bioscara_hardware_drivers::err_type_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="518" column="47" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="681" bodyend="694"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a24aabd10f21fc711121cd4ce3e2e37ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">bioscara_hardware_drivers::err_type_t</ref></type>
+        <definition>bioscara_hardware_drivers::err_type_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::stop_homing</definition>
+        <argsstring>(const std::string name)</argsstring>
+        <name>stop_homing</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::stop_homing</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>wrapper method to stop homing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop the homing. Reset acceleration and velocity and perform the postHoming cleanup, then deactivate the joint. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">bioscara_hardware_drivers::err_type_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="527" column="47" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="696" bodyend="710"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a12e2f95de2b5d0ebf3a44dbb3bcec099" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bioscara_hardware_interfaces::BioscaraArmHardwareInterface::split_interface_string_to_joint_and_name</definition>
+        <argsstring>(std::string interface, std::string &amp;joint_name, std::string &amp;interface_name)</argsstring>
+        <name>split_interface_string_to_joint_and_name</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::split_interface_string_to_joint_and_name</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>joint_name</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>interface_name</declname>
+        </param>
+        <briefdescription>
+<para>Split a interface string like &quot;&lt;joint_name&gt;/&lt;interface_name&gt;&quot; to &quot;&lt;joint_name&gt;&quot; and &quot;&lt;interface_name&gt;&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>joint_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interface_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="536" column="14" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="712" bodyend="720"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1aacfb3f227b2e2e5ab0d4aaa6e6790771" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">bioscara_hardware_drivers::err_type_t</ref></type>
+        <definition>bioscara_hardware_drivers::err_type_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::activate_joint</definition>
+        <argsstring>(const std::string name)</argsstring>
+        <name>activate_joint</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::activate_joint</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Enables each joint, enables the stall detection and sets the maximmum acceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joint name to enable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">bioscara_hardware_drivers::err_type_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="544" column="47" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="722" bodyend="774"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ae2dd8ba9d468f31f98338ebbd3e3c9c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">bioscara_hardware_drivers::err_type_t</ref></type>
+        <definition>bioscara_hardware_drivers::err_type_t bioscara_hardware_interfaces::BioscaraArmHardwareInterface::deactivate_joint</definition>
+        <argsstring>(const std::string name)</argsstring>
+        <name>deactivate_joint</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraArmHardwareInterface::deactivate_joint</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Disables each joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>joint name to disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="namespacebioscara__hardware__drivers_1a1d009df6593ed79588fb4ae11be3e7c5" kindref="member">bioscara_hardware_drivers::err_type_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="552" column="47" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/src/arm_hardware.cpp" bodystart="776" bodyend="788"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The bioscara arm hardware interface class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The hardware interface serves to wrap custom hardware interaction with the arm joints in the standardized ros2_control architecture.</para>
+<para><bold>Hardware Lifecycle</bold> <linebreak/>
+The hardware follows the ros2_control hardware interface lifecyle which intern is following the <ulink url="https://github.com/ros2/design/blob/93a415bf928751d37fce6f83215c521658e20c93/articles/node_lifecycle.md">ROS2 managed node lifecycle</ulink>.</para>
+<para><image type="html" name="hardware_interface_lifecycle.png" width="1000em">Hardware interface lifecycle</image>
+ <image type="latex" name="hardware_interface_lifecycle.png" width="\linewidth">Hardware interface lifecycle</image>
+ </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</label>
+        <link refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hardware_interface::SystemInterface</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</label>
+        <link refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hardware_interface::SystemInterface</label>
+      </node>
+    </collaborationgraph>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" line="54" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_interface/include/bioscara_arm_hardware_interface/arm_hardware.hpp" bodystart="55" bodyend="553"/>
+    <listofallmembers>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a24bfb6fef55ee2a8f659f82ab60b5a4b" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>_joint_cfg</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afc419a32f050cf461e64d958fed917ce" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>_joint_command_modes</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a99e93a65247944cf62e75767ba98a656" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>_joints</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a222af12f49df8ea14f9d0d44a92e9617" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>_new_joint_command_modes</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a2faf2623163728b0dfd2b3e45c48e954" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>_ordered_joint_state_interfaces_ptr</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1aacfb3f227b2e2e5ab0d4aaa6e6790771" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>activate_joint</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ae2dd8ba9d468f31f98338ebbd3e3c9c7" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>deactivate_joint</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ae6ab09796fe5fe402f63f6769670eea3" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>mtx</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a98236f8d72f1937774358eb326c4e795" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>on_activate</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a1bec98b0fd955e1403ebc224e3562082" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>on_cleanup</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a46024cc8b398b66dc5cf80b8bcd252b2" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>on_configure</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1ab126441df1ddd42eee72667dd3d91301" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>on_deactivate</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1abf1f3328408e4393b11699ffee27fe33" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>on_error</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adf7c055a54ae3c1810743de2296585d4" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>on_init</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1afa934c6b2ca1e00577c57ed91b80b385" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>on_shutdown</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a06406f562da286f933b52b6e7009bd7f" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>perform_command_mode_switch</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a39c1169f5d6bcc8d74b015ba73684096" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>prepare_command_mode_switch</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adc34f1df847375abf18fe8100ecec1d1" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>read</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a12e2f95de2b5d0ebf3a44dbb3bcec099" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>split_interface_string_to_joint_and_name</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a639930173ff099a985d3664f2292d5b1" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>start_homing</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a24aabd10f21fc711121cd4ce3e2e37ec" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>stop_homing</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1a4ffd7d4e6890f9dfc3d757fb5e3bd5e3" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraArmHardwareInterface</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

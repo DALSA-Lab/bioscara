@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_7008866f968644f0896cb9ce1b165062" kind="dir">
+    <compoundname>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src</compoundname>
+    <innerfile refid="gripper__hardware_8cpp">gripper_hardware.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classTrajectorySequence" kind="class" language="C++" prot="public">
+    <compoundname>TrajectorySequence</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classTrajectorySequence_1abff54e1a0f3481ec7b0cdbd14e63227c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TrajectorySequence::planning_group_</definition>
+        <argsstring></argsstring>
+        <name>planning_group_</name>
+        <qualifiedname>TrajectorySequence::planning_group_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="27" column="15" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTrajectorySequence_1a6d4e345f15fb582ef32c89dc53e830b0" prot="private" static="no" mutable="no">
+        <type>rclcpp::Client&lt; <ref refid="pilz__sequence_8cpp_1a0de0573c78ea15165bcd03d89c814cca" kindref="member">GetMotionSequence</ref> &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;GetMotionSequence&gt;::SharedPtr TrajectorySequence::seq_service_client_</definition>
+        <argsstring></argsstring>
+        <name>seq_service_client_</name>
+        <qualifiedname>TrajectorySequence::seq_service_client_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="28" column="30" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTrajectorySequence_1a8c4147451fa38dd062a6bfeb25c790bf" prot="private" static="no" mutable="no">
+        <type>rclcpp_action::Client&lt; <ref refid="pilz__sequence_8cpp_1aaafc780b942e5157f260bf8abd46a43b" kindref="member">MoveGroupSequence</ref> &gt;::SharedPtr</type>
+        <definition>rclcpp_action::Client&lt;MoveGroupSequence&gt;::SharedPtr TrajectorySequence::seq_action_client_</definition>
+        <argsstring></argsstring>
+        <name>seq_action_client_</name>
+        <qualifiedname>TrajectorySequence::seq_action_client_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="29" column="37" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTrajectorySequence_1a30d545486b529ca39b357aaa42a1b0fb" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node::SharedPtr</type>
+        <definition>rclcpp::Node::SharedPtr TrajectorySequence::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <qualifiedname>TrajectorySequence::node_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="31" column="27" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTrajectorySequence_1a40af27e541ab3b280adc2dcb35c2071e" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; MoveGroupInterface &gt;</type>
+        <definition>std::shared_ptr&lt;MoveGroupInterface&gt; TrajectorySequence::mgi_</definition>
+        <argsstring></argsstring>
+        <name>mgi_</name>
+        <qualifiedname>TrajectorySequence::mgi_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="33" column="19" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTrajectorySequence_1aec2a8aea7ac8aac5ed54581d55b7e2e4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; moveit_msgs::msg::MotionSequenceItem &gt;</type>
+        <definition>std::vector&lt;moveit_msgs::msg::MotionSequenceItem&gt; TrajectorySequence::items_</definition>
+        <argsstring></argsstring>
+        <name>items_</name>
+        <qualifiedname>TrajectorySequence::items_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="35" column="15" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classTrajectorySequence_1ad08e8b7801e0ca1846e991e63277bb06" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TrajectorySequence::exec_thread</definition>
+        <argsstring>(void)</argsstring>
+        <name>exec_thread</name>
+        <qualifiedname>TrajectorySequence::exec_thread</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="37" column="8" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="37" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTrajectorySequence_1a3005ccbe01fcc476e55797815b60f327" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TrajectorySequence::TrajectorySequence</definition>
+        <argsstring>(std::string planning_group)</argsstring>
+        <name>TrajectorySequence</name>
+        <qualifiedname>TrajectorySequence::TrajectorySequence</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>planning_group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="45" column="3" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1a1782986fde39b54844e9de2bed89d1cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TrajectorySequence::~TrajectorySequence</definition>
+        <argsstring>()</argsstring>
+        <name>~TrajectorySequence</name>
+        <qualifiedname>TrajectorySequence::~TrajectorySequence</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="50" column="3" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1aeecaf38593066b2b0f1b4f2b575cf7c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int TrajectorySequence::init</definition>
+        <argsstring>(void)</argsstring>
+        <name>init</name>
+        <qualifiedname>TrajectorySequence::init</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="52" column="7" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="52" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1a675d8f0b8bd302bbaaba066dea8ced06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; MoveGroupInterface &gt;</type>
+        <definition>std::shared_ptr&lt; MoveGroupInterface &gt; TrajectorySequence::getMoveGroupInterface</definition>
+        <argsstring>(void)</argsstring>
+        <name>getMoveGroupInterface</name>
+        <qualifiedname>TrajectorySequence::getMoveGroupInterface</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="90" column="19" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1a5e84b32c3a00cfac49759b2abf2b5db4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>rclcpp::Node::SharedPtr</type>
+        <definition>rclcpp::Node::SharedPtr TrajectorySequence::getNode</definition>
+        <argsstring>(void)</argsstring>
+        <name>getNode</name>
+        <qualifiedname>TrajectorySequence::getNode</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="95" column="27" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1a5dc8deb7b9cfe1054df5dbac29c8715a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrajectorySequence::addSegment</definition>
+        <argsstring>(moveit_msgs::msg::MotionSequenceItem segment)</argsstring>
+        <name>addSegment</name>
+        <qualifiedname>TrajectorySequence::addSegment</qualifiedname>
+        <param>
+          <type>moveit_msgs::msg::MotionSequenceItem</type>
+          <declname>segment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="100" column="8" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="100" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1a4783115f0a24cb243d8953da349702f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TrajectorySequence::execute</definition>
+        <argsstring>(void)</argsstring>
+        <name>execute</name>
+        <qualifiedname>TrajectorySequence::execute</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="106" column="8" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="106" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1a78ea0a0dc0863c8358e1c194810355a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>moveit_msgs::msg::MotionSequenceItem</type>
+        <definition>moveit_msgs::msg::MotionSequenceItem TrajectorySequence::moveJ</definition>
+        <argsstring>(const std::string &amp;link_name, const geometry_msgs::msg::PoseStamped &amp;pose, const float blend_radius=0.0, const float speed_scaling=1.0)</argsstring>
+        <name>moveJ</name>
+        <qualifiedname>TrajectorySequence::moveJ</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>link_name</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::msg::PoseStamped &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>blend_radius</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>speed_scaling</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The methods are very redundant and hard coded. Things that come to mind:<itemizedlist>
+<listitem><para>refactor common functions</para>
+</listitem><listitem><para>set names of pipeline_id in</para>
+</listitem><listitem><para>dont need to be member functions </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="220" column="40" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="220" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1a5a96dd1a6bc76d565b3d1dfc76a137c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>moveit_msgs::msg::MotionSequenceItem</type>
+        <definition>moveit_msgs::msg::MotionSequenceItem TrajectorySequence::moveJ</definition>
+        <argsstring>(const std::vector&lt; moveit_msgs::msg::JointConstraint &gt; &amp;joint_values, const float blend_radius=0.0, const float speed_scaling=1.0)</argsstring>
+        <name>moveJ</name>
+        <qualifiedname>TrajectorySequence::moveJ</qualifiedname>
+        <param>
+          <type>const std::vector&lt; moveit_msgs::msg::JointConstraint &gt; &amp;</type>
+          <declname>joint_values</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>blend_radius</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>speed_scaling</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="241" column="40" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="241" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1aed48bcc57a0d137a24dac14db813e077" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>moveit_msgs::msg::MotionSequenceItem</type>
+        <definition>moveit_msgs::msg::MotionSequenceItem TrajectorySequence::moveL</definition>
+        <argsstring>(const std::string &amp;link_name, const geometry_msgs::msg::PoseStamped &amp;pose, const float blend_radius=0.0, const float speed_scaling=1.0)</argsstring>
+        <name>moveL</name>
+        <qualifiedname>TrajectorySequence::moveL</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>link_name</declname>
+        </param>
+        <param>
+          <type>const geometry_msgs::msg::PoseStamped &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>blend_radius</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>speed_scaling</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="263" column="40" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="263" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classTrajectorySequence_1a2701402f070ce8a844e987c2c9bd37bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>moveit_msgs::msg::MotionSequenceItem</type>
+        <definition>moveit_msgs::msg::MotionSequenceItem TrajectorySequence::moveL</definition>
+        <argsstring>(const std::vector&lt; moveit_msgs::msg::JointConstraint &gt; &amp;joint_values, const float blend_radius=0.0, const float speed_scaling=1.0)</argsstring>
+        <name>moveL</name>
+        <qualifiedname>TrajectorySequence::moveL</qualifiedname>
+        <param>
+          <type>const std::vector&lt; moveit_msgs::msg::JointConstraint &gt; &amp;</type>
+          <declname>joint_values</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>blend_radius</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>speed_scaling</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="285" column="40" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="285" bodyend="306"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" line="24" column="1" bodyfile="lib/ros2_ws/src/moveit_motion_plans/src/pilz_sequence.cpp" bodystart="25" bodyend="307"/>
+    <listofallmembers>
+      <member refid="classTrajectorySequence_1a5dc8deb7b9cfe1054df5dbac29c8715a" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>addSegment</name></member>
+      <member refid="classTrajectorySequence_1ad08e8b7801e0ca1846e991e63277bb06" prot="private" virt="non-virtual"><scope>TrajectorySequence</scope><name>exec_thread</name></member>
+      <member refid="classTrajectorySequence_1a4783115f0a24cb243d8953da349702f3" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>execute</name></member>
+      <member refid="classTrajectorySequence_1a675d8f0b8bd302bbaaba066dea8ced06" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>getMoveGroupInterface</name></member>
+      <member refid="classTrajectorySequence_1a5e84b32c3a00cfac49759b2abf2b5db4" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>getNode</name></member>
+      <member refid="classTrajectorySequence_1aeecaf38593066b2b0f1b4f2b575cf7c9" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>init</name></member>
+      <member refid="classTrajectorySequence_1aec2a8aea7ac8aac5ed54581d55b7e2e4" prot="private" virt="non-virtual"><scope>TrajectorySequence</scope><name>items_</name></member>
+      <member refid="classTrajectorySequence_1a40af27e541ab3b280adc2dcb35c2071e" prot="private" virt="non-virtual"><scope>TrajectorySequence</scope><name>mgi_</name></member>
+      <member refid="classTrajectorySequence_1a78ea0a0dc0863c8358e1c194810355a4" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>moveJ</name></member>
+      <member refid="classTrajectorySequence_1a5a96dd1a6bc76d565b3d1dfc76a137c1" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>moveJ</name></member>
+      <member refid="classTrajectorySequence_1aed48bcc57a0d137a24dac14db813e077" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>moveL</name></member>
+      <member refid="classTrajectorySequence_1a2701402f070ce8a844e987c2c9bd37bf" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>moveL</name></member>
+      <member refid="classTrajectorySequence_1a30d545486b529ca39b357aaa42a1b0fb" prot="private" virt="non-virtual"><scope>TrajectorySequence</scope><name>node_</name></member>
+      <member refid="classTrajectorySequence_1abff54e1a0f3481ec7b0cdbd14e63227c" prot="private" virt="non-virtual"><scope>TrajectorySequence</scope><name>planning_group_</name></member>
+      <member refid="classTrajectorySequence_1a8c4147451fa38dd062a6bfeb25c790bf" prot="private" virt="non-virtual"><scope>TrajectorySequence</scope><name>seq_action_client_</name></member>
+      <member refid="classTrajectorySequence_1a6d4e345f15fb582ef32c89dc53e830b0" prot="private" virt="non-virtual"><scope>TrajectorySequence</scope><name>seq_service_client_</name></member>
+      <member refid="classTrajectorySequence_1a3005ccbe01fcc476e55797815b60f327" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>TrajectorySequence</name></member>
+      <member refid="classTrajectorySequence_1a1782986fde39b54844e9de2bed89d1cd" prot="public" virt="non-virtual"><scope>TrajectorySequence</scope><name>~TrajectorySequence</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface" kind="class" language="C++" prot="public">
+    <compoundname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">hardware_interface::SystemInterface</basecompoundref>
+    <includes refid="gripper__hardware_8hpp" local="no">gripper_hardware.hpp</includes>
+    <innerclass refid="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t" prot="private">bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1ad6dc3662a82a73acc13b429e81d93b37" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classbioscara__hardware__drivers_1_1BaseGripper" kindref="compound">bioscara_hardware_drivers::BaseGripper</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;bioscara_hardware_drivers::BaseGripper&gt; bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::_gripper</definition>
+        <argsstring></argsstring>
+        <name>_gripper</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::_gripper</qualifiedname>
+        <briefdescription>
+<para>Smart pointer to the local BaseGripper. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This will be used to either interact with the hardware or mock hardware. A smart pointer is used to guarantee destruction when the pointer is destructed. A unique pointer is used to prevent copying of the object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="178" column="25" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a99bd1544cf9fb1885403b00dbda9f241" prot="private" static="no" mutable="no">
+        <type><ref refid="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t" kindref="compound">gripper_config_t</ref></type>
+        <definition>gripper_config_t bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::_gripper_cfg</definition>
+        <argsstring></argsstring>
+        <name>_gripper_cfg</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::_gripper_cfg</qualifiedname>
+        <briefdescription>
+<para>configuration struct of the gripper. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="184" column="26" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a83f4a3e4a9e84f3111cd9b1cffaf0f49" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::_last_pos</definition>
+        <argsstring></argsstring>
+        <name>_last_pos</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::_last_pos</qualifiedname>
+        <initializer>= std::numeric_limits&lt;double&gt;::quiet_NaN()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="186" column="15" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a8c2b94e383243e391d9e17e19292540c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::_vel</definition>
+        <argsstring></argsstring>
+        <name>_vel</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::_vel</qualifiedname>
+        <initializer>= std::numeric_limits&lt;double&gt;::quiet_NaN()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="187" column="15" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a678cc84a04f0e3b8837ddc9564ebbe5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_init</definition>
+        <argsstring>(const hardware_interface::HardwareComponentInterfaceParams &amp;params) override</argsstring>
+        <name>on_init</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_init</qualifiedname>
+        <param>
+          <type>const hardware_interface::HardwareComponentInterfaceParams &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>check that only one joint is defined, more mimic joints may be defined.</para>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="51" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp" bodystart="27" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a4b96e3c7ead0c9631feefc6645149ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_shutdown</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_shutdown</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_shutdown</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>inactive</computeroutput>, <computeroutput>unconfigured</computeroutput> and <computeroutput>active</computeroutput> to the <computeroutput>finalized</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When transitioning directly from <computeroutput>active</computeroutput> to <computeroutput>finalized</computeroutput> <ref refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1ab199edb3ee4a278fc8f5a24c2536fc14" kindref="member">on_deactivate()</ref> is automatically called before <ulink url="https://github.com/ros-controls/ros2_control/blob/d0836b7f12b89acb89bde83d4ba4308513b03204/hardware_interface/src/resource_manager.cpp#L616">Source Code</ulink> If the previous state is either <computeroutput>inactive</computeroutput> or <computeroutput>active</computeroutput> the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a5adcd99396a192989faaaaea5aeeffc1" kindref="member">on_cleanup()</ref> method is called first. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="62" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp" bodystart="137" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1abd2ff2b6270b1e0c25b99f189cafac1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_configure</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_configure</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_configure</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>unconfigured</computeroutput> to the <computeroutput>inactive</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="71" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp" bodystart="163" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a5adcd99396a192989faaaaea5aeeffc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_cleanup</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_cleanup</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_cleanup</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>inactive</computeroutput> to the <computeroutput>unconfigured</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="80" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp" bodystart="192" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a1b3579dff95aaba920a11ab7bb3b7f95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_activate</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_activate</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_activate</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>inactive</computeroutput> to the <computeroutput>active</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables PWM generation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="91" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp" bodystart="211" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1ab199edb3ee4a278fc8f5a24c2536fc14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_deactivate</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_deactivate</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_deactivate</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called on the transistion from the <computeroutput>active</computeroutput> to the <computeroutput>inactive</computeroutput> state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Disables PWM generation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="102" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp" bodystart="252" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a207c9d4e3f1d72d65fb42623bb63a96a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::return_type</type>
+        <definition>hardware_interface::return_type bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::read</definition>
+        <argsstring>(const rclcpp::Time &amp;time, const rclcpp::Duration &amp;period) override</argsstring>
+        <name>read</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::read</qualifiedname>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Duration &amp;</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para>Reads from the hardware and populates the state interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Invokes the <ref refid="classbioscara__hardware__drivers_1_1BaseGripper_1a49fca88d7a33ad560cd96ceee0124092" kindref="member">bioscara_hardware_drivers::Gripper::getPosition()</ref> method to read the gripper position.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::return_type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="114" column="41" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp" bodystart="271" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a153a54653dd489cf768f0749eacf7e45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::return_type</type>
+        <definition>hardware_interface::return_type bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::write</definition>
+        <argsstring>(const rclcpp::Time &amp;time, const rclcpp::Duration &amp;period) override</argsstring>
+        <name>write</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::write</qualifiedname>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Duration &amp;</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para>Writes commands to the hardware from the command interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Invokes the <ref refid="classbioscara__hardware__drivers_1_1Gripper_1abdf1f8e545da0a246f4effd78ae09f35" kindref="member">bioscara_hardware_drivers::Gripper::setPosition()</ref> method to write the command to the gripper.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::return_type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="127" column="41" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp" bodystart="303" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a44d87744318928ac5ba54096764a3bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hardware_interface::CallbackReturn</type>
+        <definition>hardware_interface::CallbackReturn bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_error</definition>
+        <argsstring>(const rclcpp_lifecycle::State &amp;previous_state) override</argsstring>
+        <name>on_error</name>
+        <qualifiedname>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::on_error</qualifiedname>
+        <param>
+          <type>const rclcpp_lifecycle::State &amp;</type>
+          <declname>previous_state</declname>
+        </param>
+        <briefdescription>
+<para>Called when an error in any state or state transition is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>According to the <ulink url="https://control.ros.org/jazzy/doc/ros2_control/hardware_interface/doc/hardware_components_userdoc.html#handling-of-errors-that-happen-during-read-and-write-calls">ros2_control documentation</ulink>:</para>
+<para><blockquote><para><zwj/>Error handling follows the node lifecycle. If successful CallbackReturn::SUCCESS is returned and hardware is again in <computeroutput>UNCONFIGURED</computeroutput> state, if any ERROR or FAILURE happens the hardware ends in <computeroutput>FINALIZED</computeroutput> state and can not be recovered. The only option is to reload the complete plugin, but there is currently no service for this in the Controller Manager. </para>
+</blockquote></para>
+<para>Since the hardware will immediatly return to the <computeroutput>unconfigured</computeroutput> state (<ulink url="https://github.com/ros-controls/ros2_control/blob/d0836b7f12b89acb89bde83d4ba4308513b03204/hardware_interface/src/hardware_component.cpp#L247">source</ulink>) if the error could be handled we manually call the transition functions which would normally be called to this state. Those are:<itemizedlist>
+<listitem><para><bold>Previous state</bold>: <computeroutput>active</computeroutput><itemizedlist>
+<listitem><para>Deactivate hardware (<ref refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1ab199edb3ee4a278fc8f5a24c2536fc14" kindref="member">on_deactivate()</ref>) -&gt; <computeroutput>inactive</computeroutput></para>
+</listitem><listitem><para>Clean-Up hardware (<ref refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a5adcd99396a192989faaaaea5aeeffc1" kindref="member">on_cleanup()</ref>) -&gt; <computeroutput>unconfigured</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Previous state</bold>: <computeroutput>inactive</computeroutput><itemizedlist>
+<listitem><para>Deactivate hardware (<ref refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1ab199edb3ee4a278fc8f5a24c2536fc14" kindref="member">on_deactivate()</ref>) -&gt; <computeroutput>inactive</computeroutput><itemizedlist>
+<listitem><para>call the deactivate function anyway regardless if state was active or inactive.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Clean-Up hardware (<ref refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a5adcd99396a192989faaaaea5aeeffc1" kindref="member">on_cleanup()</ref>) -&gt; <computeroutput>unconfigured</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hardware_interface::CallbackReturn </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="153" column="44" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/src/gripper_hardware.cpp" bodystart="331" bodyend="364"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The bioscara gripper hardware interface class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>System interface has been chosen to allow future modifications for grippers that provide feedback. refer to the <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface" kindref="compound">BioscaraArmHardwareInterface</ref> class for a more detailed description of the hardware life-cycle. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</label>
+        <link refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hardware_interface::SystemInterface</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</label>
+        <link refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_gripper_cfg</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t</label>
+        <link refid="structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t"/>
+      </node>
+      <node id="2">
+        <label>hardware_interface::SystemInterface</label>
+      </node>
+    </collaborationgraph>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" line="46" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_interface/include/bioscara_gripper_hardware_interface/gripper_hardware.hpp" bodystart="47" bodyend="188"/>
+    <listofallmembers>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1ad6dc3662a82a73acc13b429e81d93b37" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>_gripper</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a99bd1544cf9fb1885403b00dbda9f241" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>_gripper_cfg</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a83f4a3e4a9e84f3111cd9b1cffaf0f49" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>_last_pos</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a8c2b94e383243e391d9e17e19292540c" prot="private" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>_vel</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a1b3579dff95aaba920a11ab7bb3b7f95" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>on_activate</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a5adcd99396a192989faaaaea5aeeffc1" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>on_cleanup</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1abd2ff2b6270b1e0c25b99f189cafac1d" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>on_configure</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1ab199edb3ee4a278fc8f5a24c2536fc14" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>on_deactivate</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a44d87744318928ac5ba54096764a3bcc" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>on_error</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a678cc84a04f0e3b8837ddc9564ebbe5b" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>on_init</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a4b96e3c7ead0c9631feefc6645149ab2" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>on_shutdown</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a207c9d4e3f1d72d65fb42623bb63a96a" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>read</name></member>
+      <member refid="classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1a153a54653dd489cf768f0749eacf7e45" prot="public" virt="non-virtual"><scope>bioscara_hardware_interfaces::BioscaraGripperHardwareInterface</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

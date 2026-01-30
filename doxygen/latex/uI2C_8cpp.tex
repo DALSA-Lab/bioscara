@@ -1,0 +1,105 @@
+\doxysection{lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+arm/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/src/u\+I2C.cpp File Reference}
+\hypertarget{uI2C_8cpp}{}\label{uI2C_8cpp}\index{lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/src/uI2C.cpp@{lib/ros2\_ws/src/dalsa\_bioscara\_arm/bioscara\_arm\_hardware\_driver/src/uI2C.cpp}}
+{\ttfamily \#include "{}bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/u\+I2\+C.\+h"{}}\newline
+{\ttfamily \#include "{}bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/common.\+h"{}}\newline
+{\ttfamily \#include $<$lgpio.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{uI2C_8cpp_a6434d4118a714731dc36bf1d2d1a9406}{open\+I2\+CDev\+Handle}} (const int dev\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em Initiates an I2C device on the bus. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uI2C_8cpp_a607cb25ea06e8ce952788a1e710e7f50}{read\+From\+I2\+CDev}} (const int dev\+\_\+handle, const int \mbox{\hyperlink{joint_8ino_a9428adc9af4653a2050e2536b55dec8d}{reg}}, char \texorpdfstring{$\ast$}{*}buffer, const int data\+\_\+length)
+\begin{DoxyCompactList}\small\item\em reads block of bytes from device to buffer \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uI2C_8cpp_ab73613a3b862a54f70dff0b5192cbcac}{write\+To\+I2\+CDev}} (const int dev\+\_\+handle, const int \mbox{\hyperlink{joint_8ino_a9428adc9af4653a2050e2536b55dec8d}{reg}}, char \texorpdfstring{$\ast$}{*}tx\+\_\+buffer, const int data\+\_\+length, char \texorpdfstring{$\ast$}{*}RFLAGS\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em writes block of bytes from buffer to device \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uI2C_8cpp_afeb62c435271a8b6dd47be9e4428b746}{close\+I2\+CDev\+Handle}} (int \&dev\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em close an I2C device on the bus \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{uI2C_8cpp_afeb62c435271a8b6dd47be9e4428b746}\label{uI2C_8cpp_afeb62c435271a8b6dd47be9e4428b746} 
+\index{uI2C.cpp@{uI2C.cpp}!closeI2CDevHandle@{closeI2CDevHandle}}
+\index{closeI2CDevHandle@{closeI2CDevHandle}!uI2C.cpp@{uI2C.cpp}}
+\doxysubsubsection{\texorpdfstring{closeI2CDevHandle()}{closeI2CDevHandle()}}
+{\footnotesize\ttfamily int close\+I2\+CDev\+Handle (\begin{DoxyParamCaption}\item[{int \&}]{dev\+\_\+handle }\end{DoxyParamCaption})}
+
+
+
+close an I2C device on the bus 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev\+\_\+handle} & device handle obtained from {\ttfamily open\+I2\+CDev\+Handle} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on OK, negative on error. 
+\end{DoxyReturn}
+\Hypertarget{uI2C_8cpp_a6434d4118a714731dc36bf1d2d1a9406}\label{uI2C_8cpp_a6434d4118a714731dc36bf1d2d1a9406} 
+\index{uI2C.cpp@{uI2C.cpp}!openI2CDevHandle@{openI2CDevHandle}}
+\index{openI2CDevHandle@{openI2CDevHandle}!uI2C.cpp@{uI2C.cpp}}
+\doxysubsubsection{\texorpdfstring{openI2CDevHandle()}{openI2CDevHandle()}}
+{\footnotesize\ttfamily int open\+I2\+CDev\+Handle (\begin{DoxyParamCaption}\item[{const int}]{dev\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+Initiates an I2C device on the bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev\+\_\+addr} & 7-\/bit device adress \mbox{[}0 -\/ 0x7F\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the device handle, negative on error. 
+\end{DoxyReturn}
+\Hypertarget{uI2C_8cpp_a607cb25ea06e8ce952788a1e710e7f50}\label{uI2C_8cpp_a607cb25ea06e8ce952788a1e710e7f50} 
+\index{uI2C.cpp@{uI2C.cpp}!readFromI2CDev@{readFromI2CDev}}
+\index{readFromI2CDev@{readFromI2CDev}!uI2C.cpp@{uI2C.cpp}}
+\doxysubsubsection{\texorpdfstring{readFromI2CDev()}{readFromI2CDev()}}
+{\footnotesize\ttfamily int read\+From\+I2\+CDev (\begin{DoxyParamCaption}\item[{const int}]{dev\+\_\+handle,  }\item[{const int}]{reg,  }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{const int}]{data\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+reads block of bytes from device to buffer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev\+\_\+handle} & device handle obtained from {\ttfamily open\+I2\+CDev\+Handle} \\
+\hline
+{\em reg} & the command/data register \\
+\hline
+{\em buffer} & pointer to data buffer to hold received values \\
+\hline
+{\em data\+\_\+length} & number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes read, negative on error. 
+\end{DoxyReturn}
+\Hypertarget{uI2C_8cpp_ab73613a3b862a54f70dff0b5192cbcac}\label{uI2C_8cpp_ab73613a3b862a54f70dff0b5192cbcac} 
+\index{uI2C.cpp@{uI2C.cpp}!writeToI2CDev@{writeToI2CDev}}
+\index{writeToI2CDev@{writeToI2CDev}!uI2C.cpp@{uI2C.cpp}}
+\doxysubsubsection{\texorpdfstring{writeToI2CDev()}{writeToI2CDev()}}
+{\footnotesize\ttfamily int write\+To\+I2\+CDev (\begin{DoxyParamCaption}\item[{const int}]{dev\+\_\+handle,  }\item[{const int}]{reg,  }\item[{char \texorpdfstring{$\ast$}{*}}]{tx\+\_\+buffer,  }\item[{const int}]{data\+\_\+length,  }\item[{char \texorpdfstring{$\ast$}{*}}]{RFLAGS\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+writes block of bytes from buffer to device 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev\+\_\+handle} & device handle obtained from {\ttfamily open\+I2\+CDev\+Handle} \\
+\hline
+{\em reg} & the command/data register \\
+\hline
+{\em tx\+\_\+buffer} & pointer to data buffer holding the data to send \\
+\hline
+{\em data\+\_\+length} & number of bytes to send \\
+\hline
+{\em RFLAGS\+\_\+buffer} & buffer to hold returned flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on OK, negative on error. 
+\end{DoxyReturn}

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_72ca79b112bcff11cd9271528e6d002d" kind="dir">
+    <compoundname>lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver</compoundname>
+    <innerdir refid="dir_1f8acbea3d2fa5a5471da68583a44d9a">lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/include</innerdir>
+    <innerdir refid="dir_d858bba49e679975ecb3b6a5c48c08b4">lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_hardware_driver/"/>
+  </compounddef>
+</doxygen>

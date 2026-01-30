@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_fb2eed3eb5ccd33720b2bab882c2b847" kind="dir">
+    <compoundname>lib/ros2_ws/src/system_test_packages/max_accel_test/src</compoundname>
+    <innerfile refid="max__accel__test_2src_2main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/system_test_packages/max_accel_test/src/"/>
+  </compounddef>
+</doxygen>

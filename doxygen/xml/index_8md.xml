@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="index_8md" kind="file" language="Markdown">
+    <compoundname>index.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Bioscara<sp/>C++<sp/>API<sp/>Documentation</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>the<sp/>API<sp/>documentation<sp/>for<sp/>the<sp/>Bioscara<sp/>robotic<sp/>control<sp/>middleware<sp/>based<sp/>on<sp/>the<sp/>ROS2<sp/>framework.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>TODO<sp/>link<sp/>components<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">Joint<sp/>firmware</highlight></codeline>
+<codeline><highlight class="normal">Hardware<sp/>drivers</highlight></codeline>
+<codeline><highlight class="normal">Hardware<sp/>interfaces</highlight></codeline>
+<codeline><highlight class="normal">Single<sp/>Trigger<sp/>controller</highlight></codeline>
+    </programlisting>
+    <location file="docs/doxygen/index.md"/>
+  </compounddef>
+</doxygen>

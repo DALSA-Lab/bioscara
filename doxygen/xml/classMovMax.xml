@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classMovMax" kind="class" language="C++" prot="public">
+    <compoundname>MovMax</compoundname>
+    <includes refid="filters_8h" local="no">filters.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classMovMax_1aa692a6af7d2e32b4a645a7add6ab2b2c" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MovMax::M</definition>
+        <argsstring></argsstring>
+        <name>M</name>
+        <qualifiedname>MovMax::M</qualifiedname>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/joint_firmware/joint/filters.h" line="49" column="16" bodyfile="lib/joint_firmware/joint/filters.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMovMax_1abeed8527a75d1305e84320fde87a9eee" prot="protected" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* MovMax::cb_data</definition>
+        <argsstring></argsstring>
+        <name>cb_data</name>
+        <qualifiedname>MovMax::cb_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/joint_firmware/joint/filters.h" line="51" column="9" bodyfile="lib/joint_firmware/joint/filters.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMovMax_1a5395671dbb651a64510d5430ca99fadd" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MovMax::cb_index</definition>
+        <argsstring></argsstring>
+        <name>cb_index</name>
+        <qualifiedname>MovMax::cb_index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/joint_firmware/joint/filters.h" line="52" column="16" bodyfile="lib/joint_firmware/joint/filters.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMovMax_1abd83f665cd06bc3eff6fb7d741200b2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MovMax::MovMax</definition>
+        <argsstring>(float windowSize)</argsstring>
+        <name>MovMax</name>
+        <qualifiedname>MovMax::MovMax</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>windowSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/joint_firmware/joint/filters.h" line="57" column="3" bodyfile="lib/joint_firmware/joint/filters.h" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classMovMax_1ada7066045a5a72f9333f1b84583e1cc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float MovMax::updateState</definition>
+        <argsstring>(float u)</argsstring>
+        <name>updateState</name>
+        <qualifiedname>MovMax::updateState</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/joint_firmware/joint/filters.h" line="63" column="9" bodyfile="lib/joint_firmware/joint/filters.h" bodystart="63" bodyend="77"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/joint_firmware/joint/filters.h" line="46" column="1" bodyfile="lib/joint_firmware/joint/filters.h" bodystart="46" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classMovMax_1abeed8527a75d1305e84320fde87a9eee" prot="protected" virt="non-virtual"><scope>MovMax</scope><name>cb_data</name></member>
+      <member refid="classMovMax_1a5395671dbb651a64510d5430ca99fadd" prot="protected" virt="non-virtual"><scope>MovMax</scope><name>cb_index</name></member>
+      <member refid="classMovMax_1aa692a6af7d2e32b4a645a7add6ab2b2c" prot="protected" virt="non-virtual"><scope>MovMax</scope><name>M</name></member>
+      <member refid="classMovMax_1abd83f665cd06bc3eff6fb7d741200b2c" prot="public" virt="non-virtual"><scope>MovMax</scope><name>MovMax</name></member>
+      <member refid="classMovMax_1ada7066045a5a72f9333f1b84583e1cc9" prot="public" virt="non-virtual"><scope>MovMax</scope><name>updateState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

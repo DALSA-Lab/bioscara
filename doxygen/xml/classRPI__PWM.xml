@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classRPI__PWM" kind="class" language="C++" prot="public">
+    <compoundname>RPI_PWM</compoundname>
+    <includes refid="uPWM_8h" local="no">uPWM.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRPI__PWM_1a980677ec3d3119a4dc69a66cf73f1de6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RPI_PWM::per</definition>
+        <argsstring></argsstring>
+        <name>per</name>
+        <qualifiedname>RPI_PWM::per</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="122" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRPI__PWM_1a35df433d8a5faeed71f439ea6063030a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string RPI_PWM::chippath</definition>
+        <argsstring></argsstring>
+        <name>chippath</name>
+        <qualifiedname>RPI_PWM::chippath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="124" column="17" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRPI__PWM_1a62b8d2b406cbb62d2703d282bdc703d9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string RPI_PWM::pwmpath</definition>
+        <argsstring></argsstring>
+        <name>pwmpath</name>
+        <qualifiedname>RPI_PWM::pwmpath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="125" column="17" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRPI__PWM_1a99e582b3b8571eb991c80268d6024cd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int RPI_PWM::start</definition>
+        <argsstring>(int channel, int frequency, float duty_cycle=0, int chip=2)</argsstring>
+        <name>start</name>
+        <qualifiedname>RPI_PWM::start</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>frequency</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>duty_cycle</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>chip</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+<para>Starts the PWM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The GPIO channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PWM frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>duty_cycle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial duty cycle of the PWM (default 0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The chip number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&gt;0 on success and -1 if an error has happened. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="45" column="9" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="45" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classRPI__PWM_1a1ca02994ab743f3397bce2ebc2b745ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RPI_PWM::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>RPI_PWM::stop</qualifiedname>
+        <briefdescription>
+<para>Stops the PWM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="71" column="10" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classRPI__PWM_1a48018f0627c5c22a313a2d69b0bb3301" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RPI_PWM::~RPI_PWM</definition>
+        <argsstring>()</argsstring>
+        <name>~RPI_PWM</name>
+        <qualifiedname>RPI_PWM::~RPI_PWM</qualifiedname>
+        <briefdescription>
+<para>Destroy the <ref refid="classRPI__PWM" kindref="compound">RPI_PWM</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Invokes <ref refid="classRPI__PWM_1ade7c53f4c16b0dc40e8e8f38eb151a89" kindref="member">disable()</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="82" column="5" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classRPI__PWM_1aa873d369ec4dec004a6be8ba63606c11" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int RPI_PWM::setDutyCycle</definition>
+        <argsstring>(float v) const</argsstring>
+        <name>setDutyCycle</name>
+        <qualifiedname>RPI_PWM::setDutyCycle</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Sets the duty cycle in percent 0 - 100. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The duty cycle in percent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&gt;0 on success and -1 after an error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="92" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="92" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classRPI__PWM_1a6d1eaddac5428733db69f27d962b0cc3" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RPI_PWM::setPeriod</definition>
+        <argsstring>(int ns) const</argsstring>
+        <name>setPeriod</name>
+        <qualifiedname>RPI_PWM::setPeriod</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="101" column="10" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classRPI__PWM_1acd7a572ed91355ae643f39689c5c8174" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int RPI_PWM::setDutyCycleNS</definition>
+        <argsstring>(int ns) const</argsstring>
+        <name>setDutyCycleNS</name>
+        <qualifiedname>RPI_PWM::setDutyCycleNS</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="106" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="106" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classRPI__PWM_1aa023cdb54ae0945f74c454d70d654a58" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RPI_PWM::enable</definition>
+        <argsstring>() const</argsstring>
+        <name>enable</name>
+        <qualifiedname>RPI_PWM::enable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="112" column="10" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classRPI__PWM_1ade7c53f4c16b0dc40e8e8f38eb151a89" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RPI_PWM::disable</definition>
+        <argsstring>() const</argsstring>
+        <name>disable</name>
+        <qualifiedname>RPI_PWM::disable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="117" column="10" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classRPI__PWM_1a96f1e19737bef5df387113a7dd7ca0f3" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int RPI_PWM::writeSYS</definition>
+        <argsstring>(std::string filename, int value) const</argsstring>
+        <name>writeSYS</name>
+        <qualifiedname>RPI_PWM::writeSYS</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="127" column="16" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="127" bodyend="137"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class to create a Pulse Width Modulated (PWM) signal on the Raspberry PI 4 and 5. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Based on <ulink url="https://github.com/berndporr/rpi_pwm/blob/main/rpi_pwm.h">https://github.com/berndporr/rpi_pwm/blob/main/rpi_pwm.h</ulink> and slightly modified.</para>
+<para>For servo control it is important to use a hardware generated PWM, since software PWM, like it is created by the lgpio library, is subject to timing jitter which can cause the servo to figet which might lead to overheating and wear. </para>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" line="33" column="1" bodyfile="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/uPWM.h" bodystart="34" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classRPI__PWM_1a35df433d8a5faeed71f439ea6063030a" prot="private" virt="non-virtual"><scope>RPI_PWM</scope><name>chippath</name></member>
+      <member refid="classRPI__PWM_1ade7c53f4c16b0dc40e8e8f38eb151a89" prot="private" virt="non-virtual"><scope>RPI_PWM</scope><name>disable</name></member>
+      <member refid="classRPI__PWM_1aa023cdb54ae0945f74c454d70d654a58" prot="private" virt="non-virtual"><scope>RPI_PWM</scope><name>enable</name></member>
+      <member refid="classRPI__PWM_1a980677ec3d3119a4dc69a66cf73f1de6" prot="private" virt="non-virtual"><scope>RPI_PWM</scope><name>per</name></member>
+      <member refid="classRPI__PWM_1a62b8d2b406cbb62d2703d282bdc703d9" prot="private" virt="non-virtual"><scope>RPI_PWM</scope><name>pwmpath</name></member>
+      <member refid="classRPI__PWM_1aa873d369ec4dec004a6be8ba63606c11" prot="public" virt="non-virtual"><scope>RPI_PWM</scope><name>setDutyCycle</name></member>
+      <member refid="classRPI__PWM_1acd7a572ed91355ae643f39689c5c8174" prot="private" virt="non-virtual"><scope>RPI_PWM</scope><name>setDutyCycleNS</name></member>
+      <member refid="classRPI__PWM_1a6d1eaddac5428733db69f27d962b0cc3" prot="private" virt="non-virtual"><scope>RPI_PWM</scope><name>setPeriod</name></member>
+      <member refid="classRPI__PWM_1a99e582b3b8571eb991c80268d6024cd8" prot="public" virt="non-virtual"><scope>RPI_PWM</scope><name>start</name></member>
+      <member refid="classRPI__PWM_1a1ca02994ab743f3397bce2ebc2b745ed" prot="public" virt="non-virtual"><scope>RPI_PWM</scope><name>stop</name></member>
+      <member refid="classRPI__PWM_1a96f1e19737bef5df387113a7dd7ca0f3" prot="private" virt="non-virtual"><scope>RPI_PWM</scope><name>writeSYS</name></member>
+      <member refid="classRPI__PWM_1a48018f0627c5c22a313a2d69b0bb3301" prot="public" virt="non-virtual"><scope>RPI_PWM</scope><name>~RPI_PWM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

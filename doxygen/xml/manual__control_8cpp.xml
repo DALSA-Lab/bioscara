@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="manual__control_8cpp" kind="file" language="C++">
+    <compoundname>manual_control.cpp</compoundname>
+    <includes local="no">signal.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">limits</includes>
+    <includes refid="mGripper_8h" local="yes">bioscara_gripper_hardware_driver/mGripper.h</includes>
+    <includes refid="manual__control_8h" local="yes">manual_control.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>bioscara_arm_hardware_driver/uErr.h</label>
+        <link refid="uErr_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>bioscara_gripper_hardware_driver/mBaseGripper.h</label>
+        <link refid="mBaseGripper_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>bioscara_gripper_hardware_driver/mGripper.h</label>
+        <link refid="mGripper_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>bioscara_gripper_hardware_driver/uPWM.h</label>
+        <link refid="uPWM_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp</label>
+        <link refid="manual__control_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>manual_control.h</label>
+        <link refid="manual__control_8h"/>
+      </node>
+      <node id="10">
+        <label>chrono</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>limits</label>
+      </node>
+      <node id="15">
+        <label>math.h</label>
+      </node>
+      <node id="2">
+        <label>signal.h</label>
+      </node>
+      <node id="12">
+        <label>stdio.h</label>
+      </node>
+      <node id="13">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="14">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" prot="public" static="no" mutable="no">
+        <type><ref refid="classbioscara__hardware__drivers_1_1Gripper" kindref="compound">Gripper</ref></type>
+        <definition>Gripper _Gripper(1, 0, 0, 100, 0.08)</definition>
+        <argsstring>(1, 0, 0, 100, 0.08)</argsstring>
+        <name>_Gripper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" line="11" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="manual__control_8cpp_1af9b80db93c2f990422ecd0295b90668a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref></type>
+        <definition>void INT_handler</definition>
+        <argsstring>(int s)</argsstring>
+        <name>INT_handler</name>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" line="13" column="6" bodyfile="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" bodystart="13" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="manual__control_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">int</ref></type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">char</ref> **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" line="21" column="5" bodyfile="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" bodystart="21" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="manual__control_8cpp_1a6acba5e3fefc8f68101e187e16d5a902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref></type>
+        <definition>void read_angle</definition>
+        <argsstring>()</argsstring>
+        <name>read_angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" line="69" column="6" bodyfile="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" bodystart="69" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="manual__control_8cpp_1affb6d356d1a8dab7c82573250405023a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref></type>
+        <definition>void read_width</definition>
+        <argsstring>()</argsstring>
+        <name>read_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" line="89" column="6" bodyfile="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" bodystart="89" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="manual__control_8cpp_1a24f7978abf40bfbedfebbb698157b8c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref></type>
+        <definition>void read_offset</definition>
+        <argsstring>()</argsstring>
+        <name>read_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" line="109" column="6" bodyfile="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" bodystart="109" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="manual__control_8cpp_1afa3679662405460881b7003e4bd95cf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref></type>
+        <definition>void read_reduction</definition>
+        <argsstring>()</argsstring>
+        <name>read_reduction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" line="130" column="6" bodyfile="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp" bodystart="130" bodyend="149"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mGripper_8h" kindref="compound">bioscara_gripper_hardware_driver/mGripper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="manual__control_8h" kindref="compound">manual_control.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacebioscara__hardware__drivers" kindref="compound">bioscara_hardware_drivers</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="classbioscara__hardware__drivers_1_1Gripper" kindref="compound">Gripper</ref><sp/><ref refid="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" kindref="member">_Gripper</ref>(1,<sp/>0,<sp/>0,<sp/>100,0.08);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="manual__control_8cpp_1af9b80db93c2f990422ecd0295b90668a" kindref="member">INT_handler</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">s</ref>)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">printf</ref>(</highlight><highlight class="stringliteral">&quot;Caught<sp/>signal<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" kindref="member">_Gripper</ref>.<ref refid="classbioscara__hardware__drivers_1_1Gripper_1a15e81fdb19ac401043423db0ada77368" kindref="member">disable</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" kindref="member">_Gripper</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseGripper_1a71f6d89f40cc0ff6a4e94972b92d8f61" kindref="member">deinit</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">exit</ref>(1);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="manual__control_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">argc</ref>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">argv</ref>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">signal</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">SIGINT</ref>,<sp/><ref refid="manual__control_8cpp_1af9b80db93c2f990422ecd0295b90668a" kindref="member">INT_handler</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref>)<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">argc</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">void</ref>)<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">argv</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" kindref="member">_Gripper</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseGripper_1a6b8832da36c84c9e2eeff2a5b86a3135" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" kindref="member">_Gripper</ref>.<ref refid="classbioscara__hardware__drivers_1_1Gripper_1ab08eb3424c419db0577deddf70fadacb" kindref="member">enable</ref>()<sp/>!=<sp/>err_type_t::OK)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cerr</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Gripper<sp/>not<sp/>enabled&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">endl</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Control<sp/>the<sp/>gripper<sp/>by<sp/>width<sp/>(w)<sp/>or<sp/>actuator<sp/>angle<sp/>(a)<sp/>[w/a]:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref><sp/>&gt;&gt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.clear();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">mode</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;w&apos;</highlight><highlight class="normal"><sp/>||<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">mode</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;W&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="manual__control_8cpp_1afa3679662405460881b7003e4bd95cf6" kindref="member">read_reduction</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="manual__control_8cpp_1a24f7978abf40bfbedfebbb698157b8c7" kindref="member">read_offset</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="manual__control_8cpp_1affb6d356d1a8dab7c82573250405023a" kindref="member">read_width</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">mode</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>||<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">mode</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="manual__control_8cpp_1a6acba5e3fefc8f68101e187e16d5a902" kindref="member">read_angle</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>input:<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">mode</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">endl</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="manual__control_8cpp_1a6acba5e3fefc8f68101e187e16d5a902" kindref="member">read_angle</ref>()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;enter<sp/>the<sp/>actuator<sp/>angle<sp/>in<sp/>degrees<sp/>(-180<sp/>&lt;=<sp/>x<sp/>&lt;=<sp/>+180):<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref><sp/>&gt;&gt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>input!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">endl</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.clear();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" kindref="member">_Gripper</ref>.<ref refid="classbioscara__hardware__drivers_1_1Gripper_1a3ecdc7bfd94d407e430ca15c8cbcb5cc" kindref="member">setServoPosition</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>)<sp/>!=<sp/>err_type_t::OK)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cerr</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>set<sp/>position!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">endl</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="manual__control_8cpp_1affb6d356d1a8dab7c82573250405023a" kindref="member">read_width</ref>()</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Enter<sp/>the<sp/>gripper<sp/>width<sp/>in<sp/>mm:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref><sp/>&gt;&gt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>input!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">endl</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.clear();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" kindref="member">_Gripper</ref>.<ref refid="classbioscara__hardware__drivers_1_1Gripper_1abdf1f8e545da0a246f4effd78ae09f35" kindref="member">setPosition</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref><sp/>/<sp/>1000.0)<sp/>!=<sp/>err_type_t::OK)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cerr</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>set<sp/>position!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">endl</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="manual__control_8cpp_1a24f7978abf40bfbedfebbb698157b8c7" kindref="member">read_offset</ref>()</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Enter<sp/>the<sp/>offset:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref><sp/>&gt;&gt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>input!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">endl</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.clear();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" kindref="member">_Gripper</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseGripper_1ad66c8a68783f65ca2dacb4cf93ce7ee9" kindref="member">setOffset</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="manual__control_8cpp_1afa3679662405460881b7003e4bd95cf6" kindref="member">read_reduction</ref>()</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Enter<sp/>the<sp/>reduction:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref><sp/>&gt;&gt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>input!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">endl</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.clear();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="manual__control_8cpp_1a36ad23fb8c7a01dbaf0355f35a45f2b6" kindref="member">_Gripper</ref>.<ref refid="classbioscara__hardware__drivers_1_1BaseGripper_1aa7e516774731da7d7c2501317d3ba5e5" kindref="member">setReduction</ref>(<ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">i</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="joint_8h_1a018130d8f5ce298859605a5c8e1320ee" kindref="member">cin</ref>.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="lib/ros2_ws/src/system_test_packages/gripper_manual_control/src/manual_control.cpp"/>
+  </compounddef>
+</doxygen>

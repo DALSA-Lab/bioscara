@@ -1,0 +1,78 @@
+\doxysection{lib/ros2\+\_\+ws/src/moveit\+\_\+motion\+\_\+plans/src/pilz\+\_\+sequence.cpp File Reference}
+\hypertarget{pilz__sequence_8cpp}{}\label{pilz__sequence_8cpp}\index{lib/ros2\_ws/src/moveit\_motion\_plans/src/pilz\_sequence.cpp@{lib/ros2\_ws/src/moveit\_motion\_plans/src/pilz\_sequence.cpp}}
+{\ttfamily \#include $<$rclcpp/rclcpp.\+hpp$>$}\newline
+{\ttfamily \#include $<$rclcpp\+\_\+action/rclcpp\+\_\+action.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit/move\+\_\+group\+\_\+interface/move\+\_\+group\+\_\+interface.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit/planning\+\_\+pipeline/planning\+\_\+pipeline.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit/robot\+\_\+trajectory/robot\+\_\+trajectory.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit/robot\+\_\+state/conversions.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit/kinematic\+\_\+constraints/utils.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit\+\_\+visual\+\_\+tools/moveit\+\_\+visual\+\_\+tools.\+h$>$}\newline
+{\ttfamily \#include $<$moveit\+\_\+msgs/msg/motion\+\_\+sequence\+\_\+item.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit\+\_\+msgs/msg/motion\+\_\+sequence\+\_\+request.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit\+\_\+msgs/msg/planning\+\_\+options.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit\+\_\+msgs/srv/get\+\_\+motion\+\_\+sequence.\+hpp$>$}\newline
+{\ttfamily \#include $<$moveit\+\_\+msgs/action/move\+\_\+group\+\_\+sequence.\+hpp$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTrajectorySequence}{Trajectory\+Sequence}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{pilz__sequence_8cpp_a58e32679db784894316c9fa3827ee5a2}{Goal\+Handle\+Move\+Group\+Sequence}} = rclcpp\+\_\+action\+::\+Client\+Goal\+Handle$<$ \mbox{\hyperlink{pilz__sequence_8cpp_aaafc780b942e5157f260bf8abd46a43b}{Move\+Group\+Sequence}} $>$
+\item 
+using \mbox{\hyperlink{pilz__sequence_8cpp_a0de0573c78ea15165bcd03d89c814cca}{Get\+Motion\+Sequence}} = moveit\+\_\+msgs\+::srv\+::\+Get\+Motion\+Sequence
+\item 
+using \mbox{\hyperlink{pilz__sequence_8cpp_aaafc780b942e5157f260bf8abd46a43b}{Move\+Group\+Sequence}} = moveit\+\_\+msgs\+::action\+::\+Move\+Group\+Sequence
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{pilz__sequence_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto const \mbox{\hyperlink{pilz__sequence_8cpp_a9e74a0fbe961d2e0b2919c7d08d07bc4}{LOGGER}} = rclcpp\+::get\+\_\+logger("{}pilz\+\_\+sequence\+\_\+node"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{pilz__sequence_8cpp_a0de0573c78ea15165bcd03d89c814cca}\label{pilz__sequence_8cpp_a0de0573c78ea15165bcd03d89c814cca} 
+\index{pilz\_sequence.cpp@{pilz\_sequence.cpp}!GetMotionSequence@{GetMotionSequence}}
+\index{GetMotionSequence@{GetMotionSequence}!pilz\_sequence.cpp@{pilz\_sequence.cpp}}
+\doxysubsubsection{\texorpdfstring{GetMotionSequence}{GetMotionSequence}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{pilz__sequence_8cpp_a0de0573c78ea15165bcd03d89c814cca}{Get\+Motion\+Sequence}} =  moveit\+\_\+msgs\+::srv\+::\+Get\+Motion\+Sequence}
+
+\Hypertarget{pilz__sequence_8cpp_a58e32679db784894316c9fa3827ee5a2}\label{pilz__sequence_8cpp_a58e32679db784894316c9fa3827ee5a2} 
+\index{pilz\_sequence.cpp@{pilz\_sequence.cpp}!GoalHandleMoveGroupSequence@{GoalHandleMoveGroupSequence}}
+\index{GoalHandleMoveGroupSequence@{GoalHandleMoveGroupSequence}!pilz\_sequence.cpp@{pilz\_sequence.cpp}}
+\doxysubsubsection{\texorpdfstring{GoalHandleMoveGroupSequence}{GoalHandleMoveGroupSequence}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{pilz__sequence_8cpp_a58e32679db784894316c9fa3827ee5a2}{Goal\+Handle\+Move\+Group\+Sequence}} =  rclcpp\+\_\+action\+::\+Client\+Goal\+Handle$<$\mbox{\hyperlink{pilz__sequence_8cpp_aaafc780b942e5157f260bf8abd46a43b}{Move\+Group\+Sequence}}$>$}
+
+\Hypertarget{pilz__sequence_8cpp_aaafc780b942e5157f260bf8abd46a43b}\label{pilz__sequence_8cpp_aaafc780b942e5157f260bf8abd46a43b} 
+\index{pilz\_sequence.cpp@{pilz\_sequence.cpp}!MoveGroupSequence@{MoveGroupSequence}}
+\index{MoveGroupSequence@{MoveGroupSequence}!pilz\_sequence.cpp@{pilz\_sequence.cpp}}
+\doxysubsubsection{\texorpdfstring{MoveGroupSequence}{MoveGroupSequence}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{pilz__sequence_8cpp_aaafc780b942e5157f260bf8abd46a43b}{Move\+Group\+Sequence}} =  moveit\+\_\+msgs\+::action\+::\+Move\+Group\+Sequence}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{pilz__sequence_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{pilz__sequence_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{pilz\_sequence.cpp@{pilz\_sequence.cpp}!main@{main}}
+\index{main@{main}!pilz\_sequence.cpp@{pilz\_sequence.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{pilz__sequence_8cpp_a9e74a0fbe961d2e0b2919c7d08d07bc4}\label{pilz__sequence_8cpp_a9e74a0fbe961d2e0b2919c7d08d07bc4} 
+\index{pilz\_sequence.cpp@{pilz\_sequence.cpp}!LOGGER@{LOGGER}}
+\index{LOGGER@{LOGGER}!pilz\_sequence.cpp@{pilz\_sequence.cpp}}
+\doxysubsubsection{\texorpdfstring{LOGGER}{LOGGER}}
+{\footnotesize\ttfamily auto const LOGGER = rclcpp\+::get\+\_\+logger("{}pilz\+\_\+sequence\+\_\+node"{})}
+

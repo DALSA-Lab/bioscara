@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Bioscara C++ API Documentation</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_docs_2doxygen_2index"/>This is the API documentation for the Bioscara robotic control middleware based on the ROS2 framework.</para>
+<para>Joint firmware Hardware drivers Hardware interfaces Single Trigger controller </para>
+    </detaileddescription>
+    <location file="docs/doxygen/index.md"/>
+  </compounddef>
+</doxygen>

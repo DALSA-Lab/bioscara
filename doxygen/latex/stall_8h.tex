@@ -1,0 +1,48 @@
+\doxysection{lib/joint\+\_\+firmware/joint/stall.h File Reference}
+\hypertarget{stall_8h}{}\label{stall_8h}\index{lib/joint\_firmware/joint/stall.h@{lib/joint\_firmware/joint/stall.h}}
+
+
+Helper functions for improved stall detection.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{stall_8h_a20b63ab92f5a7c21541a9382c1d1e6a4}{stall\+\_\+threshold}} (float qd\+\_\+rad, float offset)
+\begin{DoxyCompactList}\small\item\em computes the speed adaptive threshold. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper functions for improved stall detection. 
+
+\begin{DoxyAuthor}{Author}
+sbstorz 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/05-\/27
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{stall_8h_a20b63ab92f5a7c21541a9382c1d1e6a4}\label{stall_8h_a20b63ab92f5a7c21541a9382c1d1e6a4} 
+\index{stall.h@{stall.h}!stall\_threshold@{stall\_threshold}}
+\index{stall\_threshold@{stall\_threshold}!stall.h@{stall.h}}
+\doxysubsubsection{\texorpdfstring{stall\_threshold()}{stall\_threshold()}}
+{\footnotesize\ttfamily float stall\+\_\+threshold (\begin{DoxyParamCaption}\item[{float}]{qd\+\_\+rad,  }\item[{float}]{offset }\end{DoxyParamCaption})}
+
+
+
+computes the speed adaptive threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qd\+\_\+rad} & speed in rad/s. Should be measured speed because set speed is only available in velocity mode. \\
+\hline
+\end{DoxyParams}

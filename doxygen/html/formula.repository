@@ -1,0 +1,17 @@
+\_form#0=8x6:$r$
+\_form#1=6x6:$o$
+\_form#2=10x6:$w$
+\_form#3=8x6:$\alpha$
+\_form#4=70x14:\[
+  \alpha = r (w-o)
+  \]
+\_form#5=15x9:$w_1$
+\_form#6=13x9:$\alpha_1$
+\_form#7=15x9:$w_2$
+\_form#8=13x9:$\alpha_2$
+\_form#9=96x25:\[
+  o = \frac{\alpha_1 w_2 -  \alpha_2 w_1}{\alpha_1 - \alpha_2}
+  \]
+\_form#10=61x26:\[
+  r = \frac{\alpha_1}{w_1 - o}
+  \]

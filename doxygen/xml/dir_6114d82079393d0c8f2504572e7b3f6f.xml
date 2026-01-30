@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_6114d82079393d0c8f2504572e7b3f6f" kind="dir">
+    <compoundname>lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver</compoundname>
+    <innerfile refid="mBaseGripper_8h">mBaseGripper.h</innerfile>
+    <innerfile refid="mGripper_8h">mGripper.h</innerfile>
+    <innerfile refid="mMockGripper_8h">mMockGripper.h</innerfile>
+    <innerfile refid="uPWM_8h">uPWM.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/ros2_ws/src/dalsa_bioscara_grippers/bioscara_gripper_hardware_driver/include/bioscara_gripper_hardware_driver/"/>
+  </compounddef>
+</doxygen>

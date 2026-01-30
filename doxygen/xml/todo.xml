@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Member <ref refid="classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1adf7c055a54ae3c1810743de2296585d4" kindref="member">bioscara_hardware_interfaces::BioscaraArmHardwareInterface::on_init</ref>  (const hardware_interface::HardwareComponentInterfaceParams &amp;params) override</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000001"/>threshold and current are uint8_t, if a number larger outside 0 &lt; n &lt; 255 is passed as a parameters it will overflow. </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="todo"/>
+  </compounddef>
+</doxygen>

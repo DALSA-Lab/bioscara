@@ -1,0 +1,851 @@
+\doxysection{bioscara\+\_\+hardware\+\_\+drivers\+::Joint Class Reference}
+\hypertarget{classbioscara__hardware__drivers_1_1Joint}{}\label{classbioscara__hardware__drivers_1_1Joint}\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+
+
+Representing a single hardware joint connected via I2C.  
+
+
+
+
+{\ttfamily \#include $<$m\+Joint.\+h$>$}
+
+Inheritance diagram for bioscara\+\_\+hardware\+\_\+drivers\+::Joint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbioscara__hardware__drivers_1_1Joint}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a15158462a50f041035e39d3bd98f9624}{Joint}} (const std\+::string \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aca33fbf6ffb94cf1cd15c5b9354eb643}{name}}, const int \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_aa56fb271850d0c7416e29390f0c9b01b}{address}}, const float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a20acf935ce8f212f17cabf3a18685517}{reduction}}, const float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a408272f7c846f1ee7bd139203dbcb12e}{min}}, const float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a39932890fc3174218cb79a0068a26d5b}{max}})
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_acdc5b57844833a7ac8a563f7527f961d}{\texorpdfstring{$\sim$}{\string~}\+Joint}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_aca63d0af8ba889417a16bc15510a565b}{init}} (void) override
+\begin{DoxyCompactList}\small\item\em Initialize connection to a joint via I2C. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a88b63de2e0d43456fd70249ab1c525e5}{deinit}} (void) override
+\begin{DoxyCompactList}\small\item\em Disconnects from a joint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a4fba72ada8234cb624658560a3c40530}{enable}} (u\+\_\+int8\+\_\+t drive\+Current, u\+\_\+int8\+\_\+t hold\+Current) override
+\begin{DoxyCompactList}\small\item\em Engages the joint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a00cdbe2e89b9955f83b891eaa259f1d3}{post\+Homing}} (void) override
+\begin{DoxyCompactList}\small\item\em perform tasks after a non-\/blocking homing   \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_aa48673be56b04a573142ee8c9ad18e20}{get\+Position}} (float \&pos) override
+\begin{DoxyCompactList}\small\item\em get the current joint position in radians or m for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a8d477e842ea6139ca17fde0af43bc482}{set\+Position}} (float pos) override
+\begin{DoxyCompactList}\small\item\em get the current joint position in radians or m for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_af1a075a16a36e1ab5d6c81362c5f99d6}{move\+Steps}} (int32\+\_\+t steps) override
+\begin{DoxyCompactList}\small\item\em Move full steps. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a12e554163eb7cb23f6b5b07da4b8705a}{get\+Velocity}} (float \&vel) override
+\begin{DoxyCompactList}\small\item\em get the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a5b2479210b861c53c3c4e53cf12d75be}{set\+Velocity}} (float vel) override
+\begin{DoxyCompactList}\small\item\em Set the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a5055eb9a482ef4f8114a58f8a772260d}{check\+Orientation}} (float angle=2.\+0) override
+\begin{DoxyCompactList}\small\item\em Calls the check\+Orientation method of the motor. Checks in which direction the motor is turning. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a7a11a2f2d49749ec2e0118dab8adfde5}{stop}} (void) override
+\begin{DoxyCompactList}\small\item\em Stops the motor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a9b05f23c836dd08824b21628381cf324}{disable\+CL}} (void) override
+\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_aabac8baa0314469b9b0235a2ff712107}{set\+Drive\+Current}} (u\+\_\+int8\+\_\+t current) override
+\begin{DoxyCompactList}\small\item\em Set the Drive Current. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a21373b0df29cc283a40aeba42a0d0656}{set\+Hold\+Current}} (u\+\_\+int8\+\_\+t current) override
+\begin{DoxyCompactList}\small\item\em Set the Hold Current. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a3fc257cb593d6a70599c4f8630ff1c33}{set\+Brake\+Mode}} (u\+\_\+int8\+\_\+t mode) override
+\begin{DoxyCompactList}\small\item\em Set Brake Mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a40598bc9a450734c35b7a8060d50170e}{set\+Max\+Acceleration}} (float max\+Accel) override
+\begin{DoxyCompactList}\small\item\em Set the maximum permitted joint acceleration (and deceleration) in rad/s\texorpdfstring{$^\wedge$}{\string^}2 or m/s\texorpdfstring{$^\wedge$}{\string^}2 for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a9a3a794f43851cd6a6ae5068dff59d95}{set\+Max\+Velocity}} (float max\+Vel) override
+\begin{DoxyCompactList}\small\item\em Set the maximum permitted joint velocity in rad/s or m/s for cylindrical and prismatic joints respectively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a203608e60cc83c2078edf0c3a4a68dbe}{enable\+Stallguard}} (u\+\_\+int8\+\_\+t sensitivity) override
+\begin{DoxyCompactList}\small\item\em Enable encoder stall detection of the joint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a7c1f0ad13cedb16c6b0c3da6c88f8f94}{get\+Flags}} (void) override
+\begin{DoxyCompactList}\small\item\em Overload of \doxylink{classbioscara__hardware__drivers_1_1BaseJoint_a5c54829edfd4860f5ce333cda7044fb2}{get\+Flags(u\+\_\+int8\+\_\+t \&flags)} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a8cbc09097a8f6a428879bf84fe702629}{Base\+Joint}} (const std\+::string \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aca33fbf6ffb94cf1cd15c5b9354eb643}{name}})
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ad19e3022fe177cb6cfd3044a111e4abb}{\texorpdfstring{$\sim$}{\string~}\+Base\+Joint}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classbioscara__hardware__drivers_1_1BaseJoint}{Base\+Joint} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ab6d12171276b56bae07d1b194a90844e}{disable}} (void)
+\begin{DoxyCompactList}\small\item\em disenganges the joint \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a1e728f5477c6e683eacba485b0c4deef}{home}} (float velocity, u\+\_\+int8\+\_\+t sensitivity, u\+\_\+int8\+\_\+t current)
+\begin{DoxyCompactList}\small\item\em Blocking implementation to home the joint. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a81b05153ca250ea09930f955ecff09f2}{start\+Homing}} (float velocity, u\+\_\+int8\+\_\+t sensitivity, u\+\_\+int8\+\_\+t current)
+\begin{DoxyCompactList}\small\item\em non-\/blocking implementation to home the joint \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ad010a69043a9ee4578cadeebc85d9c80}{is\+Homed}} (void)
+\begin{DoxyCompactList}\small\item\em Checks the state if the motor is homed. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ad918d513bfb96f082b1d7e1cc1f430d2}{is\+Enabled}} (void)
+\begin{DoxyCompactList}\small\item\em Checks the state if the motor is enabled. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a3e0bf2ee963d94b7272ea31c38ee9021}{is\+Stalled}} (void)
+\begin{DoxyCompactList}\small\item\em Checks if the motor is stalled. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a3d59aa860f6b64e6fead60919386f518}{is\+Busy}} (void)
+\begin{DoxyCompactList}\small\item\em Checks if the joint controller is busy processing a blocking command. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a5c54829edfd4860f5ce333cda7044fb2}{get\+Flags}} (u\+\_\+int8\+\_\+t \&\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}})
+\begin{DoxyCompactList}\small\item\em get the latest driver state flags from the joint \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a412c4e474be5de0820d88b7d1d6084de}{get\+Current\+BCmd}} (void)
+\begin{DoxyCompactList}\small\item\em get the currently active blocking command \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_aada1bc3cffdd384f6cb7777091c9a7ec}{get\+Homing\+Offset}} (float \&\mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_af1d813e08ed0e7f9c9ca236a0802a371}{offset}})
+\begin{DoxyCompactList}\small\item\em Retrieves the homing position from the last homing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a36cb6ee03949c8ed8e57078d12c10b8f}{set\+Homing\+Offset}} (const float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_af1d813e08ed0e7f9c9ca236a0802a371}{offset}})
+\begin{DoxyCompactList}\small\item\em Stores the homing position on the joint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a6d416639501622575c86185620b2995b}{\+\_\+home}} (float velocity, u\+\_\+int8\+\_\+t sensitivity, u\+\_\+int8\+\_\+t current) override
+\begin{DoxyCompactList}\small\item\em Call to start the homing sequence of a joint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a9fb746226bee6133ca4469b6e1164834}{check\+Com}} (void)
+\begin{DoxyCompactList}\small\item\em Check if communication to the joint is established. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a8555f3dd707f20e8a30df9c642a5ffb1}{wait\+\_\+while\+\_\+busy}} (const float period\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Blocking loop waiting for BUSY flag to reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a20acf935ce8f212f17cabf3a18685517}{reduction}} = 1
+\begin{DoxyCompactList}\small\item\em \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} to actuator reduction ratio. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_af1d813e08ed0e7f9c9ca236a0802a371}{offset}} = 0
+\begin{DoxyCompactList}\small\item\em \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} position offset. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a408272f7c846f1ee7bd139203dbcb12e}{min}} = 0
+\begin{DoxyCompactList}\small\item\em \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} lower limit. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a39932890fc3174218cb79a0068a26d5b}{max}} = 0
+\begin{DoxyCompactList}\small\item\em \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} upper limit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+u\+\_\+int8\+\_\+t \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}} = 0b00001100
+\begin{DoxyCompactList}\small\item\em State flags transmitted with every I2C transaction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}} \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a6bf8458a8930ca6360304f736ef5c781}{current\+\_\+b\+\_\+cmd}} = \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45}{NONE}}
+\begin{DoxyCompactList}\small\item\em Keeps track if a blocking command is being executed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a81a8e4841ae03d04498d2f6ef3c08d82}{read}} (const \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}} \mbox{\hyperlink{joint_8ino_a9428adc9af4653a2050e2536b55dec8d}{reg}}, T \&data, u\+\_\+int8\+\_\+t \&\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}})
+\begin{DoxyCompactList}\small\item\em Wrapper function to request data from the I2C slave. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a6c6b257722e6d6b9c5d9f059fa9d0ca3}{write}} (const \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}} \mbox{\hyperlink{joint_8ino_a9428adc9af4653a2050e2536b55dec8d}{reg}}, T data, u\+\_\+int8\+\_\+t \&\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{flags}})
+\begin{DoxyCompactList}\small\item\em Wrapper function to send command to the I2C slave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_aa56fb271850d0c7416e29390f0c9b01b}{address}}
+\begin{DoxyCompactList}\small\item\em I2C adress. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbioscara__hardware__drivers_1_1Joint_a94ad561692bc595de865ddec3dc67a0f}{handle}} = -\/1
+\begin{DoxyCompactList}\small\item\em I2C bus handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}} \{ \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45}{NONE}} = 0x00
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ae8720d18d948fb556a54ababdd877f8b}{PING}} = 0x0f
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a223032f3646e3e996828736f484d447e}{SETUP}} = 0x10
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a1e84b541415e4add21c735fb451536d5}{SETRPM}} = 0x11
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad044a4c9f7da6cef029ccd1fff21eaa5}{GETDRIVERRPM}} = 0x12
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13aba49883a985d506aa5e4889fafdf7d65}{MOVESTEPS}} = 0x13
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ac941e7750fad733d1d6d923d31877a0a}{MOVEANGLE}} = 0x14
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a7047254578dd479cff21251d8596409d}{MOVETOANGLE}} = 0x15
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad0971de7ebe215ab10a090d9ad5f6647}{GETMOTORSTATE}} = 0x16
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a455aa94aa4bd470f083c2589eff9f416}{RUNCOTINOUS}} = 0x17
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab67f7cf4cf5b60110bd18c6e06af9753}{ANGLEMOVED}} = 0x18
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a5ac0b7e4fb8cf296c65aacef7e2f6c60}{SETCURRENT}} = 0x19
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab7538ca1e0d4576030825828eebea7d9}{SETHOLDCURRENT}} = 0x1A
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab6dd8689c0bd53792a8804b88a340c5f}{SETMAXACCELERATION}} = 0x1B
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab1667efd2009bea1883fd787b3d540eb}{SETMAXDECELERATION}} = 0x1C
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ab0c90e70f3ae738003f722537c435d7b}{SETMAXVELOCITY}} = 0x1D
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13aa27f384ee957893e8651a958d800f941}{ENABLESTALLGUARD}} = 0x1E
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad8021317a96d3c00769c83d0a590d381}{DISABLESTALLGUARD}} = 0x1F
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13af443d7efe7d7cf333a2787e7934a3ba3}{CLEARSTALL}} = 0x20
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ad926039be0b1d9ac5c666f79c57bed3d}{SETBRAKEMODE}} = 0x22
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a73c4a3a2c651b451dfa337a0150ca820}{ENABLEPID}} = 0x23
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a1c3a61c741f99de3dd3c421bdf2960bc}{DISABLEPID}} = 0x24
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a0a8b4b17b84327807a2221382093ccfe}{ENABLECLOSEDLOOP}} = 0x25
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a2dfb035a1b3bc28dd9b290f5ec426966}{DISABLECLOSEDLOOP}} = 0x26
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13afdb66020aebb4cfc209fde7c5cc5be44}{SETCONTROLTHRESHOLD}} = 0x27
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a41a2b4c4d34fef0226666308020f8294}{MOVETOEND}} = 0x28
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13ae64c24b0196c0b2014ba1dbb2c57ca0d}{STOP}} = 0x29
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a16de9b14545022bb1196eb795d4174e8}{GETPIDERROR}} = 0x2A
+, \newline
+\mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13afb43bf90bcd948c31c206dc15d92b4aa}{CHECKORIENTATION}} = 0x2B
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a1d87ebf442a24b863eddd8177460607e}{GETENCODERRPM}} = 0x2C
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a93a9a074f04be4b2316dbbca5882b6fa}{HOME}} = 0x2D
+, \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13a7bf8300e64d1c6a9154dda83299939e4}{HOMEOFFSET}} = 0x2E
+ \}
+\begin{DoxyCompactList}\small\item\em register and command definitions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aca33fbf6ffb94cf1cd15c5b9354eb643}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} name for logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representing a single hardware joint connected via I2C. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a15158462a50f041035e39d3bd98f9624}\label{classbioscara__hardware__drivers_1_1Joint_a15158462a50f041035e39d3bd98f9624} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!Joint@{Joint}}
+\index{Joint@{Joint}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{Joint()}{Joint()}}
+{\footnotesize\ttfamily bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::\+Joint (\begin{DoxyParamCaption}\item[{const std\+::string}]{name,  }\item[{const int}]{address,  }\item[{const float}]{reduction,  }\item[{const float}]{min,  }\item[{const float}]{max }\end{DoxyParamCaption})}
+
+
+
+Create a \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} object. 
+
+The \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} object represents a single joint and its actuator. Each \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} has a transmission with the following relationship\+: ~\newline
+ \begin{quote}
+actuator position = (joint position -\/ offset) \texorpdfstring{$\ast$}{*} reduction ~\newline
+joint position = actuator position / reduction + offset \end{quote}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & string device name for identification \\
+\hline
+{\em address} & 1-\/byte I2C device adress (0x11 ... 0x14) for J1 ... J4 \\
+\hline
+{\em reduction} & gear reduction of the joint. This is used to transform position and velocity values between in joint units and actuator (stepper) units. The sign depends on the direction the motor is mounted and is turning. Adjust such that the joint moves in the positive direction on on positive joint commands. Cable polarity has no effect since the motors automatically adjust to always run in the \textquotesingle{}right\textquotesingle{} direction from their point of view. ~\newline
+J1\+: 35 ~\newline
+J2\+: -\/2\texorpdfstring{$\ast$}{*}pi/0.004 (4 mm linear movement per stepper revolution) ~\newline
+J3\+: 24 ~\newline
+J4\+: 12 \\
+\hline
+{\em min} & lower joint limit in joint units. ~\newline
+J1\+: -\/3.\+04647 ~\newline
+J2\+: -\/0.\+0016 ~\newline
+J3\+: -\/2.\+62672 ~\newline
+J4\+: -\/3.\+01069 \\
+\hline
+{\em max} & upper joint limit in joint units. ~\newline
+J1\+: 3.\+04647 ~\newline
+J2\+: 0.\+3380 ~\newline
+J3\+: 2.\+62672 ~\newline
+J4\+: 3.\+01069 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_acdc5b57844833a7ac8a563f7527f961d}\label{classbioscara__hardware__drivers_1_1Joint_acdc5b57844833a7ac8a563f7527f961d} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!````~Joint@{\texorpdfstring{$\sim$}{\string~}Joint}}
+\index{````~Joint@{\texorpdfstring{$\sim$}{\string~}Joint}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Joint()}{\string~Joint()}}
+{\footnotesize\ttfamily bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::\texorpdfstring{$\sim$}{\string~}\+Joint (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} object. 
+
+Create a \doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} object.   
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a6d416639501622575c86185620b2995b}\label{classbioscara__hardware__drivers_1_1Joint_a6d416639501622575c86185620b2995b} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!\_home@{\_home}}
+\index{\_home@{\_home}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{\_home()}{\_home()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::\+\_\+home (\begin{DoxyParamCaption}\item[{float}]{velocity,  }\item[{u\+\_\+int8\+\_\+t}]{sensitivity,  }\item[{u\+\_\+int8\+\_\+t}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Call to start the homing sequence of a joint. 
+
+The joint will start rotating with the specified speed until a resistance which drives the PID error above the specified threshold is encountered. At this point the stepper stops and zeros the encoder. 
+\begin{DoxyParams}{Parameters}
+{\em velocity} & signed velocity in rad/s or m/s. Must be between 1.\+0 \texorpdfstring{$<$}{<} \doxylink{uTransmission_8h_aacc958134b53425ec947541bb72ac8b1}{RAD2\+DEG(\+JOINT2\+ACTUATOR(velocity, reduction, 0))} / 6 \texorpdfstring{$<$}{<} 250.\+0 \\
+\hline
+{\em sensitivity} & Encoder pid error threshold 0 to 255. \\
+\hline
+{\em current} & homing current, determines how easy it is to stop the motor and thereby provoke a stall\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ae05e1fd900c1d905ebec9a00ea5b2628}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a9fb746226bee6133ca4469b6e1164834}\label{classbioscara__hardware__drivers_1_1Joint_a9fb746226bee6133ca4469b6e1164834} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!checkCom@{checkCom}}
+\index{checkCom@{checkCom}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{checkCom()}{checkCom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::check\+Com (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if communication to the joint is established. 
+
+Sends a PING to and expects a ACK from the joint.
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a5055eb9a482ef4f8114a58f8a772260d}\label{classbioscara__hardware__drivers_1_1Joint_a5055eb9a482ef4f8114a58f8a772260d} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!checkOrientation@{checkOrientation}}
+\index{checkOrientation@{checkOrientation}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{checkOrientation()}{checkOrientation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::check\+Orientation (\begin{DoxyParamCaption}\item[{float}]{angle = {\ttfamily 2.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calls the check\+Orientation method of the motor. Checks in which direction the motor is turning. 
+
+\begin{DoxyNote}{Note}
+This is a blocking function. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & degrees how much the motor should turn. A few degrees is sufficient. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a5a5a86649f69fa130c73e6ef6815c241}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a88b63de2e0d43456fd70249ab1c525e5}\label{classbioscara__hardware__drivers_1_1Joint_a88b63de2e0d43456fd70249ab1c525e5} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!deinit@{deinit}}
+\index{deinit@{deinit}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Disconnects from a joint. 
+
+Removes the joint from the I2C bus by invoking \doxylink{uI2C_8h_afeb62c435271a8b6dd47be9e4428b746}{close\+I2\+CDev\+Handle()}.
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a6d5c44dc49dbcc361e8f0eb0a7f332d1}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a9b05f23c836dd08824b21628381cf324}\label{classbioscara__hardware__drivers_1_1Joint_a9b05f23c836dd08824b21628381cf324} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!disableCL@{disableCL}}
+\index{disableCL@{disableCL}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{disableCL()}{disableCL()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::disable\+CL (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ab5746f8054e8c15f4f004c67325cc50f}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a4fba72ada8234cb624658560a3c40530}\label{classbioscara__hardware__drivers_1_1Joint_a4fba72ada8234cb624658560a3c40530} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!enable@{enable}}
+\index{enable@{enable}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::enable (\begin{DoxyParamCaption}\item[{u\+\_\+int8\+\_\+t}]{drive\+Current,  }\item[{u\+\_\+int8\+\_\+t}]{hold\+Current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Engages the joint. 
+
+This function prepares the motor for movement. After successfull execution the joint is ready to accept \doxylink{classbioscara__hardware__drivers_1_1Joint_a8d477e842ea6139ca17fde0af43bc482}{set\+Position()} and \doxylink{classbioscara__hardware__drivers_1_1Joint_a5b2479210b861c53c3c4e53cf12d75be}{set\+Velocity()} commands.
+
+The function sets the drive and hold current for the specified joint and engages the motor. The currents are in percent of driver max. output (2.\+5A, check with TMC5130 datasheet or Ustepper documentation) 
+\begin{DoxyParams}{Parameters}
+{\em drive\+Current} & drive current in 0-\/100 \% of 2.\+5A output (check u\+Stepper doc.) \\
+\hline
+{\em hold\+Current} & hold current in 0-\/100 \% of 2.\+5A output (check u\+Stepper doc.) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ab71c7a70946252c09efbd42b039b7eb0}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a203608e60cc83c2078edf0c3a4a68dbe}\label{classbioscara__hardware__drivers_1_1Joint_a203608e60cc83c2078edf0c3a4a68dbe} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!enableStallguard@{enableStallguard}}
+\index{enableStallguard@{enableStallguard}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{enableStallguard()}{enableStallguard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::enable\+Stallguard (\begin{DoxyParamCaption}\item[{u\+\_\+int8\+\_\+t}]{sensitivity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Enable encoder stall detection of the joint. 
+
+If the PID error exceeds the set threshold a stall is triggered and the motor disabled. A detected stall can be reset by homing or reenabling the joint using \doxylink{classbioscara__hardware__drivers_1_1Joint_a4fba72ada8234cb624658560a3c40530}{enable()}. \begin{DoxyNote}{Note}
+If stall detection shall be enabled, invoke this method AFTER enabling the joint with \doxylink{classbioscara__hardware__drivers_1_1Joint_a4fba72ada8234cb624658560a3c40530}{enable()}. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em sensitivity} & value of threshold. 0 -\/ 255 where lower is more sensitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_af2e8a64536a75ffb20f5ed81836eead5}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a7c1f0ad13cedb16c6b0c3da6c88f8f94}\label{classbioscara__hardware__drivers_1_1Joint_a7c1f0ad13cedb16c6b0c3da6c88f8f94} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!getFlags@{getFlags}}
+\index{getFlags@{getFlags}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{getFlags()}{getFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::get\+Flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overload of \doxylink{classbioscara__hardware__drivers_1_1BaseJoint_a5c54829edfd4860f5ce333cda7044fb2}{get\+Flags(u\+\_\+int8\+\_\+t \&flags)} 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aaef8fb5aad3fb6ce0721043b6812d87b}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_aada1bc3cffdd384f6cb7777091c9a7ec}\label{classbioscara__hardware__drivers_1_1Joint_aada1bc3cffdd384f6cb7777091c9a7ec} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!getHomingOffset@{getHomingOffset}}
+\index{getHomingOffset@{getHomingOffset}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{getHomingOffset()}{getHomingOffset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::get\+Homing\+Offset (\begin{DoxyParamCaption}\item[{float \&}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Retrieves the homing position from the last homing. 
+
+The homing position is stored on the joint to make it persistent as long as the joint is powered up.
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_aa48673be56b04a573142ee8c9ad18e20}\label{classbioscara__hardware__drivers_1_1Joint_aa48673be56b04a573142ee8c9ad18e20} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::get\+Position (\begin{DoxyParamCaption}\item[{float \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the current joint position in radians or m for cylindrical and prismatic joints respectively. 
+
+\begin{DoxyWarning}{Warning}
+If the joint is not homed this method does not return an error. Instead {\ttfamily pos} will be 0.\+0.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the current joint position in rad or m. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a39160e6187aa75ae2be3112ae3538060}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a12e554163eb7cb23f6b5b07da4b8705a}\label{classbioscara__hardware__drivers_1_1Joint_a12e554163eb7cb23f6b5b07da4b8705a} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!getVelocity@{getVelocity}}
+\index{getVelocity@{getVelocity}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{getVelocity()}{getVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::get\+Velocity (\begin{DoxyParamCaption}\item[{float \&}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & the current joint velocity in rad/s or m/s. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a971fd55f4e858c806b2624fbd5d8806a}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_aca63d0af8ba889417a16bc15510a565b}\label{classbioscara__hardware__drivers_1_1Joint_aca63d0af8ba889417a16bc15510a565b} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!init@{init}}
+\index{init@{init}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialize connection to a joint via I2C. 
+
+Adds the joint to the I2C bus and tests if is responsive by invoking \doxylink{classbioscara__hardware__drivers_1_1Joint_a9fb746226bee6133ca4469b6e1164834}{check\+Com()}. If the joint is homed, retrieve the homing position stored on the joint by invoking \doxylink{classbioscara__hardware__drivers_1_1Joint_aada1bc3cffdd384f6cb7777091c9a7ec}{get\+Homing\+Offset()}.
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a720e0da2547a8942fb9cf7e1961a758b}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_af1a075a16a36e1ab5d6c81362c5f99d6}\label{classbioscara__hardware__drivers_1_1Joint_af1a075a16a36e1ab5d6c81362c5f99d6} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!moveSteps@{moveSteps}}
+\index{moveSteps@{moveSteps}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{moveSteps()}{moveSteps()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::move\+Steps (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{steps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Move full steps. 
+
+This function can be called even when not homed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em steps} & number of full steps \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a8d2e2724df1d2a0906f6f2d3e1bb60bb}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a00cdbe2e89b9955f83b891eaa259f1d3}\label{classbioscara__hardware__drivers_1_1Joint_a00cdbe2e89b9955f83b891eaa259f1d3} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!postHoming@{postHoming}}
+\index{postHoming@{postHoming}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{postHoming()}{postHoming()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::post\+Homing (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+perform tasks after a non-\/blocking homing   
+
+Invokes \doxylink{classbioscara__hardware__drivers_1_1BaseJoint_acdbdac96efcea81f34db96a47b317a55}{Base\+Joint\+::post\+Homing()} and additionally saves the homing offset to the joint controller \doxylink{classbioscara__hardware__drivers_1_1Joint_a36cb6ee03949c8ed8e57078d12c10b8f}{set\+Homing\+Offset()}
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_acdbdac96efcea81f34db96a47b317a55}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a81a8e4841ae03d04498d2f6ef3c08d82}\label{classbioscara__hardware__drivers_1_1Joint_a81a8e4841ae03d04498d2f6ef3c08d82} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!read@{read}}
+\index{read@{read}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::read (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}}}]{reg,  }\item[{T \&}]{data,  }\item[{u\+\_\+int8\+\_\+t \&}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wrapper function to request data from the I2C slave. 
+
+Allocates a buffer of size sizeof(\+T) + RFLAGS\+\_\+\+SIZE. Invokes \doxylink{uI2C_8h_a607cb25ea06e8ce952788a1e710e7f50}{read\+From\+I2\+CDev()}, and copies the received payload to {\itshape data} and the transmisison flags to {\itshape flags}. See \doxylink{classbioscara__hardware__drivers_1_1BaseJoint_a959c1652a778c7654db894eef9b337c3}{Base\+Joint\+::flags} for details.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Datatype of value to be transmitted \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & stp\+\_\+reg\+\_\+t register to read \\
+\hline
+{\em data} & reference to store payload. \\
+\hline
+{\em flags} & reference to a byte which stores the return flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on OK, negative on error 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a3fc257cb593d6a70599c4f8630ff1c33}\label{classbioscara__hardware__drivers_1_1Joint_a3fc257cb593d6a70599c4f8630ff1c33} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!setBrakeMode@{setBrakeMode}}
+\index{setBrakeMode@{setBrakeMode}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{setBrakeMode()}{setBrakeMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::set\+Brake\+Mode (\begin{DoxyParamCaption}\item[{u\+\_\+int8\+\_\+t}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set Brake Mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Freewheel\+: 0, Coolbrake\+: 1, Hardbrake\+: 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a4420214ace796cee97755e41f97a8550}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_aabac8baa0314469b9b0235a2ff712107}\label{classbioscara__hardware__drivers_1_1Joint_aabac8baa0314469b9b0235a2ff712107} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!setDriveCurrent@{setDriveCurrent}}
+\index{setDriveCurrent@{setDriveCurrent}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{setDriveCurrent()}{setDriveCurrent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::set\+Drive\+Current (\begin{DoxyParamCaption}\item[{u\+\_\+int8\+\_\+t}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the Drive Current. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & 0\% -\/ 100\% of driver current \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aa917e3e6aeb7271e11ecefcc91ff257a}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a21373b0df29cc283a40aeba42a0d0656}\label{classbioscara__hardware__drivers_1_1Joint_a21373b0df29cc283a40aeba42a0d0656} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!setHoldCurrent@{setHoldCurrent}}
+\index{setHoldCurrent@{setHoldCurrent}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{setHoldCurrent()}{setHoldCurrent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::set\+Hold\+Current (\begin{DoxyParamCaption}\item[{u\+\_\+int8\+\_\+t}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the Hold Current. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & 0\% -\/ 100\% of driver current \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t -\/1 on communication error, 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_af0532522ea1f7aa066367b2a33d9225c}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a36cb6ee03949c8ed8e57078d12c10b8f}\label{classbioscara__hardware__drivers_1_1Joint_a36cb6ee03949c8ed8e57078d12c10b8f} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!setHomingOffset@{setHomingOffset}}
+\index{setHomingOffset@{setHomingOffset}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{setHomingOffset()}{setHomingOffset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::set\+Homing\+Offset (\begin{DoxyParamCaption}\item[{const float}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Stores the homing position on the joint. 
+
+The homing position is stored on the joint to make it persistent as long as the joint is powered up.
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a40598bc9a450734c35b7a8060d50170e}\label{classbioscara__hardware__drivers_1_1Joint_a40598bc9a450734c35b7a8060d50170e} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!setMaxAcceleration@{setMaxAcceleration}}
+\index{setMaxAcceleration@{setMaxAcceleration}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{setMaxAcceleration()}{setMaxAcceleration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::set\+Max\+Acceleration (\begin{DoxyParamCaption}\item[{float}]{max\+Accel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the maximum permitted joint acceleration (and deceleration) in rad/s\texorpdfstring{$^\wedge$}{\string^}2 or m/s\texorpdfstring{$^\wedge$}{\string^}2 for cylindrical and prismatic joints respectively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Accel} & maximum joint acceleration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a47296176d6bd6a86a66412cad1fb5f21}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a9a3a794f43851cd6a6ae5068dff59d95}\label{classbioscara__hardware__drivers_1_1Joint_a9a3a794f43851cd6a6ae5068dff59d95} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!setMaxVelocity@{setMaxVelocity}}
+\index{setMaxVelocity@{setMaxVelocity}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{setMaxVelocity()}{setMaxVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::set\+Max\+Velocity (\begin{DoxyParamCaption}\item[{float}]{max\+Vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the maximum permitted joint velocity in rad/s or m/s for cylindrical and prismatic joints respectively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Vel} & maximum joint velocity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_a270d845f4fcbad79eaf3d218badf43e1}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a8d477e842ea6139ca17fde0af43bc482}\label{classbioscara__hardware__drivers_1_1Joint_a8d477e842ea6139ca17fde0af43bc482} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::set\+Position (\begin{DoxyParamCaption}\item[{float}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the current joint position in radians or m for cylindrical and prismatic joints respectively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the commanded joint position in rad or m. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_ac16fc6fc228f1e4855ed0401a2c8368e}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a5b2479210b861c53c3c4e53cf12d75be}\label{classbioscara__hardware__drivers_1_1Joint_a5b2479210b861c53c3c4e53cf12d75be} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::set\+Velocity (\begin{DoxyParamCaption}\item[{float}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the current joint velocity in radians/s or m/s for cylindrical and prismatic joints respectively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & the commanded joint velocity in rad/s or m/s. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affb3dfb90967f45ed12ef67a5a6e7ed9}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a7a11a2f2d49749ec2e0118dab8adfde5}\label{classbioscara__hardware__drivers_1_1Joint_a7a11a2f2d49749ec2e0118dab8adfde5} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!stop@{stop}}
+\index{stop@{stop}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebioscara__hardware__drivers_a1d009df6593ed79588fb4ae11be3e7c5}{err\+\_\+type\+\_\+t}} bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stops the motor. 
+
+Stops the motor by setting the maximum velocity to zero and the position setpoint to the current position
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+type\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_aa604fcfc2283f48f0851aaf1439f7809}{bioscara\+\_\+hardware\+\_\+drivers\+::\+Base\+Joint}}.
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a6c6b257722e6d6b9c5d9f059fa9d0ca3}\label{classbioscara__hardware__drivers_1_1Joint_a6c6b257722e6d6b9c5d9f059fa9d0ca3} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!write@{write}}
+\index{write@{write}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbioscara__hardware__drivers_1_1BaseJoint_affbc9ba6c17b02af32647dc76796de13}{stp\+\_\+reg\+\_\+t}}}]{reg,  }\item[{T}]{data,  }\item[{u\+\_\+int8\+\_\+t \&}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wrapper function to send command to the I2C slave. 
+
+Allocates a buffer of size sizeof(\+T) + RFLAGS\+\_\+\+SIZE. Copyies {\itshape data} to the buffer and invokes \doxylink{uI2C_8h_ab73613a3b862a54f70dff0b5192cbcac}{write\+To\+I2\+CDev()}. The flags received from the transaction are copied to {\itshape flags}. The flags are described in \doxylink{classbioscara__hardware__drivers_1_1Joint_a81a8e4841ae03d04498d2f6ef3c08d82}{Joint\+::read()}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Datatype of value to be transmitted \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & stp\+\_\+reg\+\_\+t command to execute \\
+\hline
+{\em data} & payload to transmit. It is the users responsibility to populate the right amount of data for the relevant register \\
+\hline
+{\em flags} & reference to a byte which stores the return flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on OK, negative on error 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_aa56fb271850d0c7416e29390f0c9b01b}\label{classbioscara__hardware__drivers_1_1Joint_aa56fb271850d0c7416e29390f0c9b01b} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!address@{address}}
+\index{address@{address}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily int bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::address\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+I2C adress. 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a94ad561692bc595de865ddec3dc67a0f}\label{classbioscara__hardware__drivers_1_1Joint_a94ad561692bc595de865ddec3dc67a0f} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!handle@{handle}}
+\index{handle@{handle}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{handle}{handle}}
+{\footnotesize\ttfamily int bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::handle = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+I2C bus handle. 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a39932890fc3174218cb79a0068a26d5b}\label{classbioscara__hardware__drivers_1_1Joint_a39932890fc3174218cb79a0068a26d5b} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!max@{max}}
+\index{max@{max}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::max = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} upper limit. 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a408272f7c846f1ee7bd139203dbcb12e}\label{classbioscara__hardware__drivers_1_1Joint_a408272f7c846f1ee7bd139203dbcb12e} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!min@{min}}
+\index{min@{min}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::min = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} lower limit. 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_af1d813e08ed0e7f9c9ca236a0802a371}\label{classbioscara__hardware__drivers_1_1Joint_af1d813e08ed0e7f9c9ca236a0802a371} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!offset@{offset}}
+\index{offset@{offset}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::offset = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} position offset. 
+
+\Hypertarget{classbioscara__hardware__drivers_1_1Joint_a20acf935ce8f212f17cabf3a18685517}\label{classbioscara__hardware__drivers_1_1Joint_a20acf935ce8f212f17cabf3a18685517} 
+\index{bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}!reduction@{reduction}}
+\index{reduction@{reduction}!bioscara\_hardware\_drivers::Joint@{bioscara\_hardware\_drivers::Joint}}
+\doxysubsubsection{\texorpdfstring{reduction}{reduction}}
+{\footnotesize\ttfamily float bioscara\+\_\+hardware\+\_\+drivers\+::\+Joint\+::reduction = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{classbioscara__hardware__drivers_1_1Joint}{Joint} to actuator reduction ratio. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+arm/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/include/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/\mbox{\hyperlink{mJoint_8h}{m\+Joint.\+h}}\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+arm/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/include/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/\mbox{\hyperlink{mJoint_8hpp}{m\+Joint.\+hpp}}\item 
+lib/ros2\+\_\+ws/src/dalsa\+\_\+bioscara\+\_\+arm/bioscara\+\_\+arm\+\_\+hardware\+\_\+driver/src/\mbox{\hyperlink{mJoint_8cpp}{m\+Joint.\+cpp}}\end{DoxyCompactItemize}
