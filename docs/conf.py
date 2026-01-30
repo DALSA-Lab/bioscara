@@ -48,4 +48,6 @@ source_suffix = {
     '.md': 'markdown',
 }
 
+myst_enable_extensions = ["colon_fence"]
+
 exclude_patterns = ['README.md']

@@ -1,11 +1,9 @@
 # Building the Documentation locally
-
 It is recommended to use a virtual environment to manage all dependencies.
-All following commands are executed from the *~/bioscara/docs/* directory.
+All following commands are executed from the *~/bioscara/docs/* directory:
 ```bash
 cd docs
 ```
-
 
 ## Create the Virtual Environment and Install Dependencies
 These steps need to be executed only once at the first time.
@@ -23,11 +21,20 @@ The we can install the required packages to build the documentation:
 ```bash
 pip install -r requirements-docs.txt
 ```
+This installs Sphinx and its packages.
 
-Aditionally install the required latex tools:
-<!-- TODO -->
+Aditionally install doxygen
+```bash
+sudo apt-get update
+sudo apt-get install doxygen
+```
 
-## Making the Documentation
+And install all LaTeX tools:
+```bash
+sudo apt-get install texlive texlive-font-utils texlive-fonts-recommended texlive-latex-extra latexmk
+```
+
+## Building the Documentation
 
 First make sure the virtual environment is activated:
 ```bash
