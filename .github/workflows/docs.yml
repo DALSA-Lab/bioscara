@@ -28,19 +28,19 @@ jobs:
         run: pip install -r docs/requirements-docs.txt
       - name: Install Doxygen
         run: sudo apt-get update && sudo apt-get install -y doxygen
-      - name: Install latex
+      - name: Install LaTeX
         run: sudo apt-get update && sudo apt-get install -y texlive texlive-font-utils texlive-fonts-recommended texlive-latex-extra latexmk
-      - name: Generate Doxygen XML
+      - name: Generate Doxygen XML, HTML and LaTeX
         run: cd docs/doxygen && doxygen
-      - name: Make doxygen pdf from latex output
+      - name: Make doxygen PDF from LaTeX output
         run: cd docs/doxygen/latex && make
       - name: Build Sphinx HTML
-        run: sphinx-build -b html docs build/html
+        run: sphinx-build -b html docs docs/sphinx/html
       - name: Build Sphinx PDF
-        run: sphinx-build -M latexpdf docs build/latex
+        run: sphinx-build -M latexpdf docs docs/sphinx/latex        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/html
+          publish_dir: docs/
           publish_branch: gh-pages
