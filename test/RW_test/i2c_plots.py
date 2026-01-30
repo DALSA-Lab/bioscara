@@ -28,10 +28,11 @@ plt.yticks([], [])
 #     top=False,         # ticks along the top edge are off
 #     labelbottom=False,
 #     left = False) # labels along the bottom edge are off
-plt.legend()
+plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1),
+          fancybox=True, ncol=2)
 
 
 plt.tight_layout()
-plt.savefig(f"{base_file}.pdf")
-plt.savefig(f"{base_file}.png")
+plt.savefig(f"{base_file}.pdf", bbox_inches='tight')
+plt.savefig(f"{base_file}.png", bbox_inches='tight')
 plt.show()

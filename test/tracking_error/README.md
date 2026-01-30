@@ -20,9 +20,9 @@ $$
 e_{1} = \frac{r_1-q_1}{\dot{r}_{1}}
 $$
 
-To investigate the effect of the maximum acceleration setting the test is repeated for the acceleration values given below. Note that these are the maximum hardware values to protect the joint from stalling. The final motion planning will use lower acceleration values to create trajectories.
+To investigate the effect of the maximum acceleration setting the test is repeated for the acceleration values given below. Note that these are the maximum hardware values to protect the joint from stalling. The final motion planning will use lower acceleration values to create trajectories.<br>
 **MaxAccel 1**: 0.157 rad/s^2 <br>
-**MaxAccel 2**: 1.57 rad/s^2 <br>
+**MaxAccel 2**: 1.57 rad/s^2 
 
 ### Controller Parameters
 The JTC runs with an update rate of 50 Hz.

@@ -44,12 +44,12 @@ for p in traj_points:
 
 # Plot
 fig, ax = plt.subplots(3, 1,sharex="col")
-ax[0].plot(out["time"],out["position"], marker='o', markersize=2, label=joint_names)
-ax[0].set_ylabel("$q(t)$ [rad]")
-ax[1].plot(out["time"],out["velocity"], marker='o', markersize=2, label=joint_names)
-ax[1].set_ylabel(r'$\dot{q}(t)$ [rad/s]')
-ax[2].plot(out["time"],out["acceleration"], marker='o', markersize=2, label=joint_names)
-ax[2].set_ylabel(r'$\ddot{q}(t)$ [$\mathrm{rad}/s^2$]')
+ax[0].plot(out["time"],out["position"], label=joint_names) #, marker='o', markersize=2)
+ax[0].set_ylabel("$q$ [rad]")
+ax[1].plot(out["time"],out["velocity"], label=joint_names) #, marker='o', markersize=2)
+ax[1].set_ylabel(r'$\dot{q}$ [rad/s]')
+ax[2].plot(out["time"],out["acceleration"], label=joint_names) #, marker='o', markersize=2)
+ax[2].set_ylabel(r'$\ddot{q}$ [$\mathrm{rad}/s^2$]')
 
 
 plt.xlabel(r'$t$ [s]')
@@ -59,6 +59,6 @@ ax[0].legend(bbox_to_anchor=(0, 1.03, 1, 0.2), loc="lower left",
 fig.align_ylabels()
 fig.align_xlabels()
 plt.tight_layout()
-plt.savefig(f"{base_file}.pdf")
-plt.savefig(f"{base_file}.png")
+plt.savefig(f"{base_file}.pdf", bbox_inches='tight')
+plt.savefig(f"{base_file}.png", bbox_inches='tight')
 plt.show()

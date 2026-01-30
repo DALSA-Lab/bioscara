@@ -22,7 +22,8 @@ plt.hist(MOVETOANGLE_val, bins=range(int(min(MOVETOANGLE_val)), int(max(MOVETOAN
 
 plt.ylabel(r'Samples')
 plt.xlabel(r'$t_{total}$ [$\mu $s]')
-plt.legend()
+plt.legend(loc='upper center', bbox_to_anchor=(0.4, -0.3),
+          fancybox=True, ncol=1)
 
 
 plt.tight_layout()

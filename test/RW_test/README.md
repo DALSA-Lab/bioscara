@@ -1,7 +1,7 @@
 # Communication Read/Write speed test
 The realtime performance tests described in the [realtime test](../RT_test/README.md) showed slow execution times for both the read and write cycle. To be precise the test measured the following average cumulative execution times for all joints:
-- **Read** (*getPosition*): 3575 μs
-- **Write** (*setPosition*): 5062 μs
+- **Read** (*getPosition*): 3465 μs
+- **Write** (*setPosition*): 4964 μs
 
 > [!NOTE]
 >
@@ -23,7 +23,7 @@ ros2 run comm_speed_test main
 ```
 
 <!-- TODO: write documentation for test program, link or reference here -->
-The test program calls times the read and write execution of either position or velocity (`getPosition()`/getVelocity/() and `setPosition()`/setVelocity/() respectively) for a total of 1000x cycles per joint and prints the collected data to a CSV file.
+The test program calls and times the read and write execution duration of either position or velocity (`getPosition()`/`getVelocity/()` and `setPosition()`/`setVelocity/()` respectively) for a total of 1000x cycles per joint and prints the collected data to a CSV file.
 
 No prints and other unneccessary functions are executed in the timed sections.
 
@@ -122,7 +122,7 @@ The test was conducted at 400 kHz, however this has no effect since the test onl
 
 **Figure 2:** Histogram of the execution time of the position set and get method on the firmware.
 
-This test clearly shows the reason for the much longer $t_{total}$ for `setPosition()`: The corresponding function on the joint firmware itself takes on average $t_{exec}$ = 351.13 μs, while the corresponding function to `getPosition()` only takes  $t_{exec}$ = 5.21 μs on average. exactly the difference previously described. The execution on the joint takes hence 345.92 μs longer on the joint, very close the discrepancy in $t_{total}$.
+This test clearly shows the reason for the much longer $t_{total}$ for `setPosition()`: The corresponding function on the joint firmware itself takes on average $t_{exec}$ = 353.13 μs, while the corresponding function to `getPosition()` only takes  $t_{exec}$ = 5.21 μs on average, exactly the difference previously described. The execution on the joint takes hence 345.92 μs longer, very close the discrepancy in $t_{total}$.
 
 There is no data for the $t_{exec}$ for `setVelocity()` and  `getVelocity()`, however from the total time it can be deduced that the execution time is similar to $t_{exec}$ for `getPosition()`, since they are relatively close.
 
@@ -178,15 +178,15 @@ The controller needs to:
 | Method            | $t_{total}$ (100 kHz) [μs]| $t_{total}$ (400 kHz) [μs]|
 | ---               |---:   |---:   |
 |`setVelocity()`        | 905  |319  |
-|`getVelocity()`        | 853  |267  |
+|`getVelocity()`        | 854  |267  |
 |`getPosition()`        | 860  | 625  |
-| per joint *subtotal*        | 2,618  |1,211  |
+| per joint *subtotal*        | 2,619  |1,211  |
 | 4 joint **total** | 10,472 | 4,844  |
 
 **Table 5:** Expected total times for the velocity based controller.
 
 
-### Velocity based Control
+### Position based Control
 The simplest joint controller simply forwards position commands to the hardware. The controller is non as such since there is no feedback loop. This drastically lightens the requirements on the robot controllers realtime capability and controllers update frequency. However it leaves all the closed loop control to the joint firmware which has a much less advanced internal control loop. This results in a steady state tracking error for a ramp position reference.
 
 The controller needs to:

@@ -1,5 +1,14 @@
+# Finding the maximum acceleration and deceleration values.
+This test assumes no payload.
+This test uses the *system_test_packages/max_accel_test/* executable to drive a joint with increasing accelerations and velocities until it can no longer follow.
+The data is recorded into a CSV file.
+
+> [!WARNING]
+> The executable node is very crude and does not contain protections against crashing into joint limits. 
+> Use with care!
+
 Generally max acceleration is more subtle than max vel. in the latter the joint stops moving,
-Max both can be increased with higher current.
+Both values can be increased with higher drive currents.
 
 ## J1
 - hearable skipping when a max at 3/rad/s2
