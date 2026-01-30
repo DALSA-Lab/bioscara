@@ -29,7 +29,7 @@ jobs:
       - name: Install Doxygen
         run: sudo apt-get update && sudo apt-get install -y doxygen
       - name: Install latex
-        run: sudo apt-get update && sudo apt-get install -y texlive texlive-font-utils texlive-fonts-recommended
+        run: sudo apt-get update && sudo apt-get install -y texlive texlive-font-utils texlive-fonts-recommended texlive-latex-extra
       - name: Generate Doxygen XML
         run: cd docs/doxygen && doxygen
       - name: Make doxygen pdf from latex output
