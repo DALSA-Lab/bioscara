@@ -1,6 +1,0 @@
-\babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {1}Overview}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Documentation}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}bioscara\_hardware\_interfaces}{1}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}bioscara\_hardware\_drivers}{14}{subsection.1.1.2}%
-\contentsline {chapter}{Index}{35}{section*.1064}%
