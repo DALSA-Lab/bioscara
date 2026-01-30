@@ -3,11 +3,6 @@ name: Docs Site
 on:
   push:
     branches: [ feat/restructure-dalsa-template ]
-    paths:
-      #- "docs/**"
-      #- "requirements-docs.txt"
-      #- "Doxyfile"
-      #- "src/**"
   workflow_dispatch:
 
 jobs:
@@ -37,10 +32,12 @@ jobs:
       - name: Build Sphinx HTML
         run: sphinx-build -b html docs docs/sphinx/html
       - name: Build Sphinx PDF
-        run: sphinx-build -M latexpdf docs docs/sphinx/latex        
+        run: sphinx-build -M latexpdf docs docs/sphinx/latex
+      - name: Move PDFs and Doxygen HTML so that sphinx can link them
+        run: mv docs/doxygen/latex/refman.pdf docs/sphinx/html/bioscara_cpp_api.pdf && mv docs/sphinx/latex/latex/bioscara.pdf docs/sphinx/html && mv docs/doxygen/html docs/sphinx/html/doxygen
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/
+          publish_dir: docs/sphinx/html
           publish_branch: gh-pages
