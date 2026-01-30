@@ -4,6 +4,8 @@
   <xacro:macro name="bioscara_arm" params="parameters prefix parent *origin">
     
     <xacro:include filename="$(find bioscara_arm_description)/urdf/materials.xacro" />
+
+    <!-- Adjust this parameter manually to tune the tool_flange z-height -->
     <xacro:property name="tool_flange_zheight" value="0.135"/>
 
     <joint name="${prefix}base_joint" type="fixed">
