@@ -33,14 +33,12 @@ def generate_launch_description():
     )
 
     package = "moveit_motion_plans"
-    package_shared_path = get_package_share_directory(package)
     node = Node(
         package=package,
         executable=exe,
         output="screen",
         parameters=[
             moveit_config.to_dict(),
-            # os.path.join(package_shared_path, "config", "panda_config.yaml"),
         ],
         arguments=['--ros-args', '--log-level', logger]
     )

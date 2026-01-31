@@ -1,8 +1,0 @@
-planning_plugins:
-  - ompl_interface/OMPLPlanner
-# enforce_joint_model_state_space: True
-# request_adapters:
-  # - default_planning_request_adapters/ResolveConstraintFrames
-  # - default_planning_request_adapters/ValidateWorkspaceBounds
-# response_adapters:
-  # - default_planning_response_adapters/AddTimeOptimalParameterization

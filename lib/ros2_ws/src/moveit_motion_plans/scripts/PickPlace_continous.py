@@ -17,7 +17,10 @@ object_name = "plate"
 # Cartesian and joint-space interpolation planners
 cartesian = core.CartesianPath()
 jointspace = core.JointInterpolationPlanner()
-pipeline = core.PipelinePlanner(node, "ompl", "RRTConnectkConfigDefault")
+# TODO: This does NOT invoke the RRTConnect, move_group just falls back to it:
+# "Cannot find planning configuration for group 'arm' using planner 'geometric::RRTConnect'. Will use defaults instead" 
+# -> "Planner configuration 'arm' will use planner 'geometric::RRTConnect'"
+pipeline = core.PipelinePlanner(node, "ompl", "RRTConnect") 
 
 
 ############### PreTask - bringing robot to start state ###############

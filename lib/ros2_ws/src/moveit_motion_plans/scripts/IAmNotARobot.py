@@ -18,7 +18,7 @@ group = "arm"
 # Cartesian and joint-space interpolation planners
 cartesian = core.CartesianPath()
 jointspace = core.JointInterpolationPlanner()
-pipeline = core.PipelinePlanner(node, "ompl", "RRTConnectkConfigDefault")
+pipeline = core.PipelinePlanner(node, "ompl", "RRTConnect") 
 
 
 task = core.Task()

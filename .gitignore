@@ -25,8 +25,11 @@ msg/_*.py
 build_isolated/
 devel_isolated/
 
-docs/latex/*
-!docs/latex/refman.pdf
+docs/doxygen/xml
+docs/doxygen/latex
+docs/doxygen/html
+docs/sphinx/latex
+docs/sphinx/html
 
 test/*/record*
 !test/*/record*.csv
