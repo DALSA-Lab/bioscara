@@ -91,10 +91,10 @@ Macros</h2></td></tr>
 <tr class="memitem:ac0265004084d8f72947a83ca56953dda" id="r_ac0265004084d8f72947a83ca56953dda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="configuration_8h.html#ac0265004084d8f72947a83ca56953dda">ADR</a>&#160;&#160;&#160;0x11</td></tr>
 <tr class="memdesc:ac0265004084d8f72947a83ca56953dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C adress of joint n is 0x1n.  <br /></td></tr>
 <tr class="separator:ac0265004084d8f72947a83ca56953dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58d72e884a5d54f3b15eb8914c08ce07" id="r_a58d72e884a5d54f3b15eb8914c08ce07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="configuration_8h.html#a58d72e884a5d54f3b15eb8914c08ce07">MAXACCEL</a>&#160;&#160;&#160;1010000</td></tr>
+<tr class="memitem:a58d72e884a5d54f3b15eb8914c08ce07" id="r_a58d72e884a5d54f3b15eb8914c08ce07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="configuration_8h.html#a58d72e884a5d54f3b15eb8914c08ce07">MAXACCEL</a>&#160;&#160;&#160;100</td></tr>
 <tr class="memdesc:a58d72e884a5d54f3b15eb8914c08ce07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum acceleration in steps/s^2. Can be set for each joint depending on inertia. If set to high stalls might trigger since PID error grows too large.  <br /></td></tr>
 <tr class="separator:a58d72e884a5d54f3b15eb8914c08ce07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46ddbfe86544acf048b68d9e4735137b" id="r_a46ddbfe86544acf048b68d9e4735137b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="configuration_8h.html#a46ddbfe86544acf048b68d9e4735137b">MAXVEL</a>&#160;&#160;&#160;1800</td></tr>
+<tr class="memitem:a46ddbfe86544acf048b68d9e4735137b" id="r_a46ddbfe86544acf048b68d9e4735137b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="configuration_8h.html#a46ddbfe86544acf048b68d9e4735137b">MAXVEL</a>&#160;&#160;&#160;10</td></tr>
 <tr class="memdesc:a46ddbfe86544acf048b68d9e4735137b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum velocity in steps/s. Can be set for each joint. If set to high stalls might trigger since PID error grows too large.  <br /></td></tr>
 <tr class="separator:a46ddbfe86544acf048b68d9e4735137b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -129,7 +129,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAXACCEL&#160;&#160;&#160;1010000</td>
+          <td class="memname">#define MAXACCEL&#160;&#160;&#160;100</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -145,7 +145,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAXVEL&#160;&#160;&#160;1800</td>
+          <td class="memname">#define MAXVEL&#160;&#160;&#160;10</td>
         </tr>
       </table>
 </div><div class="memdoc">

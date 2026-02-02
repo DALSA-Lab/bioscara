@@ -76,6 +76,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -92,54 +93,65 @@ $(function() {
 <code>#include &quot;<a class="el" href="filters_8h_source.html">filters.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="stall_8h_source.html">stall.h</a>&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacebioscara__joint__firmware" id="r_namespacebioscara__joint__firmware"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html">bioscara_joint_firmware</a></td></tr>
+<tr class="memdesc:namespacebioscara__joint__firmware"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joint firmware. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a587193c9dfc1e471f4510ec090b3c01f" id="r_a587193c9dfc1e471f4510ec090b3c01f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a587193c9dfc1e471f4510ec090b3c01f">J4</a></td></tr>
-<tr class="memdesc:a587193c9dfc1e471f4510ec090b3c01f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define either joint that is to be flashed.  <br /></td></tr>
-<tr class="separator:a587193c9dfc1e471f4510ec090b3c01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a810e76ff16787aab0c30a8b973e8a" id="r_aa0a810e76ff16787aab0c30a8b973e8a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#aa0a810e76ff16787aab0c30a8b973e8a">J1</a></td></tr>
+<tr class="memdesc:aa0a810e76ff16787aab0c30a8b973e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define either joint that is to be flashed.  <br /></td></tr>
+<tr class="separator:aa0a810e76ff16787aab0c30a8b973e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac2aa7b4f0152518591d4a22fc5a04c52" id="r_ac2aa7b4f0152518591d4a22fc5a04c52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#ac2aa7b4f0152518591d4a22fc5a04c52">blocking_handler</a> (uint8_t <a class="el" href="joint_8ino.html#a9428adc9af4653a2050e2536b55dec8d">reg</a>)</td></tr>
-<tr class="memdesc:ac2aa7b4f0152518591d4a22fc5a04c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles commands received via I2C.  <br /></td></tr>
-<tr class="separator:ac2aa7b4f0152518591d4a22fc5a04c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f7e5c60aa6959bb0b1b9a53b423670" id="r_a80f7e5c60aa6959bb0b1b9a53b423670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a80f7e5c60aa6959bb0b1b9a53b423670">non_blocking_handler</a> (uint8_t <a class="el" href="joint_8ino.html#a9428adc9af4653a2050e2536b55dec8d">reg</a>)</td></tr>
-<tr class="memdesc:a80f7e5c60aa6959bb0b1b9a53b423670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles read request received via I2C.  <br /></td></tr>
-<tr class="separator:a80f7e5c60aa6959bb0b1b9a53b423670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e9f58c3243b02aa93017378d1df368d" id="r_a5e9f58c3243b02aa93017378d1df368d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a5e9f58c3243b02aa93017378d1df368d">set_flags_for_blocking_handler</a> (uint8_t <a class="el" href="joint_8ino.html#a9428adc9af4653a2050e2536b55dec8d">reg</a>)</td></tr>
-<tr class="memdesc:a5e9f58c3243b02aa93017378d1df368d"><td class="mdescLeft">&#160;</td><td class="mdescRight">prepare flags to initiate the blocking handling of the received comman.  <br /></td></tr>
-<tr class="separator:a5e9f58c3243b02aa93017378d1df368d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad830e539898b28392f61bfbbc02458f" id="r_aad830e539898b28392f61bfbbc02458f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#aad830e539898b28392f61bfbbc02458f">receiveEvent</a> (int n)</td></tr>
-<tr class="memdesc:aad830e539898b28392f61bfbbc02458f"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C receive event Handler.  <br /></td></tr>
-<tr class="separator:aad830e539898b28392f61bfbbc02458f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac10b80b8aaeaf66cecbf0bb5eff5ae33" id="r_ac10b80b8aaeaf66cecbf0bb5eff5ae33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#ac10b80b8aaeaf66cecbf0bb5eff5ae33">requestEvent</a> ()</td></tr>
-<tr class="memdesc:ac10b80b8aaeaf66cecbf0bb5eff5ae33"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C request event Handler.  <br /></td></tr>
-<tr class="separator:ac10b80b8aaeaf66cecbf0bb5eff5ae33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad9c813f16512d9fe182856a942e91c2" id="r_aad9c813f16512d9fe182856a942e91c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#aad9c813f16512d9fe182856a942e91c2">bioscara_joint_firmware::blocking_handler</a> (uint8_t <a class="el" href="namespacebioscara__joint__firmware.html#a9f21225b8da61831349f9f11c7c3e064">reg</a>)</td></tr>
+<tr class="memdesc:aad9c813f16512d9fe182856a942e91c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles commands received via I2C.  <br /></td></tr>
+<tr class="separator:aad9c813f16512d9fe182856a942e91c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a638e754b06ecdaf1ca035d6d77d361" id="r_a5a638e754b06ecdaf1ca035d6d77d361"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#a5a638e754b06ecdaf1ca035d6d77d361">bioscara_joint_firmware::non_blocking_handler</a> (uint8_t <a class="el" href="namespacebioscara__joint__firmware.html#a9f21225b8da61831349f9f11c7c3e064">reg</a>)</td></tr>
+<tr class="memdesc:a5a638e754b06ecdaf1ca035d6d77d361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles read request received via I2C.  <br /></td></tr>
+<tr class="separator:a5a638e754b06ecdaf1ca035d6d77d361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa303686892879cc30fcabb2344067150" id="r_aa303686892879cc30fcabb2344067150"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#aa303686892879cc30fcabb2344067150">bioscara_joint_firmware::set_flags_for_blocking_handler</a> (uint8_t <a class="el" href="namespacebioscara__joint__firmware.html#a9f21225b8da61831349f9f11c7c3e064">reg</a>)</td></tr>
+<tr class="memdesc:aa303686892879cc30fcabb2344067150"><td class="mdescLeft">&#160;</td><td class="mdescRight">prepare flags to initiate the blocking handling of the received comman.  <br /></td></tr>
+<tr class="separator:aa303686892879cc30fcabb2344067150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad92197f10e0bea205bb222e83a2de6" id="r_adad92197f10e0bea205bb222e83a2de6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#adad92197f10e0bea205bb222e83a2de6">bioscara_joint_firmware::receiveEvent</a> (int n)</td></tr>
+<tr class="memdesc:adad92197f10e0bea205bb222e83a2de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C receive event Handler.  <br /></td></tr>
+<tr class="separator:adad92197f10e0bea205bb222e83a2de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab617db782416c8eb4479ae5f1d59ba51" id="r_ab617db782416c8eb4479ae5f1d59ba51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#ab617db782416c8eb4479ae5f1d59ba51">bioscara_joint_firmware::requestEvent</a> ()</td></tr>
+<tr class="memdesc:ab617db782416c8eb4479ae5f1d59ba51"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C request event Handler.  <br /></td></tr>
+<tr class="separator:ab617db782416c8eb4479ae5f1d59ba51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae686c37aecb29d694eb0af24daf636d8" id="r_ae686c37aecb29d694eb0af24daf636d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#ae686c37aecb29d694eb0af24daf636d8">bioscara_joint_firmware::setup</a> (void)</td></tr>
+<tr class="memdesc:ae686c37aecb29d694eb0af24daf636d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup Peripherals.  <br /></td></tr>
+<tr class="separator:ae686c37aecb29d694eb0af24daf636d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb1efec60b91fd4b307b113d1ab84d8" id="r_a1cb1efec60b91fd4b307b113d1ab84d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#a1cb1efec60b91fd4b307b113d1ab84d8">bioscara_joint_firmware::loop</a> (void)</td></tr>
+<tr class="memdesc:a1cb1efec60b91fd4b307b113d1ab84d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop.  <br /></td></tr>
+<tr class="separator:a1cb1efec60b91fd4b307b113d1ab84d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dfd9b79bc5a37d7df40207afbc5431f" id="r_a7dfd9b79bc5a37d7df40207afbc5431f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f">setup</a> (void)</td></tr>
-<tr class="memdesc:a7dfd9b79bc5a37d7df40207afbc5431f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup Peripherals.  <br /></td></tr>
 <tr class="separator:a7dfd9b79bc5a37d7df40207afbc5431f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b33edabd7f1c4e4a0bf32c67269be2f" id="r_a0b33edabd7f1c4e4a0bf32c67269be2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f">loop</a> (void)</td></tr>
-<tr class="memdesc:a0b33edabd7f1c4e4a0bf32c67269be2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop.  <br /></td></tr>
 <tr class="separator:a0b33edabd7f1c4e4a0bf32c67269be2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aba8f71f42a1e65ec8b11603f009f025b" id="r_aba8f71f42a1e65ec8b11603f009f025b"><td class="memItemLeft" align="right" valign="top">UstepperS32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#aba8f71f42a1e65ec8b11603f009f025b">stepper</a></td></tr>
-<tr class="separator:aba8f71f42a1e65ec8b11603f009f025b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9428adc9af4653a2050e2536b55dec8d" id="r_a9428adc9af4653a2050e2536b55dec8d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a9428adc9af4653a2050e2536b55dec8d">reg</a> = 0</td></tr>
-<tr class="separator:a9428adc9af4653a2050e2536b55dec8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0c2c00de97fca251c217b445070f778" id="r_ac0c2c00de97fca251c217b445070f778"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#ac0c2c00de97fca251c217b445070f778">blk_reg</a> = 0</td></tr>
-<tr class="separator:ac0c2c00de97fca251c217b445070f778"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d929025fa8e1a7ac1fe8209bc592f73" id="r_a4d929025fa8e1a7ac1fe8209bc592f73"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a4d929025fa8e1a7ac1fe8209bc592f73">rx_buf</a> [<a class="el" href="joint_8h.html#a1d5dab30b404fab91608086105afc78c">MAX_BUFFER</a>] = { 0 }</td></tr>
-<tr class="separator:a4d929025fa8e1a7ac1fe8209bc592f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12443830e4f85d217d84ce079f79a59d" id="r_a12443830e4f85d217d84ce079f79a59d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a12443830e4f85d217d84ce079f79a59d">tx_buf</a> [<a class="el" href="joint_8h.html#a1d5dab30b404fab91608086105afc78c">MAX_BUFFER</a>+<a class="el" href="joint_8h.html#abf5d227b2ae124bdc7d5f15397b9bca1">RFLAGS_SIZE</a>] = { 0 }</td></tr>
-<tr class="separator:a12443830e4f85d217d84ce079f79a59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26beb56022f5fe492a3f84209e7f61fa" id="r_a26beb56022f5fe492a3f84209e7f61fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a26beb56022f5fe492a3f84209e7f61fa">rx_data_ready</a> = 0</td></tr>
-<tr class="separator:a26beb56022f5fe492a3f84209e7f61fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ab3114be16a93ee047a809202bc7183" id="r_a7ab3114be16a93ee047a809202bc7183"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a7ab3114be16a93ee047a809202bc7183">tx_length</a> = 0</td></tr>
-<tr class="separator:a7ab3114be16a93ee047a809202bc7183"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15d2985ceb08bf6824378e9b6ee54ac1" id="r_a15d2985ceb08bf6824378e9b6ee54ac1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joint_8ino.html#a15d2985ceb08bf6824378e9b6ee54ac1">rx_length</a> = 0</td></tr>
-<tr class="separator:a15d2985ceb08bf6824378e9b6ee54ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7678c0f2f4d08342becad314134632b6" id="r_a7678c0f2f4d08342becad314134632b6"><td class="memItemLeft" align="right" valign="top">UstepperS32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#a7678c0f2f4d08342becad314134632b6">bioscara_joint_firmware::stepper</a></td></tr>
+<tr class="memdesc:a7678c0f2f4d08342becad314134632b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The core UstepperS32 stepper object to control the motor.  <br /></td></tr>
+<tr class="separator:a7678c0f2f4d08342becad314134632b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f21225b8da61831349f9f11c7c3e064" id="r_a9f21225b8da61831349f9f11c7c3e064"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#a9f21225b8da61831349f9f11c7c3e064">bioscara_joint_firmware::reg</a> = 0</td></tr>
+<tr class="separator:a9f21225b8da61831349f9f11c7c3e064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdb51020cd091f513f2ed3b8959555d" id="r_a9fdb51020cd091f513f2ed3b8959555d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#a9fdb51020cd091f513f2ed3b8959555d">bioscara_joint_firmware::blk_reg</a> = 0</td></tr>
+<tr class="separator:a9fdb51020cd091f513f2ed3b8959555d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01784fedd123b8d0af14daeca0f9510" id="r_af01784fedd123b8d0af14daeca0f9510"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#af01784fedd123b8d0af14daeca0f9510">bioscara_joint_firmware::rx_buf</a> [<a class="el" href="joint_8h.html#a1d5dab30b404fab91608086105afc78c">MAX_BUFFER</a>] = {0}</td></tr>
+<tr class="separator:af01784fedd123b8d0af14daeca0f9510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734d2065292a3ad471c67707c99ab1fa" id="r_a734d2065292a3ad471c67707c99ab1fa"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#a734d2065292a3ad471c67707c99ab1fa">bioscara_joint_firmware::tx_buf</a> [<a class="el" href="joint_8h.html#a1d5dab30b404fab91608086105afc78c">MAX_BUFFER</a>+<a class="el" href="joint_8h.html#abf5d227b2ae124bdc7d5f15397b9bca1">RFLAGS_SIZE</a>] = {0}</td></tr>
+<tr class="separator:a734d2065292a3ad471c67707c99ab1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01fcf4f410567648cd9e07cade30ec82" id="r_a01fcf4f410567648cd9e07cade30ec82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#a01fcf4f410567648cd9e07cade30ec82">bioscara_joint_firmware::rx_data_ready</a> = 0</td></tr>
+<tr class="separator:a01fcf4f410567648cd9e07cade30ec82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e5d3369efc583a9924e5445d3a5865" id="r_a11e5d3369efc583a9924e5445d3a5865"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#a11e5d3369efc583a9924e5445d3a5865">bioscara_joint_firmware::tx_length</a> = 0</td></tr>
+<tr class="separator:a11e5d3369efc583a9924e5445d3a5865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6eeca51d70a5377b541a1abdcc9293f" id="r_aa6eeca51d70a5377b541a1abdcc9293f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebioscara__joint__firmware.html#aa6eeca51d70a5377b541a1abdcc9293f">bioscara_joint_firmware::rx_length</a> = 0</td></tr>
+<tr class="separator:aa6eeca51d70a5377b541a1abdcc9293f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>joint firmware </p>
@@ -149,14 +161,14 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025</dd></dl>
 <p>This file contains the joint firmware. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a587193c9dfc1e471f4510ec090b3c01f" name="a587193c9dfc1e471f4510ec090b3c01f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a587193c9dfc1e471f4510ec090b3c01f">&#9670;&#160;</a></span>J4</h2>
+<a id="aa0a810e76ff16787aab0c30a8b973e8a" name="aa0a810e76ff16787aab0c30a8b973e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a810e76ff16787aab0c30a8b973e8a">&#9670;&#160;</a></span>J1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define J4</td>
+          <td class="memname">#define J1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -167,33 +179,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac2aa7b4f0152518591d4a22fc5a04c52" name="ac2aa7b4f0152518591d4a22fc5a04c52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2aa7b4f0152518591d4a22fc5a04c52">&#9670;&#160;</a></span>blocking_handler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void blocking_handler </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>reg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Handles commands received via I2C. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This is a blocking function which may take some time to execute. This function must not be called from an ISR or callback! Call from main loop instead.</dd></dl>
-<p>The registers handled in this handler are those whose implementation can take time and can thereby not be called directly from the request handler. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">reg</td><td>command that should be executed. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a0b33edabd7f1c4e4a0bf32c67269be2f" name="a0b33edabd7f1c4e4a0bf32c67269be2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b33edabd7f1c4e4a0bf32c67269be2f">&#9670;&#160;</a></span>loop()</h2>
 
@@ -210,114 +195,6 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Main loop. </p>
-<p>Executes the following: <br  />
-</p><ol type="1">
-<li>if isStallguardEnabled: compares stepper.getPidError() with stallguardThreshold and sets isStalled flag. <br  />
-</li>
-<li>if rx_data_ready: set isBusy flag to indicate device is busy. Invoke blocking_handler. Clear isBusy flag to indicate device is no longer busy <br  />
- </li>
-</ol>
-
-</div>
-</div>
-<a id="a80f7e5c60aa6959bb0b1b9a53b423670" name="a80f7e5c60aa6959bb0b1b9a53b423670"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80f7e5c60aa6959bb0b1b9a53b423670">&#9670;&#160;</a></span>non_blocking_handler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void non_blocking_handler </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>reg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Handles read request received via I2C. </p>
-<p>Can be invoked from the I2C ISR since reads from the stepper are non-blocking. Also Handling reads and the subsequent wire.write(), did not work from the main loop. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">reg</td><td>command to execute/register to read. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aad830e539898b28392f61bfbbc02458f" name="aad830e539898b28392f61bfbbc02458f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad830e539898b28392f61bfbbc02458f">&#9670;&#160;</a></span>receiveEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void receiveEvent </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>I2C receive event Handler. </p>
-<p>Reads the content of the received message. Saves the register so it can be used in the main loop. If the master invokes the read() function the message contains only the register byte and no payload. If the master invokes the write() the message has a payload of appropriate size for the command. Every I2C transaction starts with a receive event when the command is sent and is immediatly followed by a request since at minimum the flags need to be transmitted back. This means that the receive handler and request handler are always executed sequentially. The main loop is not executed since both handlers are ISRs. For a read request the message looks like this: <br  />
- &lt; [REG] <br  />
- &gt; [TXBUFn]...[TXBUF2][TXBUF1][TXBUF0][FLAGS] <br  />
- For a command the message looks like this: <br  />
- &lt; [REG][RXBUFn]...[RXBUF2][RXBUF1][RXBUF0] <br  />
- &gt; [FLAGS] <br  />
- The payload is read into the rx_buf, rx_length is set to the payload length. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n</td><td>the number of bytes read from the controller device: MAX_BUFFER </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac10b80b8aaeaf66cecbf0bb5eff5ae33" name="ac10b80b8aaeaf66cecbf0bb5eff5ae33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac10b80b8aaeaf66cecbf0bb5eff5ae33">&#9670;&#160;</a></span>requestEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void requestEvent </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>I2C request event Handler. </p>
-<p>Sends the response data to the master. Every transaction begins with a receive event. The request event is always triggered since at a minimum the status flags are returned to the master. Hence this function is only invoked after the <a class="el" href="joint_8ino.html#aad830e539898b28392f61bfbbc02458f" title="I2C receive event Handler.">receiveEvent()</a> handler has been called. The function calls the <a class="el" href="joint_8ino.html#a80f7e5c60aa6959bb0b1b9a53b423670" title="Handles read request received via I2C.">non_blocking_handler()</a> which is non-blocking. Since most Ustepper functions are non-blocking as they just read/write registers to the stepper driver/encoder they can be handled directly in the ISR. The <a class="el" href="joint_8ino.html#a80f7e5c60aa6959bb0b1b9a53b423670" title="Handles read request received via I2C.">non_blocking_handler()</a> populates the tx_buf with relevant data, the current state flags are appended to the tx_buf and then it is send to the master. </p>
-
-</div>
-</div>
-<a id="a5e9f58c3243b02aa93017378d1df368d" name="a5e9f58c3243b02aa93017378d1df368d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e9f58c3243b02aa93017378d1df368d">&#9670;&#160;</a></span>set_flags_for_blocking_handler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void set_flags_for_blocking_handler </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>reg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>prepare flags to initiate the blocking handling of the received comman. </p>
-<p>Sets the blk_reg to reg, this makes sure that even if a new command is received the blocking hanlder access the latest blocking command. Sets the isBusy flag, to indicate immediatly that the blocking has not been finished. This is if a status request follows immidiatly the command, before the context back to the main loop has happened. Sets the rx_data_ready flag to indicate to the main loop that there is data to read in the blocking handler. Sets the tx_length to 0 because blocking commands can not return a payload. </p>
-
 </div>
 </div>
 <a id="a7dfd9b79bc5a37d7df40207afbc5431f" name="a7dfd9b79bc5a37d7df40207afbc5431f"></a>
@@ -332,122 +209,6 @@ Variables</h2></td></tr>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Setup Peripherals. </p>
-<p>Setup I2C with the address ADR, and begin Serial for debugging with baudrate 9600. Setup the stepper, perform orientation check to check wiring and disable again. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ac0c2c00de97fca251c217b445070f778" name="ac0c2c00de97fca251c217b445070f778"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0c2c00de97fca251c217b445070f778">&#9670;&#160;</a></span>blk_reg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t blk_reg = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9428adc9af4653a2050e2536b55dec8d" name="a9428adc9af4653a2050e2536b55dec8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9428adc9af4653a2050e2536b55dec8d">&#9670;&#160;</a></span>reg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t reg = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4d929025fa8e1a7ac1fe8209bc592f73" name="a4d929025fa8e1a7ac1fe8209bc592f73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d929025fa8e1a7ac1fe8209bc592f73">&#9670;&#160;</a></span>rx_buf</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t rx_buf[<a class="el" href="joint_8h.html#a1d5dab30b404fab91608086105afc78c">MAX_BUFFER</a>] = { 0 }</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a26beb56022f5fe492a3f84209e7f61fa" name="a26beb56022f5fe492a3f84209e7f61fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26beb56022f5fe492a3f84209e7f61fa">&#9670;&#160;</a></span>rx_data_ready</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool rx_data_ready = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a15d2985ceb08bf6824378e9b6ee54ac1" name="a15d2985ceb08bf6824378e9b6ee54ac1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15d2985ceb08bf6824378e9b6ee54ac1">&#9670;&#160;</a></span>rx_length</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t rx_length = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aba8f71f42a1e65ec8b11603f009f025b" name="aba8f71f42a1e65ec8b11603f009f025b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba8f71f42a1e65ec8b11603f009f025b">&#9670;&#160;</a></span>stepper</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">UstepperS32 stepper</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a12443830e4f85d217d84ce079f79a59d" name="a12443830e4f85d217d84ce079f79a59d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12443830e4f85d217d84ce079f79a59d">&#9670;&#160;</a></span>tx_buf</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t tx_buf[<a class="el" href="joint_8h.html#a1d5dab30b404fab91608086105afc78c">MAX_BUFFER</a>+<a class="el" href="joint_8h.html#abf5d227b2ae124bdc7d5f15397b9bca1">RFLAGS_SIZE</a>] = { 0 }</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7ab3114be16a93ee047a809202bc7183" name="a7ab3114be16a93ee047a809202bc7183"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ab3114be16a93ee047a809202bc7183">&#9670;&#160;</a></span>tx_length</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t tx_length = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

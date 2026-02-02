@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m_0',['M',['../classMovMax.html#aa692a6af7d2e32b4a645a7add6ab2b2c',1,'MovMax']]],
+  ['m_0',['M',['../classbioscara__joint__firmware_1_1MovMax.html#a6e89d926841dafa37d6118f1688058ec',1,'bioscara_joint_firmware::MovMax']]],
   ['max_1',['max',['../classbioscara__hardware__drivers_1_1Joint.html#a39932890fc3174218cb79a0068a26d5b',1,'bioscara_hardware_drivers::Joint::max'],['../structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t.html#a3c29de194b4fc68f0934838209681382',1,'bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t::max'],['../structbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface_1_1gripper__config__t.html#ac9aa7a3d481b7e0e050052464ed1588d',1,'bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::gripper_config_t::max']]],
   ['max_5facceleration_2',['max_acceleration',['../structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t.html#a4bd8e5ea941aa2c52b2b31cbb0022765',1,'bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t']]],
   ['max_5fvelocity_3',['max_velocity',['../structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__config__t.html#aea92062a753d103f48b2e5a7b03554a3',1,'bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_config_t']]],

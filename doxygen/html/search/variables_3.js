@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['cb_5fdata_0',['cb_data',['../classMovMax.html#abeed8527a75d1305e84320fde87a9eee',1,'MovMax']]],
-  ['cb_5findex_1',['cb_index',['../classMovMax.html#a5395671dbb651a64510d5430ca99fadd',1,'MovMax']]],
+  ['cb_5fdata_0',['cb_data',['../classbioscara__joint__firmware_1_1MovMax.html#a3c395024cf08025f30fe4632f681129d',1,'bioscara_joint_firmware::MovMax']]],
+  ['cb_5findex_1',['cb_index',['../classbioscara__joint__firmware_1_1MovMax.html#a612a931aabe9096529fe2b4cb9ebe6cc',1,'bioscara_joint_firmware::MovMax']]],
   ['chippath_2',['chippath',['../classRPI__PWM.html#a35df433d8a5faeed71f439ea6063030a',1,'RPI_PWM']]],
   ['cm_5fstate_5fsubsription_5f_3',['cm_state_subsription_',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#acb0ccbaf786959f349361ce0d335fd77',1,'bioscara_rviz_plugin::BioscaraPanel']]],
   ['configure_5fcontroller_5fclient_5f_4',['configure_controller_client_',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#a142b579c2883d0ed55404226f475c1f0',1,'bioscara_rviz_plugin::BioscaraPanel']]],

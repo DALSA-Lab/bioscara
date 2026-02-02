@@ -73,11 +73,14 @@
   <section id="bioscara-c-api-documentation">
 <h1>Bioscara C++ API Documentation<a class="headerlink" href="#bioscara-c-api-documentation" title="Link to this heading"></a></h1>
 <p>This is the API documentation for the Bioscara robotic control middleware based on the ROS2 framework.</p>
-<!-- TODO link components -->
-<p>Joint firmware
-Hardware drivers
-Hardware interfaces
-Single Trigger controller</p>
+<p>Please find the key components below:</p>
+<ul class="simple">
+<li><p>bioscara_joint_firmware: contains the joint firmware and its associtated helper classes.</p></li>
+<li><p>bioscara_hardware_drivers: contains the BaseJoint, Joint and MockJoint drivers as well as the BaseGripper, Gripper and MockGripper drivers.</p></li>
+<li><p>bioscara_hardware_interfaces: contains the ros2_control hardware interfaces that implement the Bioscara arm and gripper hardware components in the BioscaraArmHardwareInterface and BioscaraGripperHardwareInterface respectively.</p></li>
+<li><p>bioscara_rviz_plugin: contains the BioscaraPanel Rviz GUI panel.</p></li>
+<li><p>single_trigger_controller: contains the documentation for the SingleTriggerController.</p></li>
+</ul>
 </section>
 
 
