@@ -16,10 +16,9 @@ Observations:
 
 - Yellow (chB): SDA, Blue (chA): SCL
 - Visible crosstalk on every large transition
-
-- AND: clock stretching (is it really? Check i2c specs)
-
+- AND: clock stretching
 - Time divisions are not correct. Measured on osci is 6 us period
+- Frequency: 138kHz
 - short SDA spike:
   - ACK after address?
   - COntroller releases SDA and waits for answer?
@@ -39,3 +38,8 @@ hardware i2c
 
 - Same cross coupling obvs.
 - slower
+- 100 kHz
+
+## Generally
+
+All samples exhibit crosstalk, a potential culprit for a stuck bus according to the [TI Application Note](https://www.ti.com/lit/an/scpa069/scpa069.pdf?ts=1768568213636). It mentions that if a bus exhibits crosstalk, although mostly present on SDA, a false SCL edge can be triggered on the start condition. Indeed both samples exhibit also a "dip" in SCL at the start condtion when SDA gets pulled low.
