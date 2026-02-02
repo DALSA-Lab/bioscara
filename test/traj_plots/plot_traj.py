@@ -45,11 +45,11 @@ for p in traj_points:
 # Plot
 fig, ax = plt.subplots(3, 1,sharex="col")
 ax[0].plot(out["time"],out["position"], label=joint_names) #, marker='o', markersize=2)
-ax[0].set_ylabel("$q$ [rad]")
+ax[0].set_ylabel("$q$") # [rad]
 ax[1].plot(out["time"],out["velocity"], label=joint_names) #, marker='o', markersize=2)
-ax[1].set_ylabel(r'$\dot{q}$ [rad/s]')
+ax[1].set_ylabel(r'$\dot{q}$') # [rad/s]
 ax[2].plot(out["time"],out["acceleration"], label=joint_names) #, marker='o', markersize=2)
-ax[2].set_ylabel(r'$\ddot{q}$ [$\mathrm{rad}/s^2$]')
+ax[2].set_ylabel(r'$\ddot{q}$') # [$\mathrm{rad}/s^2$]
 
 
 plt.xlabel(r'$t$ [s]')

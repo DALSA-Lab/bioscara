@@ -20,7 +20,7 @@ plt.plot(x,df['/velocity_joint_trajectory_controller/controller_state/reference/
 plt.plot(x,df['/velocity_joint_trajectory_controller/controller_state/reference/positions[2]'],label="J3")
 plt.plot(x,df['/velocity_joint_trajectory_controller/controller_state/reference/positions[3]'],label="J4")
 
-plt.ylabel(r'$q$ [rad]/[m]')
+plt.ylabel(r'$q$')# [rad]/[m]
 plt.tick_params('x', labelbottom=False)
 
 ax2 = plt.subplot(212, sharex=ax1)
@@ -31,7 +31,7 @@ plt.plot(x,df['/velocity_joint_trajectory_controller/controller_state/reference/
 
 
 plt.xlabel(r'$t$ [s]')
-plt.ylabel(r'$\dot{q}$ [$\text{rad}\text{ s}^{-1}$]/[$\text{m}\text{ s}^{-1}$]')
+plt.ylabel(r'$\dot{q}$') #[$\text{rad}\text{ s}^{-1}$]/[$\text{m}\text{ s}^{-1}$]
 ax1.legend(bbox_to_anchor=(0, 1.03, 1, 0.2), loc="lower left",
                 mode="expand", borderaxespad=0, ncol=4)
 plt.tight_layout()
