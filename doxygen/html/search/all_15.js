@@ -5,11 +5,15 @@ var searchData=
   ['ui2c_2ecpp_2',['uI2C.cpp',['../uI2C_8cpp.html',1,'']]],
   ['ui2c_2eh_3',['uI2C.h',['../uI2C_8h.html',1,'']]],
   ['ui_5f_4',['ui_',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#a4501942366b971cad451516efa72e361',1,'bioscara_rviz_plugin::BioscaraPanel']]],
-  ['update_5fhoming_5fgrp_5fstate_5',['update_homing_grp_state',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#ab1f8741339db74bdeae1465631d8b3f0',1,'bioscara_rviz_plugin::BioscaraPanel']]],
-  ['update_5fhoming_5fstate_5flabels_6',['update_homing_state_labels',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#a6d60adb3bcb389e3637da8669294c58c',1,'bioscara_rviz_plugin::BioscaraPanel']]],
-  ['update_5fstate_5flabel_5fand_5fbtn_7',['update_state_label_and_btn',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#a87c0e9b0f98f235d8b40916b394e055a',1,'bioscara_rviz_plugin::BioscaraPanel']]],
-  ['update_5fstate_5flabels_5fand_5fbtns_8',['update_state_labels_and_btns',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#af48cad9687e3e61d24518469a0a00cab',1,'bioscara_rviz_plugin::BioscaraPanel']]],
-  ['updatestate_9',['updatestate',['../classbioscara__joint__firmware_1_1Lowpass.html#a043ac9f63b28a3b1f38c57e80fea523e',1,'bioscara_joint_firmware::Lowpass::updateState()'],['../classbioscara__joint__firmware_1_1MovMax.html#af483c9a0df35f033005d845ebf355e84',1,'bioscara_joint_firmware::MovMax::updateState()']]],
-  ['upwm_2eh_10',['uPWM.h',['../uPWM_8h.html',1,'']]],
-  ['utransmission_2eh_11',['uTransmission.h',['../uTransmission_8h.html',1,'']]]
+  ['update_5',['update',['../classsingle__trigger__controller_1_1SingleTriggerController.html#a7aedde91a021b0a2ce78e78eed311a36',1,'single_trigger_controller::SingleTriggerController']]],
+  ['update_5fcommands_6',['update_commands',['../classsingle__trigger__controller_1_1SingleTriggerController.html#a2e1751666daa3385818539b38437ab04',1,'single_trigger_controller::SingleTriggerController']]],
+  ['update_5fdynamic_5fmap_5fparameters_7',['update_dynamic_map_parameters',['../classsingle__trigger__controller_1_1SingleTriggerController.html#af541080debd506310bc6fab27b5d7dfa',1,'single_trigger_controller::SingleTriggerController']]],
+  ['update_5fhoming_5fgrp_5fstate_8',['update_homing_grp_state',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#ab1f8741339db74bdeae1465631d8b3f0',1,'bioscara_rviz_plugin::BioscaraPanel']]],
+  ['update_5fhoming_5fstate_5flabels_9',['update_homing_state_labels',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#a6d60adb3bcb389e3637da8669294c58c',1,'bioscara_rviz_plugin::BioscaraPanel']]],
+  ['update_5fstate_5flabel_5fand_5fbtn_10',['update_state_label_and_btn',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#a87c0e9b0f98f235d8b40916b394e055a',1,'bioscara_rviz_plugin::BioscaraPanel']]],
+  ['update_5fstate_5flabels_5fand_5fbtns_11',['update_state_labels_and_btns',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#af48cad9687e3e61d24518469a0a00cab',1,'bioscara_rviz_plugin::BioscaraPanel']]],
+  ['update_5fstates_12',['update_states',['../classsingle__trigger__controller_1_1SingleTriggerController.html#a39bf6624edcb8642e002fa0a1815c3c6',1,'single_trigger_controller::SingleTriggerController']]],
+  ['updatestate_13',['updatestate',['../classbioscara__joint__firmware_1_1Lowpass.html#a043ac9f63b28a3b1f38c57e80fea523e',1,'bioscara_joint_firmware::Lowpass::updateState()'],['../classbioscara__joint__firmware_1_1MovMax.html#af483c9a0df35f033005d845ebf355e84',1,'bioscara_joint_firmware::MovMax::updateState()']]],
+  ['upwm_2eh_14',['uPWM.h',['../uPWM_8h.html',1,'']]],
+  ['utransmission_2eh_15',['uTransmission.h',['../uTransmission_8h.html',1,'']]]
 ];

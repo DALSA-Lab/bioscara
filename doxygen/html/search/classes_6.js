@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trajectorysequence_0',['TrajectorySequence',['../classTrajectorySequence.html',1,'']]]
+  ['singletriggercontroller_0',['SingleTriggerController',['../classsingle__trigger__controller_1_1SingleTriggerController.html',1,'single_trigger_controller']]]
 ];

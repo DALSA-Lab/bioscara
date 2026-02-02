@@ -9,8 +9,10 @@ var searchData=
   ['adr_6',['ADR',['../configuration_8h.html#ac0265004084d8f72947a83ca56953dda',1,'configuration.h']]],
   ['anglemoved_7',['anglemoved',['../classbioscara__hardware__drivers_1_1BaseJoint.html#affbc9ba6c17b02af32647dc76796de13ab67f7cf4cf5b60110bd18c6e06af9753',1,'bioscara_hardware_drivers::BaseJoint::ANGLEMOVED'],['../namespacebioscara__joint__firmware.html#a7d83f159118cbb1012425d05b440ac93a0cba49d0914ad05381e46f20fbe57577',1,'bioscara_joint_firmware::ANGLEMOVED']]],
   ['api_20documentation_8',['Bioscara C++ API Documentation',['../index.html',1,'']]],
-  ['arm_5fen_5fbtn_5fcb_9',['arm_en_btn_cb',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#acd799448d38d554075c5ac05e61be5a6',1,'bioscara_rviz_plugin::BioscaraPanel']]],
-  ['arm_5fhardware_2ecpp_10',['arm_hardware.cpp',['../arm__hardware_8cpp.html',1,'']]],
-  ['arm_5fhardware_2ehpp_11',['arm_hardware.hpp',['../arm__hardware_8hpp.html',1,'']]],
-  ['async_5fstart_5ftime_12',['async_start_time',['../classbioscara__hardware__drivers_1_1MockJoint.html#a1c308444f41a5f000b878b5581359df8',1,'bioscara_hardware_drivers::MockJoint']]]
+  ['apply_5fcommand_9',['apply_command',['../classsingle__trigger__controller_1_1SingleTriggerController.html#ad3d5fb1c3fbf820e4592d8f837267ddb',1,'single_trigger_controller::SingleTriggerController']]],
+  ['apply_5fstate_5fvalue_10',['apply_state_value',['../classsingle__trigger__controller_1_1SingleTriggerController.html#a93bbc069ae78ffdff80f9a078b036d43',1,'single_trigger_controller::SingleTriggerController']]],
+  ['arm_5fen_5fbtn_5fcb_11',['arm_en_btn_cb',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#acd799448d38d554075c5ac05e61be5a6',1,'bioscara_rviz_plugin::BioscaraPanel']]],
+  ['arm_5fhardware_2ecpp_12',['arm_hardware.cpp',['../arm__hardware_8cpp.html',1,'']]],
+  ['arm_5fhardware_2ehpp_13',['arm_hardware.hpp',['../arm__hardware_8hpp.html',1,'']]],
+  ['async_5fstart_5ftime_14',['async_start_time',['../classbioscara__hardware__drivers_1_1MockJoint.html#a1c308444f41a5f000b878b5581359df8',1,'bioscara_hardware_drivers::MockJoint']]]
 ];
