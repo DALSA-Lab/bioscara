@@ -26,6 +26,8 @@
 #include "filters.h"
 #include "stall.h"
 
+namespace bioscara_joint_firmware {
+
 UstepperS32 stepper;
 static Lowpass lp(1, 0.01, 0.1);
 
@@ -52,32 +54,37 @@ size_t rx_length = 0;
 
 static uint32_t deadman = 0;
 
+static float last_pid_err = 0, last_pid_err_fil = 0;
+static float pid_err = 0, pid_err_fil = 0;
+// static uint16_t last_SG_err = 0;
+// static uint16_t SG_err = 0, SG_err_fil = 0;
+
 
 void blocking_handler(uint8_t reg);
 void non_blocking_handler(uint8_t reg);
 void set_flags_for_blocking_handler(uint8_t reg);
 
 /**
- * @brief I2C receive event Handler.
- *
- * Reads the content of the received message. Saves the register so it can be used in the main loop. 
- * If the master invokes the read() function the message contains only the register byte and no payload.
- * If the master invokes the write() the message has a payload of appropriate size for the command.
- * Every I2C transaction starts with a receive event when the command is sent and is immediatly followed by a request 
- * since at minimum the flags need to be transmitted back. This means that the receive handler and request handler are always 
- * executed sequentially. The main loop is not executed since both handlers are ISRs.
- * For a read request the message looks like this: \n 
- * \< [REG] \n 
- * \> [TXBUFn]...[TXBUF2][TXBUF1][TXBUF0][FLAGS] \n 
- * For a command the message looks like this: \n 
- * \< [REG][RXBUFn]...[RXBUF2][RXBUF1][RXBUF0] \n 
- * \> [FLAGS] \n 
- * The payload is read into the rx_buf, rx_length is set to the payload length.
- * @param n the number of bytes read from the controller device: MAX_BUFFER
- */
+  * @brief I2C receive event Handler.
+  *
+  * Reads the content of the received message. Saves the register so it can be used in the main loop. 
+  * If the master invokes the read() function the message contains only the register byte and no payload.
+  * If the master invokes the write() the message has a payload of appropriate size for the command.
+  * Every I2C transaction starts with a receive event when the command is sent and is immediatly followed by a request 
+  * since at minimum the flags need to be transmitted back. This means that the receive handler and request handler are always 
+  * executed sequentially. The main loop is not executed since both handlers are ISRs.
+  * For a read request the message looks like this: \n 
+  * \< [REG] \n 
+  * \> [TXBUFn]...[TXBUF2][TXBUF1][TXBUF0][FLAGS] \n 
+  * For a command the message looks like this: \n 
+  * \< [REG][RXBUFn]...[RXBUF2][RXBUF1][RXBUF0] \n 
+  * \> [FLAGS] \n 
+  * The payload is read into the rx_buf, rx_length is set to the payload length.
+  * @param n the number of bytes read from the controller device: MAX_BUFFER
+  */
 void receiveEvent(int n) {
   // Serial.print("receive: \t");
-  reg = Wire.read(); // Defaults to -1 if no data is available
+  reg = Wire.read();  // Defaults to -1 if no data is available
   // Serial.printf("Register: 0x%02x\n", reg);
   int i = 0;
   while (Wire.available()) {
@@ -94,14 +101,14 @@ void receiveEvent(int n) {
 }
 
 /**
- * @brief I2C request event Handler.
- *
- * Sends the response data to the master. Every transaction begins with a receive event. The request event is always triggered since at a minimum the status flags are returned
- * to the master.
- * Hence this function is only invoked after the receiveEvent() handler has been called. The function calls the non_blocking_handler() which is non-blocking.
- * Since most Ustepper functions are non-blocking as they just read/write registers to the stepper driver/encoder they can be handled directly in the ISR.
- * The non_blocking_handler() populates the tx_buf with relevant data, the current state flags are appended to the tx_buf and then it is send to the master.
- */
+  * @brief I2C request event Handler.
+  *
+  * Sends the response data to the master. Every transaction begins with a receive event. The request event is always triggered since at a minimum the status flags are returned
+  * to the master.
+  * Hence this function is only invoked after the receiveEvent() handler has been called. The function calls the non_blocking_handler() which is non-blocking.
+  * Since most Ustepper functions are non-blocking as they just read/write registers to the stepper driver/encoder they can be handled directly in the ISR.
+  * The non_blocking_handler() populates the tx_buf with relevant data, the current state flags are appended to the tx_buf and then it is send to the master.
+  */
 void requestEvent() {
   // Serial.print("request: \t");
   // Serial.print("Register: ");
@@ -124,13 +131,13 @@ void requestEvent() {
 }
 
 /**
- * @brief Handles commands received via I2C.
- * @warning This is a blocking function which may take some time to execute. This function must not be called from an ISR or callback! 
- * Call from main loop instead.
+  * @brief Handles commands received via I2C.
+  * @warning This is a blocking function which may take some time to execute. This function must not be called from an ISR or callback! 
+  * Call from main loop instead.
 
- * The registers handled in this handler are those whose implementation can take time and can thereby not be called directly from the request handler.
- * @param reg command that should be executed.
- */
+  * The registers handled in this handler are those whose implementation can take time and can thereby not be called directly from the request handler.
+  * @param reg command that should be executed.
+  */
 void blocking_handler(uint8_t reg) {
   // Serial.print("Receive Handler: \t Register: ");
   // Serial.println(reg);
@@ -207,12 +214,12 @@ void blocking_handler(uint8_t reg) {
 }
 
 /**
- * @brief Handles read request received via I2C.
+  * @brief Handles read request received via I2C.
 
- * Can be invoked from the I2C ISR since reads from the stepper are non-blocking. 
- * Also Handling reads and the subsequent wire.write(), did not work from the main loop.
- * @param reg command to execute/register to read.
- */
+  * Can be invoked from the I2C ISR since reads from the stepper are non-blocking. 
+  * Also Handling reads and the subsequent wire.write(), did not work from the main loop.
+  * @param reg command to execute/register to read.
+  */
 
 void non_blocking_handler(uint8_t reg) {
   rx_data_ready = 0;
@@ -424,8 +431,8 @@ void non_blocking_handler(uint8_t reg) {
     case HOME:
       {
         /* Immediatly set the notHomed and isBusy flag.
-        This is neccessary since if homing command is received but the blocking_handler has not handled the command yet
-        a following read request might read isBusy and notHomed to be 0 leading to the false assumption homing has completed. */
+          This is neccessary since if homing command is received but the blocking_handler has not handled the command yet
+          a following read request might read isBusy and notHomed to be 0 leading to the false assumption homing has completed. */
         notHomed = 1;
         set_flags_for_blocking_handler(reg);
 
@@ -439,14 +446,14 @@ void non_blocking_handler(uint8_t reg) {
 }
 
 /**
- * @brief prepare flags to initiate the blocking handling of the received comman.
- *
- * Sets the blk_reg to reg, this makes sure that even if a new command is received the blocking hanlder access the latest blocking command.
- * Sets the isBusy flag, to indicate immediatly that the blocking has not been finished. This is if a status request follows immidiatly the command,
- * before the context back to the main loop has happened.
- * Sets the rx_data_ready flag to indicate to the main loop that there is data to read in the blocking handler.
- * Sets the tx_length to 0 because blocking commands can not return a payload.
- */
+  * @brief prepare flags to initiate the blocking handling of the received comman.
+  *
+  * Sets the blk_reg to reg, this makes sure that even if a new command is received the blocking hanlder access the latest blocking command.
+  * Sets the isBusy flag, to indicate immediatly that the blocking has not been finished. This is if a status request follows immidiatly the command,
+  * before the context back to the main loop has happened.
+  * Sets the rx_data_ready flag to indicate to the main loop that there is data to read in the blocking handler.
+  * Sets the tx_length to 0 because blocking commands can not return a payload.
+  */
 void set_flags_for_blocking_handler(uint8_t reg) {
   blk_reg = reg;
   isBusy = 1;
@@ -454,12 +461,11 @@ void set_flags_for_blocking_handler(uint8_t reg) {
   tx_length = 0;
 }
 
-
 /**
  * @brief Setup Peripherals
  *
  * Setup I2C with the address ADR, and begin Serial for debugging with baudrate 9600.
- * Setup the stepper, perform orientation check to check wiring and disable again.
+ * Setup the stepper, perform orientation check to check wiring and disable the stepper again.
  */
 void setup(void) {
   // Join I2C bus as follower
@@ -483,13 +489,6 @@ void setup(void) {
   Wire.onRequest(requestEvent);
 }
 
-
-static float last_pid_err = 0, last_pid_err_fil = 0;
-static float pid_err = 0, pid_err_fil = 0;
-
-// static uint16_t last_SG_err = 0;
-// static uint16_t SG_err = 0, SG_err_fil = 0;
-
 /**
  * @brief Main loop
 
@@ -499,7 +498,6 @@ static float pid_err = 0, pid_err_fil = 0;
  * Clear isBusy flag to indicate device is no longer busy \n 
  */
 void loop(void) {
-
   if (isStallguardEnabled && !isStalled) {
     float qd = stepper.encoder.getRPM();
     pid_err = abs(stepper.getPidError());
@@ -589,4 +587,15 @@ void loop(void) {
   }
   // Serial.printf("Set: %d, Is: %d, encoder: %d\n", stepper.driver.readRegister(XTARGET), stepper.driver.readRegister(XACTUAL), stepper.encoder.getAngleMovedRaw());
   delay(10);
+}
+}
+
+
+void setup(void) {
+  bioscara_joint_firmware::setup();
+}
+
+
+void loop(void) {
+  bioscara_joint_firmware::loop();
 }

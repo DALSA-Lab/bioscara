@@ -49,6 +49,7 @@
     Serial.println();                 \
   }
 
+namespace bioscara_joint_firmware {
 /**
  * @brief register and command definitions
  *
@@ -118,5 +119,5 @@ int writeValue(const T val, uint8_t *txBuf, size_t &tx_length)
   memcpy(txBuf, &val, tx_length);
   return 0;
 }
-
+}
 #endif
