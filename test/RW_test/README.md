@@ -160,7 +160,7 @@ The oscilloscope screen captures show that the waveform at 400 kHz already looks
 
 There are two limitations: 
 - The oscilloscope has a too low sampling frequency to judge the 400 kHz waveform correctly
-- The potential result driving the bus at 400 kHz could be a bit flip, which could would go unchecked since to checksum is implemented in the communication protocol to save bytes. A bit flip could have destructive results.
+- The potential result driving the bus at 400 kHz could be a bit flip, which could would go unchecked since no checksum is implemented in the communication protocol to save bytes. A bit flip could have destructive results.
 
 ## Discussion
 This test has been conducted to investigate if it is possible to increase the controller frequency to achieve better performance and to determine if velocity control is feasible.
@@ -186,7 +186,7 @@ The controller needs to:
 **Table 5:** Expected total times for the velocity based controller.
 
 
-### Velocity based Control
+### Position based Control
 The simplest joint controller simply forwards position commands to the hardware. The controller is non as such since there is no feedback loop. This drastically lightens the requirements on the robot controllers realtime capability and controllers update frequency. However it leaves all the closed loop control to the joint firmware which has a much less advanced internal control loop. This results in a steady state tracking error for a ramp position reference.
 
 The controller needs to:
