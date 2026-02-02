@@ -1,13 +1,13 @@
 /**
- * @file profiling_test.ino
+ * @file comm_test.ino
  * @author sbstorz
- * @brief joint firmware for speed profiling
+ * @brief joint firmware for communication test
  * @version 0.1
  * @date 2025-05-27
  *
  * @copyright Copyright (c) 2025
  *
- * This file contains a copy of the firmware for speed profiling.
+ * This file contains a copy of the joint firmware used for communication tests.
  *
  */
 
@@ -78,9 +78,9 @@ void set_flags_for_blocking_handler(uint8_t reg);
  * @param n the number of bytes read from the controller device: MAX_BUFFER
  */
 void receiveEvent(int n) {
-  // Serial.print("receive: \t");
+  Serial.print("Receive Event, reading...\n");
   reg = Wire.read();
-  // Serial.printf("Register: 0x%02x\n", reg);
+  Serial.printf("Read Register: 0x%02x\n", reg);
   int i = 0;
   while (Wire.available()) {
     rx_buf[i] = Wire.read();
@@ -90,8 +90,8 @@ void receiveEvent(int n) {
   tx_length = 0;
 
   if (i) {
-    // Serial.print("rx_buf: ");
-    // DUMP_BUFFER(rx_buf, rx_length);
+    Serial.print("rx_buf: ");
+    DUMP_BUFFER(rx_buf, rx_length);
   }
 }
 
@@ -105,13 +105,11 @@ void receiveEvent(int n) {
  * The non_blocking_handler() populates the tx_buf with relevant data, the current state flags are appended to the tx_buf and then it is send to the master.
  */
 void requestEvent() {
-  // Serial.print("request: \t");
+  Serial.print("Request Event...\n");
   // Serial.print("Register: ");
   // Serial.println(reg);
 
-  unsigned long start = micros();
   non_blocking_handler(reg);
-  unsigned long now = micros();
   uint8_t state = 0x00;
   state |= (isStalled << 0);
   state |= (isBusy << 1);
@@ -125,17 +123,6 @@ void requestEvent() {
   // DUMP_BUFFER(tx_buf, tx_length);
   Wire.write(tx_buf, tx_length);
   deadman = millis();
-
-  /* time [ms], command, rx_length, tx_length, t_exec [us] */
-  Serial.print(millis());
-  Serial.print(", ");
-  Serial.print(reg_txt);
-  Serial.print(", ");
-  Serial.print(rx_length);
-  Serial.print(", ");
-  Serial.print(tx_length);
-  Serial.print(", ");
-  Serial.println(now - start);
 }
 
 /**
@@ -239,6 +226,9 @@ void non_blocking_handler(uint8_t reg) {
         Serial.print("Executing PING\n");
         reg_txt = "PING";
         writeValue<char>(ACK, tx_buf, tx_length);
+        // static uint32_t delay_ms = 0;
+        // Serial.printf("Delay: %ld\n",delay_ms);
+        // delay(delay_ms++);
         break;
       }
 
@@ -520,16 +510,10 @@ void setup(void) {
 
   Wire.onReceive(receiveEvent);
   Wire.onRequest(requestEvent);
-
-  Serial.println("time [ms], command, rx_length, tx_length, t_exec [us]");
 }
 
 
-static float last_pid_err = 0, last_pid_err_fil = 0;
-static float pid_err = 0, pid_err_fil = 0;
-
-// static uint16_t last_SG_err = 0;
-// static uint16_t SG_err = 0, SG_err_fil = 0;
+uint32_t last = millis();
 
 /**
  * @brief Main loop
@@ -541,77 +525,6 @@ static float pid_err = 0, pid_err_fil = 0;
  */
 void loop(void) {
 
-  if (isStallguardEnabled && !isStalled) {
-    float qd = stepper.encoder.getRPM();
-    pid_err = abs(stepper.getPidError());
-
-    /* data0: raw abs(pid-error) */
-    Serial.print(pid_err);
-    Serial.print("\t");
-    if (pid_err - last_pid_err > 100) {
-      pid_err = last_pid_err;
-    }
-
-    /* data1: abs(pid-error) spikes removed */
-    Serial.print(pid_err);
-    Serial.print("\t");
-
-    /* data2: abs(pid-error) spikes removed LP filtered */
-    pid_err_fil = lp.updateState(pid_err);
-    Serial.print(pid_err_fil);
-    Serial.print("\t");
-
-    /* data3: raw SG_RESULT */
-    // SG_err = stepper.driver.getStallValue();
-    // Serial.print(SG_err);
-    // Serial.print("\t");
-    // if (SG_err - last_SG_err > 200) {
-    //   SG_err = last_SG_err;
-    // }
-
-    /* data4: SG_RESULT spikes removed */
-    // Serial.print(SG_err);
-    // Serial.print("\t");
-
-    /* data5: q */
-    // Serial.print(q);
-    // Serial.print("\t");
-
-    /* data6: q_set */
-    // Serial.print(q_set);
-    // Serial.print("\t");
-
-    /* data7: qd */
-    Serial.print(qd / 9.549296596425384);
-    Serial.print("\t");
-
-    /* data8: qd_set */
-    Serial.print(qd_set / 9.549296596425384);
-    Serial.print("\t");
-
-    /* data9: threshold */
-    float threshold = stall_threshold(qd / 9.549296596425384, stallguardThreshold);
-    Serial.print(threshold);
-    Serial.print("\t");
-
-    /* data10: stall */
-    if (pid_err_fil > threshold) {
-      Serial.println(1);
-      isStalled = 1;
-      stepper.stop(HARD);
-
-      /* Clear the LP memory */
-      lp.resetState();
-      last_pid_err = 0;
-      pid_err_fil = 0;
-      // last_SG_err = 0;
-    } else {
-      Serial.println(0);
-      last_pid_err = pid_err;
-      // last_SG_err = SG_err;
-    }
-  }
-
   if (rx_data_ready) {
     rx_data_ready = 0;
     isBusy = 1;  // set is busy flag
@@ -620,14 +533,11 @@ void loop(void) {
   }
 
   uint32_t now = millis();
-  /* Take potential overflow of millis() into account (50 days) and calculate the difference according to this */
-  uint32_t diff = (now >= deadman) ? (now - deadman) : (std::numeric_limits<uint32_t>::max() + 1 - (deadman - now));
-  // Serial.printf("diff: %lu; qd: %.4f\n",diff,qd_set);
-  if (diff > 50 && !notEnabled && qd_set) {
-    Serial.println("Deadman switch triggered");
-    stepper.setRPM(0);
-    notEnabled = 1;
+  uint32_t dt = now -last;
+  if(dt > 1){
+     Serial.printf("time: %ld\n", dt);
   }
-  // Serial.printf("Set: %d, Is: %d, encoder: %d\n", stepper.driver.readRegister(XTARGET), stepper.driver.readRegister(XACTUAL), stepper.encoder.getAngleMovedRaw());
-  delay(10);
+ 
+  last = now;
+  delay(1);
 }
