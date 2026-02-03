@@ -29,7 +29,8 @@
  * @brief Joint firmware
  *
  * The joint firmware is implemented in the Arduino framework. Initially the setup() function is called and subsequently the loop() function in an infinite loop.
- *
+ * The receiveEvent() is executed when a I2C message is received, and the requestEvent() when data is requested.
+ * This always happens sequentially because at least always the #state flags are returned to the robot controller
  */
 namespace bioscara_joint_firmware
 {
@@ -159,7 +160,7 @@ namespace bioscara_joint_firmware
     {
     case CHECKORIENTATION:
     {
-      Serial.print("Executing CHECKORIENTATION\n");
+      // Serial.print("Executing CHECKORIENTATION\n");
       float v;
       readValue<float>(v, rx_buf, rx_length);
       stepper.checkOrientation(v);
@@ -168,7 +169,7 @@ namespace bioscara_joint_firmware
 
     case HOME:
     {
-      Serial.print("Executing HOME\n");
+      // Serial.print("Executing HOME\n");
       uint8_t dir;
       uint8_t speed;
       uint8_t sensitivity;
@@ -246,14 +247,14 @@ namespace bioscara_joint_firmware
     {
     case PING:
     {
-      Serial.print("Executing PING\n");
+      // Serial.print("Executing PING\n");
       writeValue<char>(ACK, tx_buf, tx_length);
       break;
     }
 
     case SETUP:
     {
-      Serial.print("Executing SETUP\n");
+      // Serial.print("Executing SETUP\n");
       memcpy(&driveCurrent, rx_buf, 1);
       memcpy(&holdCurrent, rx_buf + 1, 1);
 
@@ -288,8 +289,6 @@ namespace bioscara_joint_firmware
       break;
     }
 
-      /* Below are write commands that are non-blocking and can be executed from the request ISR */
-
     case SETRPM:
     {
       // Serial.print("Executing SETRPM\n");
@@ -304,7 +303,7 @@ namespace bioscara_joint_firmware
 
     case MOVESTEPS:
     {
-      Serial.print("Executing MOVESTEPS\n");
+      // Serial.print("Executing MOVESTEPS\n");
       int32_t v;
       readValue<int32_t>(v, rx_buf, rx_length);
       stepper.moveSteps(v);
@@ -313,19 +312,18 @@ namespace bioscara_joint_firmware
 
     case MOVETOANGLE:
     {
-      Serial.print("Executing MOVETOANGLE\n");
+      // Serial.print("Executing MOVETOANGLE\n");
       readValue<float>(q_set, rx_buf, rx_length);
       if (!isStalled)
       {
         stepper.moveToAngle(q_set);
-        // Serial.println(q_set,4);
       }
       break;
     }
 
     case SETCURRENT:
     {
-      Serial.print("Executing SETCURRENT\n");
+      // Serial.print("Executing SETCURRENT\n");
       readValue<uint8_t>(driveCurrent, rx_buf, rx_length);
       stepper.setCurrent(driveCurrent);
       if (driveCurrent == 0)
@@ -337,7 +335,7 @@ namespace bioscara_joint_firmware
 
     case SETHOLDCURRENT:
     {
-      Serial.print("Executing SETHOLDCURRENT\n");
+      // Serial.print("Executing SETHOLDCURRENT\n");
       readValue<uint8_t>(holdCurrent, rx_buf, rx_length);
       stepper.setHoldCurrent(holdCurrent);
       if (holdCurrent == 0)
@@ -349,7 +347,7 @@ namespace bioscara_joint_firmware
 
     case SETMAXACCELERATION:
     {
-      Serial.print("Executing SETMAXACCELERATION\n");
+      // Serial.print("Executing SETMAXACCELERATION\n");
       readValue<float>(maxAccel, rx_buf, rx_length);
       maxAccel *= 200 / 360.0; // conversion from degrees/s^2 to steps/s^2
       stepper.setMaxAcceleration(maxAccel);
@@ -363,7 +361,7 @@ namespace bioscara_joint_firmware
 
     case SETMAXVELOCITY:
     {
-      Serial.print("Executing SETMAXVELOCITY\n");
+      // Serial.print("Executing SETMAXVELOCITY\n");
       readValue<float>(maxVel, rx_buf, rx_length);
       maxVel *= 200 / 360.0; // conversion from degrees/s to steps/s
       stepper.setMaxVelocity(maxVel);
@@ -372,7 +370,7 @@ namespace bioscara_joint_firmware
 
     case ENABLESTALLGUARD:
     {
-      Serial.print("Executing ENABLESTALLGUARD\n");
+      // Serial.print("Executing ENABLESTALLGUARD\n");
 
       // Very simple workaround for stall detection, since the built-in encoder stall-detection is tricky to work with in particular in combination with homing since it can not be reset.
       uint8_t sensitivity;
@@ -398,7 +396,7 @@ namespace bioscara_joint_firmware
 
     case SETBRAKEMODE:
     {
-      Serial.print("Executing SETBRAKEMODE\n");
+      // Serial.print("Executing SETBRAKEMODE\n");
       uint8_t v;
       readValue<uint8_t>(v, rx_buf, rx_length);
       stepper.setBrakeMode(v);
@@ -415,7 +413,7 @@ namespace bioscara_joint_firmware
 
     case DISABLECLOSEDLOOP:
     {
-      Serial.print("Executing DISABLECLOSEDLOOP\n");
+      // Serial.print("Executing DISABLECLOSEDLOOP\n");
       uint8_t v;
       readValue<uint8_t>(v, rx_buf, rx_length);
       stepper.disableClosedLoop();
@@ -425,7 +423,7 @@ namespace bioscara_joint_firmware
 
     case STOP:
     {
-      Serial.print("Executing STOP\n");
+      // Serial.print("Executing STOP\n");
       uint8_t v;
       readValue<uint8_t>(v, rx_buf, rx_length);
       stepper.setRPM(0);
@@ -440,7 +438,7 @@ namespace bioscara_joint_firmware
 
     case HOMEOFFSET:
     {
-      Serial.print("Executing HOMEOFFSET\n");
+      // Serial.print("Executing HOMEOFFSET\n");
       if (rx_length)
       {
         readValue<float>(homingOffset, rx_buf, rx_length);
@@ -531,21 +529,21 @@ namespace bioscara_joint_firmware
       pid_err = abs(stepper.getPidError());
 
       /* data0: raw abs(pid-error) */
-      Serial.print(pid_err);
-      Serial.print("\t");
+      // Serial.print(pid_err);
+      // Serial.print("\t");
       if (pid_err - last_pid_err > 100)
       {
         pid_err = last_pid_err;
       }
 
       /* data1: abs(pid-error) spikes removed */
-      Serial.print(pid_err);
-      Serial.print("\t");
+      // Serial.print(pid_err);
+      // Serial.print("\t");
 
       /* data2: abs(pid-error) spikes removed LP filtered */
-      pid_err_fil = lp.updateState(pid_err);
-      Serial.print(pid_err_fil);
-      Serial.print("\t");
+      // pid_err_fil = lp.updateState(pid_err);
+      // Serial.print(pid_err_fil);
+      // Serial.print("\t");
 
       /* data3: raw SG_RESULT */
       // SG_err = stepper.driver.getStallValue();
@@ -568,22 +566,22 @@ namespace bioscara_joint_firmware
       // Serial.print("\t");
 
       /* data7: qd */
-      Serial.print(qd / 9.549296596425384);
-      Serial.print("\t");
+      // Serial.print(qd / 9.549296596425384);
+      // Serial.print("\t");
 
       /* data8: qd_set */
-      Serial.print(qd_set / 9.549296596425384);
-      Serial.print("\t");
+      // Serial.print(qd_set / 9.549296596425384);
+      // Serial.print("\t");
 
       /* data9: threshold */
       float threshold = stall_threshold(qd / 9.549296596425384, stallguardThreshold);
-      Serial.print(threshold);
-      Serial.print("\t");
+      // Serial.print(threshold);
+      // Serial.print("\t");
 
       /* data10: stall */
       if (pid_err_fil > threshold)
       {
-        Serial.println(1);
+        // Serial.println(1);
         isStalled = 1;
         stepper.stop(HARD);
 
@@ -595,7 +593,7 @@ namespace bioscara_joint_firmware
       }
       else
       {
-        Serial.println(0);
+        // Serial.println(0);
         last_pid_err = pid_err;
         // last_SG_err = SG_err;
       }
