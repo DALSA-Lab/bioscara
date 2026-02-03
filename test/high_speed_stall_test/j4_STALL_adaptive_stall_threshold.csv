@@ -1,4 +1,4 @@
-Program Time [s],data 0,data 1,data 2,data 3,data 4,data 5,data 6,data 7,data 8,data 9,data 10
+Program Time [s],raw abs(pid-error),abs(pid-error) spikes removed,abs(pid-error) spikes removed LP filtered,raw SG_RESULT,SG_RESULT spikes removed,q [deg],q_set [deg],qd [rad/s],qd_set [rad/s],threshold,stall
 4.55028,23,23,22.96,49,49,0,0,14.97,15.48,141.24,0
 4.56022,20,20,22.67,31,31,0,0,15.05,15.6,141.27,0
 4.57002,46,46,25,49,49,0,0,15.12,15.72,141.3,0
