@@ -153,8 +153,7 @@ namespace bioscara_hardware_drivers
         float _pos = _backup_init_pos; ///< stored position
         float _pos_get = _pos;         ///< reported position
     private:
-        std::chrono::_V2::system_clock::time_point _new_cmd_time =
-            std::chrono::high_resolution_clock::now();
+        std::chrono::_V2::system_clock::time_point _new_cmd_time = std::chrono::_V2::system_clock::time_point();
     };
 }
 #endif // MBASEGRIPPER_H

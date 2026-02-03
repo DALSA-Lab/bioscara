@@ -22,16 +22,6 @@ namespace bioscara_hardware_drivers
 
     err_type_t BaseGripper::init(void)
     {
-        return err_type_t::OK;
-    }
-
-    err_type_t BaseGripper::deinit(void)
-    {
-        return err_type_t::OK;
-    }
-
-    err_type_t BaseGripper::enable(void)
-    {
         // try to retrieve the last recorded position
         float t;
         if (retrieve_last_position(t) != err_type_t::OK)
@@ -42,6 +32,16 @@ namespace bioscara_hardware_drivers
         {
             _pos = t;
         }
+        return err_type_t::OK;
+    }
+
+    err_type_t BaseGripper::deinit(void)
+    {
+        return err_type_t::OK;
+    }
+
+    err_type_t BaseGripper::enable(void)
+    {
         return err_type_t::OK;
     }
 
