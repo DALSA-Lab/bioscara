@@ -8,3 +8,4 @@ User Guides
    documentation.md
    installation.md
    building.md
+   firmware.md
