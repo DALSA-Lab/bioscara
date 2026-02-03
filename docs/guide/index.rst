@@ -5,7 +5,9 @@ User Guides
    :maxdepth: 3
    :caption: Contents
 
-   documentation.md
    installation.md
    building.md
+   operate.md
+   documentation.md   
    firmware.md
+   IKFast.md
