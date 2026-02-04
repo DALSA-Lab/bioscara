@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modifying and Flashing the Joint Firmware &mdash; Bioscara  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Creating a IKFast Inverse Kinematics Plugin" href="IKFast.html" />
+    <link rel="prev" title="Building the Documentation locally" href="documentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Bioscara
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../code/index.html">Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building.html">Building the ROS2 Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operate.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Building the Documentation locally</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Modifying and Flashing the Joint Firmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-the-arduino-ide">Install the Arduino IDE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-stm32-cube-programmer">Install STM32 CUBE Programmer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-the-usteppers32-library-to-the-arduino-ide">Add the uStepperS32 library to the Arduino IDE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-the-usteppers32-library">Install the uStepperS32 Library</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#flashing-the-firmware">Flashing the Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-notes">Other Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="IKFast.html">Creating a IKFast Inverse Kinematics Plugin</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bioscara</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">User Guides</a></li>
+      <li class="breadcrumb-item active">Modifying and Flashing the Joint Firmware</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide/firmware.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modifying-and-flashing-the-joint-firmware">
+<h1>Modifying and Flashing the Joint Firmware<a class="headerlink" href="#modifying-and-flashing-the-joint-firmware" title="Link to this heading"></a></h1>
+<p>The joint firmware is programmed in C++ using the Arduino framework since the uStepperS32 stepper library is released for that ecosystem.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>In order to flash firmware to the uStepperS32 stepper controllers some prerequisites must be met. The following guide is copied for reference from the <a class="reference external" href="https://www.ustepper.com/getting-started-with-ustepper/">uStepper website</a>.</p>
+<section id="install-the-arduino-ide">
+<h3>Install the Arduino IDE<a class="headerlink" href="#install-the-arduino-ide" title="Link to this heading"></a></h3>
+<p>Installing the uStepperS32 library and flashing the firmware is done through the Arduino IDE which needs to be installed on the developer’s computer from <a class="reference external" href="https://www.arduino.cc/en/software/">here</a>.</p>
+</section>
+<section id="install-stm32-cube-programmer">
+<h3>Install STM32 CUBE Programmer<a class="headerlink" href="#install-stm32-cube-programmer" title="Link to this heading"></a></h3>
+<p>The uStepper is based on an STM32F401 microcontroller. The STM32 CUBE Programmer is used behind the scenes to flash the firmware from the Arduino IDE.
+Install the programmer from <a class="reference external" href="https://www.st.com/en/development-tools/stm32cubeprog.html">here</a>.</p>
+</section>
+<section id="add-the-usteppers32-library-to-the-arduino-ide">
+<h3>Add the uStepperS32 library to the Arduino IDE<a class="headerlink" href="#add-the-usteppers32-library-to-the-arduino-ide" title="Link to this heading"></a></h3>
+<p>In the Arduino IDE, go to <em>File</em>-&gt;<em>preferences</em> and append the URL <code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/uStepper/uStepperSTM32Hardware/master/package.json</span></code> to the Additional Boards Manager URLs field at the bottom and accept with OK.</p>
+<p>Then install the uStepper board through the board manager under <em>Tools</em>-&gt;<em>Board</em>-&gt;<em>Boards Manager</em>. Search for “ustepper” and the board should show up after the board manager has refreshed. Then press INSTALL.</p>
+<p>Finally it should now be possible to select the uStepper STM32 boards under <em>tools</em>-&gt;<em>boards</em>.</p>
+</section>
+<section id="install-the-usteppers32-library">
+<h3>Install the uStepperS32 Library<a class="headerlink" href="#install-the-usteppers32-library" title="Link to this heading"></a></h3>
+<p>Go to <em>Sketch</em>-&gt;<em>Include Library</em>-&gt;<em>Manage Libraries</em>, search for “uStepperS32”, and press INSTALL.
+Now both the hardware and the library are setup for compilation and flashing.</p>
+</section>
+</section>
+<section id="flashing-the-firmware">
+<h2>Flashing the Firmware<a class="headerlink" href="#flashing-the-firmware" title="Link to this heading"></a></h2>
+<p>To flash the firmware on the uStepper board, open the <em>lib/joint_firmware/joint/joint.ino</em> firmware file with the Arduino IDE, connect the uStepper board with a USB-C cable to the computer, select the correct serial port and the board as “uStepper STM32 boards” under the “board and port” tab.</p>
+<p>The follow the steps to flash the firmware:</p>
+<ol class="arabic simple">
+<li><p>Press and hold the BOOT button on the uStepper board</p></li>
+<li><p>Keep the BOOT button is pressed and press the RESET button for at least 0.5 s</p></li>
+<li><p>Release the BOOT button</p></li>
+<li><p>Select UPLOAD in the Arduino IDE. The board is now in dowload mode and will load the new firmware.</p></li>
+</ol>
+<p>Monitor the Arduino IDE output console for potential error messages.</p>
+</section>
+<section id="other-notes">
+<h2>Other Notes<a class="headerlink" href="#other-notes" title="Link to this heading"></a></h2>
+<p>The buttons on the uStepper board are very difficult to reach on J2 if it is mounted on the robot. A thin non-conductive stick can be used to press the BOOT button, the RESET button should be reachable by hand.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="documentation.html" class="btn btn-neutral float-left" title="Building the Documentation locally" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="IKFast.html" class="btn btn-neutral float-right" title="Creating a IKFast Inverse Kinematics Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, DALSA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

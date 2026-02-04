@@ -195,7 +195,7 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Joint firmware. </p>
-<p>The joint firmware is implemented in the Arduino framework. Initially the <a class="el" href="namespacebioscara__joint__firmware.html#ae686c37aecb29d694eb0af24daf636d8" title="Setup Peripherals.">setup()</a> function is called and subsequently the <a class="el" href="namespacebioscara__joint__firmware.html#a1cb1efec60b91fd4b307b113d1ab84d8" title="Main loop.">loop()</a> function in an infinite loop. </p>
+<p>The joint firmware is implemented in the Arduino framework. Initially the <a class="el" href="namespacebioscara__joint__firmware.html#ae686c37aecb29d694eb0af24daf636d8" title="Setup Peripherals.">setup()</a> function is called and subsequently the <a class="el" href="namespacebioscara__joint__firmware.html#a1cb1efec60b91fd4b307b113d1ab84d8" title="Main loop.">loop()</a> function in an infinite loop. The <a class="el" href="namespacebioscara__joint__firmware.html#adad92197f10e0bea205bb222e83a2de6" title="I2C receive event Handler.">receiveEvent()</a> is executed when a I2C message is received, and the <a class="el" href="namespacebioscara__joint__firmware.html#ab617db782416c8eb4479ae5f1d59ba51" title="I2C request event Handler.">requestEvent()</a> when data is requested. This always happens sequentially because at least always the #state flags are returned to the robot controller </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a7d83f159118cbb1012425d05b440ac93" name="a7d83f159118cbb1012425d05b440ac93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d83f159118cbb1012425d05b440ac93">&#9670;&#160;</a></span>stp_reg_t</h2>

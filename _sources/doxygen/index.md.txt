@@ -6,4 +6,4 @@ Please find the key components below:
 - bioscara_hardware_drivers: contains the BaseJoint, Joint and MockJoint drivers as well as the BaseGripper, Gripper and MockGripper drivers.
 - bioscara_hardware_interfaces: contains the ros2_control hardware interfaces that implement the Bioscara arm and gripper hardware components in the BioscaraArmHardwareInterface and BioscaraGripperHardwareInterface respectively.
 - bioscara_rviz_plugin: contains the BioscaraPanel Rviz GUI panel.
-- single_trigger_controller: contains the documentation for the SingleTriggerController.
+- single_trigger_controller::SingleTriggerController: contains the documentation for the SingleTriggerController.
