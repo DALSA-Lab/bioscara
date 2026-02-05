@@ -12,6 +12,7 @@
   <depend>rviz_common</depend>
   <depend>controller_manager_msgs</depend>
   <depend>control_msgs</depend>
+  <depend>bioscara_arm_gripper_128_moveit_config</depend>
 
 
   <export>

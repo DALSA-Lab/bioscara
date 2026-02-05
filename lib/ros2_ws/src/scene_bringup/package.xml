@@ -11,6 +11,7 @@
 
   <exec_depend>dalsa_bioscara_arm</exec_depend>
   <exec_depend>dalsa_bioscara_grippers</exec_depend>
+  <exec_depend>scene_descriptions</exec_depend>
   <exec_depend>rviz2</exec_depend>
   <exec_depend>xacro</exec_depend>
   <exec_depend>ros2launch</exec_depend>

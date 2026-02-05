@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>moveit_configurations</name>
+  <name>dalsa_moveit_configurations</name>
   <version>0.0.0</version>
   <description>Metapackage containing all packages concerning trajectory generation. </description>
 

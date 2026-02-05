@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(moveit_configurations)
+project(dalsa_moveit_configurations)
 
 find_package(ament_cmake REQUIRED)
 ament_package()

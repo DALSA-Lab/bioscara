@@ -15,15 +15,7 @@ sudo dpkg -i ros-jazzy-rviz-common_14.1.11-1noble.20250520.201719_arm64.deb
 ```
 
 
-
+<!-- TODO: how to launch  -->
 cd to ~/bioscara/ROS2/ros2_scara_ws
 source source install/local_setup.bash
 ros2 launch moveit_setup_assistant setup_assistant.launch.py
-
-
-
-TODO:
-explore different solvers
-Gripper Position not just open/close
-Drag handle at tcp
-

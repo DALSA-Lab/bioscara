@@ -34,14 +34,14 @@ The following meta packages are available:
 
 **dalsa_controllers**: Contains custom, hardware agnostic controllers.
 
-**moveit_configurations**: Contains MoveIt2 configurations.
+**dalsa_moveit_configurations**: Contains MoveIt2 configurations.
 
 **system_test_packages**: Contain different simple programs to execute system tests.
 
 
 ## Overview
 The diagram below shows a simple package architecture and dependency diagram. It does not yet include the MoveIt configuration package. The individual packages (violet) are grouped by their meta package (yellow).
-<!-- TODO: include moveit_configurations package, adjust dependecies where necessary -->
+<!-- TODO: include dalsa_moveit_configurations package, adjust dependecies where necessary -->
 
 ```mermaid
 flowchart TB
@@ -312,4 +312,4 @@ Contains the launch files of a specific robot configuration.
 > Start Bioscara with the currently mounted 128 mm gripper, execute `ros2 launch scene_bringup bioscara_arm_gripper128.launch.py use_mock_hardware:=true/false gui:=true/false`.
 
 > [!NOTE]
-> This launch files might be superseeded by a single launch file that additionally launches the MoveIt move_group from a hardware specific moveit_configurations package.
+> This launch files might be superseeded by a single launch file that additionally launches the MoveIt move_group from a hardware specific dalsa_moveit_configurations package.
