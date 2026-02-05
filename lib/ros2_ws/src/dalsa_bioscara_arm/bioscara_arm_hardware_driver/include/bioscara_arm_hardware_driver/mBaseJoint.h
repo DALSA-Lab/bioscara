@@ -293,7 +293,7 @@ namespace bioscara_hardware_drivers
     /**
      * @brief Checks the state if the motor is homed.
      *
-     * Reads the internal state flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
+     * Reads the internal state #flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
      *
      * @return true if the motor is homed,
      * false if not.
@@ -303,7 +303,7 @@ namespace bioscara_hardware_drivers
     /**
      * @brief Checks the state if the motor is enabled.
      *
-     * Reads the internal state flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
+     * Reads the internal state #flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
      * If the motor actually can move depends on the state of the STALLED flag which can be checked using Joint::isStalled().
      *
      * @return true if the motor is enabled,
@@ -314,7 +314,7 @@ namespace bioscara_hardware_drivers
     /**
      * @brief Checks if the motor is stalled.
      *
-     * Reads the internal state flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
+     * Reads the internal state #flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
      * @return true if the motor is stalled,
      * false if not.
      */
@@ -323,15 +323,15 @@ namespace bioscara_hardware_drivers
     /**
      * @brief Checks if the joint controller is busy processing a blocking command.
      *
-     * Reads the internal state flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
+     * Reads the internal state #flags from the last transmission. If an update is neccessary call getFlags() before invoking this function.
      * @return true if a blocking command is currently executing,
      * false if not.
      */
     virtual bool isBusy(void);
 
     /**
-     * @brief get the latest driver state flags from the joint
-     * @param flags if succesfull, populated with the latest flags
+     * @brief get the latest driver state #flags from the joint
+     * @param flags if succesfull, populated with the latest #flags
      * @return err_type_t
      */
     virtual err_type_t getFlags(u_int8_t &flags);
@@ -374,7 +374,7 @@ namespace bioscara_hardware_drivers
     virtual err_type_t _home(float velocity, u_int8_t sensitivity, u_int8_t current) = 0;
 
     /**
-     * @brief State flags transmitted with every I2C transaction.
+     * @brief State #flags transmitted with every I2C transaction.
      *
      * The transmission flags purpose are to transmit the joints current state.
      * Note: They can not be used as error indication of the execution of a transmitted write command,
