@@ -67,7 +67,6 @@ namespace bioscara_hardware_drivers
          */
         err_type_t setPosition(float width) override;
 
-    protected:
         /**
          * @brief Sets the servo position of the gripper actuator in degrees.
          * 
@@ -77,6 +76,8 @@ namespace bioscara_hardware_drivers
          * @return err_type_t::OK on success, err_type_t::COMM_ERROR if the dutycycle can not be set.
          */
         err_type_t setServoPosition(float angle);
+
+    protected:
 
         RPI_PWM _pwm;   ///< RPI_PWM object to generate PWM voltage for servo control
         int _freq = 50; ///< PWM frequency in Hz
