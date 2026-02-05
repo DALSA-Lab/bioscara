@@ -32,7 +32,7 @@ def generate_launch_description():
         .to_moveit_configs()
     )
 
-    package = "moveit_motion_plans"
+    package = "dalsa_motion_plans"
     node = Node(
         package=package,
         executable=exe,

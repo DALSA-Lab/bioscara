@@ -12,7 +12,7 @@ repositories:
     url: https://github.com/DALSA-Lab/moveit2-dalsa.git
     version: main
 
-  # Build moveit visual tools from source as well, since the 'moveit_motion_plans' package depends on it.
+  # Build moveit visual tools from source as well, since the 'dalsa_motion_plans' package depends on it.
   # Rosdep would install it, but the binary depends on a lot of moveit packages which would automatically be installed as well.
   # We could remove them before building with `sudo apt remove ros-$ROS_DISTRO-moveit*` but that would remove the visual tools again well. 
   moveit_visual_tools:
