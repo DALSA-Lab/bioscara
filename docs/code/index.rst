@@ -1,14 +1,14 @@
-Documentation
-=============
+C++ API Documentation
+=====================
 
 The C++ API documentation is generated with doxygen and can be found `here <../doxygen/html/index.html>`_.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: C++ API
+.. .. toctree::
+..    :maxdepth: 2
+..    :caption: C++ API
 
-   bioscara_hardware_interfaces/index.rst
-   bioscara_hardware_drivers/index.rst
+..    bioscara_hardware_interfaces/index.rst
+..    bioscara_hardware_drivers/index.rst
 
 .. .. doxygennamespace:: bioscara_hardware_drivers
 ..    :project: cpp_proj

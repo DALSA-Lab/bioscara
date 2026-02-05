@@ -5,9 +5,7 @@ User Guides
    :maxdepth: 3
    :caption: Contents
 
-   installation.md
-   building.md
-   operate.md
-   documentation.md   
+   gripper.md
    firmware.md
+   documentation.md   
    IKFast.md

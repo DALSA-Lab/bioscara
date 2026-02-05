@@ -87,4 +87,4 @@ arm:
 ```
 
 ## Try it out
-Start the robot (mock or hardware), move_group and rviz as described in the [guide](operate.md).
+Start the robot (mock or hardware), move_group and rviz as described in the [guide](../getting_started/operate.md).
