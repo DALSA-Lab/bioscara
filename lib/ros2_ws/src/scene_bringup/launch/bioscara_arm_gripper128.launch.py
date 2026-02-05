@@ -5,6 +5,7 @@ from launch.actions import (
     DeclareLaunchArgument,
     RegisterEventHandler,
     TimerAction,
+    LogInfo
 )
 from launch.event_handlers import OnProcessExit, OnProcessStart
 from launch.substitutions import (
@@ -55,6 +56,7 @@ def generate_launch_description():
     prefix = ""
     use_mock_hardware = LaunchConfiguration("use_mock_hardware")
     gui = LaunchConfiguration("gui")
+
 
     # assemble robot via XACRO
     robot_description_content = Command(
@@ -219,6 +221,7 @@ def generate_launch_description():
             robot_state_pub_node,
             delay_rviz_after_joint_state_broadcaster_spawner,
             delay_joint_state_broadcaster_spawner_after_ros2_control_node,
+            LogInfo(msg=['Using mock hardware: ', use_mock_hardware])
         ]
         + delay_robot_controller_spawners_after_joint_state_broadcaster_spawner
     )
