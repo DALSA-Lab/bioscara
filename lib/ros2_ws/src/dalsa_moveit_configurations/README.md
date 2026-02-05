@@ -8,7 +8,6 @@ sudo dpkg -i ros-jazzy-rviz-common_14.1.11-1noble.20250520.201719_amd64.deb
 ```
 
 or for arm64 architecture:
-
 ```bash
 wget http://snapshots.ros.org/jazzy/2025-05-23/ubuntu/pool/main/r/ros-jazzy-rviz-common/ros-jazzy-rviz-common_14.1.11-1noble.20250520.201719_arm64.deb
 sudo dpkg -i ros-jazzy-rviz-common_14.1.11-1noble.20250520.201719_arm64.deb

@@ -13,6 +13,9 @@
   <depend>controller_manager_msgs</depend>
   <depend>control_msgs</depend>
   <depend>bioscara_arm_gripper_128_moveit_config</depend>
+  <depend>dalsa_bioscara_arm</depend>
+  <depend>dalsa_bioscara_grippers</depend>
+
 
 
   <export>
