@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>This package is a communication library for the bioscara arm joints via I2C</description>
   <maintainer email="s.storz01@gmail.com">sbstorz</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

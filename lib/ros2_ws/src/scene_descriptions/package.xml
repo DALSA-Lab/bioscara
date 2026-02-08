@@ -5,7 +5,7 @@
   <version>0.0.0</version>
 <description>The scene_descriptions package</description>
   <maintainer email="todo@todo.com">author</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
 
   <exec_depend>xacro</exec_depend>
   <exec_depend>rviz2</exec_depend>

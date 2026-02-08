@@ -8,7 +8,3 @@ figure.titlesize: medium
 #text.latex.preamble: \usepackage{amsmath}\usepackage{amssymb}#\renewcommand{\familydefault}{\sfdefault}#\usepackage{siunitx}[=v2]
 axes.prop_cycle: "cycler('color', ['#FC7634','#1FD082','#E83F48','#008835','#79238E','#990000','#2F3EEA','#030F4F','#F6D04D','#F7BBB1',])"
 legend.handlelength: 1.0
-
-
-# TODO: set font to Arial like
-# Enabling latex overrides the sans-serif setting, axis labels are serif again

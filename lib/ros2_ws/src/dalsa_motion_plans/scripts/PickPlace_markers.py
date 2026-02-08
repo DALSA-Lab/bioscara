@@ -70,7 +70,7 @@ task.add(stages.Connect("Go to Approach", [(arm, pipeline),(eef,jointspace)]))
 
 # The grasp generator spawns a set of possible grasp poses around the object
 grasp_generator = stages.GenerateGraspPose("Generate Grasp Pose")
-grasp_generator.angle_delta = math.pi / 2 # TODO: change back to pi/2
+grasp_generator.angle_delta = math.pi / 2
 grasp_generator.pregrasp = "close_40"
 grasp_generator.grasp = "close_40"
 # grasp_generator.setPreGraspPose({"gripper":0.12}) TODO: This can be supported with some changes in MTC
