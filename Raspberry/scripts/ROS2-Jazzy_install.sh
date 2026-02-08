@@ -2,11 +2,6 @@
 
 # Parts of this script have been created by AI
 
-# Function to display usage information
-usage() {
-    echo "Usage: $0 --domain-id <ROS_DOMAIN_ID> --version <ros-base|ros-desktop>"
-    exit 1
-}
 
 p_ROS_DOMAIN_ID=41
 p_ROS_VERSION=ros-desktop

@@ -10,7 +10,7 @@
 - install net-tools
 
 ## install ROS2
-using this [script](scripts/ROS2-Jazzy_install.sh) with arguments domain ID = 41 and version ROS-Desktop
+using this [script](../Raspberry/scripts/ROS2-Jazzy_install.sh) with arguments domain ID = 41 and version ROS-Desktop
 
 ## Install ROS2_control
 Although not neccessarily needed, this package comes with some handy tools that might be usefull.
