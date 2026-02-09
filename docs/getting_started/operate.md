@@ -6,8 +6,7 @@ The document will decribe how to start the robot hardware as well as its emulati
 Make sure that following prerequisites are fullfilled:
 - In order for the robot to operate, all software and system configurations must be installed as described in the [installation](installation.md) guide. 
 - The ROS2 workspace must be compiled as described in the [build](building.md) guide.
-- **For hardware operation:** The robot must be correctly assembled and all components are electrically connected.
-<!-- TODO: link to assembly guide -->
+- **For hardware operation:** The robot must be correctly assembled and all components are electrically connected. The latest hardware information can be found [here](../hardware/index.rst)
 
 ## Starting the Robot
 

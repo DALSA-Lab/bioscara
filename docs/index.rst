@@ -13,6 +13,7 @@ TODO:
 
    getting_started/index.rst
    further_guides/index.rst
+   hardware/index.rst
    code/index.rst
 ..
    
