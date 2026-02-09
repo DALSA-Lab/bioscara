@@ -8,4 +8,4 @@ Getting Started
    installation.md
    building.md
    operate.md
-   packages.md
+   network.md

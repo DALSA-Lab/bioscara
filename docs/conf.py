@@ -23,7 +23,7 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.githubpages",
     "sphinx.ext.mathjax",
-    "breathe",
+    # "breathe",
     'myst_parser',
     'sphinxcontrib.mermaid',
 ]
@@ -31,10 +31,10 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-breathe_projects = {
-    "cpp_proj": "doxygen/xml/",
-}
-breathe_default_project = "cpp_proj"
+# breathe_projects = {
+#     "cpp_proj": "doxygen/xml/",
+# }
+# breathe_default_project = "cpp_proj"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -48,6 +48,6 @@ source_suffix = {
     '.md': 'markdown',
 }
 
-myst_enable_extensions = ["colon_fence"]
+myst_enable_extensions = ["colon_fence", "dollarmath"]
 
 exclude_patterns = ['README.md']
