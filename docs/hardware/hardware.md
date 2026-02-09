@@ -89,7 +89,7 @@ A video of the original assembly can be found in [this  YouTube video](https://w
 
 
 ## CAD Model and STL Meshes
-The complete STEP CAD model can be found in the *hardware/CAD_models/* directory. The STL meshes for 3D-printing are in the *hardware/meshes/*.
+The complete STEP CAD model can be found in the *hardware/CAD_model/* directory. The STEP file is compressed as a ZIP archive to be able to upload it to Github. The STL meshes for 3D-printing are in the *hardware/meshes/*.
 
 :::{tip}
 The original STEP files can be found [here](https://a360.co/3SWc07A)
