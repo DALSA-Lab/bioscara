@@ -26,11 +26,6 @@ def generate_launch_description():
                 IncludeLaunchDescription(
                 PathJoinSubstitution([move_group_dir, 'move_group.launch.py'])
             )
-            ],forwarding = False),
-            GroupAction([
-                IncludeLaunchDescription(
-                PathJoinSubstitution([rviz_dir, 'moveit_rviz.launch.py'])
-            )
             ],forwarding = False)
         ]
     )
