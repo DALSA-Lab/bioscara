@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ROS2 Package Architecture" href="packages.html" />
+    <link rel="next" title="Network Setup" href="network.html" />
     <link rel="prev" title="Building the ROS2 Workspace" href="building.html" /> 
 </head>
 
@@ -49,8 +49,10 @@
 <li class="toctree-l2"><a class="reference internal" href="building.html">Building the ROS2 Workspace</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Operate the Robot</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connect-to-the-robot-controller">Connect to the Robot Controller</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#starting-the-robot">Starting the Robot</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#launch-the-complete-launch-file">Launch the complete Launch file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#launch-the-robot-control-nodes">Launch the robot control nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#launch-the-rviz-gui">Launch the RViz GUI</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#alternative-manually-launching-nodes">Alternative: Manually launching Nodes</a></li>
 </ul>
 </li>
@@ -69,18 +71,19 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#common-problems">Common Problems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general-launch-problems">General Launch Problems</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#motion-planning-fails">Motion Planning Fails</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ros2-control-fails-to-start">ros2_control Fails to Start</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="packages.html">ROS2 Package Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html">Network Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../further_guides/index.html">Developer Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../code/index.html">C++ API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/index.html">Source Code Documentation</a></li>
 </ul>
 
         </div>
@@ -108,7 +111,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="operate-the-robot">
+  <section class="tex2jax_ignore mathjax_ignore" id="operate-the-robot">
 <h1>Operate the Robot<a class="headerlink" href="#operate-the-robot" title="Link to this heading"></a></h1>
 <p>This document explains how to bring the robot into operation for manual and programmatic control.
 The document will decribe how to start the robot hardware as well as its emulation.</p>
@@ -119,7 +122,16 @@ The document will decribe how to start the robot hardware as well as its emulati
 <li><p>In order for the robot to operate, all software and system configurations must be installed as described in the <a class="reference internal" href="installation.html"><span class="std std-doc">installation</span></a> guide.</p></li>
 <li><p>The ROS2 workspace must be compiled as described in the <a class="reference internal" href="building.html"><span class="std std-doc">build</span></a> guide.</p></li>
 <li><p><strong>For hardware operation:</strong> The robot must be correctly assembled and all components are electrically connected. The latest hardware information can be found <a class="reference internal" href="../hardware/index.html"><span class="std std-doc">here</span></a></p></li>
+<li><p>A stable wired network connection between the control PC/developers PC and the robot controller is established as described in the <a class="reference internal" href="network.html"><span class="std std-doc">networking tutorial</span></a>.</p></li>
 </ul>
+</section>
+<section id="connect-to-the-robot-controller">
+<h2>Connect to the Robot Controller<a class="headerlink" href="#connect-to-the-robot-controller" title="Link to this heading"></a></h2>
+<p>After a connection has been established to the robot controller, open a ssh session from the control PC:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>scara@&lt;ip-adress&gt;
+</pre></div>
+</div>
+<p>Type the password <strong>dtubio</strong> when prompted and hit enter. You should now have a terminal session on the robot controller and you can proceed.</p>
 </section>
 <section id="starting-the-robot">
 <h2>Starting the Robot<a class="headerlink" href="#starting-the-robot" title="Link to this heading"></a></h2>
@@ -136,13 +148,13 @@ The document will decribe how to start the robot hardware as well as its emulati
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>install/local_setup.bash
 </pre></div>
 </div>
-<section id="launch-the-complete-launch-file">
-<h3>Launch the complete Launch file<a class="headerlink" href="#launch-the-complete-launch-file" title="Link to this heading"></a></h3>
+<section id="launch-the-robot-control-nodes">
+<h3>Launch the robot control nodes<a class="headerlink" href="#launch-the-robot-control-nodes" title="Link to this heading"></a></h3>
 <p>To start all ROS2 nodes simultaneously launch the complete launch file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>bioscara_arm_gripper_128_moveit_config<span class="w"> </span>complete.launch.py
 </pre></div>
 </div>
-<p>This will start the ros2_control node responsible for the control implementation, the MoveIt2 move_group node for trajectory generation and RViz2 for viszualization including the custom Bioscara panel for hardware control.</p>
+<p>This will start the ros2_control node responsible for the control implementation and the MoveIt2 move_group node for trajectory generation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>With no access to the hardware it is possible to emulate it by passing the <code class="docutils literal notranslate"><span class="pre">use_mock_hardware:=true</span></code> argument to the launch file:</p>
@@ -151,6 +163,32 @@ The document will decribe how to start the robot hardware as well as its emulati
 </div>
 </div>
 </section>
+<section id="launch-the-rviz-gui">
+<h3>Launch the RViz GUI<a class="headerlink" href="#launch-the-rviz-gui" title="Link to this heading"></a></h3>
+<p>The RViz GUI is needed for vsizualization and to control the Bioscara hardware, to example home it.
+Since the robot controller does not have a desktop, the control GUI must either run on a seperate control PC or must be forwared via ssh. In both cases a stable and fast network connection is critical to ensure timely updates.</p>
+<section id="using-window-forwarding">
+<h4>Using Window Forwarding<a class="headerlink" href="#using-window-forwarding" title="Link to this heading"></a></h4>
+<p>This method has the advantage that the external control PC does not need have ROS2 installed. A ssh client capable of X-forwarding is sufficient.</p>
+<p>Open a second ssh session from the control PC to the robot controller with X-forwarding enabled:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>scara@&lt;ip-adress&gt;<span class="w"> </span>-X
+</pre></div>
+</div>
+<p>Start the RViz GUI on the robot controller, it will be forwarded to the control PC:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>bioscara_arm_gripper_128_moveit_config<span class="w"> </span>moveit_rviz.launch.py
+</pre></div>
+</div>
+</section>
+<section id="using-an-networked-pc-with-ros2-installed">
+<h4>Using an Networked PC with ROS2 installed<a class="headerlink" href="#using-an-networked-pc-with-ros2-installed" title="Link to this heading"></a></h4>
+<p>Using this method requires the control PC to have ROS2 installed, along with RViz2, the Bioscara RViz plugin, the MoveIt Panel and MTC Panel. The advantage is that the robot controller has less computation load, since it does not need to display the RViz process.</p>
+<p>In this case it is sufficient to simply open a new local terminal session.
+Start the RViz GUI on the robot controller:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>bioscara_arm_gripper_128_moveit_config<span class="w"> </span>moveit_rviz.launch.py
+</pre></div>
+</div>
+</section>
+</section>
 <section id="alternative-manually-launching-nodes">
 <h3>Alternative: Manually launching Nodes<a class="headerlink" href="#alternative-manually-launching-nodes" title="Link to this heading"></a></h3>
 <p>If you experience problems with the complete launch file or to try differnent launch configurations, you can try to launch the components indiviudally.
@@ -158,9 +196,8 @@ First launch the ros2_control node with the <em>scene_bringup</em> packages:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>scene_bringup<span class="w"> </span>bioscara_arm_gripper128.launch.py<span class="w"> </span>use_mock_hardware:<span class="o">=</span>true/false
 </pre></div>
 </div>
-<p>Then launch the move_group and rviz:</p>
+<p>Then launch the move_group seperately:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>bioscara_arm_gripper_128_moveit_config<span class="w"> </span>move_group.launch.py
-ros2<span class="w"> </span>launch<span class="w"> </span>bioscara_arm_gripper_128_moveit_config<span class="w"> </span>moveit_rviz.launch.py
 </pre></div>
 </div>
 </section>
@@ -192,7 +229,8 @@ The <a class="reference external" href="https://moveit.picknik.ai/main/doc/tutor
 </section>
 <section id="planning-and-executing-a-mtc-task">
 <h2>Planning and Executing a MTC Task<a class="headerlink" href="#planning-and-executing-a-mtc-task" title="Link to this heading"></a></h2>
-<p>The MoveIt-Task-Constructor is used to plan more complex trajectory sequences. The tasks are created in the <em>dalsa_motion_plans</em> package. Python scripts are the easiest to edit and create, although it seems that not all C++ methods are fully supported through the Python bindings. The Python scripts are in the <em>dalsa_motion_plans/scripts</em> directory.</p>
+<p>The MoveIt-Task-Constructor (MTC) is used to plan more complex trajectory sequences. The tasks are created in the <em>dalsa_motion_plans</em> package. Python scripts are the easiest to edit and create, although it seems that not all C++ methods are fully supported through the Python bindings. The Python scripts are in the <em>dalsa_motion_plans/scripts</em> directory.</p>
+<p>The MTC can be run either on the robot contoller or the control PC since it is not realtime-critical. Exectute the following steps on the robot controller or control PC respectively.</p>
 <section id="adding-a-new-mtc-task">
 <h3>Adding a new MTC Task<a class="headerlink" href="#adding-a-new-mtc-task" title="Link to this heading"></a></h3>
 <p>A sort-of correct documentation for the Python bindings can be found <a class="reference external" href="https://moveit.github.io/moveit_task_constructor/">here</a>.
@@ -232,6 +270,15 @@ Using these recipes complex applications can be programmed. Some examples can be
 <section id="common-problems">
 <h2>Common Problems<a class="headerlink" href="#common-problems" title="Link to this heading"></a></h2>
 <p>Some common issues and remedies are described in the following.</p>
+<section id="general-launch-problems">
+<h3>General Launch Problems<a class="headerlink" href="#general-launch-problems" title="Link to this heading"></a></h3>
+<p>If nodes fail to launch and no clear error message is printed in the console try one or a combination of the following:</p>
+<ul class="simple">
+<li><p>Open a new terminal and source the workspace again</p></li>
+<li><p>Build the workspace or the affected packages again and execute the above step.</p></li>
+<li><p>Remove the affected packages from the <em>lib/ros2_ws/install/&lt;package&gt;</em> and <em>lib/ros2_ws/build/&lt;package&gt;</em> directory and execute the above steps.</p></li>
+</ul>
+</section>
 <section id="motion-planning-fails">
 <h3>Motion Planning Fails<a class="headerlink" href="#motion-planning-fails" title="Link to this heading"></a></h3>
 <p>This can have many reasons, the exact move_group error usually helps to identify the issue.</p>
@@ -257,7 +304,7 @@ If that happens while no hardware is connected, the node will fail to start and 
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="building.html" class="btn btn-neutral float-left" title="Building the ROS2 Workspace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="packages.html" class="btn btn-neutral float-right" title="ROS2 Package Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="network.html" class="btn btn-neutral float-right" title="Network Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

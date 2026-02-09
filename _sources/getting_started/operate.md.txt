@@ -7,6 +7,14 @@ Make sure that following prerequisites are fullfilled:
 - In order for the robot to operate, all software and system configurations must be installed as described in the [installation](installation.md) guide. 
 - The ROS2 workspace must be compiled as described in the [build](building.md) guide.
 - **For hardware operation:** The robot must be correctly assembled and all components are electrically connected. The latest hardware information can be found [here](../hardware/index.rst)
+- A stable wired network connection between the control PC/developers PC and the robot controller is established as described in the [networking tutorial](../getting_started/network.md).
+
+## Connect to the Robot Controller
+After a connection has been established to the robot controller, open a ssh session from the control PC:
+```bash
+ssh scara@<ip-adress>
+```
+Type the password **dtubio** when prompted and hit enter. You should now have a terminal session on the robot controller and you can proceed.
 
 ## Starting the Robot
 
@@ -25,12 +33,12 @@ Source the workspace packages:
 source install/local_setup.bash
 ```
 
-### Launch the complete Launch file
+### Launch the robot control nodes
 To start all ROS2 nodes simultaneously launch the complete launch file:
 ```bash
 ros2 launch bioscara_arm_gripper_128_moveit_config complete.launch.py
 ```
-This will start the ros2_control node responsible for the control implementation, the MoveIt2 move_group node for trajectory generation and RViz2 for viszualization including the custom Bioscara panel for hardware control.
+This will start the ros2_control node responsible for the control implementation and the MoveIt2 move_group node for trajectory generation.
 
 :::{note}
 With no access to the hardware it is possible to emulate it by passing the `use_mock_hardware:=true` argument to the launch file:
@@ -39,6 +47,32 @@ ros2 launch bioscara_arm_gripper_128_moveit_config complete.launch.py use_mock_h
 ```
 :::
 
+### Launch the RViz GUI
+The RViz GUI is needed for vsizualization and to control the Bioscara hardware, to example home it.
+Since the robot controller does not have a desktop, the control GUI must either run on a seperate control PC or must be forwared via ssh. In both cases a stable and fast network connection is critical to ensure timely updates.
+
+#### Using Window Forwarding
+This method has the advantage that the external control PC does not need have ROS2 installed. A ssh client capable of X-forwarding is sufficient.
+
+Open a second ssh session from the control PC to the robot controller with X-forwarding enabled:
+```bash
+ssh scara@<ip-adress> -X
+```
+
+Start the RViz GUI on the robot controller, it will be forwarded to the control PC:
+```bash
+ros2 launch bioscara_arm_gripper_128_moveit_config moveit_rviz.launch.py
+```
+
+#### Using an Networked PC with ROS2 installed
+Using this method requires the control PC to have ROS2 installed, along with RViz2, the Bioscara RViz plugin, the MoveIt Panel and MTC Panel. The advantage is that the robot controller has less computation load, since it does not need to display the RViz process.
+
+In this case it is sufficient to simply open a new local terminal session.
+Start the RViz GUI on the robot controller:
+```bash
+ros2 launch bioscara_arm_gripper_128_moveit_config moveit_rviz.launch.py
+```
+
 ### Alternative: Manually launching Nodes
 If you experience problems with the complete launch file or to try differnent launch configurations, you can try to launch the components indiviudally.
 First launch the ros2_control node with the *scene_bringup* packages:
@@ -46,10 +80,9 @@ First launch the ros2_control node with the *scene_bringup* packages:
 ros2 launch scene_bringup bioscara_arm_gripper128.launch.py use_mock_hardware:=true/false
 ```
 
-Then launch the move_group and rviz:
+Then launch the move_group seperately:
 ```bash
 ros2 launch bioscara_arm_gripper_128_moveit_config move_group.launch.py
-ros2 launch bioscara_arm_gripper_128_moveit_config moveit_rviz.launch.py
 ```
 
 ## Preparing the Robot
@@ -77,7 +110,9 @@ In short: Use the handles to move the orange goal robot state into a desired pos
 Under the "Scene Objects" tab the planning scene can be modified. Collision objects can be added, modified and removed from it, or a a setup can be imported. Always press "publish" to commit the changes to the planning scene.
 
 ## Planning and Executing a MTC Task
-The MoveIt-Task-Constructor is used to plan more complex trajectory sequences. The tasks are created in the *dalsa_motion_plans* package. Python scripts are the easiest to edit and create, although it seems that not all C++ methods are fully supported through the Python bindings. The Python scripts are in the *dalsa_motion_plans/scripts* directory.
+The MoveIt-Task-Constructor (MTC) is used to plan more complex trajectory sequences. The tasks are created in the *dalsa_motion_plans* package. Python scripts are the easiest to edit and create, although it seems that not all C++ methods are fully supported through the Python bindings. The Python scripts are in the *dalsa_motion_plans/scripts* directory.
+
+The MTC can be run either on the robot contoller or the control PC since it is not realtime-critical. Exectute the following steps on the robot controller or control PC respectively.
 
 ### Adding a new MTC Task
 A sort-of correct documentation for the Python bindings can be found [here](https://moveit.github.io/moveit_task_constructor/).
@@ -113,6 +148,12 @@ If the task planned succesfully, it is published to the "/solution" topic and di
 
 ## Common Problems
 Some common issues and remedies are described in the following.
+
+### General Launch Problems
+If nodes fail to launch and no clear error message is printed in the console try one or a combination of the following:
+- Open a new terminal and source the workspace again
+- Build the workspace or the affected packages again and execute the above step.
+- Remove the affected packages from the *lib/ros2_ws/install/\<package\>* and *lib/ros2_ws/build/\<package\>* directory and execute the above steps.
 
 ### Motion Planning Fails
 This can have many reasons, the exact move_group error usually helps to identify the issue.

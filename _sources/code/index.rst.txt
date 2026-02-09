@@ -1,4 +1,16 @@
-C++ API Documentation
-=====================
+Source Code Documentation
+=========================
+You can find the detailed C++ API documentation and a further information about the ROS2 workspace here.
 
+C++ API Documentation
+---------------------
 The C++ API documentation is generated with doxygen and can be found `here <../doxygen/html/index.html>`_.
+
+Further Documentation
+---------------------
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents
+
+   packages.md

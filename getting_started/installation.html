@@ -45,15 +45,23 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#robot-controller-raspberry-pi-4b-4gb">Robot Controller (Raspberry Pi 4B 4GB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-pc">Control PC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#os-installation">OS Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-ros2">Install ROS2</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="building.html">Building the ROS2 Workspace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operate.html">Operate the Robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages.html">ROS2 Package Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html">Network Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../further_guides/index.html">Developer Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../code/index.html">C++ API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/index.html">Source Code Documentation</a></li>
 </ul>
 
         </div>
@@ -81,13 +89,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="installation">
+  <section class="tex2jax_ignore mathjax_ignore" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
 <!-- Merge dev_machine and Raspberry Pi Readme here -->
+<section id="robot-controller-raspberry-pi-4b-4gb">
+<h2>Robot Controller (Raspberry Pi 4B 4GB)<a class="headerlink" href="#robot-controller-raspberry-pi-4b-4gb" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Building MoveIt2 from source was only necessary during development since a bugfix has not been released yet. If MoveIt2 with a version &gt;= 2.12.4 is available as a binary, it is greatly recommended to install it as a binary instead. Building MoveIt from source is very time consuming (~10 h on the Raspberry Pi).</p>
 </div>
+</section>
+<section id="control-pc">
+<h2>Control PC<a class="headerlink" href="#control-pc" title="Link to this heading"></a></h2>
+<p>The control PC is a desktop PC running the Ubuntu 24.04 LTS Desktop operating system. Its purpose is to be the primary control interface for the user. It is in the same network as the robot controller and thus the ROS2 nodes on the robot controller and control PC can communicate with each other. Recommended use case (at the current development state):</p>
+<ul class="simple">
+<li><p>Run the RViz GUI with the Bioscara Panel, MoveIt and MTC Panel to control the hardware state, manual trajectory generation and sequence inspection</p></li>
+<li><p>Since the MTC is not realtime-critical, it can also run on the control PC</p></li>
+</ul>
+<section id="os-installation">
+<h3>OS Installation<a class="headerlink" href="#os-installation" title="Link to this heading"></a></h3>
+<p>Install the latest Ubuntu 24.04 LTS Desktop release according to <a class="reference external" href="https://ubuntu.com/download/desktop?version=24.04">the offical guide</a>.</p>
+<p>Create the following user:</p>
+<ul class="simple">
+<li><p><strong>User:</strong> <em>scara-dev</em></p></li>
+<li><p><strong>Password:</strong> <em>dtubio</em></p></li>
+</ul>
+</section>
+<section id="install-ros2">
+<h3>Install ROS2<a class="headerlink" href="#install-ros2" title="Link to this heading"></a></h3>
+<p>Use the <em>installation/scripts/ROS2-Jazzy_install.sh</em> to install ROS2. The installation requires root priviliges, enter the password when prompted:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>installation/scripts/ROS2-Jazzy_install.sh
+</pre></div>
+</div>
+<!-- needs full installation as well --></section>
+</section>
 </section>
 
 
