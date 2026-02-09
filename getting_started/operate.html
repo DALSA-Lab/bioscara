@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operate the Robot &mdash; Bioscara  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ROS2 Package Architecture" href="packages.html" />
+    <link rel="prev" title="Building the ROS2 Workspace" href="building.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Bioscara
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building.html">Building the ROS2 Workspace</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Operate the Robot</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#starting-the-robot">Starting the Robot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#launch-the-complete-launch-file">Launch the complete Launch file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alternative-manually-launching-nodes">Alternative: Manually launching Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-the-robot">Preparing the Robot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#homing-the-robot">Homing the Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enabling-the-controllers">Enabling the Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#manually-create-trajectories">Manually Create Trajectories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#planning-scene">Planning Scene</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#planning-and-executing-a-mtc-task">Planning and Executing a MTC Task</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-new-mtc-task">Adding a new MTC Task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#executing-the-task">Executing the Task</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#common-problems">Common Problems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#motion-planning-fails">Motion Planning Fails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ros2-control-fails-to-start">ros2_control Fails to Start</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html">ROS2 Package Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../further_guides/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/index.html">C++ API Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bioscara</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Operate the Robot</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/getting_started/operate.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="operate-the-robot">
+<h1>Operate the Robot<a class="headerlink" href="#operate-the-robot" title="Link to this heading"></a></h1>
+<p>This document explains how to bring the robot into operation for manual and programmatic control.
+The document will decribe how to start the robot hardware as well as its emulation.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Make sure that following prerequisites are fullfilled:</p>
+<ul class="simple">
+<li><p>In order for the robot to operate, all software and system configurations must be installed as described in the <a class="reference internal" href="installation.html"><span class="std std-doc">installation</span></a> guide.</p></li>
+<li><p>The ROS2 workspace must be compiled as described in the <a class="reference internal" href="building.html"><span class="std std-doc">build</span></a> guide.</p></li>
+<li><p><strong>For hardware operation:</strong> The robot must be correctly assembled and all components are electrically connected. The latest hardware information can be found <a class="reference internal" href="../hardware/index.html"><span class="std std-doc">here</span></a></p></li>
+</ul>
+</section>
+<section id="starting-the-robot">
+<h2>Starting the Robot<a class="headerlink" href="#starting-the-robot" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You are about to enable the robot! Make sure it is securely mounted and its workspace is clear!</p>
+</div>
+<p>Change to the <em>lib/ros2_ws</em> directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>lib/ros2_ws
+</pre></div>
+</div>
+<p>All following commands are relative to this directory.</p>
+<p>Source the workspace packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>install/local_setup.bash
+</pre></div>
+</div>
+<section id="launch-the-complete-launch-file">
+<h3>Launch the complete Launch file<a class="headerlink" href="#launch-the-complete-launch-file" title="Link to this heading"></a></h3>
+<p>To start all ROS2 nodes simultaneously launch the complete launch file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>bioscara_arm_gripper_128_moveit_config<span class="w"> </span>complete.launch.py
+</pre></div>
+</div>
+<p>This will start the ros2_control node responsible for the control implementation, the MoveIt2 move_group node for trajectory generation and RViz2 for viszualization including the custom Bioscara panel for hardware control.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With no access to the hardware it is possible to emulate it by passing the <code class="docutils literal notranslate"><span class="pre">use_mock_hardware:=true</span></code> argument to the launch file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>bioscara_arm_gripper_128_moveit_config<span class="w"> </span>complete.launch.py<span class="w"> </span>use_mock_hardware:<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="alternative-manually-launching-nodes">
+<h3>Alternative: Manually launching Nodes<a class="headerlink" href="#alternative-manually-launching-nodes" title="Link to this heading"></a></h3>
+<p>If you experience problems with the complete launch file or to try differnent launch configurations, you can try to launch the components indiviudally.
+First launch the ros2_control node with the <em>scene_bringup</em> packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>scene_bringup<span class="w"> </span>bioscara_arm_gripper128.launch.py<span class="w"> </span>use_mock_hardware:<span class="o">=</span>true/false
+</pre></div>
+</div>
+<p>Then launch the move_group and rviz:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>bioscara_arm_gripper_128_moveit_config<span class="w"> </span>move_group.launch.py
+ros2<span class="w"> </span>launch<span class="w"> </span>bioscara_arm_gripper_128_moveit_config<span class="w"> </span>moveit_rviz.launch.py
+</pre></div>
+</div>
+</section>
+</section>
+<section id="preparing-the-robot">
+<h2>Preparing the Robot<a class="headerlink" href="#preparing-the-robot" title="Link to this heading"></a></h2>
+<p>You should now see the RViz GUI like this</p>
+<p><img alt="Rviz GUI" src="../_images/rviz.png" /></p>
+<p>The important panel are on the left side. On the top left you can find the MoveIt <em>MotionPlanning</em> and MoveIt-Task-Constructor <em>Motion Plannining Tasks</em> Panel. But before we get to that the robot has to be configured for operation with the bottom left <em>Bioscara</em> Panel.</p>
+<section id="homing-the-robot">
+<h3>Homing the Robot<a class="headerlink" href="#homing-the-robot" title="Link to this heading"></a></h3>
+<p>If the robot has been power-cycled, its joint’s need to be homed again. To do this activate the homing controller under the “State” tab as displayed in the picture above. The navigate to the “Homing” tab where you should see all joints as “Not Homed”. During homing the joint will slowly drive towards its upper or lower limit where it will detect the collission and zero its encoder. You can select the direction through the buttons right of the joint label as it suits you best. Make sure that the joint can move freely and that it actually stops at its endstop. Repeat this until all joints report “Ready” as shown in the picture below:</p>
+<p><img alt="Rviz homing" src="../_images/rviz_homing.png" /></p>
+</section>
+<section id="enabling-the-controllers">
+<h3>Enabling the Controllers<a class="headerlink" href="#enabling-the-controllers" title="Link to this heading"></a></h3>
+<p>Now with the robot homed it is almost ready for operation. Under the “State” tab, deactivate the homing controller then activate the trajectory and gripper controller. The arm and gripper hardware must also be active. All joint motors are now engaged and can not be backdriven. To backdrive the robot deactivate the Arm hardware.</p>
+</section>
+</section>
+<section id="manually-create-trajectories">
+<h2>Manually Create Trajectories<a class="headerlink" href="#manually-create-trajectories" title="Link to this heading"></a></h2>
+<p>It is possible to manually plan trajectories, execute them, compare path planner performance and more with the <em>MotionPlanning</em> panel.
+The <a class="reference external" href="https://moveit.picknik.ai/main/doc/tutorials/quickstart_in_rviz/quickstart_in_rviz_tutorial.html">official tutorial</a> gives a good introduction hot to use it.</p>
+<p>In short: Use the handles to move the orange goal robot state into a desired pose, then press “plan” and/or “execute” under the “Planning” tab. By default the OMPL RRTConnect path planner is used to plan the paths, alternatives can be selected under the “Context” tab.</p>
+<section id="planning-scene">
+<h3>Planning Scene<a class="headerlink" href="#planning-scene" title="Link to this heading"></a></h3>
+<p>Under the “Scene Objects” tab the planning scene can be modified. Collision objects can be added, modified and removed from it, or a a setup can be imported. Always press “publish” to commit the changes to the planning scene.</p>
+</section>
+</section>
+<section id="planning-and-executing-a-mtc-task">
+<h2>Planning and Executing a MTC Task<a class="headerlink" href="#planning-and-executing-a-mtc-task" title="Link to this heading"></a></h2>
+<p>The MoveIt-Task-Constructor is used to plan more complex trajectory sequences. The tasks are created in the <em>dalsa_motion_plans</em> package. Python scripts are the easiest to edit and create, although it seems that not all C++ methods are fully supported through the Python bindings. The Python scripts are in the <em>dalsa_motion_plans/scripts</em> directory.</p>
+<section id="adding-a-new-mtc-task">
+<h3>Adding a new MTC Task<a class="headerlink" href="#adding-a-new-mtc-task" title="Link to this heading"></a></h3>
+<p>A sort-of correct documentation for the Python bindings can be found <a class="reference external" href="https://moveit.github.io/moveit_task_constructor/">here</a>.
+Using these recipes complex applications can be programmed. Some examples can be found in the <em>/scripts</em> dir, have fun!</p>
+<p>To create a new Python script with a new MTC task the following needs to be done:</p>
+<ul class="simple">
+<li><p>Create the <em>cool_task.py</em> under <em>dalsa_motion_plans/scripts</em></p></li>
+<li><p>Add the script to the <em>dalsa_motion_plans/CMakeLists.txt</em>. Find the following lines and append the the <em>cool_task.py</em> to the list of installed files.</p></li>
+</ul>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">install</span><span class="p">(</span><span class="s">PROGRAMS</span>
+<span class="w">        </span><span class="s">scripts/IAmNotARobot.py</span>
+<span class="w">        </span><span class="s">scripts/PickPlace.py</span>
+<span class="w">        </span><span class="s">scripts/PickPlace_continous.py</span>
+<span class="w">        </span><span class="s">scripts/PickPlace_markers.py</span>
+<span class="w">        </span><span class="s">scripts/cool_task.py</span><span class="w">                </span><span class="c"># &lt;===== Append here</span>
+<span class="w">        </span><span class="s">DESTINATION</span><span class="w"> </span><span class="s">lib/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In order to make the script available rebuild the <em>dalsa_motion_plans</em> package:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install<span class="w"> </span>--mixin<span class="w"> </span>release<span class="w"> </span>--packages-select<span class="w"> </span>dalsa_motion_plans
+</pre></div>
+</div>
+</section>
+<section id="executing-the-task">
+<h3>Executing the Task<a class="headerlink" href="#executing-the-task" title="Link to this heading"></a></h3>
+<p>From a new terminal, navigate to the <em>lib/ros2_ws</em> worspace and source it <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">install/local_setup.bash</span></code>. Then you can execute any MTC task by invoking</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>dalsa_motion_plans<span class="w"> </span>run.launch.py<span class="w"> </span>exe:<span class="o">=</span>cool_task.py
+</pre></div>
+</div>
+<p>where the <code class="docutils literal notranslate"><span class="pre">exe</span></code> argument specifies the name of the script to execute.</p>
+<p>If the task planned succesfully, it is published to the “/solution” topic and displayed in the <em>Motion Planning Tasks</em> MTC Panel shown below. For each task a number of solutions can be computed which can be indivdually inspected and, if one is selected, executed by pressing the Exec button.</p>
+<p><img alt="Rviz mtc" src="../_images/rviz_mtc.png" /></p>
+</section>
+</section>
+<section id="common-problems">
+<h2>Common Problems<a class="headerlink" href="#common-problems" title="Link to this heading"></a></h2>
+<p>Some common issues and remedies are described in the following.</p>
+<section id="motion-planning-fails">
+<h3>Motion Planning Fails<a class="headerlink" href="#motion-planning-fails" title="Link to this heading"></a></h3>
+<p>This can have many reasons, the exact move_group error usually helps to identify the issue.</p>
+<ul class="simple">
+<li><p><strong>Start state out ouf bounds:</strong> If a joint is just a tenth of a millimeter outside its limit, motion planning will fail. If the gripper is causing the violation, manually send a new width command through the console <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">action</span> <span class="pre">send_goal</span> <span class="pre">/gripper_controller/gripper_cmd</span> <span class="pre">control_msgs/action/ParallelGripperCommand</span> <span class="pre">&quot;{command:{name:[gripper],position:[0.05]}}&quot;</span></code>. If the problematic joint is on the robot arm and not J2, just deactivate the robot arm, move the joint away from the limit and reactivate the arm again. If the problematic joint is J2 it can not be moved by hand. Instead do the following: Open another terminal navigate to <em>lib/ros2_ws/</em>, source the workspace, and start the rqt_joint_trajectory_controller: <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">rqt_joint_trajectory_controller</span> <span class="pre">rqt_joint_trajectory_controller</span></code>. Select the “controller_manager” and “velocity_joint_trajectory_controller”, enable it on the red button and manually drag the J2 set point away from the limit. This GUI can also be used for other purposes but it should never be active in parallel with an ongoing trajectory through MoveIt.</p></li>
+</ul>
+<p><img alt="Rviz homing" src="../_images/rqt_joint_trajectory_controller.png" /></p>
+<ul class="simple">
+<li><p><strong>Start state collision:</strong> If a trajectory is planner immediatly after homing , the gripper links can be in a self-collision with link link_1, since the collision body is a primitive cylinder. Simply deactivate the arm and move the links out of collision. The collided links will be highlighted in red in RViz.</p></li>
+</ul>
+<!-- TODO: more problems? -->
+</section>
+<section id="ros2-control-fails-to-start">
+<h3>ros2_control Fails to Start<a class="headerlink" href="#ros2-control-fails-to-start" title="Link to this heading"></a></h3>
+<p>Sometimes, for yet unknown reasons, if the ros2_control node is launched from the complete launch file, it attempts to start the robot hardware despite the <code class="docutils literal notranslate"><span class="pre">use_mock_hardware:=true</span></code> has been set.
+If that happens while no hardware is connected, the node will fail to start and control is impossible. Launching the ros2_control node separately as described in <a class="reference internal" href="#alternative-manually-launching-nodes"><span class="xref myst">here</span></a> seems to resolve this issue.</p>
+<!-- TODO: where to modify dynamic limits --></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="building.html" class="btn btn-neutral float-left" title="Building the ROS2 Workspace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="packages.html" class="btn btn-neutral float-right" title="ROS2 Package Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, DALSA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

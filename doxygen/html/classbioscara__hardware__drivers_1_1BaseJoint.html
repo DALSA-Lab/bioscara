@@ -231,7 +231,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3d59aa860f6b64e6fead60919386f518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the joint controller is busy processing a blocking command.  <br /></td></tr>
 <tr class="separator:a3d59aa860f6b64e6fead60919386f518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c54829edfd4860f5ce333cda7044fb2" id="r_a5c54829edfd4860f5ce333cda7044fb2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a5c54829edfd4860f5ce333cda7044fb2">getFlags</a> (u_int8_t &amp;<a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3">flags</a>)</td></tr>
-<tr class="memdesc:a5c54829edfd4860f5ce333cda7044fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the latest driver state flags from the joint  <br /></td></tr>
+<tr class="memdesc:a5c54829edfd4860f5ce333cda7044fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the latest driver state <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3" title="State flags transmitted with every I2C transaction.">flags</a> from the joint  <br /></td></tr>
 <tr class="separator:a5c54829edfd4860f5ce333cda7044fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaef8fb5aad3fb6ce0721043b6812d87b" id="r_aaef8fb5aad3fb6ce0721043b6812d87b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#aaef8fb5aad3fb6ce0721043b6812d87b">getFlags</a> (void)</td></tr>
 <tr class="memdesc:aaef8fb5aad3fb6ce0721043b6812d87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a5c54829edfd4860f5ce333cda7044fb2" title="get the latest driver state flags from the joint">getFlags(u_int8_t &amp;flags)</a>  <br /></td></tr>
@@ -258,7 +258,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a959c1652a778c7654db894eef9b337c3" id="r_a959c1652a778c7654db894eef9b337c3"><td class="memItemLeft" align="right" valign="top">u_int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3">flags</a> = 0b00001100</td></tr>
-<tr class="memdesc:a959c1652a778c7654db894eef9b337c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">State flags transmitted with every I2C transaction.  <br /></td></tr>
+<tr class="memdesc:a959c1652a778c7654db894eef9b337c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">State <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3" title="State flags transmitted with every I2C transaction.">flags</a> transmitted with every I2C transaction.  <br /></td></tr>
 <tr class="separator:a959c1652a778c7654db894eef9b337c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf8458a8930ca6360304f736ef5c781" id="r_a6bf8458a8930ca6360304f736ef5c781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#affbc9ba6c17b02af32647dc76796de13">stp_reg_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a6bf8458a8930ca6360304f736ef5c781">current_b_cmd</a> = <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#affbc9ba6c17b02af32647dc76796de13ab0bd70c81aace8775e32e0c0e1dfec45">NONE</a></td></tr>
 <tr class="memdesc:a6bf8458a8930ca6360304f736ef5c781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keeps track if a blocking command is being executed.  <br /></td></tr>
@@ -709,10 +709,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>get the latest driver state flags from the joint </p>
+<p>get the latest driver state <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3" title="State flags transmitted with every I2C transaction.">flags</a> from the joint </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">flags</td><td>if succesfull, populated with the latest flags </td></tr>
+    <tr><td class="paramname">flags</td><td>if succesfull, populated with the latest <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3" title="State flags transmitted with every I2C transaction.">flags</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -928,7 +928,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks if the joint controller is busy processing a blocking command. </p>
-<p>Reads the internal state flags from the last transmission. If an update is neccessary call <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#aaef8fb5aad3fb6ce0721043b6812d87b" title="Overload of getFlags(u_int8_t &amp;flags)">getFlags()</a> before invoking this function. </p><dl class="section return"><dt>Returns</dt><dd>true if a blocking command is currently executing, false if not. </dd></dl>
+<p>Reads the internal state <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3" title="State flags transmitted with every I2C transaction.">flags</a> from the last transmission. If an update is neccessary call <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#aaef8fb5aad3fb6ce0721043b6812d87b" title="Overload of getFlags(u_int8_t &amp;flags)">getFlags()</a> before invoking this function. </p><dl class="section return"><dt>Returns</dt><dd>true if a blocking command is currently executing, false if not. </dd></dl>
 
 </div>
 </div>
@@ -957,7 +957,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks the state if the motor is enabled. </p>
-<p>Reads the internal state flags from the last transmission. If an update is neccessary call <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#aaef8fb5aad3fb6ce0721043b6812d87b" title="Overload of getFlags(u_int8_t &amp;flags)">getFlags()</a> before invoking this function. If the motor actually can move depends on the state of the STALLED flag which can be checked using <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a3e0bf2ee963d94b7272ea31c38ee9021" title="Checks if the motor is stalled.">Joint::isStalled()</a>.</p>
+<p>Reads the internal state <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3" title="State flags transmitted with every I2C transaction.">flags</a> from the last transmission. If an update is neccessary call <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#aaef8fb5aad3fb6ce0721043b6812d87b" title="Overload of getFlags(u_int8_t &amp;flags)">getFlags()</a> before invoking this function. If the motor actually can move depends on the state of the STALLED flag which can be checked using <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a3e0bf2ee963d94b7272ea31c38ee9021" title="Checks if the motor is stalled.">Joint::isStalled()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if the motor is enabled, false if not. </dd></dl>
 
 </div>
@@ -987,7 +987,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks the state if the motor is homed. </p>
-<p>Reads the internal state flags from the last transmission. If an update is neccessary call <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#aaef8fb5aad3fb6ce0721043b6812d87b" title="Overload of getFlags(u_int8_t &amp;flags)">getFlags()</a> before invoking this function.</p>
+<p>Reads the internal state <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3" title="State flags transmitted with every I2C transaction.">flags</a> from the last transmission. If an update is neccessary call <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#aaef8fb5aad3fb6ce0721043b6812d87b" title="Overload of getFlags(u_int8_t &amp;flags)">getFlags()</a> before invoking this function.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if the motor is homed, false if not. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classbioscara__hardware__drivers_1_1MockJoint.html#a6892f0942bfe3ca98532258a5b73dc56">bioscara_hardware_drivers::MockJoint</a>.</p>
@@ -1019,7 +1019,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks if the motor is stalled. </p>
-<p>Reads the internal state flags from the last transmission. If an update is neccessary call <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#aaef8fb5aad3fb6ce0721043b6812d87b" title="Overload of getFlags(u_int8_t &amp;flags)">getFlags()</a> before invoking this function. </p><dl class="section return"><dt>Returns</dt><dd>true if the motor is stalled, false if not. </dd></dl>
+<p>Reads the internal state <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3" title="State flags transmitted with every I2C transaction.">flags</a> from the last transmission. If an update is neccessary call <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#aaef8fb5aad3fb6ce0721043b6812d87b" title="Overload of getFlags(u_int8_t &amp;flags)">getFlags()</a> before invoking this function. </p><dl class="section return"><dt>Returns</dt><dd>true if the motor is stalled, false if not. </dd></dl>
 
 </div>
 </div>
@@ -1510,7 +1510,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>State flags transmitted with every I2C transaction. </p>
+<p>State <a class="el" href="classbioscara__hardware__drivers_1_1BaseJoint.html#a959c1652a778c7654db894eef9b337c3" title="State flags transmitted with every I2C transaction.">flags</a> transmitted with every I2C transaction. </p>
 <p>The transmission flags purpose are to transmit the joints current state. Note: They can not be used as error indication of the execution of a transmitted write command, since commands are executed after the I2C transaction is completed. The status flags are one byte with following structure: <br  />
  </p><table class="markdownTable">
 <tr class="markdownTableHead">

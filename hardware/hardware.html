@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supplementary Assembly Instructions &mdash; Bioscara  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C++ API Documentation" href="../code/index.html" />
+    <link rel="prev" title="Hardware" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Bioscara
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../further_guides/index.html">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Hardware</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Supplementary Assembly Instructions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#key-modifications">Key Modifications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#joint-driver">Joint driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#endstops">Endstops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#new-gripper-assembly">New Gripper Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tensioner-pulley-slipping">Tensioner Pulley Slipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#electrical-design">Electrical Design</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simplified-electronics-compartment">Simplified Electronics Compartment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#assembly-instructions">Assembly Instructions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cad-model-and-stl-meshes">CAD Model and STL Meshes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code/index.html">C++ API Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bioscara</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Hardware</a></li>
+      <li class="breadcrumb-item active">Supplementary Assembly Instructions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/hardware/hardware.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="supplementary-assembly-instructions">
+<h1>Supplementary Assembly Instructions<a class="headerlink" href="#supplementary-assembly-instructions" title="Link to this heading"></a></h1>
+<p>The hardware has been modified in comparison the original Bioscara project.</p>
+<p><img alt="bioscara" src="../_images/bioscara_image_1.png" /></p>
+<section id="key-modifications">
+<h2>Key Modifications<a class="headerlink" href="#key-modifications" title="Link to this heading"></a></h2>
+<p>The key changes were:</p>
+<ul class="simple">
+<li><p>Replacing the MKServo42C closed-loop stepper drivers with UStepper S32 drivers</p></li>
+<li><p>Removing the optical endstops and replacing them with physical stop blocks for sensor less homing</p></li>
+<li><p>Removing the associtated wiring to the optical endstops and MKServo drivers.</p></li>
+<li><p>The UStepper drivers only require two signal wires (SDA/SCL) and the 24V/GND power cables.</p></li>
+<li><p>The electronics compartment has been simplified since the 3D-printer motherboard could be removed.</p></li>
+<li><p>All wires have been replaced and properly sized and terminated.</p></li>
+<li><p>Power distribution is achieved through terminal block mounted on DIN-rails.</p></li>
+<li><p>The gripper has been redesgined.</p></li>
+</ul>
+<section id="joint-driver">
+<h3>Joint driver<a class="headerlink" href="#joint-driver" title="Link to this heading"></a></h3>
+<p>The new joint driver is mounted on the back of the stepper motors just like the MKServo 42C drivers.</p>
+<p><img alt="UStepper S32" src="../_images/ustepper.jpg" /></p>
+<p><strong>TO-DO:</strong></p>
+<ul class="simple">
+<li><p>Increase the cutout dimensions in the J2 covers and J1 Top cover to make room for the slightly larger UStepper mounts.</p></li>
+</ul>
+</section>
+<section id="endstops">
+<h3>Endstops<a class="headerlink" href="#endstops" title="Link to this heading"></a></h3>
+<p>See the new endstops in the figures below. Their STL file can be found in the <em>hardware/meshes/</em> directory.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="J1 Endstop" src="../_images/j1_stop.jpg" /></p></th>
+<th class="head"><p><img alt="J2 Endstop" src="../_images/j2_stop.jpg" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>J1 Endstop</strong></p></td>
+<td><p><strong>J2 Endstop</strong></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="J3 Endstop" src="../_images/j3_stop.jpg" /></p></th>
+<th class="head"><p><img alt="J4 Endstop" src="../_images/j4_stop.jpg" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>J3 Endstop</strong></p></td>
+<td><p><strong>J4 Endstop</strong></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="new-gripper-assembly">
+<h3>New Gripper Assembly<a class="headerlink" href="#new-gripper-assembly" title="Link to this heading"></a></h3>
+<p>The new gripper was designed in June 2025. The results are presented in a <a class="reference download internal" download="" href="../_downloads/2a6d1d37bcc970761109e2d2fa484e82/gripper_redesign_project_presentation.pdf"><span class="xref download myst">presentation</span></a> and <a class="reference download internal" download="" href="../_downloads/8b5b1dc24e495373c134a0a13f8f2d93/gripper_redesign_project_report.pdf"><span class="xref download myst">report</span></a>.</p>
+<p>The CAD files can be found under the <em>hardware/CAD Model/gripper_v2</em> directory.</p>
+</section>
+<section id="tensioner-pulley-slipping">
+<h3>Tensioner Pulley Slipping<a class="headerlink" href="#tensioner-pulley-slipping" title="Link to this heading"></a></h3>
+<p>The J4 belt drive needs to be redesigned, since the tensioner pulley slips under load, releasing tension. The current workaround is the <em>tensioner_stop_block</em> that is inserted in the slot to prevent the pulley from sliding back. The stop block needs to be printed and inserted as shown in the figure.</p>
+<p><strong>TO-DO:</strong></p>
+<ul class="simple">
+<li><p>Fix the design, for example by “knurling” the surface to increase its roughness to increase friction.</p></li>
+</ul>
+<p><img alt="Stop Block" src="../_images/stop_block.png" /></p>
+</section>
+<section id="electrical-design">
+<h3>Electrical Design<a class="headerlink" href="#electrical-design" title="Link to this heading"></a></h3>
+<p>The electrical schematic can be found <a class="reference download internal" download="" href="../_downloads/e4f7ad7d5172eefe12a67355382b2275/schematic.pdf"><span class="xref download myst">here</span></a>.</p>
+<p>The schematic shows how to wire the new joint controllers and how to distribute the power in the terminal blocks.
+For indicative cable lengths and wire gauges refer to the schematic as well.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>All wires shall be appropriatly sized and terminated with spade connectors for the power supply and ferrules for screw terminals.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some images may display a seperate GND connection with the I2C wires. This is no longer correct. The wiring as displayed in the schematic with only a single GND wired to the power terminals is correct.</p>
+</div>
+<p>The AC wiring was redone. Note that the wires are properly terminated. The power switch was replaced with a simple switch.</p>
+<p><img alt="AC cables" src="../_images/ac_power_cables.jpg" /></p>
+</section>
+<section id="simplified-electronics-compartment">
+<h3>Simplified Electronics Compartment<a class="headerlink" href="#simplified-electronics-compartment" title="Link to this heading"></a></h3>
+<p>The 3D-printer motherboard and level-shifter was removed from the base plate. The number of wires was reduced. The new design is shown in the figure below.
+<img alt="Electronics baseplate" src="../_images/electronics_v2.png" /></p>
+<p><strong>TO-DO:</strong></p>
+<ul class="simple">
+<li><p>Redesigning the electronics base plate to be able to properly mount all components. The terminal block are currently just glued in place.</p></li>
+</ul>
+</section>
+</section>
+<section id="assembly-instructions">
+<h2>Assembly Instructions<a class="headerlink" href="#assembly-instructions" title="Link to this heading"></a></h2>
+<p>The assmbley instructions are given in <a class="reference download internal" download="" href="../_downloads/996e7c352063e898f4c7885a8b5db2d0/Bioscara_v2_manual_preliminary.pdf"><span class="xref download myst">this pdf</span></a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A video of the original assembly can be found in <a class="reference external" href="https://www.youtube.com/watch?v=obPP-tCtBTw">this  YouTube video</a>.</p>
+</div>
+<p><strong>TO-DO:</strong></p>
+<ul class="simple">
+<li><p>The instructions have only been preliminarily updated. A unified assembly guide with up to date images and information needs to be compiled.</p></li>
+<li><p>The current assembly guide is PowerPoint presentation. This file format is very poor for version control. The new assembly guide needs to full-fill the following criteria:</p>
+<ul>
+<li><p>Platform independent: The new guide shall be easily maintainable from different platforms. PowerPoint is poorly portable between operating systems.</p></li>
+<li><p>Version Control: The new guide shall be written in a text based format that supports version control such as this document or Latex.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="cad-model-and-stl-meshes">
+<h2>CAD Model and STL Meshes<a class="headerlink" href="#cad-model-and-stl-meshes" title="Link to this heading"></a></h2>
+<p>The complete STEP CAD model can be found in the <em>hardware/CAD_models/</em> directory. The STL meshes for 3D-printing are in the <em>hardware/meshes/</em>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The original STEP files can be found <a class="reference external" href="https://a360.co/3SWc07A">here</a></p>
+</div>
+<p><strong>TO-DO:</strong></p>
+<ul class="simple">
+<li><p>The coordinate systems of the CAD model are completely wrong and need to be fixed</p></li>
+<li><p>The CAD model does not include the simplified arm shape used in the robot description URDF files, this remains to be added.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Hardware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../code/index.html" class="btn btn-neutral float-right" title="C++ API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, DALSA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Documentation" href="code/index.html" /> 
+    <link rel="next" title="Getting Started" href="getting_started/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,8 +43,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="code/index.html">Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide/index.html">User Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="further_guides/index.html">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/index.html">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/index.html">C++ API Documentation</a></li>
 </ul>
 
         </div>
@@ -76,38 +78,28 @@
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p>TODO:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><em>A project overview should briefly describe the scope, purpose, and goals of the project. It helps users quickly understand what the project is about and why it exists.
-When writing an overview, mention the main problem the project solves, its target audience, and any unique features or technologies it uses.</em></p>
-<p><em>Example:</em></p>
-<blockquote>
-<div><p><em>This project provides a stadaridized template for DALSA GitHub repositories, designed to help project owners quickly set up new projects with a consistent structure and DevOps features.
-Its goal is to ensure maintainability and collaboration by enforcing standards that make future contributions and usage seamless. The template integrates Sphinx + Doxygen for unified
-documentation of both Python and C++ packages, and uses GitHub Actions to automate generation of web-based documentation, code analyis (linting), code rewrites to follow a
-consistent style (formatting), and execution of tests.</em></p>
-</div></blockquote>
-</div>
-<p>Here you will find a full description of the project’s architecture and core concepts, detailed documentation of all packages, and practical usage examples.
-This guide is designed to help you understand the structure and functionality of the project, making it easier to get started and make effective use of its features.</p>
-<p>TODO:</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="code/index.html">Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="code/bioscara_hardware_interfaces/index.html">bioscara_hardware_interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code/bioscara_hardware_drivers/index.html">bioscara_hardware_drivers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/building.html">Building the ROS2 Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/operate.html">Operate the Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/packages.html">ROS2 Package Architecture</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="guide/index.html">User Guides</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="guide/installation.html">Installing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/building.html">Building the ROS2 Workspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/operate.html">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/documentation.html">Building the Documentation locally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/firmware.html">Modifying and Flashing the Joint Firmware</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/IKFast.html">Creating a IKFast Inverse Kinematics Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="further_guides/index.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="further_guides/gripper.html">Standalone Gripper Operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="further_guides/firmware.html">Modifying and Flashing the Joint Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="further_guides/documentation.html">Building the Documentation locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="further_guides/IKFast.html">Creating a IKFast Inverse Kinematics Plugin</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/index.html">Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/hardware.html">Supplementary Assembly Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code/index.html">C++ API Documentation</a></li>
 </ul>
 </div>
 </section>
@@ -117,7 +109,7 @@ This guide is designed to help you understand the structure and functionality of
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="code/index.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting_started/index.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

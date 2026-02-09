@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating a IKFast Inverse Kinematics Plugin &mdash; Bioscara  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hardware" href="../hardware/index.html" />
+    <link rel="prev" title="Building the Documentation locally" href="documentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Bioscara
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gripper.html">Standalone Gripper Operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware.html">Modifying and Flashing the Joint Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Building the Documentation locally</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Creating a IKFast Inverse Kinematics Plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plugin-creation">Plugin Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-new-plugin-package">Build the new Plugin Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-the-kinematics-yaml">Change the kinematics.yaml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#try-it-out">Try it out</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/index.html">C++ API Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bioscara</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Developer Guides</a></li>
+      <li class="breadcrumb-item active">Creating a IKFast Inverse Kinematics Plugin</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/further_guides/IKFast.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-a-ikfast-inverse-kinematics-plugin">
+<h1>Creating a IKFast Inverse Kinematics Plugin<a class="headerlink" href="#creating-a-ikfast-inverse-kinematics-plugin" title="Link to this heading"></a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This guide can only serve as a starting point since the desired result could not be achieved!</p>
+</div>
+<p>The IKFast is an analytical inverse kinematics solver that automatically generates a robots IK solver code based on its URDF file. This guide documents which steps have been undertaken to generate the IKFast solver plugin for MoveIt.</p>
+<p>The result however has always been that the robot did not move when dragging on its handles in MoveIt.</p>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading"></a></h2>
+<p>Please refer to the original guide on the MoveIt documentation page <a class="reference external" href="https://moveit.picknik.ai/main/doc/examples/ikfast/ikfast_tutorial.html">here</a> for the information about the individual commands.</p>
+</section>
+<section id="plugin-creation">
+<h2>Plugin Creation<a class="headerlink" href="#plugin-creation" title="Link to this heading"></a></h2>
+<p>make sure Docker is installed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>-v
+</pre></div>
+</div>
+<p>If that is not the case install Docker by following the guide <a class="reference external" href="https://docs.docker.com/engine/install/ubuntu/">here</a>.</p>
+<p>if that is done, make sure your user is added to the “docker” group:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+</pre></div>
+</div>
+<p>log out and back in to apply the new group:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>su<span class="w"> </span>-l<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+</pre></div>
+</div>
+<p>navigate to the <em>lib/ros2_ws/src/dalsa_bioscara_arm</em> directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>lib/ros2_ws/src/dalsa_bioscara_arm
+</pre></div>
+</div>
+<p>export the arm as an ENV variable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">MYROBOT_NAME</span><span class="o">=</span><span class="s2">&quot;bioscara_arm&quot;</span>
+</pre></div>
+</div>
+<p>Create a urdf file from the <em>scene.xacro</em> which will be parsed by the plugin generation script.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>xacro<span class="w"> </span>xacro<span class="w"> </span>-o<span class="w"> </span><span class="nv">$MYROBOT_NAME</span>.urdf<span class="w"> </span>bioscara_arm_description/urdf/scene.xacro
+</pre></div>
+</div>
+<p>Then create then call the plugin creation script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>moveit_kinematics<span class="w"> </span>auto_create_ikfast_moveit_plugin.sh<span class="w"> </span>--iktype<span class="w"> </span>&lt;type&gt;<span class="w"> </span><span class="nv">$MYROBOT_NAME</span>.urdf<span class="w"> </span>arm<span class="w"> </span>base_link<span class="w"> </span>tool_flange
+</pre></div>
+</div>
+<p>On first run this will take a while to pull and build the docker images.</p>
+<p>Select one 4-DOF &lt;type&gt; from the following (<a class="reference external" href="https://openrave.org/docs/latest_stable/openravepy/ikfast/#ik-types">source</a>):</p>
+<ul class="simple">
+<li><p><strong>Transform6D</strong> - end effector reaches desired 6D transformation</p></li>
+<li><p><strong>Rotation3D</strong> - end effector reaches desired 3D rotation</p></li>
+<li><p><strong>Translation3D</strong> - end effector origin reaches desired 3D translation</p></li>
+<li><p><strong>Direction3D</strong> - direction on end effector coordinate system reaches desired direction</p></li>
+<li><p><strong>Ray4D</strong> - ray on end effector coordinate system reaches desired global ray</p></li>
+<li><p><strong>Lookat3D</strong> - direction on end effector coordinate system points to desired 3D position</p></li>
+<li><p><strong>TranslationDirection5D</strong> - end effector origin and direction reaches desired 3D translation and direction. Can be thought of as Ray IK where the origin of the ray must coincide.</p></li>
+<li><p><strong>TranslationXY2D</strong> - end effector origin reaches desired XY translation position, Z is ignored. The coordinate system with relative to the base link.</p></li>
+<li><p><strong>TranslationLocalGlobal6D</strong> - local point on end effector origin reaches desired 3D global point. Because both local point and global point can be specified, there are 6 values.</p></li>
+<li><p><strong>TranslationXAxisAngle4D</strong>, <strong>TranslationYAxisAngle4D</strong>, <strong>TranslationZAxisAngle4D</strong> - end effector origin reaches desired 3D translation, manipulator direction makes a specific angle with x/y/z-axis (defined in the manipulator base link’s coordinate system)</p></li>
+<li><p><strong>TranslationXAxisAngleZNorm4D</strong>, <strong>TranslationYAxisAngleXNorm4D</strong>, <strong>TranslationZAxisAngleYNorm4D</strong> - end effector origin reaches desired 3D translation, manipulator direction needs to be orthogonal to z, x, or y axis and be rotated at a certain angle starting from the x, y, or z axis (defined in the manipulator base link’s coordinate system)</p></li>
+</ul>
+<p>None of the last 6 types have yielded a successfull result yet.</p>
+</section>
+<section id="build-the-new-plugin-package">
+<h2>Build the new Plugin Package<a class="headerlink" href="#build-the-new-plugin-package" title="Link to this heading"></a></h2>
+<p>Navigate to the root of the workspace:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>lib/ros2_ws
+</pre></div>
+</div>
+<p>and build the new package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install<span class="w"> </span>--mixin<span class="w"> </span>release<span class="w"> </span>--packages-select<span class="w"> </span>bioscara_arm_ikfast_plugin
+</pre></div>
+</div>
+</section>
+<section id="change-the-kinematics-yaml">
+<h2>Change the kinematics.yaml<a class="headerlink" href="#change-the-kinematics-yaml" title="Link to this heading"></a></h2>
+<p>Almost done, change the <em>lib/ros2_ws/src/moveit_configurations/bioscara_arm_gripper_128_moveit_config/config/kinematics.yaml</em> file to the new IK solver:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">arm</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">kinematics_solver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bioscara_arm/IKFastKinematicsPlugin</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</div>
+</section>
+<section id="try-it-out">
+<h2>Try it out<a class="headerlink" href="#try-it-out" title="Link to this heading"></a></h2>
+<p>Start the robot (mock or hardware), move_group and rviz as described in the <a class="reference internal" href="../getting_started/operate.html"><span class="std std-doc">guide</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="documentation.html" class="btn btn-neutral float-left" title="Building the Documentation locally" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../hardware/index.html" class="btn btn-neutral float-right" title="Hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, DALSA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -77,7 +77,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classbioscara__hardware__drivers_1_1Gripper-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">bioscara_hardware_drivers::Gripper Class Reference</div></div>
@@ -112,6 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abdf1f8e545da0a246f4effd78ae09f35" id="r_abdf1f8e545da0a246f4effd78ae09f35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1Gripper.html#abdf1f8e545da0a246f4effd78ae09f35">setPosition</a> (float width) override</td></tr>
 <tr class="memdesc:abdf1f8e545da0a246f4effd78ae09f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the gripper width in m.    <br /></td></tr>
 <tr class="separator:abdf1f8e545da0a246f4effd78ae09f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ecdc7bfd94d407e430ca15c8cbcb5cc" id="r_a3ecdc7bfd94d407e430ca15c8cbcb5cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1Gripper.html#a3ecdc7bfd94d407e430ca15c8cbcb5cc">setServoPosition</a> (float angle)</td></tr>
+<tr class="memdesc:a3ecdc7bfd94d407e430ca15c8cbcb5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the servo position of the gripper actuator in degrees.  <br /></td></tr>
+<tr class="separator:a3ecdc7bfd94d407e430ca15c8cbcb5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbioscara__hardware__drivers_1_1BaseGripper')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html">bioscara_hardware_drivers::BaseGripper</a></td></tr>
 <tr class="memitem:a5e48cae19cd98b836e874370384fd7f0 inherit pub_methods_classbioscara__hardware__drivers_1_1BaseGripper" id="r_a5e48cae19cd98b836e874370384fd7f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html#a5e48cae19cd98b836e874370384fd7f0">BaseGripper</a> (float reduction, float offset, float min, float max, float backup_init_pos)</td></tr>
 <tr class="memdesc:a5e48cae19cd98b836e874370384fd7f0 inherit pub_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html" title="Generic base class for gripper control implementations.">BaseGripper</a> object.  <br /></td></tr>
@@ -134,19 +136,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad66c8a68783f65ca2dacb4cf93ce7ee9 inherit pub_methods_classbioscara__hardware__drivers_1_1BaseGripper" id="r_ad66c8a68783f65ca2dacb4cf93ce7ee9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html#ad66c8a68783f65ca2dacb4cf93ce7ee9">setOffset</a> (float offset)</td></tr>
 <tr class="memdesc:ad66c8a68783f65ca2dacb4cf93ce7ee9 inherit pub_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually set offset.  <br /></td></tr>
 <tr class="separator:ad66c8a68783f65ca2dacb4cf93ce7ee9 inherit pub_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a3ecdc7bfd94d407e430ca15c8cbcb5cc" id="r_a3ecdc7bfd94d407e430ca15c8cbcb5cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1Gripper.html#a3ecdc7bfd94d407e430ca15c8cbcb5cc">setServoPosition</a> (float angle)</td></tr>
-<tr class="memdesc:a3ecdc7bfd94d407e430ca15c8cbcb5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the servo position of the gripper actuator in degrees.  <br /></td></tr>
-<tr class="separator:a3ecdc7bfd94d407e430ca15c8cbcb5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbioscara__hardware__drivers_1_1BaseGripper')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html">bioscara_hardware_drivers::BaseGripper</a></td></tr>
-<tr class="memitem:a99ecbf4d373191da1622844e9c58e0f7 inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper" id="r_a99ecbf4d373191da1622844e9c58e0f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html#a99ecbf4d373191da1622844e9c58e0f7">save_last_position</a> (float pos)</td></tr>
-<tr class="memdesc:a99ecbf4d373191da1622844e9c58e0f7 inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the latest position to the buffer file.  <br /></td></tr>
-<tr class="separator:a99ecbf4d373191da1622844e9c58e0f7 inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16aae28dcd08f034da662577719b5c1b inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper" id="r_a16aae28dcd08f034da662577719b5c1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html#a16aae28dcd08f034da662577719b5c1b">retrieve_last_position</a> (float &amp;pos)</td></tr>
-<tr class="memdesc:a16aae28dcd08f034da662577719b5c1b inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the stored position from the buffer file.  <br /></td></tr>
-<tr class="separator:a16aae28dcd08f034da662577719b5c1b inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -178,6 +167,16 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a44c99d057bf270f3af1c47c37d77c49a inherit pro_attribs_classbioscara__hardware__drivers_1_1BaseGripper" id="r_a44c99d057bf270f3af1c47c37d77c49a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html#a44c99d057bf270f3af1c47c37d77c49a">_pos_get</a> = <a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html#ae10e0604a51b81e5da405152c74e9e9e">_pos</a></td></tr>
 <tr class="memdesc:a44c99d057bf270f3af1c47c37d77c49a inherit pro_attribs_classbioscara__hardware__drivers_1_1BaseGripper"><td class="mdescLeft">&#160;</td><td class="mdescRight">reported position  <br /></td></tr>
 <tr class="separator:a44c99d057bf270f3af1c47c37d77c49a inherit pro_attribs_classbioscara__hardware__drivers_1_1BaseGripper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbioscara__hardware__drivers_1_1BaseGripper')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html">bioscara_hardware_drivers::BaseGripper</a></td></tr>
+<tr class="memitem:a99ecbf4d373191da1622844e9c58e0f7 inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper" id="r_a99ecbf4d373191da1622844e9c58e0f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html#a99ecbf4d373191da1622844e9c58e0f7">save_last_position</a> (float pos)</td></tr>
+<tr class="memdesc:a99ecbf4d373191da1622844e9c58e0f7 inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the latest position to the buffer file.  <br /></td></tr>
+<tr class="separator:a99ecbf4d373191da1622844e9c58e0f7 inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16aae28dcd08f034da662577719b5c1b inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper" id="r_a16aae28dcd08f034da662577719b5c1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbioscara__hardware__drivers_1_1BaseGripper.html#a16aae28dcd08f034da662577719b5c1b">retrieve_last_position</a> (float &amp;pos)</td></tr>
+<tr class="memdesc:a16aae28dcd08f034da662577719b5c1b inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the stored position from the buffer file.  <br /></td></tr>
+<tr class="separator:a16aae28dcd08f034da662577719b5c1b inherit pro_methods_classbioscara__hardware__drivers_1_1BaseGripper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Child class implementing control of the hardware gripper. </p>
@@ -339,9 +338,6 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="namespacebioscara__hardware__drivers.html#a1d009df6593ed79588fb4ae11be3e7c5">err_type_t</a> bioscara_hardware_drivers::Gripper::setServoPosition </td>
@@ -351,11 +347,6 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Sets the servo position of the gripper actuator in degrees. </p>
