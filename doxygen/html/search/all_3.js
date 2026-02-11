@@ -26,6 +26,6 @@ var searchData=
   ['controller_5fstates_5f_23',['controller_states_',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#aa19fb953879dd20583960fc19e29686a',1,'bioscara_rviz_plugin::BioscaraPanel']]],
   ['create_5fmap_5fof_5freferences_5fto_5finterfaces_24',['create_map_of_references_to_interfaces',['../classsingle__trigger__controller_1_1SingleTriggerController.html#ac34cef8d3e409203a1e3318b3e5c9361',1,'single_trigger_controller::SingleTriggerController']]],
   ['ctrl_5fen_5fbtn_5fcb_25',['ctrl_en_btn_cb',['../classbioscara__rviz__plugin_1_1BioscaraPanel.html#ad5722f74d54cda482a31688133f307d7',1,'bioscara_rviz_plugin::BioscaraPanel']]],
-  ['current_26',['current',['../structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t.html#a31ee793925d243d4035aa1d02bd427a1',1,'bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t::current'],['../high__speed__stall__test_2src_2main_8cpp.html#a1f957b762e025dae67967a36c86dcfc1',1,'CURRENT:&#160;main.cpp'],['../max__accel__test_2src_2main_8cpp.html#a1f957b762e025dae67967a36c86dcfc1',1,'CURRENT:&#160;main.cpp']]],
+  ['current_26',['current',['../structbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface_1_1joint__homing__config__t.html#a31ee793925d243d4035aa1d02bd427a1',1,'bioscara_hardware_interfaces::BioscaraArmHardwareInterface::joint_homing_config_t']]],
   ['current_5fb_5fcmd_27',['current_b_cmd',['../classbioscara__hardware__drivers_1_1BaseJoint.html#a6bf8458a8930ca6360304f736ef5c781',1,'bioscara_hardware_drivers::BaseJoint']]]
 ];

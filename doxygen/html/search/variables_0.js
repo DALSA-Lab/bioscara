@@ -2,7 +2,7 @@ var searchData=
 [
   ['_5fbackup_5finit_5fpos_0',['_backup_init_pos',['../classbioscara__hardware__drivers_1_1BaseGripper.html#a132a5ee7e7aa2cc0f7b3527fbb5d23bd',1,'bioscara_hardware_drivers::BaseGripper']]],
   ['_5ffreq_1',['_freq',['../classbioscara__hardware__drivers_1_1Gripper.html#a64e8edb8794d4816f0410b1fcc150c65',1,'bioscara_hardware_drivers::Gripper']]],
-  ['_5fgripper_2',['_gripper',['../manual__control_8cpp.html#a36ad23fb8c7a01dbaf0355f35a45f2b6',1,'_Gripper:&#160;manual_control.cpp'],['../classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface.html#ad6dc3662a82a73acc13b429e81d93b37',1,'bioscara_hardware_interfaces::BioscaraGripperHardwareInterface::_gripper']]],
+  ['_5fgripper_2',['_gripper',['../classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface.html#ad6dc3662a82a73acc13b429e81d93b37',1,'bioscara_hardware_interfaces::BioscaraGripperHardwareInterface']]],
   ['_5fgripper_5fcfg_3',['_gripper_cfg',['../classbioscara__hardware__interfaces_1_1BioscaraGripperHardwareInterface.html#a99bd1544cf9fb1885403b00dbda9f241',1,'bioscara_hardware_interfaces::BioscaraGripperHardwareInterface']]],
   ['_5fjoint_5fcfg_4',['_joint_cfg',['../classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface.html#a24bfb6fef55ee2a8f659f82ab60b5a4b',1,'bioscara_hardware_interfaces::BioscaraArmHardwareInterface']]],
   ['_5fjoint_5fcommand_5fmodes_5',['_joint_command_modes',['../classbioscara__hardware__interfaces_1_1BioscaraArmHardwareInterface.html#afc419a32f050cf461e64d958fed917ce',1,'bioscara_hardware_interfaces::BioscaraArmHardwareInterface']]],

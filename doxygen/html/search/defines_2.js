@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['deg2rad_0',['DEG2RAD',['../uTransmission_8h.html#aa3616a5af1a14b0a5a1b2f542066ae45',1,'uTransmission.h']]],
-  ['dump_5fbuffer_1',['dump_buffer',['../joint_8h.html#a292ca54fa46995e81a58e6432a23a114',1,'DUMP_BUFFER:&#160;joint.h'],['../common_8h.html#a292ca54fa46995e81a58e6432a23a114',1,'DUMP_BUFFER:&#160;common.h']]]
+  ['j1_0',['J1',['../joint_8ino.html#aa0a810e76ff16787aab0c30a8b973e8a',1,'joint.ino']]],
+  ['joint2actuator_1',['JOINT2ACTUATOR',['../uTransmission_8h.html#a056e4bc2bde4678659c2b48c1186ec7c',1,'uTransmission.h']]]
 ];
