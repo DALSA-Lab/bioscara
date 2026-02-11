@@ -92,7 +92,7 @@ A video of the original assembly can be found in [this  YouTube video](https://w
 The complete STEP CAD model can be found in the *hardware/CAD_model/* directory. The STEP file is compressed as a ZIP archive to be able to upload it to Github. The STL meshes for 3D-printing are in the *hardware/meshes/*.
 
 :::{tip}
-The original STEP files can be found [here](https://a360.co/3SWc07A)
+The original, now outdated, Bioscara_v1 STEP files can be found [here](https://a360.co/3SWc07A)
 :::
 
 **TO-DO:**
