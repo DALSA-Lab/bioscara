@@ -956,7 +956,6 @@ INPUT                  =../../lib/joint_firmware/joint \
                         ../../lib/ros2_ws/src/moveit_motion_plans/ \
                         ../../lib/ros2_ws/src/scene_bringup/ \
                         ../../lib/ros2_ws/src/scene_descriptions/ \
-                        ../../lib/ros2_ws/src/system_test_packages/ \
                         index.md \
 
 
@@ -1063,7 +1062,7 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-EXCLUDE                =
+EXCLUDE                = ../../lib/ros2_ws/src/dalsa_bioscara_arm/bioscara_arm_ikfast_plugin
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded
@@ -1089,8 +1088,6 @@ EXCLUDE_PATTERNS       = *.py \
 # ANamespace::AClass, ANamespace::*Test
 
 EXCLUDE_SYMBOLS        =    Ui \
-                            ikfast \
-                            bioscara_arm
 
 # The EXAMPLE_PATH tag can be used to specify one or more files or directories
 # that contain example code fragments that are included (see the \include
