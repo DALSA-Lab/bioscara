@@ -53,13 +53,12 @@ cd doxygen/latex
 make
 ```
 
+First compile it as a PDF (the HTML will link to it later)
+```bash
+sphinx-build -M latexpdf . sphinx/latex
+```
+
 Finally build the Sphinx documentation:
 ```bash
-sphinx-build -b html . build/html
+sphinx-build -b html . sphinx/html
 ```
-
-It can also be compiled to a PDF:
-```bash
-sphinx-build -M latexpdf . build/latex
-```
-
