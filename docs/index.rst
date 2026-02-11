@@ -1,11 +1,7 @@
 **Bioscara**
 ============
 
-Overview
---------
-
-TODO:
-
+The PDF version of this documentation can be found here: :download:`bioscara.pdf <build/latex/latex/bioscara.pdf>`.
 
 .. toctree::
    :maxdepth: 2
