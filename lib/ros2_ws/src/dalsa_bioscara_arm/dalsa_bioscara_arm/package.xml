@@ -16,6 +16,7 @@
   <exec_depend>bioscara_arm_description</exec_depend>
   <exec_depend>bioscara_arm_hardware_driver</exec_depend>
   <exec_depend>bioscara_arm_hardware_interface</exec_depend>
+  <exec_depend>plotjuggler</exec_depend>
   <depend>python3-vcstool</depend>
 
   <export>
