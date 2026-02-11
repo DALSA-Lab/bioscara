@@ -134,12 +134,12 @@ doxygen
 make
 </pre></div>
 </div>
-<p>Finally build the Sphinx documentation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>.<span class="w"> </span>build/html
+<p>First compile it as a PDF (the HTML will link to it later)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build<span class="w"> </span>-M<span class="w"> </span>latexpdf<span class="w"> </span>.<span class="w"> </span>sphinx/latex
 </pre></div>
 </div>
-<p>It can also be compiled to a PDF:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build<span class="w"> </span>-M<span class="w"> </span>latexpdf<span class="w"> </span>.<span class="w"> </span>build/latex
+<p>Finally build the Sphinx documentation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>.<span class="w"> </span>sphinx/html
 </pre></div>
 </div>
 </section>

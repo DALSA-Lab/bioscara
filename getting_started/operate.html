@@ -74,6 +74,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#general-launch-problems">General Launch Problems</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#motion-planning-fails">Motion Planning Fails</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ros2-control-fails-to-start">ros2_control Fails to Start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#homing-sequence-not-starting-finishing">Homing Sequence not Starting/Finishing</a></li>
 </ul>
 </li>
 </ul>
@@ -289,12 +290,19 @@ Using these recipes complex applications can be programmed. Some examples can be
 <ul class="simple">
 <li><p><strong>Start state collision:</strong> If a trajectory is planner immediatly after homing , the gripper links can be in a self-collision with link link_1, since the collision body is a primitive cylinder. Simply deactivate the arm and move the links out of collision. The collided links will be highlighted in red in RViz.</p></li>
 </ul>
-<!-- TODO: more problems? -->
 </section>
 <section id="ros2-control-fails-to-start">
 <h3>ros2_control Fails to Start<a class="headerlink" href="#ros2-control-fails-to-start" title="Link to this heading"></a></h3>
 <p>Sometimes, for yet unknown reasons, if the ros2_control node is launched from the complete launch file, it attempts to start the robot hardware despite the <code class="docutils literal notranslate"><span class="pre">use_mock_hardware:=true</span></code> has been set.
 If that happens while no hardware is connected, the node will fail to start and control is impossible. Launching the ros2_control node separately as described in <a class="reference internal" href="#alternative-manually-launching-nodes"><span class="xref myst">here</span></a> seems to resolve this issue.</p>
+</section>
+<section id="homing-sequence-not-starting-finishing">
+<h3>Homing Sequence not Starting/Finishing<a class="headerlink" href="#homing-sequence-not-starting-finishing" title="Link to this heading"></a></h3>
+<p>As described in <a class="reference external" href="https://github.com/DALSA-Lab/bioscara/issues/5">this bug</a> report, under yet unclear conditions, the homing sequence is immediatly aborted after it has been started. The joint driver however assumes it is sill ongoing while the firmware has already finished it. This issues can be fixed by:</p>
+<ol class="arabic simple">
+<li><p>Stop the homing sequence by pressing the <code class="docutils literal notranslate"><span class="pre">o</span></code> button</p></li>
+<li><p>Restart homing</p></li>
+</ol>
 <!-- TODO: where to modify dynamic limits --></section>
 </section>
 </section>

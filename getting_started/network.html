@@ -487,7 +487,12 @@ window.addEventListener("load", load);</script>
 <li class="toctree-l3"><a class="reference internal" href="#architecture">Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#permanent-ethernet-lan">Permanent Ethernet LAN</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#temporary-wifi-connection">Temporary WiFi Connection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#semi-permanent-internet-access-through-dtusecure">Semi-Permanent Internet Access through DTUSecure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#semi-permanent-internet-access-through-dtusecure">Semi-Permanent Internet Access through DTUsecure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#through-the-temporary-wifi-ap">Through the temporary WiFi AP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#via-dtusecure">Via DTUsecure</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#further-information">Further Information</a></li>
 </ul>
 </li>
 </ul>
@@ -555,8 +560,8 @@ Switch&lt;--IP: 10.10.10.2--&gt;robot
 
 end
 
-Switch&lt;-.&quot;(optional) 
-IP: 10.10.10.4&quot;.-&gt;laptop
+Switch&lt;--&quot;(optional) 
+IP: 10.10.10.4&quot;--&gt;laptop
 dev&lt;-.&quot;(optional)
 IP: 10.209.X.X&quot;.-&gt;DTUsecure
 robot&lt;-.&quot;(optional)
@@ -582,15 +587,40 @@ classDef foobar stroke:#00f
 </section>
 <section id="temporary-wifi-connection">
 <h2>Temporary WiFi Connection<a class="headerlink" href="#temporary-wifi-connection" title="Link to this heading"></a></h2>
-<p>After turning on the robot, the Raspberry Pi will search for a WiFi network with the the following credentials:<br />
+<p>Both the robot controller and control PC should be configured to automatically connect to a WiFi network with the the following credentials:<br />
 <strong>SSID</strong>: DALSA_IOT<br />
 <strong>Password</strong>: dalsa_iot</p>
 <p>It is possible to gain access wirelessly by creating such an access point. An easy solution is a smartphone or laptop WiFi hotspot.
-In the hotspot’s settings the IP adress of the Raspberry Pi will show up if it has sucessfully connected.</p>
+In the hotspot’s settings the IP adress of the connected device will show up if it has sucessfully connected.</p>
 </section>
 <section id="semi-permanent-internet-access-through-dtusecure">
-<h2>Semi-Permanent Internet Access through DTUSecure<a class="headerlink" href="#semi-permanent-internet-access-through-dtusecure" title="Link to this heading"></a></h2>
-<!-- TODO --></section>
+<h2>Semi-Permanent Internet Access through DTUsecure<a class="headerlink" href="#semi-permanent-internet-access-through-dtusecure" title="Link to this heading"></a></h2>
+<p>There are two options to access the internet.</p>
+<section id="through-the-temporary-wifi-ap">
+<h3>Through the temporary WiFi AP<a class="headerlink" href="#through-the-temporary-wifi-ap" title="Link to this heading"></a></h3>
+<p>Create the access point as described in the previous section, and the device will have internet access forwarded via the hotspot. This method is simple, yet the internet connection is slow and unstable. Not ideal to pull a large repository from Github for example.</p>
+</section>
+<section id="via-dtusecure">
+<h3>Via DTUsecure<a class="headerlink" href="#via-dtusecure" title="Link to this heading"></a></h3>
+<p>Connect the device to the DTUsecure WiFi network.</p>
+<p>The easiest way is to simply execute the connection script <em>installation/scripts/connect_DTUsecure.sh</em>:</p>
+<p>If the robot should be connected to DTUsecure, for example for a faster connection, run the provided script <em>installation/scripts/connect_DTUsecure.sh</em>. DTUsecure uses the WPA-EAP authethication mechanism with your DTU id and DTU password. The script has been made to simplify the setup.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Due the nature of the OS, your DTU accounts password will be saved in plain text in a netplan file on the system if the connection shall be saved persistently betweeen reboots! Follow the scripts output to see where.</p>
+</div>
+<p>then the script can be run simply by invoking:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>bash<span class="w"> </span>installation/scripts/connect_DTUsecure.sh
+</pre></div>
+</div>
+<p>The script adds a connection via nmcli, and asks the user for DTU id and password and if the credentials should be saved.</p>
+</section>
+</section>
+<section id="further-information">
+<h2>Further Information<a class="headerlink" href="#further-information" title="Link to this heading"></a></h2>
+<p>Managing networks on Linux can be confusing, for example if interfaces show up as ‘unmanaged’ the chances are high that a different network manager has control over the interface. <a class="reference external" href="https://wiki.archlinux.org/title/Network_configuration#Network_managers">This</a> table gives a good overview which programs might be involved.
+Note that Netplan is not mentioned there, since Netplan only takes a standardized configuration file as input and then depending on the renderer creates the configuration for the backend. Currently Netplan only works with systemd-networkd and NetworkManager, the latter is much simpler to use with its CLI <code class="docutils literal notranslate"><span class="pre">nmcli</span></code>, and terminal UI <code class="docutils literal notranslate"><span class="pre">nmtui</span></code>.</p>
+</section>
 </section>
 
 
