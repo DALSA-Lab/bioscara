@@ -163,11 +163,13 @@ This can have many reasons, the exact move_group error usually helps to identify
 
 - **Start state collision:** If a trajectory is planner immediatly after homing , the gripper links can be in a self-collision with link link_1, since the collision body is a primitive cylinder. Simply deactivate the arm and move the links out of collision. The collided links will be highlighted in red in RViz.
 
-<!-- TODO: more problems? -->
-
 ### ros2_control Fails to Start
 Sometimes, for yet unknown reasons, if the ros2_control node is launched from the complete launch file, it attempts to start the robot hardware despite the `use_mock_hardware:=true` has been set.
 If that happens while no hardware is connected, the node will fail to start and control is impossible. Launching the ros2_control node separately as described in [here](#alternative-manually-launching-nodes) seems to resolve this issue.
 
+### Homing Sequence not Starting/Finishing
+As described in [this bug](https://github.com/DALSA-Lab/bioscara/issues/5) report, under yet unclear conditions, the homing sequence is immediatly aborted after it has been started. The joint driver however assumes it is sill ongoing while the firmware has already finished it. This issues can be fixed by:
+1) Stop the homing sequence by pressing the `o` button
+2) Restart homing
 
 <!-- TODO: where to modify dynamic limits -->
