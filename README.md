@@ -25,3 +25,11 @@ There are three core branches which MUST NOT be deleted without appropriate repl
 - ***main***: This branch contains the latest stable source code. Any commit to this branch will automatically trigger the build of a new documentation.
 - ***bioscara_v1***: Contains the original Bioscara project by Karol Garbor.
 - ***gh-pages***: contains the HTML source code hosted at https://dalsa-lab.github.io/bioscara/
+
+## Dependencies
+Currently the project has the following source-code dependencies:
+- [***single_trigger_controller***](https://github.com/DALSA-Lab/ros2_control-single_trigger_controller.git) branch: *main*
+- [***moveit_task_constructor***](https://github.com/moveit/moveit_task_constructor.git) branch: *ros2*
+- [***moveit2***](https://github.com/DALSA-Lab/moveit2-dalsa.git) branch: *main*
+- [***moveit_visual_tools***](https://github.com/moveit/moveit_visual_tools.git) branch: *ros2*
+- [***pick_ik***](https://github.com/PickNikRobotics/pick_ik.git) branch: *main*
