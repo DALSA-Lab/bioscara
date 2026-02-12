@@ -33,6 +33,7 @@ docs/sphinx/html
 
 test/*/record*
 !test/*/record*.csv
+!test/*/record*.png
 
 test/.venv/
 docs/.venv/
