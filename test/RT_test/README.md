@@ -60,8 +60,8 @@ The first test is conducted with the controller manager node running a non-realt
 
 ## Test 2
 The second test is executed with the controller manager node with realtime priority 50 and FIFO Scheduler (default ros2_control values).
-The user *scara* user has been added to the realtime group as described [here](../../Raspberry/README.md#adding-the-scara-user-to-realtime-group)
-<!-- TODO: update link -->
+The user *scara* user has been added to the realtime group as described in the user manuals.
+
 The recording is 613 seconds long.
 
 ## Results

@@ -12,17 +12,14 @@ This test is to identify the bottleneck that causes the long execution times and
 ## Description
 The test consists of two units:
 ### Joint Firmware
-<!-- TODO: describe and link how to flash firmware  -->
 A firmware variant ([profiling_test.ino](../../lib/joint_firmware/profiling_test/profiling_test.ino)) is flashed on the joint controller. This firmware times the execution of the `non_blocking_handler()` which handles the incoming commands and prints the results to the serial port in CSV format. The development machine stays connected to the joint via USB to capture the serial port output and save it to a file. The [Realterm](https://sourceforge.net/projects/realterm/) software was used to cpature and save the serial output. 
 ### Controller
-<!-- TODO: describe and link how to build and source workspace  -->
 The controller executes the system_test_packages/comm_speed_test program
 ```bash
-cd ~/bioscara/lib/ros2_ws
+cd lib/ros2_ws
+source install/local_setup.bash
 ros2 run comm_speed_test main
 ```
-
-<!-- TODO: write documentation for test program, link or reference here -->
 The test program calls and times the read and write execution duration of either position or velocity (`getPosition()`/`getVelocity/()` and `setPosition()`/`setVelocity/()` respectively) for a total of 1000x cycles per joint and prints the collected data to a CSV file.
 
 No prints and other unneccessary functions are executed in the timed sections.

@@ -1,5 +1,5 @@
 # Network Setup
-<!-- TODO -->
+This document describes the network architecture and possibilities to establish inter-device connections.
 
 ## Architecture
 If the network configuration described in the [installation instructions](installation.md) are followed, then the robot controller and control PC are set-up for the network architecture as follows:

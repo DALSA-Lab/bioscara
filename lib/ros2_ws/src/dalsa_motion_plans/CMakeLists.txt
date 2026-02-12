@@ -38,7 +38,6 @@ install(
     lib/${PROJECT_NAME}
 )
 
-# TODO: find a way to not add every script to the cmakelist
 install(PROGRAMS
         scripts/IAmNotARobot.py
         scripts/PickPlace.py

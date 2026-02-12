@@ -4,7 +4,7 @@
 <name>bioscara_arm_description</name>
   <version>0.0.0</version>
 <description>The bioscara_arm_description package</description>
-  <maintainer email="todo@todo.com">author</maintainer>
+  <maintainer email="s.storz01@gmail.com">sbstorz</maintainer>
   <license>Apache-2.0</license>
 
   <exec_depend>xacro</exec_depend>
