@@ -1,39 +1,27 @@
-# Bioscara - DALSA DIY SCARA robot arm
-This repository serves to collect all information regarding DALSAs DIY robot arm Bioscara.
-The latest version is based on an earlier version which can be found under the "bioscara_v1" branch. It is updated by replacing the MKS SERVO42C stepper drivers with the Ustepper S32 drivers and removing the 3D printer driver board. A custom firmware is developed and ROS2 is deployed as the middleware for motion control.
+# <img src="docs/doxygen/BioscaraPanel.png" alt="icon" width="auto" height="25"> Bioscara - DALSA DIY SCARA robot arm
+This repository serves to collect all information regarding DALSA's DIY robot arm **Bioscara**.
+<p align="center">
+  <img src="docs/assets/bioscara_image_1.png" width=500px height=autor />
+</p>
+
+## Documentation and Guides
+Please refer to the user guides and source code documentation at: https://dalsa-lab.github.io/bioscara/
+
+> [!NOTE]  
+> If the website is unavailable, you can find its source code in the *docs/* directory
 
 ## Repository Structure
 The repository structure is based on the DALSA template.
 
-<!-- TODO: structure -->
-## Documentation
-The C++ source code documentation is generated from comments using doxygen. Doxygen creates the documentation output in multiple formats, HTML for static website and latex for pdf rednering.
-Additionally user documentation has also been generated and can be found together with the source code documentation here: https://dalsa-lab.github.io/bioscara/
+- ***docs/***: Contains the user-guides as *.md* files and serves as the source code for the Sphinx documentation
+- ***hardware/***: Contains the robots CAD model as a STEP file, STL meshes, electrical schematics and further documents
+- ***installation/***: Contains installation scripts and files.
+- ***lib/***: Contains the source code for the ROS2 workspace and joint firmware.
+- ***test/***: Contains system test data and test protocols.
 
-## Usage
-<!-- TODO: link to network setup -->
-The robot controller is a Raspberry Pi 4. The RPI is configured to connect to a WIFI network with the the following credentials:  
-**SSID**: DALSA_IOT  
-**Password**: dalsa_iot  
-The easiest way to establish the network is to create a WIFI hotspot with the above credentials, however static IP assignemnt is not possible using Windows Hotspot, and hence the IP address must be checked before any connection attempt.
-On the RPI remote login and remote desktop as well as SSH is activated. This way the desktop can be accessed through a RDP software like Windows Remote Desktop or Remina. Be carefull that connecting this way will create a new user session!
 
-Interacting with the robot is handled through ROS2. In the subdirectory a seperate README can be found explaining how to use the hardware.
-
-## TODO
-### Mechanical
-- [ ]  Update the Fusion model to with all new parts.
-- [x] combine old and new stp and stl files
-- [x] Fix J3 Pulley slipping by increasing surface roughness
-- [x] Gripper Redesign
-### Software
-- [ ] Finish the TODO list for the Joint Communication Protocol (see the documentation)
-- [x] Create URDF file
-- [x] Get started with MoveIt
-### Documentation
-- [ ] Continue this TODO list and Readme
-- [ ] Improve User guide with detailed descriptions and up to date 3D models
-- [ ] Document mechanical changes
-- [ ] Document Ubuntu install and configurations
-- [ ] Document ROS installation
-- [ ] Explain the scripts
+## Branches
+There are three core branches which MUST NOT be deleted without appropriate replacement.
+- ***main***: This branch contains the latest stable source code. Any commit to this branch will automatically trigger the build of a new documentation.
+- ***bioscara_v1***: Contains the original Bioscara project by Karol Garbor.
+- ***gh-pages***: contains the HTML source code hosted at https://dalsa-lab.github.io/bioscara/
