@@ -39,4 +39,16 @@ echo "export ROS_DOMAIN_ID=$p_ROS_DOMAIN_ID" >> ~/.bashrc
 # Install colcon extensions
 sudo apt install python3-colcon-common-extensions -y
 
+# rosdep
+sudo apt install python3-rosdep -y
+sudo rosdep init
+rosdep update
+
+# vcstool
+sudo apt install python3-vcstool -y
+
+# debugging (not required for normal operation)
+sudo apt install xterm gdb gdbserver -y
+
+
 echo "ROS installation completed. Please restart your terminal or run 'source ~/.bashrc' to apply changes."
