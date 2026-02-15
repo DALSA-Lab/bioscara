@@ -1,11 +1,14 @@
 # Building the Documentation locally
-It is recommended to use a virtual environment to manage all dependencies.
+The documentation consists of two independent parts. The Doxygen-based C++ API documentation and these Sphinx user guides.
+
+
+## First Steps
 All following commands are executed from the *~/bioscara/docs/* directory:
 ```bash
 cd docs
 ```
-
 ## Create the Virtual Environment and Install Dependencies
+It is recommended to use a virtual environment to manage all dependencies.
 These steps need to be executed only once at the first time.
 Create the virtual python environment:
 ```bash

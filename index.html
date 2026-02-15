@@ -11,6 +11,7 @@
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
+    <link rel="shortcut icon" href="_static/BioscaraPanel.png"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=5929fcd5"></script>
@@ -32,6 +33,7 @@
           
           <a href="#" class="icon icon-home">
             Bioscara
+              <img src="_static/bioscara_image_1.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -75,7 +77,21 @@
              
   <section id="bioscara">
 <h1><strong>Bioscara</strong><a class="headerlink" href="#bioscara" title="Link to this heading"></a></h1>
+<p>This is the documentation for Bioscara DIY SCARA robot developed at the <strong>DTU Arena for Life Science Automation (DALSA)</strong>.
+See the table of contents below to see the available user guides.</p>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="getting_started/index.html"><span class="doc">Getting Started</span></a> guides help you to install dependencies, build the ROS2 workspace, setup the network and finally operate the robot.</p></li>
+<li><p>The <a class="reference internal" href="further_guides/index.html"><span class="doc">Developer Guides</span></a> guides are targeted towards developers and contain other useful instructions, for example how to build this documentation or flash the joint firmware.</p></li>
+<li><p>The <a class="reference internal" href="hardware/index.html"><span class="doc">Hardware</span></a> guides describe the hardware assembly instructions. <strong>Note:</strong> These require a consolidation!</p></li>
+<li><p>The <a class="reference internal" href="code/index.html"><span class="doc">Source Code Documentation</span></a> links to the C++ API documentation of the ROS2 packages.</p></li>
+</ul>
 <p>The PDF version of this documentation can be found here: <a class="reference download internal" download="" href="_downloads/267d2766b78dc3e86992062f9cf872a8/bioscara.pdf"><code class="xref download docutils literal notranslate"><span class="pre">bioscara.pdf</span></code></a></p>
+<section id="architechture">
+<h2>Architechture<a class="headerlink" href="#architechture" title="Link to this heading"></a></h2>
+<p>The control system architecture is schematically displayed in the figure below. The yellow colors whos custom C++ hardware specific code which is described in the <a class="reference internal" href="code/api.html"><span class="doc">C++ API Documentation</span></a>. The orange colors are the ROS2 applications for motion control and trajectory generation. The red colors are SiLA applications, not yet implemented as indicated by the dashed lines.</p>
+<a class="reference internal image-reference" href="_images/architecture_standalone.png"><img alt="_images/architecture_standalone.png" class="align-center" src="_images/architecture_standalone.png" style="width: 75%;" />
+</a>
+<p></p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -98,12 +114,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="code/index.html">Source Code Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="code/index.html#c-api-documentation">C++ API Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code/index.html#further-documentation">Further Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/packages.html">ROS2 Package Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/api.html">C++ API Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
+</section>
 </section>
 
 

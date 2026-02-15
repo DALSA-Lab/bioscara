@@ -214,13 +214,80 @@ Use the *installation/scripts/ROS2-Jazzy_install.sh* to install ROS2. The instal
 bash installation/scripts/ROS2-Jazzy_install.sh
 ```
 
+
+
+
 ## Clone the Project Repository
-<!-- TODO here -->
-
+Clone the project repository from Github into the *~/bioscara/* repository:
+```bash
+git clone https://github.com/DALSA-Lab/bioscara.git
+```
 ## Import further Dependecies
+Next we are going to install a lot of dependencies, either as a binary or from source.
 
+### Dependecy Management Tools
+The order of managing dependenices is according to [this](https://ros2-quality-assurance.readthedocs.io/en/released/tutorials/dependencies.html) guideline the following:
+1. **rosdep**: Installs missing binary dependecies specified in the packages via the systems package manager.
+2. **vcstool**: Specify further source code repositoryies in a repository file, `vcstool` will then retrieve the repository and it can then be built with colcon. 
+3. **other**: Manually install dependecies. (Already finished after install of *lgpio*)
 
+### Clone further Source Code Repositories
+This step pulls all dependecies that are not available as binaries.
 
-:::{note}
-Building MoveIt2 from source was only necessary during development since a bugfix has not been released yet. If MoveIt2 with a version >= 2.12.4 is available as a binary, it is greatly recommended to install it as a binary instead. Building MoveIt from source is very time consuming (~10 h on the Raspberry Pi). 
+Navigate to the ROS2 workspace *lib/ros2_ws*:
+```bash
+cd lib/ros2_ws
+```
+
+`vcstool` is found in many ROS2 packages to import dependencies that are not in a ROS or debian repository from a repository file. It should be automatically installed with the ROS2 install script. If not, its binary name is `python3-vcstool`.
+
+Then invoke the `vcstool` to import the repositories specified in the *lib/ros2_ws/req.repos* file:
+```bash
+vcs import --recursive src < req.repos
+```
+
+This will pull the following repositories:
+- [***single_trigger_controller***](https://github.com/DALSA-Lab/ros2_control-single_trigger_controller.git) branch: *main*
+  - This repository hosted on the DALSA Github contains the SingleTriggerController used to trigger homing. Since the controller is generic, it is hosted as a seperate repository.
+- [***moveit_task_constructor***](https://github.com/moveit/moveit_task_constructor.git) branch: *ros2*
+  - The MTC is not available as a binary and must thus be built from source.
+
+:::{important}
+The following repositories only need to included if the latest available binary MoveIt2 version is < 2.12.4! All newer version will include a bugfix that was not yet released at the time of writing the tutorial.
+**TO-DO:** Remove the following repositories from the *req.repos* file if the binary is available.
 :::
+- [***moveit2***](https://github.com/DALSA-Lab/moveit2-dalsa.git) branch: *main*
+  - MoveIt2 is cloned from a DALSA Fork. Using a fork, we have full control over the versioning and it also includes the changes to the Pilz Motion Controller that allow it to be used with any planning pipeline.
+- [***moveit_visual_tools***](https://github.com/moveit/moveit_visual_tools.git) branch: *ros2*
+  - Only cloned from source due to installation conflicts with the binary
+- [***pick_ik***](https://github.com/PickNikRobotics/pick_ik.git) branch: *main*
+  - Only cloned from source due to installation conflicts with the binary
+
+### Install even more Repositories
+:::{important}
+Do this step ONLY if MoveIt is installed from source! This is NOT necessary if it can be installed as a binary.
+:::
+
+Recursively import MoveIt's source code dependencies:
+```bash
+cd src
+for repo in moveit2/moveit2.repos $(f="moveit2/moveit2_$ROS_DISTRO.repos"; test -r $f && echo $f); do vcs import < "$repo"; done
+```
+
+### Binary Dependencies
+This steps installs all packages that can be resolved through `rosdep` (all packages that have been released to the ROS2 package ecosystem and some debian packages):
+```bash
+cd lib/ros2_ws
+sudo apt update
+rosdep update
+rosdep install -r --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y 
+```
+This command will recursively scan every package in the workspace for the `<depend/>` key and install missing packages.
+
+As a last step, remove any conflicting MoveIt binaries. This should not be neccessary on a fresh install.
+```bash
+sudo apt remove ros-$ROS_DISTRO-moveit*
+```
+
+### Build the Workspace!
+Follow the [building instructions](building.md) to finally compile the entire workspace!

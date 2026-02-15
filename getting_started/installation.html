@@ -11,6 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
+    <link rel="shortcut icon" href="../_static/BioscaraPanel.png"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=5929fcd5"></script>
@@ -33,6 +34,7 @@
           
           <a href="../index.html" class="icon icon-home">
             Bioscara
+              <img src="../_static/bioscara_image_1.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -65,7 +67,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#install-i2c-dependecies">Install I2C dependecies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-ros2">Install ROS2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#clone-the-project-repository">Clone the Project Repository</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#import-further-dependecies">Import further Dependecies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-further-dependecies">Import further Dependecies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dependecy-management-tools">Dependecy Management Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clone-further-source-code-repositories">Clone further Source Code Repositories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-even-more-repositories">Install even more Repositories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#binary-dependencies">Binary Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-the-workspace">Build the Workspace!</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="building.html">Building the ROS2 Workspace</a></li>
@@ -331,14 +340,102 @@ sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </
 </section>
 <section id="clone-the-project-repository">
 <h2>Clone the Project Repository<a class="headerlink" href="#clone-the-project-repository" title="Link to this heading"></a></h2>
-<!-- TODO here -->
+<p>Clone the project repository from Github into the <em>~/bioscara/</em> repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DALSA-Lab/bioscara.git
+</pre></div>
+</div>
 </section>
 <section id="import-further-dependecies">
 <h2>Import further Dependecies<a class="headerlink" href="#import-further-dependecies" title="Link to this heading"></a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Building MoveIt2 from source was only necessary during development since a bugfix has not been released yet. If MoveIt2 with a version &gt;= 2.12.4 is available as a binary, it is greatly recommended to install it as a binary instead. Building MoveIt from source is very time consuming (~10 h on the Raspberry Pi).</p>
+<p>Next we are going to install a lot of dependencies, either as a binary or from source.</p>
+<section id="dependecy-management-tools">
+<h3>Dependecy Management Tools<a class="headerlink" href="#dependecy-management-tools" title="Link to this heading"></a></h3>
+<p>The order of managing dependenices is according to <a class="reference external" href="https://ros2-quality-assurance.readthedocs.io/en/released/tutorials/dependencies.html">this</a> guideline the following:</p>
+<ol class="arabic simple">
+<li><p><strong>rosdep</strong>: Installs missing binary dependecies specified in the packages via the systems package manager.</p></li>
+<li><p><strong>vcstool</strong>: Specify further source code repositoryies in a repository file, <code class="docutils literal notranslate"><span class="pre">vcstool</span></code> will then retrieve the repository and it can then be built with colcon.</p></li>
+<li><p><strong>other</strong>: Manually install dependecies. (Already finished after install of <em>lgpio</em>)</p></li>
+</ol>
+</section>
+<section id="clone-further-source-code-repositories">
+<h3>Clone further Source Code Repositories<a class="headerlink" href="#clone-further-source-code-repositories" title="Link to this heading"></a></h3>
+<p>This step pulls all dependecies that are not available as binaries.</p>
+<p>Navigate to the ROS2 workspace <em>lib/ros2_ws</em>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>lib/ros2_ws
+</pre></div>
 </div>
+<p><code class="docutils literal notranslate"><span class="pre">vcstool</span></code> is found in many ROS2 packages to import dependencies that are not in a ROS or debian repository from a repository file. It should be automatically installed with the ROS2 install script. If not, its binary name is <code class="docutils literal notranslate"><span class="pre">python3-vcstool</span></code>.</p>
+<p>Then invoke the <code class="docutils literal notranslate"><span class="pre">vcstool</span></code> to import the repositories specified in the <em>lib/ros2_ws/req.repos</em> file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vcs<span class="w"> </span>import<span class="w"> </span>--recursive<span class="w"> </span>src<span class="w"> </span>&lt;<span class="w"> </span>req.repos
+</pre></div>
+</div>
+<p>This will pull the following repositories:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/DALSA-Lab/ros2_control-single_trigger_controller.git"><em><strong>single_trigger_controller</strong></em></a> branch: <em>main</em></p>
+<ul>
+<li><p>This repository hosted on the DALSA Github contains the SingleTriggerController used to trigger homing. Since the controller is generic, it is hosted as a seperate repository.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/moveit/moveit_task_constructor.git"><em><strong>moveit_task_constructor</strong></em></a> branch: <em>ros2</em></p>
+<ul>
+<li><p>The MTC is not available as a binary and must thus be built from source.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The following repositories only need to included if the latest available binary MoveIt2 version is &lt; 2.12.4! All newer version will include a bugfix that was not yet released at the time of writing the tutorial.
+<strong>TO-DO:</strong> Remove the following repositories from the <em>req.repos</em> file if the binary is available.</p>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/DALSA-Lab/moveit2-dalsa.git"><em><strong>moveit2</strong></em></a> branch: <em>main</em></p>
+<ul>
+<li><p>MoveIt2 is cloned from a DALSA Fork. Using a fork, we have full control over the versioning and it also includes the changes to the Pilz Motion Controller that allow it to be used with any planning pipeline.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/moveit/moveit_visual_tools.git"><em><strong>moveit_visual_tools</strong></em></a> branch: <em>ros2</em></p>
+<ul>
+<li><p>Only cloned from source due to installation conflicts with the binary</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/PickNikRobotics/pick_ik.git"><em><strong>pick_ik</strong></em></a> branch: <em>main</em></p>
+<ul>
+<li><p>Only cloned from source due to installation conflicts with the binary</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="install-even-more-repositories">
+<h3>Install even more Repositories<a class="headerlink" href="#install-even-more-repositories" title="Link to this heading"></a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Do this step ONLY if MoveIt is installed from source! This is NOT necessary if it can be installed as a binary.</p>
+</div>
+<p>Recursively import MoveIt’s source code dependencies:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>src
+<span class="k">for</span><span class="w"> </span>repo<span class="w"> </span><span class="k">in</span><span class="w"> </span>moveit2/moveit2.repos<span class="w"> </span><span class="k">$(</span><span class="nv">f</span><span class="o">=</span><span class="s2">&quot;moveit2/moveit2_</span><span class="nv">$ROS_DISTRO</span><span class="s2">.repos&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span><span class="nv">$f</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$f</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>vcs<span class="w"> </span>import<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$repo</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</pre></div>
+</div>
+</section>
+<section id="binary-dependencies">
+<h3>Binary Dependencies<a class="headerlink" href="#binary-dependencies" title="Link to this heading"></a></h3>
+<p>This steps installs all packages that can be resolved through <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> (all packages that have been released to the ROS2 package ecosystem and some debian packages):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>lib/ros2_ws
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+rosdep<span class="w"> </span>update
+rosdep<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>--rosdistro<span class="w"> </span><span class="nv">$ROS_DISTRO</span><span class="w"> </span>-y<span class="w"> </span>
+</pre></div>
+</div>
+<p>This command will recursively scan every package in the workspace for the <code class="docutils literal notranslate"><span class="pre">&lt;depend/&gt;</span></code> key and install missing packages.</p>
+<p>As a last step, remove any conflicting MoveIt binaries. This should not be neccessary on a fresh install.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>ros-<span class="nv">$ROS_DISTRO</span>-moveit*
+</pre></div>
+</div>
+</section>
+<section id="build-the-workspace">
+<h3>Build the Workspace!<a class="headerlink" href="#build-the-workspace" title="Link to this heading"></a></h3>
+<p>Follow the <a class="reference internal" href="building.html"><span class="std std-doc">building instructions</span></a> to finally compile the entire workspace!</p>
+</section>
 </section>
 </section>
 
