@@ -171,7 +171,7 @@ And the following a simple WPA wifi access point:
 ```yaml
 ...
   wifis:
-    wlan0:
+    wlp0s20f3:
       dhcp4: true
       optional: true
       access-points:
@@ -179,10 +179,6 @@ And the following a simple WPA wifi access point:
           password: "dalsa_iot"
 ...
 ```
-
-:::{important}
-It has not been confirmed that the WiFi interface name is indeed `wlan0` on the control PC. TODO!
-:::
 
 Then add a static hostname entry by adding the following line in the */etc/hosts* file:
 ```

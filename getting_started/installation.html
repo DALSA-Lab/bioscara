@@ -296,7 +296,7 @@ sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </
 <p>And the following a simple WPA wifi access point:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">...</span>
 <span class="w">  </span><span class="nt">wifis</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">wlan0</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">wlp0s20f3</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">      </span><span class="nt">optional</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">      </span><span class="nt">access-points</span><span class="p">:</span>
@@ -304,10 +304,6 @@ sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </
 <span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dalsa_iot&quot;</span>
 <span class="nn">...</span>
 </pre></div>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>It has not been confirmed that the WiFi interface name is indeed <code class="docutils literal notranslate"><span class="pre">wlan0</span></code> on the control PC. TODO!</p>
 </div>
 <p>Then add a static hostname entry by adding the following line in the <em>/etc/hosts</em> file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">10.10.10.3</span> <span class="n">scara</span><span class="o">-</span><span class="n">dev</span>
