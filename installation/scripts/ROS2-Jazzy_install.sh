@@ -38,6 +38,9 @@ echo "export ROS_DOMAIN_ID=$p_ROS_DOMAIN_ID" >> ~/.bashrc
 
 # Install colcon extensions
 sudo apt install python3-colcon-common-extensions -y
+sudo apt-get install python3-colcon-mixin
+colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+colcon mixin update default
 
 # rosdep
 sudo apt install python3-rosdep -y
